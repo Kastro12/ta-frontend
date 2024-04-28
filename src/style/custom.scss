@@ -1,0 +1,197 @@
+.modal-with-image-carousel {
+  .content {
+    background-color: $black1;
+    .DefaultImageCarouselComponent {
+      img {
+        height: 100vh;
+        width: 100vw;
+        object-fit: contain;
+      }
+
+      button:hover {
+        opacity: 1 !important;
+      }
+    }
+  }
+} //modal-with-image-carousel END
+
+.DefaultImageCarouselComponent {
+  button {
+    top: calc(50% - 28px);
+    height: auto;
+    padding: 0;
+    opacity: 0.6;
+
+    border: none;
+    background-color: transparent !important;
+    height: 100%;
+    margin: 0;
+    padding: 16px 8px;
+
+    &:hover {
+      opacity: 1 !important;
+      background-color: transparent;
+      .arrow-style {
+        color: $white1;
+      }
+    }
+  }
+} //DefaultImageCarouselComponent END
+
+.slick-initialized {
+  .scroll-arrow-button,
+  .slick-prev,
+  .slick-next {
+    @include scroll-arrow-button;
+  }
+  padding: 0;
+  ::before {
+    display: none;
+  }
+  &.arrowInSlickRow {
+    .slick-list {
+      margin: 0 -12px;
+
+      .slick-track {
+        margin: 0;
+      }
+    }
+
+    .slick-arrow {
+      opacity: 0.6;
+      &.slick-next {
+        right: 12px;
+      }
+      &.slick-prev {
+        left: 12px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.slick-disabled {
+        visibility: hidden;
+      }
+    }
+    .slick-slide {
+      .TextOverImageComponent,
+      .CreatedRouteComponent {
+        margin: 8px 12px;
+      }
+    }
+  } //arrowInSlickRow END
+} //slick-initialized END
+
+.drawerComponent {
+  width: 100%;
+  > div {
+    width: 90%;
+    &.MuiBackdrop-root {
+      width: 100%;
+    }
+  }
+  .drawerList {
+    width: 100%;
+    .mobile-button {
+      font-size: 20px;
+      svg {
+        width: 30px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $xs) {
+    width: 100%;
+    > div {
+      width: 50%;
+    }
+    .drawerList {
+      width: 100%;
+    }
+  }
+} //drawerList END
+
+.react-datepicker-wrapper {
+  min-width: 100%;
+  .custom {
+    height: 42px;
+    border-radius: 4px;
+    border: 1px solid $gray1;
+    font-size: 14px;
+    font-family: $fontFamily1;
+    padding: 0 8px;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    &.react-datepicker-ignore-onclickoutside {
+      border: 2px solid $green2;
+      padding: 0 7px;
+      outline: none;
+    }
+  }
+
+  .react-datepicker__close-icon {
+    padding: 0 46px 0 0;
+    &:after {
+      background-color: transparent;
+      content: url('../assets/icons-clear.svg') !important;
+      width: 28px;
+      height: 42px;
+    }
+  }
+
+  .react-datepicker__input-container {
+    .react-datepicker__calendar-icon {
+      right: 8px;
+      top: 9px;
+      padding: 0;
+      color: $gray1;
+    }
+  }
+
+  @media screen and (min-width: $lg) {
+    min-width: 360px;
+  }
+} //react-datepicker-wrapper END
+
+.react-datepicker-popper {
+  .react-datepicker {
+    border-radius: 4px;
+    border: 1px solid $gray1;
+    // font-size: 14px;
+    font-family: $fontFamily1;
+    color: $navyBlue1;
+
+    .react-datepicker__header {
+      border-bottom: 1px solid $gray1;
+      .react-datepicker__current-month,
+      .react-datepicker__day-name {
+        color: $navyBlue1;
+      }
+      .react-datepicker__day-name {
+        font-size: 14px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .react-datepicker__day {
+    font-size: 14px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    &.react-datepicker__day--keyboard-selected {
+      background-color: $transparentgreen2;
+      &:hover {
+        background-color: $green1;
+        color: $white2;
+      }
+    }
+    &.react-datepicker__day--selected{
+      background-color: $green1;
+    }
+  }
+} //react-datepicker-popper END

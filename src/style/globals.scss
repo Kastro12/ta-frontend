@@ -1,0 +1,80 @@
+body {
+  background-color: $white2;
+  font-family: $fontFamily1 !important;
+  margin: 0;
+  color: $navyBlue1;
+}
+
+a {
+  text-decoration: none;
+  color: $navyBlue1;
+  &:hover {
+    color: $navyBlue1;
+  }
+}
+
+.required-star {
+  color: $orange2;
+}
+
+ul {
+  @include ul;
+}
+
+.arrow-style {
+  width: 32px;
+  height: 32px;
+  padding: 0px;
+  color: $white2;
+  background: transparent;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.zoom-icon {
+  width: 32px;
+  height: 32px;
+  color: $white2;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.mobile_left_desktop_right_flex {
+  display: flex;
+  direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  @media screen and (min-width: $md) {
+    direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.mobile_column_desktop_row-reverse_flex {
+  display: flex;
+  direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  @media screen and (min-width: $md) {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}
+
+.MuiButton-sizeMedium {
+  height: 42px;
+}
+
+.MuiButton-sizeSmall {
+  height: 30px;
+  padding: 0 9px;
+}

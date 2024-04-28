@@ -1,0 +1,75 @@
+@import '@fontsource/platypi/300.css';
+@import '@fontsource/platypi/400.css';
+@import '@fontsource/platypi/500.css';
+@import '@fontsource/platypi/700.css';
+
+$white1: #fff;
+$white2: #f5f5f5;
+
+$gray1: #b9c1c6;
+$gray2: #899199;
+$gray3: #535961;
+
+$black1: #0e0e0e;
+
+$navyBlue1: #212b3b;
+
+$orange1: #f5a950;
+$orange2: #ffa235;
+
+$transparentOrange1: rgba(245, 169, 80, 0.06);
+
+$green1: #21817d;
+$green2: #1e706c;
+$transparentgreen1: rgba(33, 129, 125, 0.06);
+$transparentgreen2: rgba(33, 129, 125, 0.3);
+
+$fontFamily1: 'Platypi', Arial, Helvetica, sans-serif;
+
+$xs: 599px;
+$sm: 899px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1536px;
+
+@mixin ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin scroll_arrow_button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: transparent;
+  z-index: 1;
+  color: $white2;
+  outline: none;
+  border: 0;
+  font-size: 22px;
+  &:hover,
+  &:focus {
+    color: $white2;
+  }
+
+  &.small {
+    svg {
+      font-size: 18px;
+    }
+  }
+  &.disabled {
+    color: $gray3;
+  }
+  &::before {
+    display: none;
+  }
+}
