@@ -27,6 +27,10 @@ const theme = createTheme({
       fontWeight: 600,
       letterSpacing: '0.02em',
     },
+    body1: {
+      lineHeight: '26px',
+      fontSize: 16,
+    },
   },
 });
 

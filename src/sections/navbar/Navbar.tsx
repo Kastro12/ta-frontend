@@ -49,12 +49,20 @@ const Navbar = () => {
 
   return (
     <AppBar
-      position='static'
+      // position='static'
       color='transparent'
       className='navigation-wrap'
-      style={{ boxShadow: 'none', backgroundColor: '#21817d' }}
+      position='fixed'
+      sx={{ top: 0  }}
+      style={{
+        boxShadow: 'none',
+        backgroundColor: '#21817d',
+        // position: 'fixed',
+        // top: 0,
+        // zIndex: 8,
+      }}
     >
-      <Container maxWidth='lg'>
+      <Container maxWidth='lg' className='custom-container'>
         <Toolbar disableGutters>
           <Link href={'/'} className='logo'>
             Vacation in Serbia

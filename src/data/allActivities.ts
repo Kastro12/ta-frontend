@@ -3,7 +3,8 @@ const allActivities: Activity[] = [
   {
     id: '6625fb90e351da77e46bea8c',
     title: 'Rafting on the Tara River',
-    description: 'Rafting through the largest canyon in Europe',
+    description:
+      "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
     location: 'Tara',
     cost: 180,
     imageLink:
@@ -13,7 +14,8 @@ const allActivities: Activity[] = [
   {
     id: '6625fc51e351da77e46bea90',
     title: 'Gondola ride',
-    description: 'Viewing the Zlatibor mountain on the largest gondola in the Balkans',
+    description:
+      'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
     location: 'Zlatibor',
     cost: 20,
     imageLink:
@@ -23,7 +25,7 @@ const allActivities: Activity[] = [
   {
     id: '6625fd44e351da77e46bea93',
     title: 'Golubac Fortress',
-    description: 'Ogranizovani rafting tarom sa boravkom i 2 obroka - AZURITANA VERZIJAAAAAAAAAAA',
+    description:"Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
     location: 'Golubac',
     cost: 100,
     imageLink:
@@ -33,7 +35,8 @@ const allActivities: Activity[] = [
   {
     id: '662602b8410dc2dad9938982',
     title: 'Mountain biking',
-    description: 'Mountain biking in the wilderness of Kopaonik mountain',
+    description:
+      'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking adventure, perfect for thrill-seekers.',
     location: 'Kopaonik',
     cost: 100,
     imageLink:
@@ -43,7 +46,8 @@ const allActivities: Activity[] = [
   {
     id: '662606c2410dc2dad993898d',
     title: 'Archaeological site Vinca',
-    description: 'The Vinca culture from the 6th to the 3rd millennium BC',
+    description:
+      'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
     location: 'Grocka',
     cost: 170,
     imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',

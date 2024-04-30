@@ -13,7 +13,7 @@ import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 const Footer = () => {
   return (
     <footer>
-      <Container maxWidth='lg'>
+      <Container maxWidth='lg' className='custom-container'>
         <Grid container spacing={3}>
           <Grid xs={12} sm={6} md={3}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>

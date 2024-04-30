@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { FormControl, FormControlLabel, Radio, RadioGroup } from '@mui/material';
 import { Controller } from 'react-hook-form';
@@ -20,18 +20,13 @@ const InputRadio: React.FC<FormInputProps> = ({ name, control, label, options })
       <Controller
         name={name}
         control={control}
-        render={({ field: { onChange, value }, fieldState: { error }, formState }) => 
-      {    
-
-          console.log(value)
-
+        render={({ field: { onChange, value }, fieldState: { error }, formState }) => {
           return (
-          <RadioGroup value={value} onChange={onChange}>
-            {generateRadioOptions()}
-          </RadioGroup>
-        )
-      }
-      }
+            <RadioGroup value={value} onChange={onChange}>
+              {generateRadioOptions()}
+            </RadioGroup>
+          );
+        }}
       />
     </FormControl>
   );

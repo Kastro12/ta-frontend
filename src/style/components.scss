@@ -61,7 +61,7 @@
     display: block;
     object-fit: cover;
     width: 100%;
-    height: 256px;
+    height: 240px;
     border-radius: 4px;
   }
   .text {
@@ -83,7 +83,7 @@
       display: block;
       object-fit: cover;
       width: 100%;
-      height: 256px;
+      height: 240px;
       border-radius: 4px;
     }
     .text {
@@ -186,3 +186,43 @@
     }
   }
 } //MuiTabs-root.custom-tabs END
+
+.BoxOfActivity {
+  margin-bottom: 12px;
+  .content-wrapper {
+    height: 100%;
+    img {
+      border-radius: 4px;
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .content {
+      padding: 16px;
+      height: calc(100% - 236px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .text {
+        h3 {
+          margin: 10px 0 16px 0;
+        }
+        .description {
+          margin-bottom: 16px;
+        }
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg) {
+    .text {
+      .description {
+        min-height: 130px;
+      }
+    }
+  }
+} //BoxOfActivity END

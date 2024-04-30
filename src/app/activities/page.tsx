@@ -9,8 +9,18 @@ import Grid from '@mui/material/Unstable_Grid2';
 import theme from '@/utils/re-styledComponents/theme';
 import { ThemeProvider } from '@mui/material/styles';
 import CalendarForm from './forms/CalendarForm';
-import ActivityOffer from './components/ActivityOffer';
-import ChosenActivities from './components/ChosenActivities';
+import { allActivities, activityCategories, activityLocations } from '@/data';
+import { RootState } from '@/store/store';
+import { InputSelect } from '@/forms/components';
+
+import BoxOfActivity from './components/BoxOfActivity';
+
+import { useForm } from 'react-hook-form';
+
+interface IFormInput {
+  textValue: string;
+  radioValue: string;
+}
 
 export default function Activities() {
   const dispatch = useDispatch();
@@ -20,33 +30,22 @@ export default function Activities() {
   //   dispatch(changeTheDate({ type: 'startDate', date: '12.12.2024' }));
   // };
 
-  let [currentTab, setCurrentTab] = useState<number>(0);
+  const startDate = useSelector((state: RootState) => state.vacation.chosenActivities);
+
+  const [currentTab, setCurrentTab] = useState<number>(0);
+
+  const activitiesLength = allActivities.length;
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    console.log('newValue', newValue);
     setCurrentTab(newValue);
   };
 
-  const tabsComponent = useMemo(
-    () => (
-      <Tabs
-        sx={{ mb: 5 }}
-        value={currentTab}
-        onChange={handleChange}
-        centered
-        className='custom-tabs'
-      >
-        <Tab label='Activity offer' />
-        <Tab label='Chosen activities' />
-      </Tabs>
-    ),
-    [currentTab]
-  );
+  const { control } = useForm<IFormInput>();
 
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <Container maxWidth='lg' sx={{ mt: 3 }}>
+      <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
         <Typography variant='h1' sx={{ my: 6 }}>
           Create your Vacation
         </Typography>
@@ -64,9 +63,31 @@ export default function Activities() {
             <CalendarForm />
           </Grid>
         </Grid>
-        {tabsComponent}
-        <ActivityOffer value={currentTab} index={0} />
-        <ChosenActivities value={currentTab} index={1} />
+
+        <Typography variant='h2'>Activity offer ({activitiesLength})</Typography>
+        <div className='action-filter-wrapper'>
+          <div className='field'>
+            <InputSelect
+              options={activityCategories}
+              name={'category'}
+              control={control}
+              label={'Category'}
+            />
+          </div>
+          <div className='field'>
+            <InputSelect
+              options={activityLocations}
+              name={'location'}
+              control={control}
+              label={'Location'}
+            />
+          </div>
+        </div>
+        <div className='standard-box-wrapper'>
+          {allActivities.map((data) => (
+            <BoxOfActivity data={data} key={data.id} />
+          ))}
+        </div>
       </Container>
 
       <Footer />

@@ -5,6 +5,14 @@ body {
   color: $navyBlue1;
 }
 
+.page {
+  padding-top: 64px;
+
+  @media screen and (min-width: $md) {
+    padding-top: 74px;
+  }
+}
+
 a {
   text-decoration: none;
   color: $navyBlue1;
@@ -68,6 +76,40 @@ ul {
     flex-direction: row-reverse;
     align-items: flex-start;
   }
+}
+
+.standard-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  > div {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: $xs) {
+    flex-direction: row;
+    margin: 0px -12px;
+    > div {
+      width: calc(50% - 24px);
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    flex-direction: row;
+    > div {
+      width: calc(33.33% - 24px);
+    }
+  }
+
+  @media screen and (min-width: $lg) {
+    flex-direction: row;
+    > div {
+      width: calc(25% - 24px);
+    }
+  }
+
 }
 
 .MuiButton-sizeMedium {

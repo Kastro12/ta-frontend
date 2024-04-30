@@ -28,12 +28,10 @@ import { topSeasonActivities, organizedVacations } from '@/data';
 export default async function Home() {
   const activities = await getActivities();
 
-  console.log(activities);
-
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <Container maxWidth='lg' sx={{ mt: 3 }}>
+      <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
         <Grid container className='header-section'>
           <img
             src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'

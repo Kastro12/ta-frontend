@@ -1,3 +1,14 @@
+.MuiContainer-maxWidthLg.custom-container {
+  @media screen and (min-width: 1260px) {
+    max-width: 1226px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 1350px) {
+    max-width: 1324px;
+  }
+}
+
 .modal-with-image-carousel {
   .content {
     background-color: $black1;
@@ -50,7 +61,7 @@
   }
   &.arrowInSlickRow {
     .slick-list {
-      margin: 0 -12px;
+      margin: 0 -16px;
 
       .slick-track {
         margin: 0;
@@ -61,9 +72,23 @@
       opacity: 0.6;
       &.slick-next {
         right: 12px;
+
+        &.outside {
+          right: -22px;
+        }
+        &.background {
+          background-color: $gray1;
+        }
       }
       &.slick-prev {
         left: 12px;
+
+        &.outside {
+          left: -22px;
+        }
+        &.background {
+          background-color: $gray1;
+        }
       }
 
       &:hover {
@@ -76,7 +101,8 @@
     }
     .slick-slide {
       .TextOverImageComponent,
-      .CreatedRouteComponent {
+      .CreatedRouteComponent,
+      .BoxOfActivity {
         margin: 8px 12px;
       }
     }
@@ -190,8 +216,21 @@
         color: $white2;
       }
     }
-    &.react-datepicker__day--selected{
+    &.react-datepicker__day--selected {
       background-color: $green1;
     }
   }
 } //react-datepicker-popper END
+
+.action-filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  .field {
+    width: calc(50% - 12px);
+  }
+
+  @media screen and (min-width: $lg) {
+    width: calc(50% - 12px);
+  }
+} //action-filter-wrapper END
