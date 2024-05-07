@@ -10,6 +10,17 @@
   }
 } //navigation-wrap END
 
+.navigation-wrap-placeholder {
+  height: 64px;
+  width: 100%;
+  position: relative;
+
+  @media screen and (min-width: $md) {
+    height: 74px;
+  }
+
+} //navigation-wrap-placeholder END
+
 .CreatedRouteComponent {
   background-color: $white2;
   margin: auto;
@@ -205,10 +216,14 @@
       justify-content: space-between;
       .text {
         h3 {
-          margin: 10px 0 16px 0;
+          margin: 10px 0 6px 0;
+        }
+        .category {
+          font-size: 13px;
+          color: $gray2;
         }
         .description {
-          margin-bottom: 16px;
+          margin: 16px 0;
         }
       }
       .buttons {

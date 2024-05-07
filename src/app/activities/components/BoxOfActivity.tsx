@@ -17,6 +17,7 @@ export default function BoxOfActivity({ data }: BoxOfActivity) {
         <Box className='content'>
           <Box className='text'>
             <Typography variant='h3'>{data.title}</Typography>
+            <span className='category'>{data.category}</span>
             <Typography variant='body1' className='description'>
               {data.description}
             </Typography>

@@ -5,5 +5,5 @@ export interface Activity {
   location: string;
   cost: number;
   imageLink: string;
-  category: 'history_and_culture' | 'adventure' | 'landscape';
+  category: 'History and Culture' | 'Adventure' | 'Landscape';
 }

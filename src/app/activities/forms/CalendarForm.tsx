@@ -3,11 +3,15 @@ import DatePicker from 'react-datepicker';
 
 // import 'react-datepicker/dist/react-datepicker.css';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
+import { changeTheDate } from '@/store/vacation/vacationReducer';
 
 const CalendarForm = () => {
-  const [startDate, setStartDate] = useState<Date>();
+  const dispatch = useDispatch();
 
-  const [finishDate, setFinishDate] = useState<Date>();
+  const startDate = useSelector((state: RootState) => state.vacation.startDate);
+  const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
 
   return (
     <>
@@ -20,7 +24,7 @@ const CalendarForm = () => {
         showIcon
         icon={<CalendarMonthOutlinedIcon />}
         toggleCalendarOnIconClick
-        onChange={(date: Date) => setStartDate(date)}
+        onChange={(date: Date) => dispatch(changeTheDate({ type: 'startDate', date: date }))}
         minDate={new Date()}
         maxDate={finishDate ? finishDate : null}
         placeholderText='Start date'
@@ -38,7 +42,7 @@ const CalendarForm = () => {
         showIcon
         icon={<CalendarMonthOutlinedIcon />}
         toggleCalendarOnIconClick
-        onChange={(date: Date) => setFinishDate(date)}
+        onChange={(date: Date) => dispatch(changeTheDate({ type: 'finishDate', date: date }))}
         minDate={startDate ? startDate : new Date()}
         placeholderText='Start date'
         dateFormat='d MMMM, yyyy'

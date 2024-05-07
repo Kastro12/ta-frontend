@@ -2,8 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Activity } from '@/utils/interfaces/index';
 
 export interface IssueInitialState {
-  startDate: null | string;
-  finishDate: null | string;
+  startDate: null | Date;
+  finishDate: null | Date;
   organizerOfTheDays: 'agency' | 'user';
   chosenActivities: Activity[];
 }
@@ -16,7 +16,7 @@ const initialState: IssueInitialState = {
 
 interface TheDateChangeProps {
   type: 'startDate' | 'finishDate';
-  date: string;
+  date: null | Date;
 }
 
 export const vacationSlice = createSlice({
@@ -24,6 +24,10 @@ export const vacationSlice = createSlice({
   initialState,
   reducers: {
     changeTheDate: (state, action: PayloadAction<TheDateChangeProps>) => {
+      const ddd = action.payload.date?.toString();
+
+      console.log('action.payload.date', ddd);
+
       state[`${action.payload.type}`] = action.payload.date;
     },
     changeOrganizerOfTheDays: (state, action: PayloadAction<'agency' | 'user'>) => {

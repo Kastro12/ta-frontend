@@ -5,13 +5,13 @@ body {
   color: $navyBlue1;
 }
 
-.page {
-  padding-top: 64px;
+// .page {
+//   padding-top: 64px;
 
-  @media screen and (min-width: $md) {
-    padding-top: 74px;
-  }
-}
+//   @media screen and (min-width: $md) {
+//     padding-top: 74px;
+//   }
+// }
 
 a {
   text-decoration: none;
@@ -109,7 +109,6 @@ ul {
       width: calc(25% - 24px);
     }
   }
-
 }
 
 .MuiButton-sizeMedium {
@@ -119,4 +118,29 @@ ul {
 .MuiButton-sizeSmall {
   height: 30px;
   padding: 0 9px;
+}
+
+.MuiPaper-root {
+  color: $navyBlue1;
+}
+
+.MuiIconButton-root {
+  padding: 12px;
+  position: relative;
+  .count {
+    position: absolute;
+    background-color: $green2;
+    width: 18px;
+    height: 18px;
+    color: $white1;
+    font-weight: 600;
+    border-radius: 100%;
+    font-size: 12px;
+    top: -2px;
+    right: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 14px;
+  }
 }

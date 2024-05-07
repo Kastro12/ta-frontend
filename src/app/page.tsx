@@ -1,7 +1,7 @@
 async function getActivities() {
   const res = await fetch('http://localhost:8080/activities', {
     cache: 'force-cache',
-    next: { revalidate: 3600 },
+    // next: { revalidate: 0 },
   });
 
   if (!res.ok) {
@@ -26,7 +26,7 @@ import FormSearchActivities from '@/forms/searchActivities/FormSearchActivities'
 import { topSeasonActivities, organizedVacations } from '@/data';
 
 export default async function Home() {
-  const activities = await getActivities();
+  // const activities = await getActivities();
 
   return (
     <ThemeProvider theme={theme}>
