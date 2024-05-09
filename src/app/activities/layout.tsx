@@ -1,11 +1,10 @@
-'use client';
-import { Provider } from 'react-redux';
-import { store } from '../../store/store';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Create vacation',
+  description: 'Create vacation',
+};
 
 export default function ActivitiesLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <Provider store={store}>
-      <div className='page activities'>{children}</div>
-    </Provider>
-  );
+  return <div className='page activities'>{children}</div>;
 }

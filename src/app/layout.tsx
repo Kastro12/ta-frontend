@@ -1,9 +1,10 @@
+// 'use client'
 import type { Metadata } from 'next';
 import '../style/appStyle.scss';
 
 export const metadata: Metadata = {
-  title: 'Homepage',
-  description: 'Description about homepage',
+  title: 'Vacation in Serbia',
+  description: 'Vacation in Serbia',
 };
 
 export const revalidate = 3600;

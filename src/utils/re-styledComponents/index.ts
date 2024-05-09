@@ -26,6 +26,18 @@ export const orangeButton = {
   },
 };
 
+export const selectedActivity = {
+  color: '#21817d',
+  backgroundColor: 'rgba(33, 129, 125, 0.06)',
+  border: '1px solid  transparent',
+  '&:hover': {
+
+    color: '#1e706c',
+    backgroundColor: 'rgba(33, 129, 125, 0.3)',
+    border: '1px solid transparent',
+  },
+};
+
 export const transparentLightButton = {
   color: '#f5f5f5',
   '&:hover': {
@@ -51,5 +63,29 @@ export const lightGreenButton = {
     color: '#1e706c',
     backgroundColor: 'transparent',
     border: '1px solid #1e706c',
+  },
+};
+
+export const linkGreenButton = {
+  padding:'0 3px',
+  color: '#21817d',
+  backgroundColor: 'transparent',
+  border: '1px solid  transparent',
+  '&:hover': {
+    color: '#1e706c',
+    backgroundColor: 'rgba(33, 129, 125, 0.06)',
+    border: '1px solid transparent',
+  },
+};
+
+
+export const lightRedButton = {
+  color: '#ef5350',
+  backgroundColor: 'transparent',
+  border: '1px solid  #ef5350',
+  '&:hover': {
+    color: '#d32f2f',
+    backgroundColor: 'transparent',
+    border: '1px solid #d32f2f',
   },
 };

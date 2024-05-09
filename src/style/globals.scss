@@ -129,18 +129,34 @@ ul {
   position: relative;
   .count {
     position: absolute;
-    background-color: $green2;
     width: 18px;
     height: 18px;
-    color: $white1;
-    font-weight: 600;
+    color: $orange1;
+    font-weight: 400;
     border-radius: 100%;
-    font-size: 12px;
-    top: -2px;
-    right: -2px;
+    font-size: 16px;
+    top: 2px;
+    right: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: 14px;
+    z-index: 1;
+  }
+  svg {
+    z-index: 1;
+  }
+  .animation {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    border-radius: 100%;
+    &.adding {
+      background-color: $green2;
+    }
+    &.removing {
+      background-color: $transparentwhite2;
+    }
   }
 }

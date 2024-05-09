@@ -18,7 +18,6 @@
   @media screen and (min-width: $md) {
     height: 74px;
   }
-
 } //navigation-wrap-placeholder END
 
 .CreatedRouteComponent {
@@ -207,6 +206,7 @@
       height: 200px;
       width: 100%;
       object-fit: cover;
+      display: block;
     }
     .content {
       padding: 16px;
@@ -241,3 +241,96 @@
     }
   }
 } //BoxOfActivity END
+
+.shoppingCartList {
+  background-color: $white1;
+  color: $navyBlue1;
+  height: 100%;
+  .container {
+    padding: 16px;
+
+    .MuiTypography-root {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-top: 14px;
+    }
+
+    .date-label {
+      font-weight: 300;
+      margin-right: 16px;
+      min-width: 100px;
+      font-size: 14px;
+    }
+    .no-data {
+      font-weight: 300;
+      color: $gray1;
+      font-size: 14px;
+      svg {
+        position: relative;
+        top: 5px;
+        font-size: 22px;
+        margin-right: 3px;
+      }
+    }
+
+    .chosen-activities {
+      .no-data {
+        margin-top: 14px;
+      }
+
+      .chosen-activities-list {
+        margin-top: 14px;
+        li {
+          display: flex;
+          width: 100%;
+          border-radius: 4px;
+          align-items: center;
+          img {
+            width: 110px;
+            height: 70px;
+            object-fit: cover;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+          p {
+            margin: 0;
+            padding: 0 12px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: $lg) {
+      .chosen-activities {
+        .chosen-activities-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .MuiPaper-root {
+            width: calc(50% - 12px);
+          }
+        }
+      }
+
+      .submit-wrapper {
+        display: flex;
+        align-items: center;
+        .MuiButtonBase-root {
+          width: calc(50% - 12px);
+        }
+      }
+    }
+
+    @media screen and (min-width: 1260px) {
+      width: 613px;
+    }
+
+    @media screen and (min-width: 1350px) {
+      width: 662px;
+    }
+
+  }
+} //shoppingCartList END

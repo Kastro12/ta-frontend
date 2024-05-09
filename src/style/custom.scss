@@ -222,15 +222,4 @@
   }
 } //react-datepicker-popper END
 
-.action-filter-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  .field {
-    width: calc(50% - 12px);
-  }
 
-  @media screen and (min-width: $lg) {
-    width: calc(50% - 12px);
-  }
-} //action-filter-wrapper END

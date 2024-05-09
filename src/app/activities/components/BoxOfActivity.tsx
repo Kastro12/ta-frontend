@@ -1,15 +1,27 @@
 import * as React from 'react';
 import { Paper, Typography, Box, Button } from '@mui/material';
-import { button, lightGreenButton, greenButton } from '@/utils/re-styledComponents';
+import {
+  button,
+  linkGreenButton,
+  greenButton,
+  selectedActivity,
+} from '@/utils/re-styledComponents';
 import Link from 'next/link';
 import { Activity } from '@/utils/interfaces';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import { useDispatch } from 'react-redux';
+
+import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
 
 interface BoxOfActivity {
   data: Activity;
+  isSelected: boolean;
 }
 
-export default function BoxOfActivity({ data }: BoxOfActivity) {
+export default function BoxOfActivity({ data, isSelected }: BoxOfActivity) {
+  const dispatch = useDispatch();
+
   return (
     <Paper elevation={3} className='BoxOfActivity'>
       <Box className='content-wrapper'>
@@ -24,22 +36,22 @@ export default function BoxOfActivity({ data }: BoxOfActivity) {
           </Box>
           <div className='buttons'>
             <Button
-              sx={{ ...button, ...lightGreenButton }}
+              sx={{ ...button, ...(isSelected ? selectedActivity : greenButton) }}
+              variant='outlined'
+              startIcon={isSelected ? <CloseOutlinedIcon /> : <AddShoppingCartOutlinedIcon />}
+              onClick={() => dispatch(isSelected ? removeActivity(data.id) : addActivity(data))}
+            >
+              {isSelected ? 'Remove' : 'Choose'}
+            </Button>
+
+            <Button
+              sx={{ ...button, ...linkGreenButton }}
               variant='outlined'
               href={'./'}
               LinkComponent={Link}
               // size='small'
             >
               More info
-            </Button>
-            <Button
-              sx={{ ...button, ...greenButton }}
-              variant='outlined'
-              href={'./'}
-              LinkComponent={Link}
-              startIcon={<AddShoppingCartOutlinedIcon />}
-            >
-              Choose
             </Button>
           </div>
         </Box>
