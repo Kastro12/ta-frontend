@@ -1,5 +1,5 @@
 'use client';
-import OrganizerOfTheDaysForm from './forms/OrganizerOfTheDaysForm';
+import NumberOfPersonsForm from './forms/NumberOfPersonsForm';
 import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import CalendarForm from './forms/CalendarForm';
@@ -30,7 +30,7 @@ export default function Activities() {
 
       <Grid container spacing={3} sx={{ mb: 6 }} className='mobile_column_desktop_row-reverse_flex'>
         <Grid sm={12} md={6}>
-          <OrganizerOfTheDaysForm />
+          <NumberOfPersonsForm />
         </Grid>
         <Grid sm={12} md={6} sx={{ width: '100%' }}>
           <CalendarForm />
