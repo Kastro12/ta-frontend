@@ -9,4 +9,5 @@ export interface FormInputProps {
   control: any;
   label: string;
   options: undefined | { id: string; value: string; label: string }[];
+  className: string | undefined;
 }

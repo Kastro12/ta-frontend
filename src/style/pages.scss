@@ -2,6 +2,7 @@
   .title-filter {
     display: flex;
     flex-direction: column;
+    margin-top: 28px;
     .MuiTypography-root {
       margin-top: 0;
       line-height: 42px;
@@ -11,15 +12,16 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px;
+      position: relative;
+      .label {
+        font-size: 13px;
+        color: $gray2;
+        position: absolute;
+        top: -24px;
+      }
       .field {
         position: relative;
         width: calc(50% - 12px);
-        .label {
-          font-size: 13px;
-          color: $gray2;
-          position: absolute;
-          top: -24px;
-        }
       }
     }
 
@@ -27,10 +29,19 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-
+      margin-top: 42px;
       .action-filter-wrapper {
-        margin-bottom: 0px;
-        width: calc(50% - 12px);
+        .label {
+          position: relative;
+          top: 0;
+        }
+
+        .field {
+          width: 168px;
+          margin-left: 16px;
+        }
+
+        align-items: center;
       }
     }
   }

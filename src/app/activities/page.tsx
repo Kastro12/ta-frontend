@@ -1,7 +1,6 @@
 'use client';
 import NumberOfPersonsForm from './forms/NumberOfPersonsForm';
 import { Container, Typography } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
 import CalendarForm from './forms/CalendarForm';
 import { allActivities, activityCategories, activityLocations } from '@/data';
 import { InputSelect } from '@/forms/components';
@@ -28,25 +27,24 @@ export default function Activities() {
         Create your Vacation
       </Typography>
 
-      <Grid container spacing={3} sx={{ mb: 6 }} className='mobile_column_desktop_row-reverse_flex'>
-        <Grid sm={12} md={6}>
-          <NumberOfPersonsForm />
-        </Grid>
-        <Grid sm={12} md={6} sx={{ width: '100%' }}>
+      <div className='form-background in-container'>
+        <div className='form-calendar-persons'>
           <CalendarForm />
-        </Grid>
-      </Grid>
+          <NumberOfPersonsForm />
+        </div>
+      </div>
 
       <div className='title-filter'>
         <Typography variant='h2'>Activity offer ({activitiesLength})</Typography>
         <div className='action-filter-wrapper'>
+          <span className='label'>Filter by:</span>
           <div className='field'>
-            <span className='label'>Filter by:</span>
             <InputSelect
               options={activityCategories}
               name={'category'}
               control={control}
               label={'Category'}
+              className='just-line'
             />
           </div>
           <div className='field'>
@@ -55,6 +53,7 @@ export default function Activities() {
               name={'location'}
               control={control}
               label={'Location'}
+              className='just-line'
             />
           </div>
         </div>

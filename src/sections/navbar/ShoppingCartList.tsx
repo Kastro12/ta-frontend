@@ -70,7 +70,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           ) : (
             <ul className='chosen-activities-list'>
               {chosenActivities.map((activity) => (
-                <Paper elevation={3} sx={{ mb: 1 }}>
+                <Paper elevation={3} sx={{ mb: 1 }} key={activity.id}>
                   <li>
                     <img src={activity.imageLink} />
                     <p>{activity.title}</p>

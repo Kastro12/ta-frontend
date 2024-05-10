@@ -122,4 +122,91 @@
       background-color: $gray1;
     }
   }
+
+  &.just-line {
+    .select-input-field__control {
+      border-radius: 0px;
+      border: 0;
+      border-bottom: 1px solid $gray1;
+      background-color: transparent;
+    }
+
+    .select-input-field__control--is-focused {
+      border-color: $green2;
+      box-shadow: none;
+    }
+
+  }
 } // select-input-field-container END
+
+.quantity-input {
+  font-weight: 400;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 126px;
+  position: relative;
+  background: $white1;
+  border: 1px solid $gray1;
+  border-radius: 4px;
+  font-size: 14px;
+  span {
+    display: inline-block;
+  }
+
+  .quantity {
+    background: $white1;
+    text-align: center;
+    width: 46px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .increment,
+  .decrement {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 120ms;
+    background: $white1;
+    color: $green2;
+    cursor: pointer;
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  .increment:hover,
+  .decrement:hover {
+    background: rgba(33, 129, 125, 0.06);
+    border-color: rgba(33, 129, 125, 0.06);
+  }
+} //quantity-input
+
+.form-calendar-persons {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $md) {
+    flex-direction: row;
+    justify-content: space-between;
+    .CalendarForm {
+      width: calc(50% - 40px);
+    }
+    .NumberOfPersonsForm {
+      width: calc(50% - 12px);
+      width: calc(50% - 40px);
+    }
+  }
+} //form-calendar-persons END

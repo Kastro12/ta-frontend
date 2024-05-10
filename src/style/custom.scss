@@ -150,10 +150,31 @@
     box-sizing: border-box;
     outline: none;
     width: 100%;
+    background-color: $white1;
+    &:disabled {
+      background-color: #eee;
+      &.react-datepicker-ignore-onclickoutside {
+        border: 1px solid $gray1;
+        padding: 0 8px;
+      }
+    }
     &.react-datepicker-ignore-onclickoutside {
       border: 2px solid $green2;
       padding: 0 7px;
       outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $navyBlue1;
+    }
+    &::-moz-placeholder {
+      color: $navyBlue1;
+    }
+    &:-ms-input-placeholder {
+      color: $navyBlue1;
+    }
+    &:-moz-placeholder {
+      color: $navyBlue1;
     }
   }
 
@@ -174,10 +195,6 @@
       padding: 0;
       color: $gray1;
     }
-  }
-
-  @media screen and (min-width: $lg) {
-    min-width: 360px;
   }
 } //react-datepicker-wrapper END
 

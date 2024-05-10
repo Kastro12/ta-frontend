@@ -331,6 +331,107 @@
     @media screen and (min-width: 1350px) {
       width: 640px;
     }
-
   }
 } //shoppingCartList END
+
+.CalendarForm {
+  .calendar-field {
+    .react-datepicker-wrapper {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (min-width: $xs) {
+    display: flex;
+    justify-content: space-between;
+    .calendar-field {
+      width: calc(50% - 12px);
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    .calendar-field {
+      .react-datepicker-wrapper {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+}
+
+.NumberOfPersonsForm {
+  .content {
+    .quantity-field {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &.adults {
+        margin-bottom: 24px;
+      }
+
+      .label {
+        min-width: 92px;
+        color: $navyBlue1;
+      }
+    }
+  }
+
+  @media screen and (min-width: $xs) {
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      .quantity-field {
+        width: calc(50% - 12px);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .quantity-field {
+        &.adults {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $md) {
+    .content {
+      justify-content: space-around;
+      .quantity-field {
+        width: auto;
+        .label {
+          min-width: 78px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    .content {
+      .quantity-field {
+        .label {
+          min-width: auto;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $md) and (max-width: 1100px) {
+    .content {
+      .quantity-field {
+        .quantity-input {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    .content {
+      .quantity-field.adults {
+        justify-content: flex-start;
+      }
+    }
+  }
+} //NumberOfPersonsForm END

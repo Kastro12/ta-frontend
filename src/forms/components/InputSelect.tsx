@@ -1,24 +1,20 @@
-'use client'
+'use client';
 import Select from 'react-select';
 import { Controller } from 'react-hook-form';
 import { FormInputProps } from '../form.interface';
 import React, { useId } from 'react';
 
-
-const InputSelect = ({ name, control, label, options }: FormInputProps) => {
-
-
+const InputSelect = ({ name, control, label, options, className }: FormInputProps) => {
   return (
     <Controller
-    
       name={name}
       control={control}
       render={({ field: { onChange, value }, fieldState: { error }, formState }) => (
         <Select
           id={name}
           instanceId={name}
-          className='select-input-field-container'
-          classNamePrefix='select-input-field'
+          className={`select-input-field-container ${className}`}
+          classNamePrefix={`select-input-field`}
           isDisabled={false}
           isLoading={false}
           isClearable={true}
@@ -26,7 +22,6 @@ const InputSelect = ({ name, control, label, options }: FormInputProps) => {
           name='color'
           options={options}
           placeholder={label}
-         
           components={{
             IndicatorSeparator: () => null,
           }}

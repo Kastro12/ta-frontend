@@ -160,3 +160,23 @@ ul {
     }
   }
 }
+
+.form-background {
+  background-color: $transparentgreen1;
+  padding: 28px 16px;
+  &.in-container {
+    position: relative;
+    width: 100%;
+    left: -16px;
+
+    @media screen and (min-width: $xs) {
+      width: auto;
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    padding: 28px;
+  }
+
+} //form-background END
