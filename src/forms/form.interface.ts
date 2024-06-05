@@ -10,4 +10,6 @@ export interface FormInputProps {
   label: string;
   options: undefined | { id: string; value: string; label: string }[];
   className: string | undefined;
+  defaultValue?: { id: string; value: string; label: string }[];
+  getSelectedValue?: (value: any) => void;
 }

@@ -2,9 +2,16 @@
 import Select from 'react-select';
 import { Controller } from 'react-hook-form';
 import { FormInputProps } from '../form.interface';
-import React, { useId } from 'react';
+import React from 'react';
 
-const InputSelect = ({ name, control, label, options, className }: FormInputProps) => {
+const InputSelect = ({
+  name,
+  control,
+  label,
+  options,
+  className,
+  getSelectedValue,
+}: FormInputProps) => {
   return (
     <Controller
       name={name}
@@ -22,6 +29,7 @@ const InputSelect = ({ name, control, label, options, className }: FormInputProp
           name='color'
           options={options}
           placeholder={label}
+          onChange={getSelectedValue ? getSelectedValue : onChange}
           components={{
             IndicatorSeparator: () => null,
           }}

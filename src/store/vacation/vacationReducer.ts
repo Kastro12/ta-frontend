@@ -1,24 +1,36 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Activity } from '@/utils/interfaces/index';
 
+interface ChildrenYears {
+  childrenYears: { years: '1-2' | '2-4' | '4-7' | '7+' }[];
+}
+
 export interface IssueInitialState {
   startDate: null | string;
   finishDate: null | string;
-  organizerOfTheDays: 'agency' | 'user';
+  adults: number;
+  children: number;
+  childrenYears: { years: '1-2' | '2-4' | '4-7' | '7+'; position: number }[];
   chosenActivities: Activity[];
   chosenActivitiesAction: 'adding' | 'removing' | null;
 }
 const initialState: IssueInitialState = {
   startDate: null,
   finishDate: null,
-  organizerOfTheDays: 'agency',
   chosenActivities: [],
   chosenActivitiesAction: null,
+  adults: 1,
+  children: 0,
+  childrenYears: [],
 };
 
 interface TheDateChangeProps {
   type: 'startDate' | 'finishDate';
   date: string | null;
+}
+
+interface handleIncrementDecrement {
+  type: 'adults' | 'children';
 }
 
 export const vacationSlice = createSlice({
@@ -34,9 +46,7 @@ export const vacationSlice = createSlice({
         state[`${action.payload.type}`] = null;
       }
     },
-    changeOrganizerOfTheDays: (state, action: PayloadAction<'agency' | 'user'>) => {
-      state.organizerOfTheDays = action.payload;
-    },
+
     addActivity: (state, action: PayloadAction<Activity>) => {
       state.chosenActivities = [...state.chosenActivities, action.payload];
       state.chosenActivitiesAction = 'adding';
@@ -61,9 +71,54 @@ export const vacationSlice = createSlice({
     deleteVacation: (state) => {
       state = initialState;
     },
+
+    handleIncrement: (state, action: PayloadAction<handleIncrementDecrement>) => {
+      state[`${action.payload.type}`] = state[`${action.payload.type}`] + 1;
+    },
+
+    handleDecrement: (state, action: PayloadAction<handleIncrementDecrement>) => {
+      if (action.payload.type === 'adults' && state[`${action.payload.type}`] == 1) {
+        return;
+      }
+
+      if (state[`${action.payload.type}`] > 0) {
+        state[`${action.payload.type}`] = state[`${action.payload.type}`] - 1;
+      }
+    },
+
+    addChildrenYears: (
+      state,
+      action: PayloadAction<{ years: '1-2' | '2-4' | '4-7' | '7+'; position: number }>
+    ) => {
+      if (state.childrenYears.find((year) => year.position === action.payload.position)) {
+        const updated = state.childrenYears.map((year) => {
+          if (year.position === action.payload.position) {
+            return action.payload;
+          } else return year;
+        });
+
+        updated.sort((a, b) => a.position - b.position);
+
+        state.childrenYears = updated;
+      } else state.childrenYears = [...state.childrenYears, action.payload];
+    },
+
+    removeChildrenYears: (state, action: PayloadAction<number>) => {
+      const filteredList = state.childrenYears.filter((year) => year.position != action.payload);
+      state.childrenYears = filteredList;
+    },
   },
 });
 
-export const { changeTheDate, addActivity, removeActivity, clearActivityAction } =
-  vacationSlice.actions;
+export const {
+  changeTheDate,
+  addActivity,
+  removeActivity,
+  updateChosenActivities,
+  clearActivityAction,
+  handleIncrement,
+  handleDecrement,
+  addChildrenYears,
+  removeChildrenYears,
+} = vacationSlice.actions;
 export default vacationSlice.reducer;

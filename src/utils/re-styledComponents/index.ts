@@ -2,6 +2,7 @@ import '@fontsource/platypi/300.css';
 import '@fontsource/platypi/400.css';
 import '@fontsource/platypi/500.css';
 import '@fontsource/platypi/700.css';
+import { current } from '@reduxjs/toolkit';
 
 export const button = {
   textTransform: 'none',
@@ -31,7 +32,6 @@ export const selectedActivity = {
   backgroundColor: 'rgba(33, 129, 125, 0.06)',
   border: '1px solid  transparent',
   '&:hover': {
-
     color: '#1e706c',
     backgroundColor: 'rgba(33, 129, 125, 0.3)',
     border: '1px solid transparent',
@@ -67,7 +67,7 @@ export const lightGreenButton = {
 };
 
 export const linkGreenButton = {
-  padding:'0 3px',
+  padding: '0 3px',
   color: '#21817d',
   backgroundColor: 'transparent',
   border: '1px solid  transparent',
@@ -78,7 +78,6 @@ export const linkGreenButton = {
   },
 };
 
-
 export const lightRedButton = {
   color: '#ef5350',
   backgroundColor: 'transparent',
@@ -87,5 +86,18 @@ export const lightRedButton = {
     color: '#d32f2f',
     backgroundColor: 'transparent',
     border: '1px solid #d32f2f',
+  },
+};
+
+export const disabledButton = {
+  color: '#fff',
+  backgroundColor: '#e4e4e4',
+  border: '1px solid  #e4e4e4',
+  cursor: 'no-drop',
+  '&:hover': {
+    color: '#fff',
+    backgroundColor: '#e4e4e4',
+    border: '1px solid #e4e4e4',
+    cursor: 'no-drop',
   },
 };

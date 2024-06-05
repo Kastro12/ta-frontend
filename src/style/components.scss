@@ -248,19 +248,24 @@
   height: 100%;
   .container {
     padding: 16px;
-
+    .main-title {
+      font-size: 20px;
+      margin-top: 0px;
+      line-height: 40px;
+    }
     .MuiTypography-root {
       display: flex;
       align-items: center;
       font-size: 14px;
-      margin-top: 14px;
+      margin-top: 18px;
     }
 
     .date-label {
       font-weight: 300;
-      margin-right: 16px;
-      min-width: 100px;
+      margin-right: 12px;
+      min-width: 90px;
       font-size: 14px;
+      font-weight: 400;
     }
     .no-data {
       font-weight: 300;
@@ -281,40 +286,45 @@
 
       .chosen-activities-list {
         margin-top: 14px;
-        li {
+        .no-activity {
           display: flex;
-          width: 100%;
-          border-radius: 4px;
           align-items: center;
-          img {
-            width: 110px;
-            height: 70px;
-            object-fit: cover;
-            border-top-left-radius: 4px;
-            border-bottom-left-radius: 4px;
-          }
-          p {
-            margin: 0;
-            padding: 0 12px;
-            font-size: 14px;
-            line-height: 22px;
+          justify-content: center;
+          font-size: 14px;
+          height: 70px;
+          margin-bottom: 12px;
+          box-shadow: none;
+          border: 1px solid $lightGray1;
+          color: $gray1;
+          .MuiSvgIcon-root {
+            font-size: 30px;
+            margin-right: 12px;
           }
         }
       }
     }
 
-    @media screen and (min-width: $lg) {
-      .chosen-activities {
-        .chosen-activities-list {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          .MuiPaper-root {
-            width: calc(50% - 12px);
-          }
-        }
+    .MuiAlert-root {
+      padding: 0 12px;
+      color: $orange2;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      .MuiAlert-icon {
+        color: $orange2;
+        margin-right: 10px;
       }
+    }
 
+    @media screen and (min-width: $md) {
+      .main-title {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (min-width: $lg) {
       .submit-wrapper {
         display: flex;
         align-items: center;
@@ -333,6 +343,80 @@
     }
   }
 } //shoppingCartList END
+
+.shoppingCartActivityList {
+  margin-bottom: 12px;
+  box-shadow: $boxShadow1;
+  li {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    align-items: center;
+    position: relative;
+    .image-wrap {
+      display: flex;
+      height: 70px;
+      img {
+        width: 100px;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        border-radius: 0px;
+      }
+      .MuiButtonBase-root {
+        padding: 4px;
+        border-radius: 0;
+        height: 100%;
+        svg {
+          width: 19px;
+          height: 19px;
+          color: $gray2;
+        }
+      }
+    }
+    .content {
+      width: calc(100% - 127px);
+      display: flex;
+      justify-content: space-between;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        p {
+          margin: 0;
+          padding: 0 12px;
+          font-size: 14px;
+          line-height: 22px !important;
+          font-weight: 600;
+          width: calc(100% - 40px);
+        }
+        .category {
+          font-size: 13px;
+          color: $gray2;
+          padding: 0 12px;
+          line-height: 22px !important;
+        }
+      }
+      .action {
+        position: absolute;
+        right: 0;
+        top: 0;
+        .MuiButtonBase-root {
+          padding: 6px;
+          svg {
+            width: 19px;
+            height: 19px;
+            color: $gray2;
+          }
+        }
+      }
+    }
+  }
+}
 
 .CalendarForm {
   .calendar-field {
@@ -356,7 +440,6 @@
       }
     }
   }
-
 }
 
 .NumberOfPersonsForm {
@@ -368,10 +451,82 @@
       &.adults {
         margin-bottom: 24px;
       }
+      &.children {
+        position: relative;
+        .label {
+          min-width: 92px;
+        }
+      }
 
       .label {
-        min-width: 92px;
         color: $navyBlue1;
+        display: block;
+        font-size: 15px;
+        line-height: 24px;
+        position: relative;
+        .MuiSvgIcon-root {
+          color: $gray2;
+          position: absolute;
+          top: 1px;
+          right: 0;
+        }
+
+        &.active {
+          .MuiSvgIcon-root {
+            color: $navyBlue1;
+          }
+        }
+        &.clickable {
+          cursor: pointer;
+        }
+      }
+
+      .children-age-info {
+        position: absolute;
+        width: calc(100% - 24px);
+        border: 1px solid $gray1;
+        border-radius: 4px;
+        top: 48px;
+        background-color: $white1;
+        z-index: 2;
+        padding: 12px;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          li {
+            width: calc(50% - 6px);
+            margin-bottom: 12px;
+            .select-input-field-container {
+              .select-input-field__control {
+                min-height: 38px;
+                border-color: $red1;
+                font-size: 13px;
+              }
+              .select-input-field__control--is-focused {
+                // border-color: $green2;
+                box-shadow: none;
+              }
+
+              .select-input-field__indicator {
+                padding: 8px 3px;
+                &.select-input-field__clear-indicator {
+                  padding: 8px 0px;
+                }
+              }
+              .select-input-field__value-container {
+                padding: 2px 6px;
+              }
+
+              &.active {
+                .select-input-field__control {
+                  border-color: $gray1;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -399,8 +554,21 @@
       justify-content: space-around;
       .quantity-field {
         width: auto;
-        .label {
-          min-width: 78px;
+        .children-age-info {
+          width: calc(100% + 84px);
+          left: -110px;
+        }
+        &.children {
+          .label {
+            min-width: 86px;
+            margin-right: 4px;
+          }
+        }
+
+        &.adults {
+          .label {
+            margin-right: 24px;
+          }
         }
       }
     }
@@ -413,6 +581,9 @@
           min-width: auto;
           margin-right: 16px;
         }
+        &.adults {
+          justify-content: flex-start;
+        }
       }
     }
   }
@@ -423,14 +594,6 @@
         .quantity-input {
           width: 100px;
         }
-      }
-    }
-  }
-
-  @media screen and (min-width: 1100px) {
-    .content {
-      .quantity-field.adults {
-        justify-content: flex-start;
       }
     }
   }

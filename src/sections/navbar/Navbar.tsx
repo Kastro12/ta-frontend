@@ -10,7 +10,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import DrawerList from './DrawerList';
-import ShoppingCartList from './ShoppingCartList';
+import ShoppingCartList from './shoppingCart/ShoppingCartList';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
 import { clearActivityAction } from '@/store/vacation/vacationReducer';
@@ -120,6 +120,7 @@ const Navbar = () => {
                 sx={{ ...button, ...transparentLightButton, p: '13px!important' }}
                 id='shoppingCartIcon'
                 onClick={handleOpenShoppingCart}
+                size='small'
               >
                 <ShoppingCartOutlinedIcon sx={{ fontSize: '24px' }} />
                 <span className='count'>{chosenActivities.length}</span>

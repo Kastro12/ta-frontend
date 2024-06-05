@@ -49,7 +49,6 @@ export default function BoxOfActivity({ data, isSelected }: BoxOfActivity) {
               variant='outlined'
               href={'./'}
               LinkComponent={Link}
-              // size='small'
             >
               More info
             </Button>

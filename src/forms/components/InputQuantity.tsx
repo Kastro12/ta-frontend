@@ -1,27 +1,44 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 
-const QuantityInput = () => {
-  const [quantity, setQuantity] = useState(0);
+import { useDispatch } from 'react-redux';
+import { handleDecrement, handleIncrement } from '@/store/vacation/vacationReducer';
 
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
+interface QuantityInput {
+  quantity: number;
+  type: 'adults' | 'children';
+  extraHandleDecrement?: (() => void) | null;
+  extraHandleIncrement?: (() => void) | null;
+}
 
-  const handleDecrement = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    }
-  };
+const QuantityInput = ({
+  quantity,
+  type,
+  extraHandleDecrement,
+  extraHandleIncrement,
+}: QuantityInput) => {
+  const dispatch = useDispatch();
 
   return (
     <div className='quantity-input'>
-      <span className='decrement' onClick={handleDecrement}>
+      <span
+        className='decrement'
+        onClick={() => {
+          dispatch(handleDecrement({ type }));
+          if (extraHandleDecrement && extraHandleDecrement !== null) extraHandleDecrement();
+        }}
+      >
         <RemoveOutlinedIcon />
       </span>
       <span className='quantity'>{quantity}</span>
-      <span className='increment' onClick={handleIncrement}>
+      <span
+        className='increment'
+        onClick={() => {
+          dispatch(handleIncrement({ type }));
+          if (extraHandleIncrement && extraHandleIncrement !== null) extraHandleIncrement();
+        }}
+      >
         <AddOutlinedIcon />
       </span>
     </div>

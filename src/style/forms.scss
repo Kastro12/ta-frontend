@@ -80,6 +80,10 @@
     font-size: 14px;
   }
 
+  .select-input-field__indicator {
+    padding: 8px;
+  }
+
   .select-input-field__control--is-focused {
     border-color: $green2;
     box-shadow: 0 0 0 1px $green2;
@@ -135,7 +139,6 @@
       border-color: $green2;
       box-shadow: none;
     }
-
   }
 } // select-input-field-container END
 
@@ -202,11 +205,10 @@
     flex-direction: row;
     justify-content: space-between;
     .CalendarForm {
-      width: calc(50% - 40px);
+      width: calc(47% - 12px);
     }
     .NumberOfPersonsForm {
-      width: calc(50% - 12px);
-      width: calc(50% - 40px);
+      width: calc(53% - 12px);
     }
   }
 } //form-calendar-persons END
