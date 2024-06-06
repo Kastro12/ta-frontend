@@ -11,7 +11,6 @@ import { Activity } from '@/utils/interfaces';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { useDispatch } from 'react-redux';
-
 import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
 
 interface BoxOfActivity {

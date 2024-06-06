@@ -13,6 +13,7 @@
       justify-content: space-between;
       margin-bottom: 30px;
       position: relative;
+      flex-direction: column;
       .label {
         font-size: 13px;
         color: $gray2;
@@ -21,7 +22,19 @@
       }
       .field {
         position: relative;
-        width: calc(50% - 12px);
+        // width: calc(50% - 12px);
+        width: 100%;
+        margin: 4px 0;
+      }
+    }
+
+    @media screen and (min-width: $xs) {
+      .action-filter-wrapper {
+        flex-direction: row;
+
+        .field {
+          width: calc(50% - 12px);
+        }
       }
     }
 
@@ -37,11 +50,20 @@
         }
 
         .field {
-          width: 168px;
+          width: 196px;
           margin-left: 16px;
         }
 
         align-items: center;
+      }
+    }
+
+    @media screen and (min-width: $lg) {
+      .action-filter-wrapper {
+        .field {
+          width: 226px;
+          margin-left: 24px;
+        }
       }
     }
   }

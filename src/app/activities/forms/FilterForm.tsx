@@ -1,16 +1,28 @@
 'use client';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import Select from 'react-select';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { activityCategories, activityLocations } from '@/data';
+import { useDispatch } from 'react-redux';
+import { filterActivityList } from '@/store/activities/activitiesReducer';
+import { updateCurrentPage } from '@/store/activities/activitiesReducer';
 
-const FilterForm = () => {
+interface FilterFormProps {
+  setIsAllActivitiesLoaded: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => {
+  const dispatch = useDispatch();
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const pathname = usePathname();
   const categoryParam = searchParams.get('category');
   const locationParam = searchParams.get('location');
+
+  useEffect(() => {
+    dispatch(filterActivityList({ category: categoryParam, location: locationParam }));
+  }, [categoryParam, locationParam]);
 
   const createLinkWithParams = (baseUrl: string, params: { [key: string]: string }): string => {
     const urlParams = new URLSearchParams(params).toString();
@@ -19,6 +31,8 @@ const FilterForm = () => {
 
   const handleFilterChange = useCallback(
     (e: { label: string; value: string; id: string } | null, type: 'category' | 'location') => {
+      setIsAllActivitiesLoaded(false);
+      dispatch(updateCurrentPage(1));
       let filterObject = {};
 
       switch (type) {
@@ -35,7 +49,7 @@ const FilterForm = () => {
       }
 
       const filterLink = createLinkWithParams(pathname, filterObject);
-      router.push(filterLink);
+      router.push(filterLink, { scroll: false });
     },
     [locationParam, categoryParam]
   );
@@ -55,6 +69,7 @@ const FilterForm = () => {
           isSearchable={true}
           name='category'
           options={activityCategories}
+          defaultValue={activityCategories.filter((category) => category.value == categoryParam)}
           placeholder={'Category'}
           onChange={(e) => handleFilterChange(e, 'category')}
           components={{
@@ -74,6 +89,7 @@ const FilterForm = () => {
           isSearchable={true}
           name='location'
           options={activityLocations}
+          defaultValue={activityLocations.filter((location) => location.value == locationParam)}
           placeholder={'Location'}
           onChange={(e) => handleFilterChange(e, 'location')}
           components={{

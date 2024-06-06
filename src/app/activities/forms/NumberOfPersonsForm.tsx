@@ -95,7 +95,7 @@ const NumberOfPersonsForm = () => {
                 })}
               </ul>
               <p style={{ margin: '3px 0', fontSize: '13px' }}>
-                Please specify each child's age. It helps us ensure we have child seats for a safe
+                Please indicate the age of each child. It helps us ensure we have child seats for a safe
                 trip.
               </p>
             </div>
