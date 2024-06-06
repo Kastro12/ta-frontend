@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Divider, Container, Typography } from '@mui/material';
 import Link from 'next/link';
@@ -9,8 +10,20 @@ import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
+import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 
 const Footer = () => {
+  const pages = useMemo(
+    () => [
+      { name: 'Activities', icon: AutoGraphIcon, link: './activities' },
+      { name: 'Create your', icon: CreateOutlinedIcon, link: './create-vacation' },
+      { name: 'Predefined', icon: RouteOutlinedIcon, link: './predefined-vacation' },
+      { name: 'About us', icon: InfoOutlinedIcon, link: './about-us' },
+      { name: 'Contact', icon: MailOutlineOutlinedIcon, link: './contact' },
+    ],
+    []
+  );
+
   return (
     <footer>
       <Container maxWidth='lg' className='custom-container'>
@@ -21,48 +34,20 @@ const Footer = () => {
             </Typography>
 
             <ul>
-              <li className='list'>
-                <Button
-                  sx={{ ...button, ...transparentLightButton }}
-                  startIcon={<AutoGraphIcon />}
-                  LinkComponent={Link}
-                  href={'/activities'}
-                >
-                  Activities
-                </Button>
-              </li>
-              <li className='list'>
-                <Button
-                  sx={{ ...button, ...transparentLightButton }}
-                  startIcon={<RouteOutlinedIcon />}
-                  LinkComponent={Link}
-                  href={'/routes'}
-                >
-                  Routes
-                </Button>
-              </li>
-
-              <li className='list'>
-                <Button
-                  sx={{ ...button, ...transparentLightButton }}
-                  startIcon={<InfoOutlinedIcon />}
-                  LinkComponent={Link}
-                  href={'/about-us'}
-                >
-                  About us
-                </Button>
-              </li>
-
-              <li className='list'>
-                <Button
-                  sx={{ ...button, ...transparentLightButton }}
-                  startIcon={<MailOutlineOutlinedIcon />}
-                  LinkComponent={Link}
-                  href={'/contact'}
-                >
-                  Contact
-                </Button>
-              </li>
+              {pages.map((page) => (
+                <li className='list' key={page.name}>
+                  <Link href={page.link} key={page.name}>
+                    <Button
+                      key={page.name}
+                      sx={{ ...button, ...transparentLightButton }}
+                      startIcon={<page.icon />}
+                      LinkComponent={Link}
+                    >
+                      {page.name}
+                    </Button>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </Grid>
 
@@ -162,7 +147,7 @@ const Footer = () => {
 
         <Grid container spacing={3}>
           <Grid xs={12} md={8}>
-            <Typography variant='body2'>
+            <Typography variant='body2' style={{ fontSize: '12px', fontWeight:'300' }}>
               Copyright ©2024 www.vacationinserbia.com | Vacation in Serbia - All Rights Reserved
             </Typography>
           </Grid>

@@ -14,12 +14,14 @@ import ShoppingCartList from './shoppingCart/ShoppingCartList';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
 import { clearActivityAction } from '@/store/vacation/vacationReducer';
+import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 
 const Navbar = () => {
   const pages = useMemo(
     () => [
       { name: 'Activities', icon: AutoGraphIcon, link: './activities' },
-      { name: 'Routes', icon: RouteOutlinedIcon, link: './routes' },
+      { name: 'Create your', icon: CreateOutlinedIcon, link: './create-vacation' },
+      { name: 'Predefined', icon: RouteOutlinedIcon, link: './predefined-vacation' },
       { name: 'About us', icon: InfoOutlinedIcon, link: './about-us' },
       { name: 'Contact', icon: MailOutlineOutlinedIcon, link: './contact' },
     ],

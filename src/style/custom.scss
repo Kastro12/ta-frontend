@@ -43,7 +43,7 @@
       opacity: 1 !important;
       background-color: transparent;
       .arrow-style {
-        color: $white1;
+        color: $gray2;
       }
     }
   }
@@ -71,7 +71,7 @@
     .slick-arrow {
       opacity: 0.6;
       &.slick-next {
-        right: 12px;
+        right: -16px;
 
         &.outside {
           right: -22px;
@@ -81,7 +81,7 @@
         }
       }
       &.slick-prev {
-        left: 12px;
+        left: -16px;
 
         &.outside {
           left: -22px;
@@ -120,7 +120,8 @@
   .drawerList {
     width: 100%;
     .mobile-button {
-      font-size: 20px;
+      font-size: 16px;
+      height: 42px;
       svg {
         width: 30px;
       }

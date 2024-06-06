@@ -11,7 +11,6 @@ import { restrictToVerticalAxis } from '@dnd-kit/modifiers';
 import { SortableItem, SortableOverlay } from './components';
 import { updateChosenActivities } from '@/store/vacation/vacationReducer';
 import { Paper } from '@mui/material';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 
 export function SortableList() {
   const dispatch = useDispatch();
@@ -74,7 +73,7 @@ export function SortableList() {
             ))
           ) : (
             <Paper elevation={3} role='application' className='no-activity'>
-              <AutoGraphIcon /> <span>No chosen activities</span>
+              <span>No chosen activities</span>
             </Paper>
           )}
         </ul>

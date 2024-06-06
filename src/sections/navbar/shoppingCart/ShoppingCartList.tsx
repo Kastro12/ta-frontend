@@ -105,7 +105,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           </Typography>
           <Typography variant='body1' sx={{ marginTop: '18px', fontWeight: '600' }}>
             <span className='date-label'>Children:</span>
-            {children ? children : <span className='no-data'>No date</span>}
+            {children}
           </Typography>
         </Grid>
 
@@ -135,20 +135,17 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           className=' submit-wrapper'
         >
           {errorAlert && (
-            <Alert
-              severity='warning'
-              icon={<InfoOutlinedIcon fontSize='small' />}
-            >
+            <Alert severity='warning' icon={<InfoOutlinedIcon fontSize='small' />}>
               {errorAlert}
             </Alert>
           )}
 
           <Button
-            sx={{ ...button, ...(errorAlert ? disabledButton : greenButton), mt:'12px' }}
+            sx={{ ...button, ...(errorAlert ? disabledButton : greenButton), mt: '12px' }}
             variant='outlined'
             onClick={() => {
               if (!errorAlert) {
-                router.push('/dashboard');
+                router.push('/book-vacation');
               }
               return;
             }}

@@ -16,7 +16,7 @@ import { InfoWithBackgroundImage } from '@/components';
 import { SliderBarActivities, SliderBarCreatedRoutesBox } from '@/sections';
 import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
-import { button, orangeButton } from '@/utils/re-styledComponents';
+import { button, greenButton } from '@/utils/re-styledComponents';
 import { settingThreeInRow, settingTwoInRow } from '@/components/sliderbar/settings';
 import FormSearchActivities from '@/forms/searchActivities/FormSearchActivities';
 
@@ -35,27 +35,27 @@ export default function Home() {
         <div className='content'>
           <Grid md={8} className='titles'>
             <h1>
-              Design your
+              Create your
               <br /> dream vacation
             </h1>
-            <h2>Choose activities, organize every day...</h2>
+            <h2>Choose activities, organize your days...</h2>
           </Grid>
-          <Grid className='mobile_left_desktop_right_flex' md={4}>
+          <Grid md={4}>
             <Button
-              sx={{ ...button, ...orangeButton, ...{ mx: '20px' } }}
+              sx={{ ...button, ...greenButton, ...{ mx: '20px', padding: '0 28px', mt: '12px' } }}
               variant='outlined'
-              href={'./'}
+              href={'./activities'}
               LinkComponent={Link}
             >
-              Organize vacation per day
+              Create your vacation
             </Button>
           </Grid>
         </div>
       </Grid>
 
-      <FormSearchActivities />
+      {/* <FormSearchActivities /> */}
 
-      <Typography variant='h2'>Organized vacations</Typography>
+      <Typography variant='h2'>Choose one of our predefined vacations</Typography>
 
       <SliderBarCreatedRoutesBox
         serverData={organizedVacations}

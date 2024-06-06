@@ -8,6 +8,7 @@
     flex-direction: column;
     .titles {
       margin-left: 20px;
+      text-shadow: 1px 1px 1px $navyBlue1;
       h1 {
         font-size: 50px;
         font-weight: 800;
@@ -23,11 +24,8 @@
   @media screen and (min-width: $md) {
     height: 400px;
     .content {
-      top: 80px;
-      flex-direction: row;
-      justify-content: space-between;
+      top: 40px;
       width: 100%;
-      align-items: flex-end;
     }
   }
 } //header-section END

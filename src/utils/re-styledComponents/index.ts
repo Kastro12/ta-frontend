@@ -2,7 +2,6 @@ import '@fontsource/platypi/300.css';
 import '@fontsource/platypi/400.css';
 import '@fontsource/platypi/500.css';
 import '@fontsource/platypi/700.css';
-import { current } from '@reduxjs/toolkit';
 
 export const button = {
   textTransform: 'none',
