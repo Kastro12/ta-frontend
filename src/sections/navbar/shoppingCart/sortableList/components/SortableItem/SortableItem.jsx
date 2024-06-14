@@ -7,6 +7,7 @@ import { button } from '@/utils/re-styledComponents/index';
 import SwipeVerticalOutlinedIcon from '@mui/icons-material/SwipeVerticalOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { removeActivity } from '@/store/vacation/vacationReducer';
+import { usePathname } from 'next/navigation';
 
 const SortableItemContext = createContext({
   attributes: {},
@@ -15,6 +16,7 @@ const SortableItemContext = createContext({
 });
 
 export function SortableItem({ id, activity }) {
+  const pathname = usePathname();
   const dispatch = useDispatch();
   const {
     attributes,
@@ -50,8 +52,8 @@ export function SortableItem({ id, activity }) {
         style={style}
       >
         <li>
-          <div className='image-wrap'>
-            <DragHandle />
+          <div className={`image-wrap ${pathname !== '/book-vacation' ? '' : 'right-radius'}`}>
+            {pathname !== '/book-vacation' && <DragHandle />}
             <img src={activity.imageLink} />
           </div>
 
@@ -60,17 +62,20 @@ export function SortableItem({ id, activity }) {
               <p>{activity.title}</p>
               <span className='category'>{activity.category}</span>
             </div>
-            <div className='action'>
-              <IconButton
-                sx={{ ...button }}
-                id='shoppingCartIcon'
-                onClick={() => dispatch(removeActivity(activity.id))}
-                size='small'
-                title='Remove activity'
-              >
-                <CloseOutlinedIcon />
-              </IconButton>
-            </div>
+
+            {pathname !== '/book-vacation' && (
+              <div className='action'>
+                <IconButton
+                  sx={{ ...button }}
+                  id='shoppingCartIcon'
+                  onClick={() => dispatch(removeActivity(activity.id))}
+                  size='small'
+                  title='Remove activity'
+                >
+                  <CloseOutlinedIcon />
+                </IconButton>
+              </div>
+            )}
           </div>
         </li>
       </Paper>

@@ -4,22 +4,25 @@ import NumberOfPersonsForm from './forms/NumberOfPersonsForm';
 import { Container, Typography } from '@mui/material';
 import CalendarForm from './forms/CalendarForm';
 import FilterForm from './forms/FilterForm';
-import { allActivities } from '@/data';
 import BoxOfActivity from './components/BoxOfActivity';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
 import { Activity } from '@/utils/interfaces';
-import { updateActivitiesToDisplay, updateCurrentPage } from '@/store/activities/activitiesReducer';
+import {
+  updateActivitiesToDisplay,
+  updateCurrentPage,
+  clearActivities,
+} from '@/store/activities/activitiesReducer';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 
 export default function Activities() {
   const dispatch = useDispatch();
-  const activitiesLength = allActivities.length;
+
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const ACTIVITY_LIST_SIZE = useSelector((state: RootState) => state.activities.activityListSize);
   const activityList = useSelector((state: RootState) => state.activities.activityList);
   const currentPage = useSelector((state: RootState) => state.activities.currentPage);
-
+  const activitiesLength = activityList?.length;
   const activitiesToDisplay = useSelector(
     (state: RootState) => state.activities.activitiesToDisplay
   );
@@ -35,6 +38,12 @@ export default function Activities() {
     const end = start + itemsPerPage;
     return data.slice(start, end);
   };
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearActivities());
+    };
+  }, []);
 
   // load new activities by scroll
   useEffect(() => {
@@ -79,14 +88,13 @@ export default function Activities() {
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Typography variant='h1' sx={{ my: 6 }}>
-        Create your Vacation
-      </Typography>
+      <Typography variant='h1'>Create your Vacation</Typography>
 
-      <div className='form-background in-container'>
+      <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
           <CalendarForm />
           <NumberOfPersonsForm />
+          <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
         </div>
       </div>
 

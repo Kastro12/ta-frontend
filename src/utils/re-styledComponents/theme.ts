@@ -8,7 +8,9 @@ const theme = createTheme({
     h1: {
       fontSize: '50px',
       fontWeight: 800,
-      marginBottom: '20px',
+      marginBottom: '60px',
+      textAlign: 'center',
+      marginTop: '60px',
     },
     h2: {
       fontSize: 20,
@@ -16,6 +18,7 @@ const theme = createTheme({
       letterSpacing: '0.07em',
       marginTop: 36,
       marginBottom: 36,
+      lineHeight: 1.6,
     },
     h3: {
       fontSize: 18,
@@ -30,6 +33,7 @@ const theme = createTheme({
     body1: {
       lineHeight: '26px',
       fontSize: 16,
+      fontWeight: 300,
     },
   },
 });

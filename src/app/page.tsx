@@ -33,16 +33,13 @@ export default function Home() {
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div className='content'>
-          <Grid md={8} className='titles'>
-            <h1>
-              Create your
-              <br /> dream vacation
-            </h1>
+          <Grid md={12} className='titles'>
+            <Typography variant='h1'>Create your dream vacation</Typography>
             <h2>Choose activities, organize your days...</h2>
           </Grid>
-          <Grid md={4}>
+          <Grid md={12} sx={{ textAlign: 'center' }}>
             <Button
-              sx={{ ...button, ...greenButton, ...{ mx: '20px', padding: '0 28px', mt: '12px' } }}
+              sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '16px' } }}
               variant='outlined'
               href={'./activities'}
               LinkComponent={Link}

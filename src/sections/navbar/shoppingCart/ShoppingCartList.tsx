@@ -6,7 +6,7 @@ import { RootState } from '@/store/store';
 import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { SortableList } from './sortableList';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -19,6 +19,7 @@ interface DrawerList {
 
 const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
   const router = useRouter();
+  const pathname = usePathname();
   const startDate = useSelector((state: RootState) => state.vacation.startDate);
   const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
 
@@ -29,7 +30,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
   let errorAlert = null;
 
   if (!startDate || chosenActivities.length == 0) {
-    errorAlert = 'Fill required fields.';
+    errorAlert = 'Fill required data.';
   }
 
   return (
@@ -140,19 +141,21 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             </Alert>
           )}
 
-          <Button
-            sx={{ ...button, ...(errorAlert ? disabledButton : greenButton), mt: '12px' }}
-            variant='outlined'
-            onClick={() => {
-              if (!errorAlert) {
-                router.push('/book-vacation');
-              }
-              return;
-            }}
-            className='submit'
-          >
-            Confirm and Continue
-          </Button>
+          {pathname !== '/book-vacation' && (
+            <Button
+              sx={{ ...button, ...(errorAlert ? disabledButton : greenButton), mt: '12px' }}
+              variant='outlined'
+              onClick={() => {
+                if (!errorAlert) {
+                  router.push('/book-vacation');
+                }
+                return;
+              }}
+              className='submit'
+            >
+              Book Now
+            </Button>
+          )}
         </Grid>
       </Grid>
     </Box>

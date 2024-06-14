@@ -16,7 +16,7 @@ const initialState: IssueInitialState = {
 };
 
 export const activitySlice = createSlice({
-  name: 'vacation',
+  name: 'activities',
   initialState,
   reducers: {
     filterActivityList: (
@@ -81,9 +81,11 @@ export const activitySlice = createSlice({
     updateCurrentPage: (state, action: PayloadAction<number>) => {
       state.currentPage = action.payload;
     },
+
+    clearActivities: (state) => initialState,
   },
 });
 
-export const { filterActivityList, updateActivitiesToDisplay, updateCurrentPage } =
+export const { filterActivityList, updateActivitiesToDisplay, updateCurrentPage, clearActivities } =
   activitySlice.actions;
 export default activitySlice.reducer;

@@ -152,6 +152,7 @@
     outline: none;
     width: 100%;
     background-color: $white1;
+    font-weight: 300;
     &:disabled {
       background-color: #eee;
       &.react-datepicker-ignore-onclickoutside {
@@ -212,10 +213,11 @@
       .react-datepicker__current-month,
       .react-datepicker__day-name {
         color: $navyBlue1;
+        font-weight: 400;
       }
       .react-datepicker__day-name {
         font-size: 14px;
-        width: 36px;
+        width: 32px;
         height: 36px;
         line-height: 36px;
       }
@@ -224,9 +226,10 @@
 
   .react-datepicker__day {
     font-size: 14px;
-    width: 36px;
+    width: 32px;
     height: 36px;
     line-height: 36px;
+    font-weight: 300;
     &.react-datepicker__day--keyboard-selected {
       background-color: $transparentgreen2;
       &:hover {

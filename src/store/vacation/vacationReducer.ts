@@ -1,10 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Activity } from '@/utils/interfaces/index';
 
-interface ChildrenYears {
-  childrenYears: { years: '1-2' | '2-4' | '4-7' | '7+' }[];
-}
-
 export interface IssueInitialState {
   startDate: null | string;
   finishDate: null | string;
@@ -107,6 +103,8 @@ export const vacationSlice = createSlice({
       const filteredList = state.childrenYears.filter((year) => year.position != action.payload);
       state.childrenYears = filteredList;
     },
+
+    clearVacation: (state) => initialState,
   },
 });
 
@@ -120,5 +118,6 @@ export const {
   handleDecrement,
   addChildrenYears,
   removeChildrenYears,
+  clearVacation,
 } = vacationSlice.actions;
 export default vacationSlice.reducer;

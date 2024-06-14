@@ -161,7 +161,7 @@ ul {
     width: 18px;
     height: 18px;
     color: $orange1;
-    font-weight: 400;
+    font-weight: 300;
     border-radius: 100%;
     font-size: 16px;
     top: 2px;
@@ -193,6 +193,7 @@ ul {
 .form-background {
   background-color: $transparentgreen1;
   padding: 28px 16px;
+  border-radius: 4px;
   &.in-container {
     position: relative;
     width: 100%;
@@ -205,6 +206,13 @@ ul {
   }
 
   @media screen and (min-width: $md) {
-    padding: 28px;
+    padding: 24px;
+  }
+
+  @media screen and (min-width: $lg) {
+    &.calendar-persons {
+      width: 940px;
+      margin: 0 auto;
+    }
   }
 } //form-background END

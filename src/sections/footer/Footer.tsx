@@ -6,7 +6,6 @@ import { Button } from '@mui/material';
 import { button, transparentLightButton } from '@/utils/re-styledComponents/index';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
@@ -15,11 +14,10 @@ import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 const Footer = () => {
   const pages = useMemo(
     () => [
-      { name: 'Activities', icon: AutoGraphIcon, link: './activities' },
-      { name: 'Create your', icon: CreateOutlinedIcon, link: './create-vacation' },
-      { name: 'Predefined', icon: RouteOutlinedIcon, link: './predefined-vacation' },
-      { name: 'About us', icon: InfoOutlinedIcon, link: './about-us' },
-      { name: 'Contact', icon: MailOutlineOutlinedIcon, link: './contact' },
+      { name: 'Create your vacation', icon: CreateOutlinedIcon, link: '/activities' },
+      { name: 'Predefined', icon: RouteOutlinedIcon, link: '/predefined-vacation' },
+      { name: 'About us', icon: InfoOutlinedIcon, link: '/about-us' },
+      { name: 'Contact', icon: MailOutlineOutlinedIcon, link: '/contact' },
     ],
     []
   );
@@ -147,7 +145,7 @@ const Footer = () => {
 
         <Grid container spacing={3}>
           <Grid xs={12} md={8}>
-            <Typography variant='body2' style={{ fontSize: '12px', fontWeight:'300' }}>
+            <Typography variant='body2' style={{ fontSize: '12px', fontWeight: '300' }}>
               Copyright ©2024 www.vacationinserbia.com | Vacation in Serbia - All Rights Reserved
             </Typography>
           </Grid>

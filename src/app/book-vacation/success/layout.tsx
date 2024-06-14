@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Book vacation',
-  description: 'Book vacation',
+  title: 'Successfully booked vacation',
+  description: 'successfully booked vacation',
 };
 
 export default function ActivitiesLayout({ children }: { children: React.ReactNode }) {
-  return <div className='page book-vacation'>{children}</div>;
+  return <div className='page book-vacation-success'>{children}</div>;
 }
