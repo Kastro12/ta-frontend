@@ -4,17 +4,24 @@ import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined
 
 const CalendarForm = ({
   startDate,
+  disabledStartDate,
   finishDate,
+  disabledFinishDate,
+  maxFinishDate,
   handleDateChange,
 }: {
+  disabledStartDate: boolean;
+  disabledFinishDate: boolean;
   startDate: Date | null;
   finishDate: Date | null;
+  maxFinishDate: Date | null;
   handleDateChange: (type: 'startDate' | 'finishDate', date: any) => void;
 }) => {
   return (
     <div className='CalendarForm'>
       <div className='calendar-field'>
         <DatePicker
+          disabled={disabledStartDate}
           className='custom calendar-field'
           selected={startDate}
           showIcon
@@ -22,7 +29,7 @@ const CalendarForm = ({
           toggleCalendarOnIconClick
           onChange={(date) => handleDateChange('startDate', date)}
           minDate={new Date()}
-          maxDate={finishDate ? finishDate : null}
+          maxDate={maxFinishDate}
           placeholderText='Start date'
           dateFormat='d MMMM, yyyy'
           isClearable={true}
@@ -30,7 +37,7 @@ const CalendarForm = ({
       </div>
       <div className='calendar-field'>
         <DatePicker
-          disabled={startDate ? false : true}
+          disabled={disabledFinishDate}
           className='custom'
           selected={finishDate}
           showIcon
@@ -40,7 +47,7 @@ const CalendarForm = ({
           minDate={startDate ? startDate : new Date()}
           placeholderText='Finish date'
           dateFormat='d MMMM, yyyy'
-          isClearable={true}
+          isClearable={!disabledFinishDate}
         />
       </div>
     </div>

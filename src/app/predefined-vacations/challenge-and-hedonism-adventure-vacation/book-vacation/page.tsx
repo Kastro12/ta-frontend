@@ -1,13 +1,13 @@
 'use client';
 import { Container, Typography } from '@mui/material';
-import BookVacationFormWithSubmitHandle from './forms/BookVacationFormWithSubmitHandle';
 import { bookVacationInfo } from '@/data/commonText';
+import BookVacationFormWithSubmitHandle from '../../_forms/BookVacationFormWithSubmitHandle';
 
 export default function BookVacation() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Typography variant='h1' sx={{ mb: '0' }}>
-        Book your vacation
+        Book vacation - Challenge and hedonism adventure vacation
       </Typography>
 
       <Typography variant='body1' sx={{ maxWidth: '940px', m: '32px auto 32px auto' }}>
@@ -15,9 +15,7 @@ export default function BookVacation() {
       </Typography>
 
       <div className='form-background in-container'>
-        <div className='form-personal-data'>
-          <BookVacationFormWithSubmitHandle />
-        </div>
+        <div className='form-personal-data'><BookVacationFormWithSubmitHandle /></div>
       </div>
     </Container>
   );

@@ -18,14 +18,10 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import { settingThreeInRow, settingTwoInRow } from '@/components/sliderbar/settings';
-import FormSearchActivities from '@/forms/searchActivities/FormSearchActivities';
-
 import { topSeasonActivities } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
 
 export default function Home() {
-  console.log('organizedVacations', organizedVacations);
-
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>

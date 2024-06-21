@@ -13,3 +13,17 @@ export interface FormInputProps {
   defaultValue?: { id: string; value: string; label: string }[];
   getSelectedValue?: (value: any) => void;
 }
+
+
+
+export type BookVacationProps = {
+  fullName: string | undefined;
+  email: string | undefined;
+  street: string | undefined;
+  city: string | undefined;
+  country: string | undefined;
+  message: string | undefined;
+  phoneNumber: string | undefined;
+  honeypot: string;
+  termsAccepted: boolean;
+};

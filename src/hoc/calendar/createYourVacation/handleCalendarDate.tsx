@@ -5,7 +5,7 @@ import { changeTheDate } from '@/store/vacation/vacationReducer';
 import { stringFromDate, dateFromString } from '@/utils/date';
 
 const handleCalendarDate = (Component: React.ComponentType<any>) => {
-  return (props: any) => {
+  return ({ duration, ...props }: { duration: number } & any) => {
     const dispatch = useDispatch();
 
     const startStringDate = useSelector((state: RootState) => state.vacation.startDate);
@@ -33,7 +33,10 @@ const handleCalendarDate = (Component: React.ComponentType<any>) => {
       <Component
         {...props}
         startDate={startDate}
+        disabledStartDate={false}
         finishDate={finishDate}
+        disabledFinishDate={startDate ? false : true}
+        maxFinishDate={finishDate ? finishDate : null}
         handleDateChange={handleDateChange}
       />
     );

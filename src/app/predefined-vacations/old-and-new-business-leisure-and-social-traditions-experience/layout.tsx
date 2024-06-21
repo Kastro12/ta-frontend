@@ -5,6 +5,6 @@ export const metadata: Metadata = {
   description: 'Old and new: business, leisure, and social traditions experience',
 };
 
-export default function ActivitiesLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className='page predefined-vacations'>{children}</div>;
 }

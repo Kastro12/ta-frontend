@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Container, Typography, Button } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -7,9 +7,10 @@ import Link from 'next/link';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import { challengeAndHedonism } from '@/data/organizedVacations';
 import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
-
 import CalendarFormWithHandleCalendarDate from '../_forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHandle';
+
+import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
 
 export default function BookVacation() {
   const dispatch = useDispatch();
@@ -21,6 +22,28 @@ export default function BookVacation() {
       bookVacationRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const uniqueLocations: { location: string }[] = [];
+  const seenLocations = new Set();
+
+  const uniqueActivities: { activityTitle: string }[] = [];
+  const seenActivities = new Set();
+
+  challengeAndHedonism.dailyOgranization.forEach((item) => {
+    if (!seenLocations.has(item.location)) {
+      seenLocations.add(item.location);
+      uniqueLocations.push({ location: item.location });
+    }
+
+    if (!seenActivities.has(item.activityTitle)) {
+      seenActivities.add(item.activityTitle);
+      uniqueActivities.push({ activityTitle: item.activityTitle });
+    }
+  });
+
+  useEffect(() => {
+    dispatch(addPredefinedVacation(challengeAndHedonism.title));
+  }, []);
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
@@ -63,30 +86,26 @@ export default function BookVacation() {
         <div className='box'>
           <Typography variant='h2'>Activities</Typography>
           <ul>
-            <li>Rafting on the Tara River</li>
-            <li>Archaeological site Vinca</li>
-            <li>Gondola ride</li>
-            <li>Rafting on the Tara River</li>
-            <li>Archaeological site Vinca</li>
-            <li>Gondola ride</li>
+            {uniqueActivities.map((activity) => (
+              <li key={activity.activityTitle}>{activity.activityTitle}</li>
+            ))}
           </ul>
         </div>
 
         <div className='box'>
           <Typography variant='h2'>Locations</Typography>
           <ul>
-            <li>Zemun</li>
-            <li>Beograd</li>
-            <li>Tara</li>
-            <li>Zlatibor</li>
-            <li>Bajina basta</li>
-            <li>Beograd</li>
+            {uniqueLocations.map((location) => (
+              <li key={location.location}>{location.location}</li>
+            ))}
           </ul>
         </div>
 
         <div className='box'>
           <Typography variant='h2'>Duration</Typography>
-          <Typography variant='body1'>Ten days, you choose started day</Typography>
+          <Typography variant='body1'>
+            {challengeAndHedonism.dailyOgranization.length} days, you choose started day
+          </Typography>
         </div>
 
         <div className='box'>
@@ -122,7 +141,9 @@ export default function BookVacation() {
 
       <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
-          <CalendarFormWithHandleCalendarDate />
+          <CalendarFormWithHandleCalendarDate
+            duration={challengeAndHedonism.dailyOgranization.length}
+          />
           <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
         </div>
@@ -133,7 +154,7 @@ export default function BookVacation() {
           <Button
             sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '32px' } }}
             variant='outlined'
-            href='./activities'
+            href='/predefined-vacations/challenge-and-hedonism-adventure-vacation/book-vacation'
             LinkComponent={Link}
           >
             Book now

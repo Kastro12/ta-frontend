@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Local culture, people, and landscapes exploration experience',
-  description: 'Local culture, people, and landscapes exploration experience',
+  title: 'Unsuccessfully booked vacation',
+  description: 'Unsuccessfully booked vacation',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

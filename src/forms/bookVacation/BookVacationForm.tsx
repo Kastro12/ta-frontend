@@ -1,121 +1,28 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+import { Controller } from 'react-hook-form';
 import { Grid, Checkbox, Button, TextField, FormControlLabel } from '@mui/material';
 import { button, greenButton } from '@/utils/re-styledComponents/index';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import { getCountryCode } from '@/utils/geolocation';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/store/store';
-import { useRouter } from 'next/navigation';
+import { BookVacationProps } from '@/forms/form.interface';
+import { SubmitHandler } from 'react-hook-form';
 
-type FormInputs = {
-  fullName: string | undefined;
-  email: string | undefined;
-  street: string | undefined;
-  city: string | undefined;
-  country: string | undefined;
-  message: string | undefined;
-  phoneNumber: string | undefined;
-  honeypot: string;
-  termsAccepted: boolean;
-};
-
-const BookVacationForm: React.FC = () => {
-  const router = useRouter();
-
-  const [initialCountryCode, setInitialCountryCode] = useState<string | undefined>();
-
-  const startDate = useSelector((state: RootState) => state.vacation.startDate);
-  const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
-  const adults = useSelector((state: RootState) => state.vacation.adults);
-  const children = useSelector((state: RootState) => state.vacation.children);
-  const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
-  const childrenYears = useSelector((state: RootState) => state.vacation.childrenYears);
-
-  useEffect(() => {
-    const fetchCountryCode = async () => {
-      const countryCode = await getCountryCode();
-      setInitialCountryCode(countryCode || 'rs');
-    };
-
-    fetchCountryCode();
-  }, []);
-
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormInputs>({
-    defaultValues: {
-      honeypot: '',
-      termsAccepted: false,
-    },
-  });
-  const onSubmit: SubmitHandler<FormInputs> = async (data: any) => {
-    if (data.honeypot) {
-      return;
-    }
-
-    const formData = new FormData();
-    for (const key in data) {
-      if (data.hasOwnProperty(key)) {
-        formData.append(key, data[key]);
-      }
-    }
-    formData.append('access_key', `${process.env.NEXT_PUBLIC_ACCESS_KEY}`);
-
-    formData.append('startDate', `${startDate}`);
-    formData.append('finishDate', `${finishDate}`);
-
-    formData.append('adults', `${adults}`);
-    formData.append('children', `${children}`);
-
-    if (children > 0 && childrenYears.length > 0) {
-      childrenYears.forEach((age, index) => {
-        formData.append(`childrenAge[${index}]`, `${age}`);
-      });
-    }
-
-    if (chosenActivities.length > 0) {
-      chosenActivities.forEach((activity, index) => {
-        formData.append(
-          `activity[${index}]`,
-          `${activity.title} ${activity.location} ${activity.category} ${activity.id}`
-        );
-      });
-    }
-
-    const object = Object.fromEntries(formData.entries());
-    const json = JSON.stringify(object);
-
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: json,
-      });
-
-      const result = await res.json();
-
-      if (result.success) {
-        router.push('/book-vacation/success');
-      } else {
-        router.push('/book-vacation/error');
-      }
-    } catch (error) {
-      router.push('/book-vacation/error');
-    }
-  };
-
+const BookVacationForm = ({
+  initialCountryCode,
+  handleSubmit,
+  onSubmit,
+  control,
+  errors,
+}: {
+  initialCountryCode: string | undefined;
+  handleSubmit: any;
+  onSubmit: SubmitHandler<BookVacationProps>;
+  control: any;
+  errors: any;
+}) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Grid container spacing={3}>
-        {/* Honeypot Field */}
         <Grid item xs={12} style={{ display: 'none' }}>
           <Controller
             name='honeypot'
@@ -148,7 +55,6 @@ const BookVacationForm: React.FC = () => {
                 size='small'
                 error={!!error}
                 onChange={onChange}
-                //value={value}
                 fullWidth
                 label={
                   <span>
@@ -179,7 +85,6 @@ const BookVacationForm: React.FC = () => {
                 size='small'
                 error={!!error}
                 onChange={onChange}
-                //value={value}
                 fullWidth
                 label={
                   <span>
@@ -192,7 +97,6 @@ const BookVacationForm: React.FC = () => {
           />
         </Grid>
         <Grid item xs={12} md={4}>
-          {/* {initialCountryCode &&  */}
           <Controller
             name='phoneNumber'
             control={control}
@@ -202,7 +106,6 @@ const BookVacationForm: React.FC = () => {
                   <PhoneInput
                     className='custom'
                     defaultCountry={initialCountryCode}
-                    //value={value}
                     onChange={onChange}
                   />
                 ) : (
@@ -214,7 +117,6 @@ const BookVacationForm: React.FC = () => {
               </>
             )}
           />
-          {/* } */}
         </Grid>
 
         <Grid item xs={12} md={4}>
@@ -228,7 +130,6 @@ const BookVacationForm: React.FC = () => {
                 size='small'
                 error={!!error}
                 onChange={onChange}
-                //value={value}
                 fullWidth
                 label='Street'
                 variant='outlined'
@@ -248,7 +149,6 @@ const BookVacationForm: React.FC = () => {
                 size='small'
                 error={!!error}
                 onChange={onChange}
-                //value={value}
                 fullWidth
                 label='City'
                 variant='outlined'
@@ -268,7 +168,6 @@ const BookVacationForm: React.FC = () => {
                 size='small'
                 error={!!error}
                 onChange={onChange}
-                //value={value}
                 fullWidth
                 label='Country'
                 variant='outlined'
@@ -288,7 +187,6 @@ const BookVacationForm: React.FC = () => {
                 size='small'
                 error={!!error}
                 onChange={onChange}
-                //value={value}
                 fullWidth
                 multiline
                 rows={4}

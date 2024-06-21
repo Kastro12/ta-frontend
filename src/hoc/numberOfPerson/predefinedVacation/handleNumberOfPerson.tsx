@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
-import { addChildrenYears, removeChildrenYears } from '@/store/vacation/vacationReducer';
+import {
+  addChildrenYears,
+  removeChildrenYears,
+  handleDecrement,
+  handleIncrement,
+} from '@/store/vacation/predefinedVacationReducer';
 
 const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
   return (props: any) => {
     const dispatch = useDispatch();
-    const adults = useSelector((state: RootState) => state.vacation.adults);
-    const children = useSelector((state: RootState) => state.vacation.children);
-    const childrenYears = useSelector((state: RootState) => state.vacation.childrenYears);
+    const adults = useSelector((state: RootState) => state.predefinedVacation.adults);
+    const children = useSelector((state: RootState) => state.predefinedVacation.children);
+    const childrenYears = useSelector((state: RootState) => state.predefinedVacation.childrenYears);
 
     const [isOpenChildrenField, setIsOpenChildrenField] = useState<boolean>(
       children > 0 ? true : false
@@ -48,6 +53,8 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
         setIsOpenChildrenField={setIsOpenChildrenField}
         extraHandleIncrement={extraHandleIncrement}
         handleChildAgeChange={handleChildAgeChange}
+        handleDecrement={handleDecrement}
+        handleIncrement={handleIncrement}
       />
     );
   };

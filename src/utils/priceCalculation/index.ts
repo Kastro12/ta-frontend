@@ -30,8 +30,6 @@ export const getSummaryInsurancePrice = () => {
     getNumberOfDay() == 0 ? getMaxNumberOfDaysForChosenActivities() : getNumberOfDay();
   const numberOfPerson = getNumberOfPerson();
 
-  console.log('numberOfDays', numberOfDays);
-
   return numberOfDays == 0
     ? getMaxNumberOfDaysForChosenActivities()
     : numberOfDays * numberOfPerson * insuranceCosts.perDay_perPerson;

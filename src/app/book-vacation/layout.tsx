@@ -5,6 +5,6 @@ export const metadata: Metadata = {
   description: 'Book vacation',
 };
 
-export default function ActivitiesLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className='page book-vacation'>{children}</div>;
 }

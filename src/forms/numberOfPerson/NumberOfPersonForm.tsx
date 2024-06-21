@@ -12,6 +12,8 @@ const NumberOfPersonForm = ({
   setIsOpenChildrenField,
   extraHandleIncrement,
   handleChildAgeChange,
+  handleDecrement,
+  handleIncrement,
 }: {
   adults: number;
   children: number;
@@ -20,13 +22,20 @@ const NumberOfPersonForm = ({
   setIsOpenChildrenField: (isOpen: boolean) => void;
   extraHandleIncrement: () => void;
   handleChildAgeChange: (index: number, value: any) => void;
+  handleDecrement: (type: string) => void;
+  handleIncrement: (type: string) => void;
 }) => {
   return (
     <div className='NumberOfPersonsForm'>
       <div className='content'>
         <div className='quantity-field adults'>
           <span className={`label`}>Adults</span>
-          <InputQuantity quantity={adults} type='adults' />
+          <InputQuantity
+            quantity={adults}
+            type='adults'
+            handleDecrement={handleDecrement}
+            handleIncrement={handleIncrement}
+          />
         </div>
         <div className='quantity-field children'>
           <span
@@ -47,6 +56,8 @@ const NumberOfPersonForm = ({
             type='children'
             extraHandleIncrement={!isOpenChildrenField ? () => setIsOpenChildrenField(true) : null}
             extraHandleDecrement={extraHandleIncrement}
+            handleDecrement={handleDecrement}
+            handleIncrement={handleIncrement}
           />
 
           {isOpenChildrenField && (

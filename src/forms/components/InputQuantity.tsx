@@ -1,15 +1,15 @@
 import React from 'react';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
-
 import { useDispatch } from 'react-redux';
-import { handleDecrement, handleIncrement } from '@/store/vacation/vacationReducer';
 
 interface QuantityInput {
   quantity: number;
   type: 'adults' | 'children';
   extraHandleDecrement?: (() => void) | null;
   extraHandleIncrement?: (() => void) | null;
+  handleDecrement: any;
+  handleIncrement: any;
 }
 
 const QuantityInput = ({
@@ -17,6 +17,8 @@ const QuantityInput = ({
   type,
   extraHandleDecrement,
   extraHandleIncrement,
+  handleDecrement,
+  handleIncrement,
 }: QuantityInput) => {
   const dispatch = useDispatch();
 

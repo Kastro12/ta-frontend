@@ -9,42 +9,55 @@ export const challengeAndHedonism = {
     {
       id: '1',
       title: 'Day one',
-      description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
+      description: 'Dolazak u Beograd. Poseta starom gradu i vecera uz tamburice. Nocni provod',
       imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Traditional music and food',
+      location: 'Belgrade',
     },
     {
       id: '2',
       title: 'Day two',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
+      imageLink:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Golubac Fortress',
+      location: 'Golubac',
     },
     {
       id: '3',
       title: 'Day three',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
+      imageLink:
+        'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Gondola ride',
+      location: 'Zlatibor',
     },
     {
       id: '4',
       title: 'Day four',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
     {
       id: '5',
       title: 'Day five',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
   ],
 };
@@ -61,42 +74,55 @@ export const pathwayFromAncientIimes = {
     {
       id: '1',
       title: 'Day one',
-      description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
+      description: 'Dolazak u Beograd. Poseta starom gradu i vecera uz tamburice. Nocni provod',
       imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Traditional music and food',
+      location: 'Belgrade',
     },
     {
       id: '2',
       title: 'Day two',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
+      imageLink:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Golubac Fortress',
+      location: 'Golubac',
     },
     {
       id: '3',
       title: 'Day three',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
+      imageLink:
+        'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Gondola ride',
+      location: 'Zlatibor',
     },
     {
       id: '4',
       title: 'Day four',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
     {
       id: '5',
       title: 'Day five',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
   ],
 };
@@ -112,42 +138,55 @@ export const localCulturePeopleLandscapes = {
     {
       id: '1',
       title: 'Day one',
-      description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
+      description: 'Dolazak u Beograd. Poseta starom gradu i vecera uz tamburice. Nocni provod',
       imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Traditional music and food',
+      location: 'Belgrade',
     },
     {
       id: '2',
       title: 'Day two',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
+      imageLink:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Golubac Fortress',
+      location: 'Golubac',
     },
     {
       id: '3',
       title: 'Day three',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
+      imageLink:
+        'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Gondola ride',
+      location: 'Zlatibor',
     },
     {
       id: '4',
       title: 'Day four',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
     {
       id: '5',
       title: 'Day five',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
   ],
 };
@@ -163,42 +202,55 @@ export const oldAndNew = {
     {
       id: '1',
       title: 'Day one',
-      description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
+      description: 'Dolazak u Beograd. Poseta starom gradu i vecera uz tamburice. Nocni provod',
       imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Traditional music and food',
+      location: 'Belgrade',
     },
     {
       id: '2',
       title: 'Day two',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
+      imageLink:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Golubac Fortress',
+      location: 'Golubac',
     },
     {
       id: '3',
       title: 'Day three',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
+      imageLink:
+        'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Gondola ride',
+      location: 'Zlatibor',
     },
     {
       id: '4',
       title: 'Day four',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
     {
       id: '5',
       title: 'Day five',
       description:
-        'This is descritpion about organized vacation. Main goal of this desc. is to explain what will happen that day.',
-      imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
+        "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      imageLink:
+        'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
       alt: 'Challenge and hedonism adventure vacation',
+      activityTitle: 'Rafting on the Tara River',
+      location: 'Tara',
     },
   ],
 };

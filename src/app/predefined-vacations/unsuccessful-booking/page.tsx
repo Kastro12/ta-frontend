@@ -1,11 +1,11 @@
 'use client';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { clearVacation } from '@/store/vacation/vacationReducer';
+import { clearVacation } from '@/store/vacation/predefinedVacationReducer';
 import { ErrorBookVacation } from '@/components';
 import { useRouter } from 'next/navigation';
 
-export default function BookVacation() {
+export default function Error() {
   const dispatch = useDispatch();
   const router = useRouter();
 

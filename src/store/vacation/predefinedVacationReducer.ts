@@ -84,7 +84,7 @@ export const predefinedVacationSlice = createSlice({
       state.childrenYears = filteredList;
     },
 
-    clearVacation: (state) => initialState,
+    clearVacation: () => initialState,
   },
 });
 

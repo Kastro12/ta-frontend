@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
-import { addChildrenYears, removeChildrenYears } from '@/store/vacation/vacationReducer';
+import {
+  addChildrenYears,
+  removeChildrenYears,
+  handleDecrement,
+  handleIncrement,
+} from '@/store/vacation/vacationReducer';
 
 const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
   return (props: any) => {
@@ -48,6 +53,8 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
         setIsOpenChildrenField={setIsOpenChildrenField}
         extraHandleIncrement={extraHandleIncrement}
         handleChildAgeChange={handleChildAgeChange}
+        handleDecrement={handleDecrement}
+        handleIncrement={handleIncrement}
       />
     );
   };
