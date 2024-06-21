@@ -11,6 +11,7 @@ interface SliderBarProps {
     description: string;
     imageLink: string;
     alt: string;
+    link: string;
   }[];
   setting: {};
   className: string;

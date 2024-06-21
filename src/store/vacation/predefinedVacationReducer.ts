@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Activity } from '@/utils/interfaces/index';
 
 export interface IssueInitialState {
   startDate: null | string;
@@ -7,14 +6,12 @@ export interface IssueInitialState {
   adults: number;
   children: number;
   childrenYears: { years: '1-2' | '2-4' | '4-7' | '7+'; position: number }[];
-  chosenActivities: Activity[];
-  chosenActivitiesAction: 'adding' | 'removing' | null;
+  chosenPredefinedVacation: null | string;
 }
 const initialState: IssueInitialState = {
   startDate: null,
   finishDate: null,
-  chosenActivities: [],
-  chosenActivitiesAction: null,
+  chosenPredefinedVacation: null,
   adults: 1,
   children: 0,
   childrenYears: [],
@@ -29,8 +26,8 @@ interface handleIncrementDecrement {
   type: 'adults' | 'children';
 }
 
-export const vacationSlice = createSlice({
-  name: 'vacation',
+export const predefinedVacationSlice = createSlice({
+  name: 'predefinedVacation',
   initialState,
   reducers: {
     changeTheDate: (state, action: PayloadAction<TheDateChangeProps>) => {
@@ -43,29 +40,12 @@ export const vacationSlice = createSlice({
       }
     },
 
-    addActivity: (state, action: PayloadAction<Activity>) => {
-      state.chosenActivities = [...state.chosenActivities, action.payload];
-      state.chosenActivitiesAction = 'adding';
+    addPredefinedVacation: (state, action: PayloadAction<string>) => {
+      state.chosenPredefinedVacation = action.payload;
     },
 
-    removeActivity: (state, action: PayloadAction<string>) => {
-      const filteredList = state.chosenActivities.filter(
-        (activity) => activity.id != action.payload
-      );
-      state.chosenActivities = filteredList;
-      state.chosenActivitiesAction = 'removing';
-    },
-
-    clearActivityAction: (state) => {
-      state.chosenActivitiesAction = null;
-    },
-
-    updateChosenActivities: (state, action: PayloadAction<Activity[]>) => {
-      state.chosenActivities = action.payload;
-    },
-
-    deleteVacation: (state) => {
-      state = initialState;
+    removePredefinedVacation: (state) => {
+      state.chosenPredefinedVacation = null;
     },
 
     handleIncrement: (state, action: PayloadAction<handleIncrementDecrement>) => {
@@ -110,14 +90,12 @@ export const vacationSlice = createSlice({
 
 export const {
   changeTheDate,
-  addActivity,
-  removeActivity,
-  updateChosenActivities,
-  clearActivityAction,
+  addPredefinedVacation,
+  removePredefinedVacation,
   handleIncrement,
   handleDecrement,
   addChildrenYears,
   removeChildrenYears,
   clearVacation,
-} = vacationSlice.actions;
-export default vacationSlice.reducer;
+} = predefinedVacationSlice.actions;
+export default predefinedVacationSlice.reducer;

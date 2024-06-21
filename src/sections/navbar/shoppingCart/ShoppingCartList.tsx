@@ -7,6 +7,11 @@ import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { SortableList } from './sortableList';
 import { useRouter, usePathname } from 'next/navigation';
+import { insuranceCosts, drivingCosts, accommodationCosts, foodCosts } from '@/data/costsVacation';
+import { calculateDaysDifference, getMaxNumberOfDaysForChosenActivities } from '@/utils/date';
+import { activityLocations } from '@/data';
+
+import { getTotalPrice } from '@/utils/priceCalculation';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -33,6 +38,10 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
     errorAlert = 'Fill required data.';
   }
 
+  const totalPrice = getTotalPrice();
+
+  const maxNumberOfDaysForChosenActivities = getMaxNumberOfDaysForChosenActivities();
+
   return (
     <Box className='drawerList shoppingCartList' sx={{ width: 250 }} role='presentation'>
       <Grid container className='container'>
@@ -50,7 +59,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             className='main-title'
             style={{ fontSize: '20px', marginTop: '0px' }}
           >
-            Your vacation
+            Your created vacation
           </Typography>
           <IconButton
             sx={{
@@ -120,7 +129,15 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           className='chosen-activities'
         >
           <Typography variant='body1' sx={{ marginTop: '18px' }}>
-            Chosen activities&nbsp;<span className='required-start'>*&nbsp;</span>:
+            Chosen activities ({chosenActivities.length}){' - '}
+            {chosenActivities.length > 0 ? (
+              <div style={{ fontSize: '13px' }}>
+                Vacation is up to <strong>{maxNumberOfDaysForChosenActivities + 1} days</strong> for
+                chosen activities.
+              </div>
+            ) : (
+              ''
+            )}
           </Typography>
 
           <SortableList />
@@ -141,6 +158,20 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             </Alert>
           )}
 
+          {!errorAlert && totalPrice && (
+            <div>
+              <Typography variant='body1' sx={{ marginTop: '18px', fontWeight: '600' }}>
+                <span style={{ fontWeight: '300', margin: '0 12px 0 0' }}>Price:</span>
+                {Math.round(totalPrice)} &#8364;
+              </Typography>
+
+              <Typography variant='body1' sx={{ marginTop: '6px!important', marginBottom: '18px' }}>
+                The price is not fixed and may be lower. After you book, our team will create a
+                detailed and optimized plan for all activities, potentially reducing costs.
+              </Typography>
+            </div>
+          )}
+
           {pathname !== '/book-vacation' && (
             <Button
               sx={{ ...button, ...(errorAlert ? disabledButton : greenButton), mt: '12px' }}
@@ -153,7 +184,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
               }}
               className='submit'
             >
-              Book Now
+              Book now
             </Button>
           )}
         </Grid>

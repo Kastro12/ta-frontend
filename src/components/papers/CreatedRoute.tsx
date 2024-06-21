@@ -10,17 +10,18 @@ interface SliderBarProps {
     description: string;
     imageLink: string;
     alt: string;
+    link: string;
   };
 }
 
 export default function CreatedRoute({ data }: SliderBarProps) {
   return (
-    <Link className='CreatedRouteComponent' href={'./'}>
+    <Link className='CreatedRouteComponent' href={data.link}>
       {/* <Paper elevation={3} className='CreatedRouteComponent'> */}
       <Box className='content'>
         <Box className='text'>
-          <Typography variant='h3'>Adventure from north to south</Typography>
-          <Typography variant='subtitle1'>9 days, 5 locations</Typography>
+          <Typography variant='h3'>{data.title}</Typography>
+          <Typography variant='subtitle1'>{data.description}</Typography>
           <Button
             sx={{ ...button, ...linkGreenButton, width: '80px' }}
             variant='outlined'
@@ -29,11 +30,7 @@ export default function CreatedRoute({ data }: SliderBarProps) {
             View more
           </Button>
         </Box>
-        <img
-          src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt={'couple near car in nature'}
-          loading='lazy'
-        />
+        <img src={data.imageLink} alt={data.alt} loading='lazy' />
       </Box>
       {/* </Paper> */}
     </Link>

@@ -1,8 +1,10 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
-import NumberOfPersonsForm from './forms/NumberOfPersonsForm';
 import { Container, Typography } from '@mui/material';
-import CalendarForm from './forms/CalendarForm';
+
+import CalendarFormWithHandleCalendarDate from './forms/CalendarFormWithHandleCalendarDate';
+import NumberOfPersonsFormWithHandle from './forms/NumberOfPersonsFormWithHandle';
+
 import FilterForm from './forms/FilterForm';
 import BoxOfActivity from './components/BoxOfActivity';
 import { useSelector, useDispatch } from 'react-redux';
@@ -92,8 +94,8 @@ export default function Activities() {
 
       <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
-          <CalendarForm />
-          <NumberOfPersonsForm />
+          <CalendarFormWithHandleCalendarDate />
+          <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
         </div>
       </div>

@@ -24,6 +24,7 @@ const theme = createTheme({
       fontSize: 18,
       fontWeight: 600,
       letterSpacing: '0.02em',
+      lineHeight: '30px',
     },
     h4: {
       fontSize: 16,
