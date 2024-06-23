@@ -17,7 +17,7 @@ import { SliderBarActivities, SliderBarCreatedRoutesBox } from '@/sections';
 import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import { button, greenButton } from '@/utils/re-styledComponents';
-import { settingThreeInRow, settingTwoInRow } from '@/components/sliderbar/settings';
+import { settingThreeInRow } from '@/components/sliderbar/settings';
 import { topSeasonActivities } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
 
@@ -53,13 +53,11 @@ export default function Home() {
 
       <Typography variant='h2'>Choose one of our predefined vacations</Typography>
 
-      <SliderBarCreatedRoutesBox
-        serverData={organizedVacations}
-        setting={settingTwoInRow}
-        className='arrowInSlickRow'
-      />
+      <SliderBarCreatedRoutesBox serverData={organizedVacations} />
 
-      <Typography variant='h2'>Top season activities</Typography>
+      <Typography variant='h2' sx={{ mt: '16px', mb:'24px' }}>
+        Top season activities
+      </Typography>
 
       <SliderBarActivities
         serverData={topSeasonActivities}

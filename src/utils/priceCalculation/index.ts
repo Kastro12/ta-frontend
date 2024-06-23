@@ -1,5 +1,5 @@
 import { activityLocations } from '@/data';
-import { getMaxNumberOfDaysForChosenActivities } from '@/utils/date';
+import { useMaxNumberOfDaysForChosenActivities } from '@/utils/date';
 import {
   insuranceCosts,
   drivingCosts,
@@ -13,32 +13,36 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import { calculateDaysDifference } from '@/utils/date';
 
-export const getNumberOfPerson = () => {
+export const useNumberOfPerson = () => {
   const adults = useSelector((state: RootState) => state.vacation.adults);
   const children = useSelector((state: RootState) => state.vacation.children);
   return adults + children;
 };
 
-export const getNumberOfDay = () => {
+export const useNumberOfDay = () => {
   const startDate = useSelector((state: RootState) => state.vacation.startDate);
   const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
   return calculateDaysDifference(startDate, finishDate);
 };
 
-export const getSummaryInsurancePrice = () => {
-  const numberOfDays =
-    getNumberOfDay() == 0 ? getMaxNumberOfDaysForChosenActivities() : getNumberOfDay();
-  const numberOfPerson = getNumberOfPerson();
+export const useSummaryInsurancePrice = () => {
+  const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
+  const numOfDay = useNumberOfDay();
+
+  const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
+  const numberOfPerson = useNumberOfPerson();
 
   return numberOfDays == 0
-    ? getMaxNumberOfDaysForChosenActivities()
+    ? maxNumberOfDaysForChosenActivities
     : numberOfDays * numberOfPerson * insuranceCosts.perDay_perPerson;
 };
 
-export const getSummaryDrivingPrice = () => {
-  const numberOfDays =
-    getNumberOfDay() == 0 ? getMaxNumberOfDaysForChosenActivities() : getNumberOfDay();
-  const numberOfPerson = getNumberOfPerson();
+export const useSummaryDrivingPrice = () => {
+  const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
+  const numOfDay = useNumberOfDay();
+
+  const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
+  const numberOfPerson = useNumberOfPerson();
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
 
   const DEFAULT_DISTANCE = 100;
@@ -99,11 +103,14 @@ export const getSummaryDrivingPrice = () => {
   return totalDrivingPrice;
 };
 
-export const getSummaryAccommodationPrice = () => {
+export const useSummaryAccommodationPrice = () => {
   let summaryAccommodationPrice = 0;
-  const numberOfDays =
-    getNumberOfDay() == 0 ? getMaxNumberOfDaysForChosenActivities() : getNumberOfDay();
-  const numberOfPerson = getNumberOfPerson();
+
+  const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
+  const numOfDay = useNumberOfDay();
+
+  const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
+  const numberOfPerson = useNumberOfPerson();
 
   if (numberOfPerson < 3) {
     summaryAccommodationPrice = accommodationCosts.studio_apartment * numberOfDays;
@@ -133,7 +140,7 @@ export const getSummaryAccommodationPrice = () => {
   return summaryAccommodationPrice;
 };
 
-export const getSummaryActivitiesPrice = () => {
+export const useSummaryActivitiesPrice = () => {
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   let summaryActivitiesPrice = 0;
   chosenActivities.forEach((activity) => {
@@ -143,22 +150,24 @@ export const getSummaryActivitiesPrice = () => {
   return summaryActivitiesPrice;
 };
 
-export const getSummaryFoodPrice = () => {
-  const numberOfDays =
-    getNumberOfDay() == 0 ? getMaxNumberOfDaysForChosenActivities() : getNumberOfDay();
-  const numberOfPerson = getNumberOfPerson();
+export const useSummaryFoodPrice = () => {
+  const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
+  const numOfDay = useNumberOfDay();
+
+  const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
+  const numberOfPerson = useNumberOfPerson();
   const dailyMenuPrice = foodCosts.breakfast + foodCosts.lunch;
   let foodPrice = numberOfDays * numberOfPerson * dailyMenuPrice;
 
   return foodPrice;
 };
 
-export const getTotalPrice = () => {
-  const summaryInsurancePrice = getSummaryInsurancePrice();
-  const summaryDrivingPrice = getSummaryDrivingPrice();
-  const summaryAccommodationPrice = getSummaryAccommodationPrice();
-  const summaryActivitiesPrice = getSummaryActivitiesPrice();
-  const summaryFoodPrice = getSummaryFoodPrice();
+export const useTotalPrice = () => {
+  const summaryInsurancePrice = useSummaryInsurancePrice();
+  const summaryDrivingPrice = useSummaryDrivingPrice();
+  const summaryAccommodationPrice = useSummaryAccommodationPrice();
+  const summaryActivitiesPrice = useSummaryActivitiesPrice();
+  const summaryFoodPrice = useSummaryFoodPrice();
 
   const vacationPrice =
     summaryInsurancePrice +

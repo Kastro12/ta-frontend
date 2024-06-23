@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import { BookVacationProps } from '@/forms/form.interface';
 
 const handleBookVacationSubmit = (Component: React.ComponentType<any>) => {
-  return ({ ...props }: any) => {
+  const WrappedComponent = ({ ...props }: any) => {
     const router = useRouter();
 
     const [initialCountryCode, setInitialCountryCode] = useState<string | undefined>();
@@ -112,6 +112,12 @@ const handleBookVacationSubmit = (Component: React.ComponentType<any>) => {
       />
     );
   };
+
+  WrappedComponent.displayName = `handleBookVacationSubmit(${
+    Component.displayName || Component.name || 'Component'
+  })`;
+
+  return WrappedComponent;
 };
 
 export default handleBookVacationSubmit;

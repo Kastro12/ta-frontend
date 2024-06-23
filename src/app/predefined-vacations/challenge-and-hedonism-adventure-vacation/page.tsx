@@ -1,21 +1,24 @@
 'use client';
-import React, { useRef, useEffect } from 'react';
-import { Container, Typography, Button } from '@mui/material';
-import { useDispatch } from 'react-redux';
+import React, { useRef, useEffect, useState } from 'react';
+import { Container, Typography, Button, Alert } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
 import Grid from '@mui/material/Unstable_Grid2';
-import Link from 'next/link';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import { challengeAndHedonism } from '@/data/organizedVacations';
 import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
 import CalendarFormWithHandleCalendarDate from '../_forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHandle';
-
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
+import { useRouter } from 'next/navigation';
 
 export default function BookVacation() {
+  const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
+  const router = useRouter();
   const dispatch = useDispatch();
   const bookVacationRef = useRef<HTMLSpanElement>(null);
-
+  const startDate = useSelector((state: RootState) => state.predefinedVacation.startDate);
   const handleScrollToBookVacation = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     if (bookVacationRef.current) {
@@ -44,6 +47,12 @@ export default function BookVacation() {
   useEffect(() => {
     dispatch(addPredefinedVacation(challengeAndHedonism.title));
   }, []);
+
+  let errorAlert = null;
+
+  if (!startDate) {
+    errorAlert = 'Choose the start date and number of people.';
+  }
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
@@ -150,15 +159,37 @@ export default function BookVacation() {
       </div>
 
       <Grid container>
-        <Grid md={12} sx={{ width: '100%', textAlign: 'center' }}>
+        <Grid md={12} sx={{ width: '100%', textAlign: 'center', position: 'relative' }}>
           <Button
             sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '32px' } }}
             variant='outlined'
-            href='/predefined-vacations/challenge-and-hedonism-adventure-vacation/book-vacation'
-            LinkComponent={Link}
+            onClick={() => {
+              if (startDate) {
+                router.push(
+                  '/predefined-vacations/challenge-and-hedonism-adventure-vacation/book-vacation'
+                );
+              } else {
+                setIsBookAlertActive(true);
+
+                setTimeout(() => {
+                  setIsBookAlertActive(false);
+                }, 5000);
+              }
+              return;
+            }}
           >
             Book now
           </Button>
+
+          {errorAlert && isBookAlertActive && (
+            <Alert
+              className='standard_alert_near_button '
+              severity='warning'
+              icon={<InfoOutlinedIcon fontSize='small' />}
+            >
+              {errorAlert}
+            </Alert>
+          )}
         </Grid>
       </Grid>
     </Container>

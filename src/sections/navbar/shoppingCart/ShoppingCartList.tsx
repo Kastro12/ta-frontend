@@ -7,11 +7,9 @@ import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { SortableList } from './sortableList';
 import { useRouter, usePathname } from 'next/navigation';
-import { insuranceCosts, drivingCosts, accommodationCosts, foodCosts } from '@/data/costsVacation';
-import { calculateDaysDifference, getMaxNumberOfDaysForChosenActivities } from '@/utils/date';
-import { activityLocations } from '@/data';
+import { useMaxNumberOfDaysForChosenActivities } from '@/utils/date';
 
-import { getTotalPrice } from '@/utils/priceCalculation';
+import { useTotalPrice } from '@/utils/priceCalculation';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -34,13 +32,17 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
 
   let errorAlert = null;
 
-  if (!startDate || chosenActivities.length == 0) {
-    errorAlert = 'Fill required data.';
+  if (!startDate && chosenActivities.length == 0) {
+    errorAlert = 'Choose a start date and choose activities.';
+  } else if (!startDate) {
+    errorAlert = 'Choose a start date.';
+  } else if (chosenActivities.length == 0) {
+    errorAlert = 'Choose activities.';
   }
 
-  const totalPrice = getTotalPrice();
+  const totalPrice = useTotalPrice();
 
-  const maxNumberOfDaysForChosenActivities = getMaxNumberOfDaysForChosenActivities();
+  const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
 
   return (
     <Box className='drawerList shoppingCartList' sx={{ width: 250 }} role='presentation'>

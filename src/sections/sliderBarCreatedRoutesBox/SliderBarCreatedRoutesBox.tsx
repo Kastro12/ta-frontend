@@ -2,9 +2,9 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CreatedRoute } from '@/components';
-import Slider from 'react-slick';
+import { Grid } from '@mui/material';
 
-interface SliderBarProps {
+interface CreatedRoutesBox {
   serverData: {
     id: string;
     title: string;
@@ -13,23 +13,13 @@ interface SliderBarProps {
     alt: string;
     link: string;
   }[];
-  setting: {};
-  className: string;
 }
 
-const SliderBarCreatedRoutesBox = ({ serverData, setting, className }: SliderBarProps) => {
+const SliderBarCreatedRoutesBox = ({ serverData }: CreatedRoutesBox) => {
   return (
-    <>
-      {serverData && (
-        <Slider {...setting} className={className}>
-          {serverData.map((data) => (
-            <div key={data.id} style={{ padding: '0 16px' }}>
-              <CreatedRoute data={data} />
-            </div>
-          ))}
-        </Slider>
-      )}
-    </>
+    <div className='CreatedRouteComponent_wrap'>
+      {serverData && serverData.map((data) => <CreatedRoute data={data} key={data.id} />)}
+    </div>
   );
 };
 

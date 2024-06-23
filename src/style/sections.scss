@@ -56,3 +56,91 @@ footer {
     margin: 16px 0;
   }
 }
+
+.CreatedRouteComponent_wrap {
+  .CreatedRouteComponent {
+    background-color: $white2;
+    margin: auto;
+    display: block;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: $boxShadow1;
+    margin-bottom: 24px;
+    .content {
+      text-decoration: none;
+      color: #212b3b;
+      display: flex;
+      flex-direction: column-reverse;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+      .text {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h3 {
+          margin-bottom: 6px;
+          line-height: 26px;
+          width: calc(100% - 32px);
+        }
+        h6 {
+          margin-bottom: 6px;
+          font-size: 14px;
+          width: calc(100% - 32px);
+        }
+        a {
+          width: 100px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 760px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    .CreatedRouteComponent {
+      width: calc(50% - 24px);
+      .content {
+        .text {
+          h3 {
+            min-height: 78px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1260px) {
+    .CreatedRouteComponent {
+      .content {
+        flex-direction: row;
+        img {
+          width: 262px;
+          height: 280px;
+        }
+        .text {
+          padding: 16px 6px 16px 16px;
+          h3 {
+            min-height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1360px) {
+    .CreatedRouteComponent {
+      .content {
+        img {
+          width: 280px;
+        }
+      }
+    }
+  }
+} //CreatedRouteComponent_wrap END

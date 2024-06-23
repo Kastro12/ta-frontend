@@ -1,7 +1,8 @@
 export const challengeAndHedonism = {
   id: '1',
   title: 'Challenge and hedonism adventure vacation',
-  description: '9 days, 7 locations',
+  description:
+    'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities, followed by luxurious relaxation and gourmet experiences.',
   imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
   alt: 'Challenge and hedonism adventure vacation',
   link: '/predefined-vacations/challenge-and-hedonism-adventure-vacation',
@@ -65,7 +66,8 @@ export const challengeAndHedonism = {
 export const pathwayFromAncientIimes = {
   id: '2',
   title: 'Pathway from ancient times through the middle ages to modern history',
-  description: '9 days, 5 locations',
+  description:
+    'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities, followed by luxurious relaxation and gourmet experiences.',
   imageLink:
     'https://images.pexels.com/photos/20975683/pexels-photo-20975683/free-photo-of-a-black-and-white-photo-of-a-horse-jumping-over-an-obstacle.jpeg',
   alt: 'Pathway from ancient times through the middle ages to modern history',
@@ -130,7 +132,8 @@ export const pathwayFromAncientIimes = {
 export const localCulturePeopleLandscapes = {
   id: '3',
   title: 'Local culture, people, and landscapes exploration experience',
-  description: '9 days, 5 locations',
+  description:
+    'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities, followed by luxurious relaxation and gourmet experiences.',
   imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
   alt: 'Local culture, people, and landscapes exploration experience',
   link: '/predefined-vacations/local-culture-people-and-landscapes-exploration-experience',
@@ -194,7 +197,8 @@ export const localCulturePeopleLandscapes = {
 export const oldAndNew = {
   id: '4',
   title: 'Old and new: business, leisure, and social traditions experience',
-  description: '9 days, 5 locations',
+  description:
+    'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities, followed by luxurious relaxation and gourmet experiences.',
   imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
   alt: 'Old and new: business, leisure, and social traditions experience',
   link: '/predefined-vacations/old-and-new-business-leisure-and-social-traditions-experience',

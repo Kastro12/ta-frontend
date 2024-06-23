@@ -56,7 +56,7 @@ export const calculateDaysDifference = (
   return diffDays;
 };
 
-export const getMaxNumberOfDaysForChosenActivities = () => {
+export const useMaxNumberOfDaysForChosenActivities = () => {
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
 
   let numberOfDays = 0;

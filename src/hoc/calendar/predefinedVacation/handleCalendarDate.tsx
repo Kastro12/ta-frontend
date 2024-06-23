@@ -5,7 +5,7 @@ import { changeTheDate } from '@/store/vacation/predefinedVacationReducer';
 import { stringFromDate, dateFromString } from '@/utils/date';
 
 const handleCalendarDate = (Component: React.ComponentType<any>) => {
-  return ({ duration, ...props }: { duration: number } & any) => {
+  const WrappedComponent = ({ duration, ...props }: { duration: number } & any) => {
     const dispatch = useDispatch();
 
     const startStringDate = useSelector((state: RootState) => state.predefinedVacation.startDate);
@@ -46,6 +46,11 @@ const handleCalendarDate = (Component: React.ComponentType<any>) => {
       />
     );
   };
+  WrappedComponent.displayName = `handleCalendarDate(${
+    Component.displayName || Component.name || 'Component'
+  })`;
+
+  return WrappedComponent;
 };
 
 export default handleCalendarDate;

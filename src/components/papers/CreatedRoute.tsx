@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Paper, Typography, Box, Button } from '@mui/material';
 import { button, linkGreenButton } from '@/utils/re-styledComponents';
 import Link from 'next/link';
+import { truncateText } from '@/utils/string';
 
 interface SliderBarProps {
   data: {
@@ -21,13 +22,15 @@ export default function CreatedRoute({ data }: SliderBarProps) {
       <Box className='content'>
         <Box className='text'>
           <Typography variant='h3'>{data.title}</Typography>
-          <Typography variant='subtitle1'>{data.description}</Typography>
+          <Typography variant='subtitle1'>
+            {truncateText({ text: data.description, maxLength: 200 })}
+          </Typography>
           <Button
-            sx={{ ...button, ...linkGreenButton, width: '80px' }}
+            sx={{ ...button, ...linkGreenButton, width: '90px' }}
             variant='outlined'
             size='small'
           >
-            View more
+            Read more
           </Button>
         </Box>
         <img src={data.imageLink} alt={data.alt} loading='lazy' />

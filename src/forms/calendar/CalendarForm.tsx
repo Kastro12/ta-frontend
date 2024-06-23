@@ -33,6 +33,7 @@ const CalendarForm = ({
           placeholderText='Start date'
           dateFormat='d MMMM, yyyy'
           isClearable={true}
+          required
         />
       </div>
       <div className='calendar-field'>

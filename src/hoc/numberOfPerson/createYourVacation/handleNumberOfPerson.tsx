@@ -9,7 +9,7 @@ import {
 } from '@/store/vacation/vacationReducer';
 
 const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
-  return (props: any) => {
+  const WrappedComponent = (props: any) => {
     const dispatch = useDispatch();
     const adults = useSelector((state: RootState) => state.vacation.adults);
     const children = useSelector((state: RootState) => state.vacation.children);
@@ -47,7 +47,6 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
       <Component
         {...props}
         adults={adults}
-        children={children}
         childrenYears={childrenYears}
         isOpenChildrenField={isOpenChildrenField}
         setIsOpenChildrenField={setIsOpenChildrenField}
@@ -55,9 +54,16 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
         handleChildAgeChange={handleChildAgeChange}
         handleDecrement={handleDecrement}
         handleIncrement={handleIncrement}
-      />
+      >
+        {children}
+      </Component>
     );
   };
+  WrappedComponent.displayName = `handleNumberOfPerson(${
+    Component.displayName || Component.name || 'Component'
+  })`;
+
+  return WrappedComponent;
 };
 
 export default handleNumberOfPerson;
