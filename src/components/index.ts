@@ -6,3 +6,6 @@ export { default as TextOverImage } from './papers/TextOverImage';
 
 export { default as SuccessBookVacation } from './bookVacationInfo/Success';
 export { default as ErrorBookVacation } from './bookVacationInfo/Error';
+
+export { default as SuccessContact } from './contactInfo/Success';
+export { default as ErrorContact } from './contactInfo/Error';

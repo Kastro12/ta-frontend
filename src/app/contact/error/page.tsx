@@ -1,23 +1,19 @@
 'use client';
-import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { clearVacation } from '@/store/vacation/vacationReducer';
-import { ErrorBookVacation } from '@/components';
+import { ErrorContact } from '@/components';
 import { useRouter } from 'next/navigation';
 
 export default function BookVacation() {
-  const dispatch = useDispatch();
   const router = useRouter();
   const isSubmitted = localStorage.getItem('formSubmitted') === 'true';
-  useEffect(() => {
-    dispatch(clearVacation());
 
+  useEffect(() => {
     if (!isSubmitted) {
       router.push('/');
     } else {
       localStorage.removeItem('formSubmitted');
     }
-  }, [router]);
+  }, []);
 
-  return <ErrorBookVacation />;
+  return <ErrorContact />;
 }
