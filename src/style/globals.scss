@@ -19,6 +19,12 @@ a {
   &:hover {
     color: $navyBlue1;
   }
+  &.green {
+    color: $green1;
+    &:hover {
+      color: $green2;
+    }
+  }
 }
 
 .required-star {

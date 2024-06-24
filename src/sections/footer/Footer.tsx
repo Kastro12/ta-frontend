@@ -104,9 +104,9 @@ const Footer = () => {
                 <Button
                   sx={{ ...button, ...transparentLightButton }}
                   LinkComponent={Link}
-                  href={'/collaborators'}
+                  href={'/partnerships'}
                 >
-                  Collaborators
+                  Partnerships
                 </Button>
               </li>
             </ul>
