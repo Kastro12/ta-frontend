@@ -59,9 +59,9 @@ const Footer = () => {
                 <Button
                   sx={{ ...button, ...transparentLightButton }}
                   LinkComponent={Link}
-                  href={'/accommodations-and-food'}
+                  href={'/accommodation-and-dining'}
                 >
-                  Accommodations & food
+                  Accommodation and dining
                 </Button>
               </li>
               <li className='list'>
@@ -155,7 +155,7 @@ const Footer = () => {
               LinkComponent={Link}
               href={'/terms-and-conditions'}
             >
-              Terms & Conditions
+              Terms and conditions
             </Button>
           </Grid>
         </Grid>

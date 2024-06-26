@@ -1,14 +1,6 @@
-'use client';
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Typography, Button } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/store/store';
 import Grid from '@mui/material/Unstable_Grid2';
-import { button, greenButton } from '@/utils/re-styledComponents';
-import { challengeAndHedonism } from '@/data/organizedVacations';
-import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
-import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
-import { useRouter } from 'next/navigation';
 
 export default function AboutUs() {
   return (
@@ -39,7 +31,6 @@ export default function AboutUs() {
 
       <Grid container spacing={4}>
         <Grid xs={12} lg={4}>
-          {' '}
           <Typography variant='body1'>
             At our vacation planning service, we specialize in creating unforgettable getaways
             tailored to your desires. Our mission is to provide you with the highest quality

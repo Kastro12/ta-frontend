@@ -61,7 +61,7 @@
   }
   &.arrowInSlickRow {
     .slick-list {
-      margin: 0 -16px;
+      margin: 0 -12px;
 
       .slick-track {
         margin: 0;
@@ -103,6 +103,12 @@
       .TextOverImageComponent,
       .BoxOfActivity {
         margin: 8px 12px;
+      }
+    }
+
+    &.slick-list-without-margin {
+      .slick-list {
+        margin: 0;
       }
     }
   } //arrowInSlickRow END

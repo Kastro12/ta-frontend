@@ -14,7 +14,7 @@
       text-shadow: 1px 1px 1px $navyBlue1;
       width: auto;
       h1 {
-        font-size: 50px;
+        font-size: 36px;
         font-weight: 800;
         margin-bottom: 20px;
         text-align: center;
@@ -32,6 +32,9 @@
     height: 400px;
     .content {
       width: 100%;
+      h1{
+        font-size: 50px;
+      }
     }
   }
 } //header-section END

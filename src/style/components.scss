@@ -38,6 +38,33 @@
   }
 } //TextOverImageComponent END
 
+.SliderBarGallery {
+  .MuiPaper-root {
+    margin: 0;
+    box-shadow: none;
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  @media screen and (min-width: 680px) {
+    .MuiPaper-root {
+      margin: 0 12px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .MuiPaper-root {
+      img {
+        height: 400px;
+      }
+    }
+  }
+} //SliderBarGallery END
+
 .InfoWithBackgroundImageComponent {
   position: relative;
 
