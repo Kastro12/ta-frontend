@@ -16,7 +16,6 @@ const Footer = () => {
     () => [
       { name: 'Create your vacation', icon: CreateOutlinedIcon, link: '/activities' },
       { name: 'Predefined', icon: RouteOutlinedIcon, link: '/predefined-vacation' },
-      { name: 'About us', icon: InfoOutlinedIcon, link: '/about-us' },
       { name: 'Contact', icon: MailOutlineOutlinedIcon, link: '/contact' },
     ],
     []
@@ -55,6 +54,16 @@ const Footer = () => {
             </Typography>
 
             <ul>
+              <li className='list'>
+                <Button
+                  sx={{ ...button, ...transparentLightButton }}
+                  LinkComponent={Link}
+                  href={'/about-us'}
+                >
+                  About us
+                </Button>
+              </li>
+
               <li className='list'>
                 <Button
                   sx={{ ...button, ...transparentLightButton }}

@@ -4,8 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { Paper } from '@mui/material';
 
-const SliderBarGallery = ({ serverData, setting, className }: any) => {
-  console.log('setting', setting);
+const SliderBarGallery = ({ serverData, setting }: any) => {
   return (
     <>
       {serverData && (

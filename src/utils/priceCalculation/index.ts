@@ -60,7 +60,7 @@ export const useSummaryDrivingPrice = () => {
 
   chosenActivities.forEach((activity, index) => {
     const currentLocation = activityLocations.find(
-      (location) => location.value == activity.locationName
+      (location) => location.value == activity.locationValue
     );
 
     if (index == 0) {

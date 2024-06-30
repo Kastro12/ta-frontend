@@ -12,6 +12,7 @@ import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHand
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
 import { useRouter } from 'next/navigation';
+import TextImage1 from '@/components/boxes/TextImage1';
 
 export default function BookVacation() {
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
@@ -86,9 +87,7 @@ export default function BookVacation() {
         variant='h3'
         sx={{ maxWidth: '640px', m: '32px auto 32px auto', fontWeight: '400', textAlign: 'center' }}
       >
-        Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain
-        biking, and other exciting activities, followed by luxurious relaxation and gourmet
-        experiences.
+        {challengeAndHedonism.description}
       </Typography>
 
       <div className='vacation-summary'>
@@ -130,15 +129,13 @@ export default function BookVacation() {
 
         <div className='items'>
           {challengeAndHedonism.dailyOgranization.map((item) => (
-            <div className='item' key={item.id}>
-              <div className='text'>
-                <h3>{item.title}</h3>
-                <Typography variant='body1'>{item.description}</Typography>
-              </div>
-              <div className='image'>
-                <img src={item.imageLink} alt={item.alt} loading='lazy' />
-              </div>
-            </div>
+            <TextImage1
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              imageLink={item.imageLink}
+              alt={item.alt}
+            />
           ))}
         </div>
         <span className='__' ref={bookVacationRef}></span>

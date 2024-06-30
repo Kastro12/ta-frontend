@@ -3,9 +3,10 @@ export interface Activity {
   title: string;
   description: string;
   location: string;
-  locationName?: string;
+  locationValue?: string;
   cost: number;
   imageLink: string;
   durationInDays: number;
-  category: 'History and Culture' | 'Adventure' | 'Landscape';
+  category: 'History & culture' | 'Adventure' | 'Landscape';
+  categoryValue: 'history_and_culture' | 'adventure' | 'landscape';
 }

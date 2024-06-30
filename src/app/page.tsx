@@ -18,13 +18,12 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import { settingThreeInRow } from '@/components/sliderbar/settings';
-import { topSeasonActivities } from '@/data';
+import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
-
 export default function Home() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Grid container className='header-section'>
+      <Grid container className='header-section' sx={{ position: 'relative' }}>
         <img
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
           alt={'couple near car in nature'}
@@ -47,15 +46,14 @@ export default function Home() {
             </Button>
           </Grid>
         </div>
+        <span id='predefined-vacations' style={{ position: 'absolute', bottom: '56px' }}></span>
       </Grid>
-
-      {/* <FormSearchActivities /> */}
 
       <Typography variant='h2'>Choose one of our predefined vacations</Typography>
 
       <SliderBarCreatedRoutesBox serverData={organizedVacations} />
 
-      <Typography variant='h2' sx={{ mt: '16px', mb:'24px' }}>
+      <Typography variant='h2' sx={{ mt: '12px', mb: '26px' }}>
         Top season activities
       </Typography>
 
@@ -65,12 +63,20 @@ export default function Home() {
         className='arrowInSlickRow'
       />
 
-      <Typography variant='h2'>History and culture</Typography>
-
-      <Grid container spacing={3}>
-        <Grid md={12}>
-          <InfoWithBackgroundImage />
-        </Grid>
+      <Typography variant='h2' sx={{ mt: '28px' }}>
+        Activity categories
+      </Typography>
+      <Grid container>
+        {activityCategories.map((category) => (
+          <Grid md={12} key={category.label} sx={{ mb: '32px' }}>
+            <InfoWithBackgroundImage
+              title={category.label}
+              description={category.description}
+              images={category.images}
+              link={category.link}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );

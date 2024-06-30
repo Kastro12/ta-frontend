@@ -6,12 +6,13 @@ const allActivities: Activity[] = [
     description:
       "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
     location: 'Tara',
-    locationName: 'tara',
+    locationValue: 'tara',
     cost: 180,
     imageLink:
       'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
     durationInDays: 3,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '6625fc51e351da77e46bea90',
@@ -19,12 +20,13 @@ const allActivities: Activity[] = [
     description:
       'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
     location: 'Zlatibor',
-    locationName: 'zlatibor',
+    locationValue: 'zlatibor',
     cost: 20,
     imageLink:
       'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
     durationInDays: 1,
     category: 'Landscape',
+    categoryValue: 'landscape',
   },
   {
     id: '6625fd44e351da77e46bea93',
@@ -32,12 +34,13 @@ const allActivities: Activity[] = [
     description:
       "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
     location: 'Golubac',
-    locationName: 'golubac',
+    locationValue: 'golubac',
     cost: 100,
     imageLink:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
   {
     id: '662602b8410dc2dad9938982',
@@ -45,12 +48,13 @@ const allActivities: Activity[] = [
     description:
       'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
     location: 'Kopaonik',
-    locationName: 'kopaonik',
+    locationValue: 'kopaonik',
     cost: 100,
     imageLink:
       'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
     durationInDays: 1,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '662606c2410dc2dad993898d',
@@ -58,11 +62,12 @@ const allActivities: Activity[] = [
     description:
       'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
     location: 'Grocka',
-    locationName: 'grocka',
+    locationValue: 'grocka',
     cost: 170,
     imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
 
   {
@@ -71,12 +76,13 @@ const allActivities: Activity[] = [
     description:
       "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
     location: 'Tara',
-    locationName: 'tara',
+    locationValue: 'tara',
     cost: 180,
     imageLink:
       'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
     durationInDays: 3,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '1 6625fc51e351da77e46bea90',
@@ -84,12 +90,13 @@ const allActivities: Activity[] = [
     description:
       'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
     location: 'Zlatibor',
-    locationName: 'zlatibor',
+    locationValue: 'zlatibor',
     cost: 20,
     imageLink:
       'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
     durationInDays: 1,
     category: 'Landscape',
+    categoryValue: 'landscape',
   },
   {
     id: '1 6625fd44e351da77e46bea93',
@@ -97,12 +104,13 @@ const allActivities: Activity[] = [
     description:
       "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
     location: 'Golubac',
-    locationName: 'golubac',
+    locationValue: 'golubac',
     cost: 100,
     imageLink:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
   {
     id: '1 662602b8410dc2dad9938982',
@@ -110,12 +118,13 @@ const allActivities: Activity[] = [
     description:
       'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
     location: 'Kopaonik',
-    locationName: 'kopaonik',
+    locationValue: 'kopaonik',
     cost: 100,
     imageLink:
       'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
     durationInDays: 1,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '1 662606c2410dc2dad993898d',
@@ -123,11 +132,12 @@ const allActivities: Activity[] = [
     description:
       'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
     location: 'Grocka',
-    locationName: 'grocka',
+    locationValue: 'grocka',
     cost: 170,
     imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
 
   {
@@ -136,12 +146,13 @@ const allActivities: Activity[] = [
     description:
       "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
     location: 'Tara',
-    locationName: 'tara',
+    locationValue: 'tara',
     cost: 180,
     imageLink:
       'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
     durationInDays: 3,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '2 6625fc51e351da77e46bea90',
@@ -149,12 +160,13 @@ const allActivities: Activity[] = [
     description:
       'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
     location: 'Zlatibor',
-    locationName: 'zlatibor',
+    locationValue: 'zlatibor',
     cost: 20,
     imageLink:
       'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
     durationInDays: 1,
     category: 'Landscape',
+    categoryValue: 'landscape',
   },
   {
     id: '2 6625fd44e351da77e46bea93',
@@ -162,12 +174,13 @@ const allActivities: Activity[] = [
     description:
       "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
     location: 'Golubac',
-    locationName: 'golubac',
+    locationValue: 'golubac',
     cost: 100,
     imageLink:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
   {
     id: '2 662602b8410dc2dad9938982',
@@ -175,12 +188,13 @@ const allActivities: Activity[] = [
     description:
       'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
     location: 'Kopaonik',
-    locationName: 'kopaonik',
+    locationValue: 'kopaonik',
     cost: 100,
     imageLink:
       'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
     durationInDays: 1,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '2 662606c2410dc2dad993898d',
@@ -188,11 +202,12 @@ const allActivities: Activity[] = [
     description:
       'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
     location: 'Grocka',
-    locationName: 'grocka',
+    locationValue: 'grocka',
     cost: 170,
     imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
 
   {
@@ -201,12 +216,13 @@ const allActivities: Activity[] = [
     description:
       "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
     location: 'Tara',
-    locationName: 'tara',
+    locationValue: 'tara',
     cost: 180,
     imageLink:
       'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
     durationInDays: 3,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '3 6625fc51e351da77e46bea90',
@@ -214,12 +230,13 @@ const allActivities: Activity[] = [
     description:
       'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
     location: 'Zlatibor',
-    locationName: 'zlatibor',
+    locationValue: 'zlatibor',
     cost: 20,
     imageLink:
       'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
     durationInDays: 1,
     category: 'Landscape',
+    categoryValue: 'landscape',
   },
   {
     id: '3 6625fd44e351da77e46bea93',
@@ -227,12 +244,13 @@ const allActivities: Activity[] = [
     description:
       "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
     location: 'Golubac',
-    locationName: 'golubac',
+    locationValue: 'golubac',
     cost: 100,
     imageLink:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
   {
     id: '3 662602b8410dc2dad9938982',
@@ -240,12 +258,13 @@ const allActivities: Activity[] = [
     description:
       'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
     location: 'Kopaonik',
-    locationName: 'kopaonik',
+    locationValue: 'kopaonik',
     cost: 100,
     imageLink:
       'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
     durationInDays: 1,
     category: 'Adventure',
+    categoryValue: 'adventure',
   },
   {
     id: '3 662606c2410dc2dad993898d',
@@ -253,11 +272,12 @@ const allActivities: Activity[] = [
     description:
       'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
     location: 'Grocka',
-    locationName: 'grocka',
+    locationValue: 'grocka',
     cost: 170,
     imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 1,
-    category: 'History and Culture',
+    durationInDays: 0.5,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
   },
 ];
 

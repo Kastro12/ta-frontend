@@ -1,34 +1,43 @@
 'use client';
 import * as React from 'react';
-import { Paper, Typography, Box, Grid } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import { GalleryWithCarousel } from '../../components';
+import Link from 'next/link';
+import { button, linkGreenButton } from '@/utils/re-styledComponents';
 
-export default function InfoWithBackgroundImage() {
+export default function InfoWithBackgroundImage({
+  title,
+  description,
+  images,
+  link,
+}: {
+  title: string;
+  description: string;
+  images: { imgLink: string; alt: string }[];
+  link: string;
+}) {
   return (
-    <Paper elevation={3} className='InfoWithBackgroundImageComponent'>
-      <Grid container className='content'>
-        <Grid
-          xs={12}
-          item
-          lg={4}
-          style={{ padding: '16px', display: 'flex', alignItems: 'center' }}
-        >
-          <Typography variant='body1'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum
-          </Typography>
-        </Grid>
-        <Grid xs={12} item lg={8} className='img-content'>
-          <GalleryWithCarousel />
-        </Grid>
-      </Grid>
-
-      <Box className='text'></Box>
-    </Paper>
+    <div className='TextImage1 categoryBox'>
+      <div className='text'>
+        <div>
+          <Typography variant='h3'>{title}</Typography>
+          <Typography variant='body1'>{description}</Typography>
+        </div>
+        <div className='button-wrap'>
+          <Button
+            sx={{ ...button, ...linkGreenButton }}
+            variant='outlined'
+            size='small'
+            LinkComponent={Link}
+            href={link}
+          >
+            {title} activities
+          </Button>
+        </div>
+      </div>
+      <div className='image'>
+        <GalleryWithCarousel images={images} />
+      </div>
+    </div>
   );
 }

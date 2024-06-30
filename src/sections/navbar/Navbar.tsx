@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { button, transparentLightButton } from '@/utils/re-styledComponents/index';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import DrawerList from './DrawerList';
@@ -19,8 +18,11 @@ const Navbar = () => {
   const pages = useMemo(
     () => [
       { name: 'Create your vacation', icon: CreateOutlinedIcon, link: '/activities' },
-      { name: 'Predefined', icon: RouteOutlinedIcon, link: '/predefined-vacation' },
-      { name: 'About us', icon: InfoOutlinedIcon, link: '/about-us' },
+      {
+        name: 'Predefined vacations',
+        icon: RouteOutlinedIcon,
+        link: '/#predefined-vacations',
+      },
       { name: 'Contact', icon: MailOutlineOutlinedIcon, link: '/contact' },
     ],
     []
@@ -63,7 +65,11 @@ const Navbar = () => {
         <Container maxWidth='lg' className='custom-container'>
           <Toolbar disableGutters>
             <Link href={'/'} className='logo'>
-              Vacation in Serbia
+              <img src='https://i.ibb.co/QHY5Cj0/tailor-made-vacation-icon.png' />
+              <span className='content'>
+                <span className='text'>Tailor-made vacations</span>
+                <span className='destination'>Serbia & surroundings</span>
+              </span>
             </Link>
 
             <Box

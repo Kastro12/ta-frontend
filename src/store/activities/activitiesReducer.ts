@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Activity } from '@/utils/interfaces/index';
-import { allActivities, activityCategories, activityLocations } from '@/data';
+import { allActivities } from '@/data';
 
 export interface IssueInitialState {
   activityList: Activity[] | null;
@@ -9,7 +9,7 @@ export interface IssueInitialState {
   currentPage: number;
 }
 const initialState: IssueInitialState = {
-  activityListSize: 4,
+  activityListSize: 8,
   activityList: null,
   activitiesToDisplay: null,
   currentPage: 1,
@@ -34,12 +34,8 @@ export const activitySlice = createSlice({
       }
 
       if (category && location) {
-        const categoryData = activityCategories.find((item) => item.value === category);
-        const locationData = activityLocations.find((item) => item.value === location);
-
         const filteredActivities = allActivities.filter(
-          (activity) =>
-            activity.category === categoryData?.label && activity.location === locationData?.label
+          (activity) => activity.categoryValue === category && activity.locationValue === location
         );
         state.activityList = filteredActivities;
         state.activitiesToDisplay = filteredActivities.slice(0, state.activityListSize);
@@ -48,21 +44,18 @@ export const activitySlice = createSlice({
       }
 
       if (category) {
-        const categoryData = activityCategories.find((item) => item.value === category);
-
         const filteredActivities = allActivities.filter(
-          (activity) => activity.category === categoryData?.label
+          (activity) => activity.categoryValue === category
         );
+
         state.activityList = filteredActivities;
         state.activitiesToDisplay = filteredActivities.slice(0, state.activityListSize);
         state.currentPage = 1;
         return;
       }
       if (location) {
-        const locationData = activityLocations.find((item) => item.value === location);
-
         const filteredActivities = allActivities.filter(
-          (activity) => activity.location === locationData?.label
+          (activity) => activity.locationValue === location
         );
 
         state.activityList = filteredActivities;
@@ -82,7 +75,7 @@ export const activitySlice = createSlice({
       state.currentPage = action.payload;
     },
 
-    clearActivities: (state) => initialState,
+    clearActivities: () => initialState,
   },
 });
 

@@ -11,6 +11,7 @@
 
 .modal-with-image-carousel {
   .content {
+    height: 100%;
     background-color: $black1;
     .DefaultImageCarouselComponent {
       img {
@@ -27,6 +28,7 @@
 } //modal-with-image-carousel END
 
 .DefaultImageCarouselComponent {
+  height: 100%;
   button {
     top: calc(50% - 28px);
     height: auto;

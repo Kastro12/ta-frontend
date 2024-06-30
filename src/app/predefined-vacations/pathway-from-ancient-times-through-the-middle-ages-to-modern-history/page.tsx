@@ -1,34 +1,193 @@
 'use client';
-import { Container, Typography, Grid } from '@mui/material';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { Container, Typography, Button, Alert } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
+import Grid from '@mui/material/Unstable_Grid2';
+import { button, greenButton } from '@/utils/re-styledComponents';
+import { pathwayFromAncientIimes } from '@/data/organizedVacations';
+import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
+import CalendarFormWithHandleCalendarDate from '../_forms/CalendarFormWithHandleCalendarDate';
+import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHandle';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
+import { useRouter } from 'next/navigation';
+import TextImage1 from '@/components/boxes/TextImage1';
 
 export default function BookVacation() {
+  const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
+  const router = useRouter();
   const dispatch = useDispatch();
+  const bookVacationRef = useRef<HTMLSpanElement>(null);
+  const startDate = useSelector((state: RootState) => state.predefinedVacation.startDate);
+  const handleScrollToBookVacation = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    if (bookVacationRef.current) {
+      bookVacationRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const uniqueLocations: { location: string }[] = [];
+  const seenLocations = new Set();
+
+  const uniqueActivities: { activityTitle: string }[] = [];
+  const seenActivities = new Set();
+
+  pathwayFromAncientIimes.dailyOgranization.forEach((item) => {
+    if (!seenLocations.has(item.location)) {
+      seenLocations.add(item.location);
+      uniqueLocations.push({ location: item.location });
+    }
+
+    if (!seenActivities.has(item.activityTitle)) {
+      seenActivities.add(item.activityTitle);
+      uniqueActivities.push({ activityTitle: item.activityTitle });
+    }
+  });
+
+  useEffect(() => {
+    dispatch(addPredefinedVacation(pathwayFromAncientIimes.title));
+  }, []);
+
+  let errorAlert = null;
+
+  if (!startDate) {
+    errorAlert = 'Choose the start date and number of people.';
+  }
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Typography variant='h1' sx={{ mb: '0' }}>
-        Pathway from ancient times through the middle ages to modern history
-      </Typography>
-
       <Grid container className='header-section'>
         <img
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt={'couple near car in nature'}
+          alt='couple near car in nature'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div className='content'>
           <Grid md={12} className='titles'>
-            <Typography variant='h1'>Create your dream vacation</Typography>
-            <h2>Choose activities, organize your days...</h2>
+            <Typography variant='h1'>
+              Challenge and hedonism
+              <br /> adventure vacation
+            </Typography>
           </Grid>
           <Grid md={12} sx={{ textAlign: 'center' }}>
-            Book now
+            <Button
+              sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '16px' } }}
+              variant='outlined'
+              onClick={handleScrollToBookVacation}
+              endIcon={<ArrowCircleDownOutlinedIcon />}
+            >
+              Book a vacation
+            </Button>
           </Grid>
         </div>
+      </Grid>
+      <Typography
+        variant='h3'
+        sx={{ maxWidth: '640px', m: '32px auto 32px auto', fontWeight: '400', textAlign: 'center' }}
+      >
+        {pathwayFromAncientIimes.description}
+      </Typography>
+
+      <div className='vacation-summary'>
+        <div className='box'>
+          <Typography variant='h2'>Activities</Typography>
+          <ul>
+            {uniqueActivities.map((activity) => (
+              <li key={activity.activityTitle}>{activity.activityTitle}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className='box'>
+          <Typography variant='h2'>Locations</Typography>
+          <ul>
+            {uniqueLocations.map((location) => (
+              <li key={location.location}>{location.location}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className='box'>
+          <Typography variant='h2'>Duration</Typography>
+          <Typography variant='body1'>
+            {pathwayFromAncientIimes.dailyOgranization.length} days, you choose started day
+          </Typography>
+        </div>
+
+        <div className='box'>
+          <Typography variant='h2'>Price</Typography>
+          <Typography variant='body1'>
+            3000&#8364; - <span className='info'>Price does not include flight cost</span>
+          </Typography>
+        </div>
+      </div>
+
+      <div className='daily-organization'>
+        <Typography variant='h2'>Daily organization</Typography>
+
+        <div className='items'>
+          {pathwayFromAncientIimes.dailyOgranization.map((item) => (
+            <TextImage1
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              imageLink={item.imageLink}
+              alt={item.alt}
+            />
+          ))}
+        </div>
+        <span className='__' ref={bookVacationRef}></span>
+      </div>
+
+      <Typography variant='h2' sx={{ textAlign: 'center', marginTop: '60px' }}>
+        Choose the start date and number of people
+      </Typography>
+
+      <div className='form-background in-container calendar-persons'>
+        <div className='form-calendar-persons'>
+          <CalendarFormWithHandleCalendarDate
+            duration={pathwayFromAncientIimes.dailyOgranization.length}
+          />
+          <NumberOfPersonsFormWithHandle />
+          <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
+        </div>
+      </div>
+
+      <Grid container>
+        <Grid md={12} sx={{ width: '100%', textAlign: 'center', position: 'relative' }}>
+          <Button
+            sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '32px' } }}
+            variant='outlined'
+            onClick={() => {
+              if (startDate) {
+                router.push(
+                  '/predefined-vacations/challenge-and-hedonism-adventure-vacation/book-vacation'
+                );
+              } else {
+                setIsBookAlertActive(true);
+
+                setTimeout(() => {
+                  setIsBookAlertActive(false);
+                }, 5000);
+              }
+              return;
+            }}
+          >
+            Book now
+          </Button>
+
+          {errorAlert && isBookAlertActive && (
+            <Alert
+              className='standard_alert_near_button '
+              severity='warning'
+              icon={<InfoOutlinedIcon fontSize='small' />}
+            >
+              {errorAlert}
+            </Alert>
+          )}
+        </Grid>
       </Grid>
     </Container>
   );

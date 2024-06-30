@@ -9,18 +9,11 @@ interface GalleryModalProps {
   isOpen: boolean;
   handleClose: (isOpen: boolean) => void;
   images: {
-    name: string;
-    link: string;
-    active: boolean;
+    imgLink: string;
+    alt: string;
   }[];
   setActiveImage: (activeImage: number | undefined) => void;
   activeImage: number | undefined;
-}
-
-interface ImageProps {
-  name: string;
-  link: string;
-  active: boolean;
 }
 
 const GalleryModal = ({
@@ -55,25 +48,7 @@ const GalleryModal = ({
   );
 };
 
-const GalleryWithCarousel = () => {
-  const images: ImageProps[] = [
-    {
-      name: 'First place',
-      link: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-      active: true,
-    },
-    {
-      name: 'Second place',
-      link: 'https://images.pexels.com/photos/20975683/pexels-photo-20975683/free-photo-of-a-black-and-white-photo-of-a-horse-jumping-over-an-obstacle.jpeg',
-      active: false,
-    },
-    {
-      name: 'Third place',
-      link: 'https://images.pexels.com/photos/21614980/pexels-photo-21614980/free-photo-of-street-photoshoot.jpeg',
-      active: false,
-    },
-  ];
-
+const GalleryWithCarousel = ({ images }: { images: { imgLink: string; alt: string }[] }) => {
   const [activeImage, setActiveImage] = useState<number | undefined>(0);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -81,7 +56,7 @@ const GalleryWithCarousel = () => {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', height: '100%' }}>
       <ZoomInOutlinedIcon
         sx={{ position: 'absolute', right: '12px', top: '12px', zIndex: 2 }}
         className='zoom-icon'

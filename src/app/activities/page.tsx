@@ -47,24 +47,6 @@ export default function Activities() {
     };
   }, []);
 
-  // load new activities by scroll
-  useEffect(() => {
-    const fetchData = () => {
-      const newActivities = loadMoreData(activityList, currentPage, ACTIVITY_LIST_SIZE);
-
-      if (newActivities == null) return;
-      if (newActivities.length < ACTIVITY_LIST_SIZE) {
-        setIsAllActivitiesLoaded(true);
-      }
-
-      dispatch(updateActivitiesToDisplay(newActivities));
-    };
-
-    if (currentPage != 1 && !IsAllActivitiesLoaded && activityList !== null) {
-      fetchData();
-    }
-  }, [currentPage, IsAllActivitiesLoaded, activityList]);
-
   useEffect(() => {
     if (IsAllActivitiesLoaded) return;
 
@@ -87,6 +69,24 @@ export default function Activities() {
       }
     };
   }, [IsAllActivitiesLoaded, currentPage]);
+
+  // load new activities by scroll
+  useEffect(() => {
+    const fetchData = async () => {
+      const newActivities = await loadMoreData(activityList, currentPage, ACTIVITY_LIST_SIZE);
+
+      if (newActivities == null) return;
+      if (newActivities.length < ACTIVITY_LIST_SIZE) {
+        setIsAllActivitiesLoaded(true);
+      }
+
+      if (newActivities) dispatch(updateActivitiesToDisplay(newActivities));
+    };
+
+    if (currentPage != 1 && !IsAllActivitiesLoaded && activityList !== null) {
+      fetchData();
+    }
+  }, [currentPage, IsAllActivitiesLoaded, activityList]);
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>

@@ -67,7 +67,7 @@ export const pathwayFromAncientIimes = {
   id: '2',
   title: 'Pathway from ancient times through the middle ages to modern history',
   description:
-    'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities, followed by luxurious relaxation and gourmet experiences.',
+    "Explore ancient ruins, medieval castles, and modern landmarks, experiencing the region's evolution from ancient times to today.",
   imageLink:
     'https://images.pexels.com/photos/20975683/pexels-photo-20975683/free-photo-of-a-black-and-white-photo-of-a-horse-jumping-over-an-obstacle.jpeg',
   alt: 'Pathway from ancient times through the middle ages to modern history',
@@ -133,7 +133,7 @@ export const localCulturePeopleLandscapes = {
   id: '3',
   title: 'Local culture, people, and landscapes exploration experience',
   description:
-    'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities, followed by luxurious relaxation and gourmet experiences.',
+    'Immerse in vibrant local culture and breathtaking landscapes. Discover local life, traditions, and unique scenic views.',
   imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
   alt: 'Local culture, people, and landscapes exploration experience',
   link: '/predefined-vacations/local-culture-people-and-landscapes-exploration-experience',
@@ -198,7 +198,7 @@ export const oldAndNew = {
   id: '4',
   title: 'Old and new: business, leisure, and social traditions experience',
   description:
-    'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities, followed by luxurious relaxation and gourmet experiences.',
+    'Explore the fascinating contrasts between historical and modern practices in business, leisure, and social traditions, discovering how industries, entertainment, and culture have evolved.',
   imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
   alt: 'Old and new: business, leisure, and social traditions experience',
   link: '/predefined-vacations/old-and-new-business-leisure-and-social-traditions-experience',
