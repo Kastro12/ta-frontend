@@ -20,7 +20,6 @@ interface BoxOfActivity {
 
 export default function BoxOfActivity({ data, isSelected }: BoxOfActivity) {
   const dispatch = useDispatch();
-  console.log('data', data);
 
   const { durationInDays, title, imageLink, description, id, category } = data;
 

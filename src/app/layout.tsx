@@ -5,6 +5,7 @@ import '../style/appStyle.scss';
 export const metadata: Metadata = {
   title: 'Vacation in Serbia',
   description: 'Vacation in Serbia',
+  robots: 'noindex, nofollow',
 };
 
 export const revalidate = 3600;
