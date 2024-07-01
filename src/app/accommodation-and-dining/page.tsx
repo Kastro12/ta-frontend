@@ -46,7 +46,7 @@ export default function AccommodationAndDining() {
         </Grid>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            Whether you're unwinding after a day of adventures or enjoying a meal at one of our
+            Whether you&apos;re unwinding after a day of adventures or enjoying a meal at one of our
             recommended establishments, our commitment to excellence guarantees that your
             accommodation and dining experiences will be outstanding.{' '}
           </Typography>
