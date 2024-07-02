@@ -19,8 +19,8 @@ export default function Template({ children }: { children: React.ReactNode }) {
       const formData = prompt('Enter your username and password') || '';
       const [username, password] = formData.split(' ');
 
-      const validUsername = process.env.NEXT_PUBLIC_USERNAME || '';
-      const validPassword = process.env.NEXT_PUBLIC_PASSWORD || '';
+      const validUsername = 'saleadmin' || '';
+      const validPassword = 'salepassword' || '';
 
       if (username === validUsername && password === validPassword) {
         Cookies.set('isLoggedIn', 'true', { expires: 1 });
