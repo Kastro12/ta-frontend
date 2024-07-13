@@ -4,13 +4,15 @@ import { Provider } from 'react-redux';
 import { store } from '@/store/store';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/utils/re-styledComponents/theme';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  console.log(process.env.NEXT_PUBLIC_USERNAME);
 
   useEffect(() => {
     const loggedIn = Cookies.get('isLoggedIn');

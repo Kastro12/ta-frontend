@@ -24,26 +24,27 @@ export const stringFromDate = (date: Date) => {
   return `${day} ${month}, ${year}`;
 };
 
-export const dateFromString = (dateString: string) => {
+export const dateFromString = (dateString: string | null) => {
   if (typeof dateString == null) {
     return null;
-  }
-  const [dayString, monthString, yearString] = dateString.split(' ');
-  const monthIndex = months.indexOf(monthString.replace(',', ''));
+  } else if (typeof dateString == 'string') {
+    const [dayString, monthString, yearString] = dateString.split(' ');
+    const monthIndex = months.indexOf(monthString.replace(',', ''));
 
-  // Kreiramo datum u UTC formatu
-  const date = new Date(Date.UTC(Number(yearString), monthIndex, parseInt(dayString, 10)));
-  return date;
+    const date = new Date(Date.UTC(Number(yearString), monthIndex, parseInt(dayString, 10)));
+    return date;
+  }
 };
 
-export const calculateDaysDifference = (
-  startString: string | null,
-  finishString: string | null
-): number => {
-  if (!startString || !finishString) return 0;
-
-  const start = dateFromString(startString);
-  const finish = dateFromString(finishString);
+export const getDateDifference = ({
+  startDate,
+  finishDate,
+}: {
+  startDate: string | null;
+  finishDate: string | null;
+}) => {
+  const start = dateFromString(startDate);
+  const finish = dateFromString(finishDate);
 
   if (!start || !finish) return 0;
 
@@ -54,6 +55,28 @@ export const calculateDaysDifference = (
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   return diffDays;
+};
+
+export const useCalculateDaysDifference = () => {
+  const startDate = useSelector((state: RootState) => state.vacation.startDate);
+  const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
+
+  if (!startDate || !finishDate) return 0;
+
+  return getDateDifference({ startDate, finishDate });
+
+  // const start = dateFromString(startDate);
+  // const finish = dateFromString(finishDate);
+
+  // if (!start || !finish) return 0;
+
+  // const startUTC = new Date(Date.UTC(start.getFullYear(), start.getMonth(), start.getDate()));
+  // const finishUTC = new Date(Date.UTC(finish.getFullYear(), finish.getMonth(), finish.getDate()));
+
+  // const diffTime = Math.abs(finishUTC.getTime() - startUTC.getTime());
+  // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  // return diffDays;
 };
 
 export const useMaxNumberOfDaysForChosenActivities = () => {

@@ -1,5 +1,5 @@
 import { activityLocations } from '@/data';
-import { useMaxNumberOfDaysForChosenActivities } from '@/utils/date';
+import { useMaxNumberOfDaysForChosenActivities, useCalculateDaysDifference } from '@/utils/date';
 import {
   insuranceCosts,
   drivingCosts,
@@ -11,7 +11,6 @@ import {
 
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
-import { calculateDaysDifference } from '@/utils/date';
 
 export const useNumberOfPerson = () => {
   const adults = useSelector((state: RootState) => state.vacation.adults);
@@ -19,15 +18,9 @@ export const useNumberOfPerson = () => {
   return adults + children;
 };
 
-export const useNumberOfDay = () => {
-  const startDate = useSelector((state: RootState) => state.vacation.startDate);
-  const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
-  return calculateDaysDifference(startDate, finishDate);
-};
-
 export const useSummaryInsurancePrice = () => {
   const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
-  const numOfDay = useNumberOfDay();
+  const numOfDay = useCalculateDaysDifference();
 
   const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
   const numberOfPerson = useNumberOfPerson();
@@ -39,7 +32,7 @@ export const useSummaryInsurancePrice = () => {
 
 export const useSummaryDrivingPrice = () => {
   const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
-  const numOfDay = useNumberOfDay();
+  const numOfDay = useCalculateDaysDifference();
 
   const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
   const numberOfPerson = useNumberOfPerson();
@@ -107,7 +100,7 @@ export const useSummaryAccommodationPrice = () => {
   let summaryAccommodationPrice = 0;
 
   const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
-  const numOfDay = useNumberOfDay();
+  const numOfDay = useCalculateDaysDifference();
 
   const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
   const numberOfPerson = useNumberOfPerson();
@@ -152,7 +145,7 @@ export const useSummaryActivitiesPrice = () => {
 
 export const useSummaryFoodPrice = () => {
   const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
-  const numOfDay = useNumberOfDay();
+  const numOfDay = useCalculateDaysDifference();
 
   const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
   const numberOfPerson = useNumberOfPerson();

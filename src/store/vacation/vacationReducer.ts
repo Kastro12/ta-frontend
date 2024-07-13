@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Activity } from '@/utils/interfaces/index';
+import { getDateDifference } from '@/utils/date';
 
 export interface IssueInitialState {
   startDate: null | string;
@@ -9,6 +10,11 @@ export interface IssueInitialState {
   childrenYears: { years: '1-2' | '2-4' | '4-7' | '7+'; position: number }[];
   chosenActivities: Activity[];
   chosenActivitiesAction: 'adding' | 'removing' | null;
+  confirmAddingActivity: null | {
+    activity: Activity;
+    differenceBetweenStartFinishDate: number;
+    maxNumberOfDaysForChosenActivities: number;
+  };
 }
 const initialState: IssueInitialState = {
   startDate: null,
@@ -18,6 +24,7 @@ const initialState: IssueInitialState = {
   adults: 1,
   children: 0,
   childrenYears: [],
+  confirmAddingActivity: null,
 };
 
 export interface TheDateChangeProps {
@@ -38,14 +45,49 @@ export const vacationSlice = createSlice({
         state[`${action.payload.type}`] = action.payload.date;
       }
       if (action.payload.date === null) {
-        if (action.payload.type == 'startDate') state.finishDate = null;
         state[`${action.payload.type}`] = null;
       }
+      if (action.payload.type == 'startDate') state.finishDate = null;
     },
 
     addActivity: (state, action: PayloadAction<Activity>) => {
-      state.chosenActivities = [...state.chosenActivities, action.payload];
-      state.chosenActivitiesAction = 'adding';
+      console.log('state.startDate', state.startDate);
+      console.log('state.finishDate', state.finishDate);
+
+      let maxNumberOfDaysForChosenActivities = action.payload.durationInDays;
+      state.chosenActivities.forEach((activity) => {
+        maxNumberOfDaysForChosenActivities += activity.durationInDays;
+      });
+
+      const differenceBetweenStartFinishDate = getDateDifference({
+        startDate: state.startDate,
+        finishDate: state.finishDate,
+      });
+
+      console.log('differenceBetweenStartFinishDate', differenceBetweenStartFinishDate);
+      console.log('maxNumberOfDaysForChosenActivities', maxNumberOfDaysForChosenActivities);
+
+      if (
+        differenceBetweenStartFinishDate != 0 &&
+        differenceBetweenStartFinishDate < maxNumberOfDaysForChosenActivities
+      ) {
+        // modal neka ponudi da se sacuva aktivnost i poveca datum vracanja,
+        // ili nemoj da dodas zeljenu aktivnost.
+        // I obavesti koliko je prekoraceno i koliko je ostalo vremena u
+        // zeljenom intervalu
+        console.log(
+          'Prikazi Modal sa obavestenjem da je korisnik prekoracio aktivnosti za odabrani vremenski period'
+        );
+
+        state.confirmAddingActivity = {
+          activity: action.payload,
+          differenceBetweenStartFinishDate,
+          maxNumberOfDaysForChosenActivities,
+        };
+      } else {
+        state.chosenActivities = [...state.chosenActivities, action.payload];
+        state.chosenActivitiesAction = 'adding';
+      }
     },
 
     removeActivity: (state, action: PayloadAction<string>) => {
@@ -104,7 +146,7 @@ export const vacationSlice = createSlice({
       state.childrenYears = filteredList;
     },
 
-    clearVacation: (state) => initialState,
+    clearVacation: () => initialState,
   },
 });
 

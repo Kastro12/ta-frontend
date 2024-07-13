@@ -9,6 +9,7 @@ const CalendarForm = ({
   disabledFinishDate,
   maxFinishDate,
   handleDateChange,
+  minFinishDate,
 }: {
   disabledStartDate: boolean;
   disabledFinishDate: boolean;
@@ -16,6 +17,7 @@ const CalendarForm = ({
   finishDate: Date | null;
   maxFinishDate: Date | null;
   handleDateChange: (type: 'startDate' | 'finishDate', date: any) => void;
+  minFinishDate: Date | null;
 }) => {
   return (
     <div className='CalendarForm'>
@@ -34,6 +36,7 @@ const CalendarForm = ({
           dateFormat='d MMMM, yyyy'
           isClearable={true}
           required
+          onFocus={(e) => e.target.blur()}
         />
       </div>
       <div className='calendar-field'>
@@ -45,10 +48,11 @@ const CalendarForm = ({
           icon={<CalendarMonthOutlinedIcon />}
           toggleCalendarOnIconClick
           onChange={(date) => handleDateChange('finishDate', date)}
-          minDate={startDate ? startDate : new Date()}
+          minDate={minFinishDate}
           placeholderText='Finish date'
           dateFormat='d MMMM, yyyy'
           isClearable={!disabledFinishDate}
+          onFocus={(e) => e.target.blur()}
         />
       </div>
     </div>

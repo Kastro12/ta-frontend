@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import IssueReducer from './issue/issueReducer';
+import alertsReducer from './alerts/alertsReducer';
 import vacationReducer from './vacation/vacationReducer';
 import predefinedVacationReducer from './vacation/predefinedVacationReducer';
 import activitiesReducer from './activities/activitiesReducer';
 
 export const store = configureStore({
   reducer: {
-    issue: IssueReducer,
+    alert: alertsReducer,
     vacation: vacationReducer,
     predefinedVacation: predefinedVacationReducer,
     activities: activitiesReducer,

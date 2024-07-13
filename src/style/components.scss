@@ -1,24 +1,40 @@
-.navigation-wrap {
+.navigation-wrap.MuiPaper-root {
+  position: fixed;
+  top: 0;
+  box-shadow: none;
+  background-color: $green1;
+  height: 72px;
+
+  .custom-container {
+    height: 100%;
+    .MuiToolbar-root {
+      height: 100%;
+    }
+  }
+
   .logo {
-    font-size: 19px;
+    font-size: 18px;
     text-decoration: none;
     color: $white2;
     display: flex;
     align-items: center;
+    margin-right: 12px;
     img {
       margin-right: 12px;
-      height: 38px;
+      height: 42px;
     }
     .content {
       display: flex;
       flex-direction: column;
       .text {
         color: $white1;
+        line-height: 22px;
       }
       .destination {
         font-size: 12px;
         font-weight: 300;
         color: $white2;
+        margin-top: 2px;
       }
     }
 
@@ -29,13 +45,13 @@
 } //navigation-wrap END
 
 .navigation-wrap-placeholder {
-  height: 64px;
+  height: 72px;
   width: 100%;
   position: relative;
 
-  @media screen and (min-width: $md) {
-    height: 74px;
-  }
+  // @media screen and (min-width: $md) {
+  //   height: 74px;
+  // }
 } //navigation-wrap-placeholder END
 
 .TextOverImageComponent {
@@ -180,13 +196,15 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      .gray-label {
+        font-size: 13px;
+        color: $gray2;
+      }
+
       .text {
         h3 {
           margin: 10px 0 6px 0;
-        }
-        .category {
-          font-size: 13px;
-          color: $gray2;
         }
         .description {
           margin: 16px 0;
@@ -195,11 +213,10 @@
       .buttons {
         display: flex;
         justify-content: space-between;
-      }
-
-      .duration {
-        font-size: 13px;
-        color: $gray2;
+        align-items: flex-end;
+        .gray-label {
+          margin-bottom: 2px;
+        }
       }
     }
   }
@@ -323,18 +340,13 @@
     position: relative;
     .image-wrap {
       display: flex;
-      height: 70px;
-      &.right-radius {
-        img {
-          border-top-left-radius: 4px;
-          border-bottom-left-radius: 4px;
-        }
-      }
+      height: 80px;
       img {
-        width: 100px;
+        width: 90px;
         height: 100%;
         object-fit: cover;
-        border-radius: 0px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
       }
       .MuiButtonBase-root {
         padding: 4px;
@@ -348,40 +360,63 @@
       }
     }
     .content {
-      width: calc(100% - 127px);
-      display: flex;
-      justify-content: space-between;
-
+      width: 100%;
       .info {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        width: 100%;
+        justify-content: space-between;
+        height: auto;
+        .sub-info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+        }
+
         p {
           margin: 0;
           padding: 0 12px;
           font-size: 14px;
           line-height: 22px !important;
           font-weight: 600;
-          width: calc(100% - 40px);
+          height: 50px;
+          width: calc(100% - 46px);
         }
-        .category {
+        .gray-label {
           font-size: 13px;
           color: $gray2;
           padding: 0 12px;
           line-height: 22px !important;
+          font-weight: 300;
         }
       }
       .action {
         position: absolute;
-        right: 0;
-        top: 0;
+
         .MuiButtonBase-root {
           padding: 6px;
           svg {
             width: 19px;
             height: 19px;
             color: $gray2;
+          }
+        }
+        &.remove {
+          right: 0;
+          top: 0;
+        }
+        &.drag {
+          left: 0;
+          top: 0;
+          background-color: $transparentwhite2;
+          border-radius: 4px;
+
+          .MuiButtonBase-root {
+            svg {
+              width: 18px;
+              height: 18px;
+              color: $navyBlue1;
+            }
           }
         }
       }
@@ -569,6 +604,47 @@
     }
   }
 } //NumberOfPersonsForm END
+
+.page-alert.MuiPaper-root {
+  position: fixed;
+  bottom: 24px;
+  z-index: 9;
+  border: 2px solid $orange2;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: calc(100% - 60px);
+  padding: 6px 12px;
+  .MuiAlert-icon {
+    margin-right: 9px;
+    position: absolute;
+    svg {
+      font-size: 24px;
+    }
+  }
+
+  .MuiAlert-action {
+    position: absolute;
+    right: 12px;
+    padding-left: 0;
+    svg {
+      color: $gray2;
+    }
+  }
+
+  .MuiAlert-message {
+    color: $navyBlue1;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    margin: 0 32px;
+  }
+
+  @media screen and (min-width: $md) {
+    max-width: max-content;
+    min-width: 326px;
+  }
+}
 
 .standard_alert_near_button {
   position: absolute;

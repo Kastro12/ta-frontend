@@ -57,15 +57,11 @@ const Navbar = () => {
   return (
     <>
       <div className='navigation-wrap-placeholder'></div>
-      <AppBar
-        color='transparent'
-        className='navigation-wrap'
-        sx={{ top: 0, position: 'fixed', boxShadow: 'none', backgroundColor: '#21817d' }}
-      >
+      <AppBar color='transparent' className='navigation-wrap'>
         <Container maxWidth='lg' className='custom-container'>
           <Toolbar disableGutters>
             <Link href={'/'} className='logo'>
-              <img src='https://i.ibb.co/QHY5Cj0/tailor-made-vacation-icon.png' />
+              <img src='/logo/android-chrome-256x256.png' />
               <span className='content'>
                 <span className='text'>Tailor-made vacations</span>
                 <span className='destination'>Serbia & surroundings</span>

@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Alert } from '@mui/material';
 
 import CalendarFormWithHandleCalendarDate from './forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from './forms/NumberOfPersonsFormWithHandle';
@@ -15,7 +15,10 @@ import {
   updateCurrentPage,
   clearActivities,
 } from '@/store/activities/activitiesReducer';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+
+import AddActivityDialog from '@/components/dialog/AddActivityDialog';
 
 export default function Activities() {
   const dispatch = useDispatch();
@@ -90,8 +93,17 @@ export default function Activities() {
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Typography variant='h1'>Create your Vacation</Typography>
+      <Alert
+        severity='warning'
+        className='page-alert'
+        icon={<InfoOutlinedIcon fontSize='small' />}
+        onClose={() => {}}
+      >
+        This is a warning Alert.
+      </Alert>
 
+      <Typography variant='h1'>Create your Vacation</Typography>
+      <AddActivityDialog />
       <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
           <CalendarFormWithHandleCalendarDate />

@@ -43,6 +43,7 @@ const handleCalendarDate = (Component: React.ComponentType<any>) => {
         disabledFinishDate={true}
         maxFinishDate={null}
         handleDateChange={handleDateChange}
+        minFinishDate={startDate ? startDate : new Date()}
       />
     );
   };

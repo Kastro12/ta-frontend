@@ -41,6 +41,19 @@ export function SortableItem({ id, activity }) {
     transition,
   };
 
+  let durationText = '';
+  switch (activity.durationInDays) {
+    case 1:
+      durationText += '1 day';
+      break;
+    case 0.5:
+      durationText += 'Half a day';
+      break;
+    default:
+      durationText += `${activity.durationInDays} days`;
+      break;
+  }
+
   return (
     <SortableItemContext.Provider value={context}>
       <Paper
@@ -52,29 +65,35 @@ export function SortableItem({ id, activity }) {
         style={style}
       >
         <li>
-          <div className={`image-wrap ${pathname !== '/book-vacation' ? '' : 'right-radius'}`}>
-            {pathname !== '/book-vacation' && <DragHandle />}
+          <div className={`image-wrap`}>
             <img src={activity.imageLink} />
           </div>
 
           <div className='content'>
             <div className='info'>
               <p>{activity.title}</p>
-              <span className='category'>{activity.category}</span>
+              <div className='sub-info'>
+                <span className='gray-label'>{activity.category}</span>
+                <span className='gray-label'>{durationText}</span>
+              </div>
             </div>
 
             {pathname !== '/book-vacation' && (
-              <div className='action'>
-                <IconButton
-                  sx={{ ...button }}
-                  id='shoppingCartIcon'
-                  onClick={() => dispatch(removeActivity(activity.id))}
-                  size='small'
-                  title='Remove activity'
-                >
-                  <CloseOutlinedIcon />
-                </IconButton>
-              </div>
+              <>
+                <div className='action remove'>
+                  <IconButton
+                    sx={{ ...button }}
+                    id='shoppingCartIcon'
+                    onClick={() => dispatch(removeActivity(activity.id))}
+                    size='small'
+                    title='Remove activity'
+                  >
+                    <CloseOutlinedIcon />
+                  </IconButton>
+                </div>
+
+                <DragHandle />
+              </>
             )}
           </div>
         </li>
@@ -83,10 +102,10 @@ export function SortableItem({ id, activity }) {
   );
 }
 
-export function DragHandle({ zIndex }) {
+export function DragHandle() {
   const { attributes, listeners, ref } = useContext(SortableItemContext);
   return (
-    <div {...attributes} {...listeners} ref={ref}>
+    <div {...attributes} {...listeners} ref={ref} className='action drag'>
       <IconButton
         sx={{ ...button }}
         id='shoppingCartIcon'

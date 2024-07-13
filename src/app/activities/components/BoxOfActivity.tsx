@@ -1,17 +1,12 @@
 import * as React from 'react';
 import { Paper, Typography, Box, Button } from '@mui/material';
-import {
-  button,
-  linkGreenButton,
-  greenButton,
-  selectedActivity,
-} from '@/utils/re-styledComponents';
-import Link from 'next/link';
+import { button, greenButton, selectedActivity } from '@/utils/re-styledComponents';
 import { Activity } from '@/utils/interfaces';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { useDispatch } from 'react-redux';
 import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
+import { activityDurationInString } from '@/utils/string';
 
 interface BoxOfActivity {
   data: Activity;
@@ -21,7 +16,7 @@ interface BoxOfActivity {
 export default function BoxOfActivity({ data, isSelected }: BoxOfActivity) {
   const dispatch = useDispatch();
 
-  const { durationInDays, title, imageLink, description, id, category } = data;
+  const { durationInDays, title, imageLink, description, id, category, location } = data;
 
   let durationText: string = 'It takes ';
   switch (durationInDays) {
@@ -48,14 +43,11 @@ export default function BoxOfActivity({ data, isSelected }: BoxOfActivity) {
                 display: 'flex',
                 justifyContent: 'space-between',
                 flexDirection: 'row',
-                marginBottom: '6px',
               }}
             >
-              <span className='category'>{category}</span>
-              <span className='category'>{durationText}</span>
+              <span className='gray-label'>{category}</span>
+              <span className='gray-label'>{location}</span>
             </div>
-
-            <div style={{ display: 'flex', flexDirection: 'row' }}></div>
 
             <Typography variant='body1' className='description'>
               {description}
@@ -71,14 +63,7 @@ export default function BoxOfActivity({ data, isSelected }: BoxOfActivity) {
               {isSelected ? 'Remove' : 'Choose'}
             </Button>
 
-            {/* <Button
-              sx={{ ...button, ...linkGreenButton }}
-              variant='outlined'
-              href={'./'}
-              LinkComponent={Link}
-            >
-              More info
-            </Button> */}
+            <span className='gray-label'>{activityDurationInString(durationInDays)}</span>
           </div>
         </Box>
       </Box>

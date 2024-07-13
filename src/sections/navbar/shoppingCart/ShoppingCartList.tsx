@@ -130,13 +130,15 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           }}
           className='chosen-activities'
         >
-          <Typography variant='body1' sx={{ marginTop: '18px' }}>
-            Chosen activities ({chosenActivities.length}){' - '}
+          <Typography
+            variant='body1'
+            sx={{ marginTop: '18px', display: 'flex', justifyContent: 'space-between' }}
+          >
+            <span>Chosen activities ({chosenActivities.length})</span>
             {chosenActivities.length > 0 ? (
-              <div style={{ fontSize: '13px' }}>
-                Vacation is up to <strong>{maxNumberOfDaysForChosenActivities + 1} days</strong> for
-                chosen activities.
-              </div>
+              <span style={{ fontSize: '13px' }}>
+                All takes <strong>{maxNumberOfDaysForChosenActivities} days</strong>
+              </span>
             ) : (
               ''
             )}
