@@ -262,6 +262,10 @@
 .MuiDialog-root.dialog-wrapper {
   margin: 12px;
 
+  .MuiPaper-root {
+    margin: 0px;
+  }
+
   .MuiDialogContent-root {
     padding: 0 12px 12px 12px;
   }

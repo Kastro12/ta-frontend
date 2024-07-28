@@ -1,46 +1,55 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
-
-import { useSelector } from 'react-redux';
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  Typography,
+  DialogActions,
+  IconButton,
+  Button,
+} from '@mui/material';
+import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
-
-import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
-import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
-
-import { button, lightGreenButton, greenButton } from '@/utils/re-styledComponents';
+import { button, lightButton, greenButton } from '@/utils/re-styledComponents';
+import {
+  addActivity,
+  removeActivity,
+  changeTheDate,
+  stopAddingActivity,
+} from '@/store/vacation/vacationReducer';
+import { dateFromString, stringFromDate } from '@/utils/date';
 
 export default function AddActivityDialog() {
-  const [open, setOpen] = React.useState(false);
+  const dispatch = useDispatch();
 
   const confirmAddingActivity = useSelector(
     (state: RootState) => state.vacation.confirmAddingActivity
   );
 
-  const startDate = useSelector((state: RootState) => state.vacation.startDate);
-  const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
-
   console.log('confirmAddingActivity', confirmAddingActivity);
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
+
+  console.log('finishDate', finishDate);
+
+  const finishDateFormatted = dateFromString(finishDate);
+
+  console.log('finishDateFormatted', finishDateFormatted);
+
+  const addDays = (date: any, days: number): Date => {
+    const result = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    result.setDate(result.getDate() + days);
+    return result;
   };
-  const handleClose = () => {
-    setOpen(false);
-  };
+
+  const newFinishDate = finishDateFormatted ? addDays(finishDateFormatted, 3) : null;
+  console.log('newFinishDate', newFinishDate);
+
+  const newFinishDateString = newFinishDate ? stringFromDate(newFinishDate) : null;
 
   return (
     <React.Fragment>
-      {/* <Button variant='outlined' onClick={handleClickOpen}>
-        Open dialog
-      </Button> */}
       <Dialog
         // onClose={handleClose}
         aria-labelledby='customized-dialog-title'
@@ -50,7 +59,7 @@ export default function AddActivityDialog() {
         <DialogTitle sx={{ m: 0, p: 2 }} id='customized-dialog-title'>
           Activity overflow
         </DialogTitle>
-        <IconButton
+        {/* <IconButton
           aria-label='close'
           onClick={handleClose}
           sx={{
@@ -61,51 +70,49 @@ export default function AddActivityDialog() {
           }}
         >
           <CloseIcon />
-        </IconButton>
+        </IconButton> */}
         <DialogContent>
-          <Typography variant='body1' sx={{ mb: '9px' }}>
-            {startDate} - {finishDate} is <strong>5</strong> days.
-            {/* The duration from start to finish date is <strong>5</strong> days. */}
+          <Typography variant='body1' sx={{ mb: '9px', fontSize: '16px' }}>
+            The dates you've selected result in a{' '}
+            <strong>{confirmAddingActivity?.differenceBetweenStartFinishDate}-day</strong> vacation.
           </Typography>
-          <Typography variant='body1' sx={{ mb: '24px' }}>
-            Chosen activities require <strong>7</strong> days.
+          <Typography variant='body1' sx={{ mb: '24px', fontSize: '16px' }}>
+            Chosen activities require{' '}
+            <strong>{confirmAddingActivity?.maxNumberOfDaysForChosenActivities}</strong> days.
           </Typography>
 
           <Button
+            aria-label='close'
             sx={{ ...button, ...greenButton, mb: 2 }}
             variant='outlined'
-            startIcon={<AddShoppingCartOutlinedIcon />}
             className='actions'
-            // onClick={() => dispatch(isSelected ? removeActivity(id) : addActivity(data))}
+            onClick={() => {
+              // if (confirmAddingActivity?.activity)
+              //   dispatch(addActivity(confirmAddingActivity.activity));
+
+              // dispatch(changeTheDate({ type: 'finishDate', date: newFinishDateString }));
+
+              dispatch(stopAddingActivity());
+            }}
           >
-            Add the activity and extend the finish date
+            Extend the finish date to {newFinishDateString}
           </Button>
 
           <Button
-            sx={{ ...button, ...lightGreenButton }}
+            aria-label='close'
+            sx={{ ...button, ...lightButton }}
             variant='outlined'
-            startIcon={<CloseOutlinedIcon />}
             className='actions'
-            // onClick={() => dispatch(isSelected ? removeActivity(id) : addActivity(data))}
+            onClick={() => {
+              dispatch(stopAddingActivity());
+              // setTimeout(() => {
+              //   if (confirmAddingActivity?.activity)
+              //     dispatch(removeActivity(confirmAddingActivity?.activity.id));
+              // }, 1000);
+            }}
           >
-            Do not add the selected activity.
+            Cancel last chosen activity
           </Button>
-
-          {/* <Typography gutterBottom>
-            You selected activities beyond your 5-day vacation ({startDate} - {finishDate}).
-          </Typography>
-
-          <Typography gutterBottom>Options:</Typography>
-
-          <p>Extend your vacation to save the activity (new end date: Jan 7, 2020)</p>
-          <Button autoFocus onClick={handleClose}>
-            Extend
-          </Button>
-
-          <p>Remove the last activity and keep the original end date (Jan 5, 2020).</p>
-          <Button autoFocus onClick={handleClose}>
-            Remove
-          </Button> */}
         </DialogContent>
       </Dialog>
     </React.Fragment>

@@ -37,6 +37,17 @@ export const selectedActivity = {
   },
 };
 
+export const lightButton = {
+  color: '#535961',
+  backgroundColor: '#f5f5f5',
+  border: '1px solid  #f5f5f5',
+  '&:hover': {
+    color: '#212b3b',
+    backgroundColor: '#e4e4e4',
+    border: '1px solid #e4e4e4',
+  },
+};
+
 export const transparentLightButton = {
   color: '#f5f5f5',
   '&:hover': {
@@ -51,17 +62,6 @@ export const greenButton = {
   '&:hover': {
     color: '#fff',
     backgroundColor: '#1e706c',
-  },
-};
-
-export const lightGreenButton = {
-  color: '#21817d',
-  backgroundColor: 'transparent',
-  border: '1px solid  #21817d',
-  '&:hover': {
-    color: '#1e706c',
-    backgroundColor: 'transparent',
-    border: '1px solid #1e706c',
   },
 };
 

@@ -5,8 +5,8 @@ import { changeTheDate } from '@/store/vacation/vacationReducer';
 import {
   stringFromDate,
   dateFromString,
-  useCalculateDaysDifference,
   useMaxNumberOfDaysForChosenActivities,
+  getDateDifference,
 } from '@/utils/date';
 
 const handleCalendarDate = (Component: React.ComponentType<any>) => {
@@ -25,11 +25,7 @@ const handleCalendarDate = (Component: React.ComponentType<any>) => {
         ? dateFromString(finishStringDate)
         : null;
 
-    const calculateDaysDifference = useCalculateDaysDifference();
-    // console.log('calculateDaysDifference', calculateDaysDifference);
-
     const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
-    // console.log('maxNumberOfDaysForChosenActivities', maxNumberOfDaysForChosenActivities);
 
     let minFinishDate = startDate ? new Date(startDate) : new Date();
 
@@ -38,16 +34,28 @@ const handleCalendarDate = (Component: React.ComponentType<any>) => {
     }
 
     const handleDateChange = (type: 'startDate' | 'finishDate', date: any) => {
-      if (type == 'finishDate' && minFinishDate < date && maxNumberOfDaysForChosenActivities != 0)
-        console.log('ZzzzzzzzzzzzzZ');
-
+      let stringDate = null;
       if (date) {
         const utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-        dispatch(changeTheDate({ type, date: stringFromDate(utcDate) }));
-      } else {
-        dispatch(changeTheDate({ type, date: null }));
+        stringDate = stringFromDate(utcDate);
       }
+
+      if (type == 'finishDate' && minFinishDate < date && maxNumberOfDaysForChosenActivities != 0) {
+        const differenceBetweenStartFinishDate = getDateDifference({
+          startDate: startStringDate,
+          finishDate: stringDate,
+        });
+
+        console.log(
+          `You have time for activities of ${
+            differenceBetweenStartFinishDate - maxNumberOfDaysForChosenActivities
+          } days`
+        );
+      }
+
+      dispatch(changeTheDate({ type, date: stringDate }));
     };
+
     return (
       <Component
         {...props}

@@ -84,10 +84,13 @@ export const vacationSlice = createSlice({
           differenceBetweenStartFinishDate,
           maxNumberOfDaysForChosenActivities,
         };
-      } else {
-        state.chosenActivities = [...state.chosenActivities, action.payload];
-        state.chosenActivitiesAction = 'adding';
       }
+      state.chosenActivities = [...state.chosenActivities, action.payload];
+      state.chosenActivitiesAction = 'adding';
+    },
+
+    stopAddingActivity: (state) => {
+      state.confirmAddingActivity = null;
     },
 
     removeActivity: (state, action: PayloadAction<string>) => {
@@ -161,5 +164,6 @@ export const {
   addChildrenYears,
   removeChildrenYears,
   clearVacation,
+  stopAddingActivity,
 } = vacationSlice.actions;
 export default vacationSlice.reducer;
