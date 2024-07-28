@@ -73,7 +73,7 @@ export default function AddActivityDialog() {
         </IconButton> */}
         <DialogContent>
           <Typography variant='body1' sx={{ mb: '9px', fontSize: '16px' }}>
-            The dates you've selected result in a{' '}
+            The dates you&apos;ve selected result in a{' '}
             <strong>{confirmAddingActivity?.differenceBetweenStartFinishDate}-day</strong> vacation.
           </Typography>
           <Typography variant='body1' sx={{ mb: '24px', fontSize: '16px' }}>
