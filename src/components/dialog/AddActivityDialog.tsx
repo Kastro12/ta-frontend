@@ -87,10 +87,10 @@ export default function AddActivityDialog() {
             variant='outlined'
             className='actions'
             onClick={() => {
-              // if (confirmAddingActivity?.activity)
-              //   dispatch(addActivity(confirmAddingActivity.activity));
+              if (confirmAddingActivity?.activity)
+                dispatch(addActivity(confirmAddingActivity.activity));
 
-              // dispatch(changeTheDate({ type: 'finishDate', date: newFinishDateString }));
+              dispatch(changeTheDate({ type: 'finishDate', date: newFinishDateString }));
 
               dispatch(stopAddingActivity());
             }}
@@ -105,10 +105,8 @@ export default function AddActivityDialog() {
             className='actions'
             onClick={() => {
               dispatch(stopAddingActivity());
-              // setTimeout(() => {
-              //   if (confirmAddingActivity?.activity)
-              //     dispatch(removeActivity(confirmAddingActivity?.activity.id));
-              // }, 1000);
+              if (confirmAddingActivity?.activity)
+                dispatch(removeActivity(confirmAddingActivity?.activity.id));
             }}
           >
             Cancel last chosen activity
