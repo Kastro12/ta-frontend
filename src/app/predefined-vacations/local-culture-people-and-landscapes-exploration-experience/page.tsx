@@ -13,6 +13,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
 import { useRouter } from 'next/navigation';
 import TextImage1 from '@/components/boxes/TextImage1';
+import Image from 'next/image';
 
 export default function BookVacation() {
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
@@ -58,11 +59,13 @@ export default function BookVacation() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
-        <img
+        <Image
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
           alt='couple near car in nature'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          width={1141}
+          height={400}
         />
         <div className='content'>
           <Grid md={12} className='titles'>

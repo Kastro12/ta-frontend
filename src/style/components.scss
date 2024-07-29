@@ -74,19 +74,22 @@
 
 .SliderBarGallery {
   .MuiPaper-root {
-    margin: 0;
+    // margin: 0;
     box-shadow: none;
     img {
-      width: 100%;
+      // width: 100%;
       height: 280px;
       object-fit: cover;
       border-radius: 4px;
     }
   }
 
-  @media screen and (min-width: 680px) {
-    .MuiPaper-root {
-      margin: 0 12px;
+  @media screen and (min-width: 740px) {
+    .slick-list {
+      margin: 0 !important;
+      .MuiPaper-root {
+        margin: 0 12px;
+      }
     }
   }
 

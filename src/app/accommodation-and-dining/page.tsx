@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import SliderBarGallery from '@/sections/sliderBarGallery/SliderBarGallery';
-import { centerModeForGallery } from '@/components/sliderbar/settings';
 import Image from 'next/image';
 
 export default function AccommodationAndDining() {
@@ -62,33 +61,39 @@ export default function AccommodationAndDining() {
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 1,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 2,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 3,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 4,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 5,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 6,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 7,
               },
             ]}
-            setting={centerModeForGallery}
           />
         </Grid>
       </Grid>

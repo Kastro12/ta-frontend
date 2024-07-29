@@ -68,8 +68,7 @@ export const pathwayFromAncientIimes = {
   title: 'Pathway from ancient times through the middle ages to modern history',
   description:
     "Explore ancient ruins, medieval castles, and modern landmarks, experiencing the region's evolution from ancient times to today.",
-  imageLink:
-    'https://images.pexels.com/photos/20975683/pexels-photo-20975683/free-photo-of-a-black-and-white-photo-of-a-horse-jumping-over-an-obstacle.jpeg',
+  imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
   alt: 'Pathway from ancient times through the middle ages to modern history',
   link: '/predefined-vacations/pathway-from-ancient-times-through-the-middle-ages-to-modern-history',
   dailyOgranization: [

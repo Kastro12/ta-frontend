@@ -1,16 +1,18 @@
 import { Container, Typography } from '@mui/material';
-
 import Grid from '@mui/material/Unstable_Grid2';
+import Image from 'next/image';
 
-export default function AboutUs() {
+export default function Staff() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
-        <img
+        <Image
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
           alt='couple near car in nature'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          width={1141}
+          height={400}
         />
         <div className='content'>
           <Grid md={12} className='titles'>
@@ -55,28 +57,52 @@ export default function AboutUs() {
       <Grid container spacing={4} className='team_members'>
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
-            <img src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg' />
+            <Image
+              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
+              alt='couple near car in nature'
+              loading='lazy'
+              width={500}
+              height={280}
+            />
             <Typography variant='h3'>Aleksandar Kastratovic</Typography>
             <Typography variant='h4'>CEO</Typography>
           </div>
         </Grid>
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
-            <img src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg' />
+            <Image
+              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
+              alt='couple near car in nature'
+              loading='lazy'
+              width={500}
+              height={280}
+            />
             <Typography variant='h3'>Elena Acevska</Typography>
             <Typography variant='h4'>Biologist</Typography>
           </div>
         </Grid>
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
-            <img src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg' />
+            <Image
+              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
+              alt='couple near car in nature'
+              loading='lazy'
+              width={500}
+              height={280}
+            />
             <Typography variant='h3'>Dragoje Kastratovic</Typography>
             <Typography variant='h4'>Medical doctor</Typography>
           </div>
         </Grid>
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
-            <img src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg' />
+            <Image
+              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
+              alt='couple near car in nature'
+              loading='lazy'
+              width={500}
+              height={280}
+            />
             <Typography variant='h3'>Marijana Milenkovic</Typography>
             <Typography variant='h4'>Medical doctor</Typography>
           </div>

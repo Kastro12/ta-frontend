@@ -37,13 +37,7 @@ export const settingThreeInRow = {
   ],
 };
 
-export const centerModeForGallery = {
-  className: 'center',
-  centerMode: true,
-  infinite: true,
-  centerPadding: '300px',
-  slidesToShow: 1,
-  speed: 300,
+export const sliderBarGallerySetting = {
   prevArrow: (
     <SlickArrowLeft className='scroll-arrow-button' externalClassName='scroll-arrow-button' />
   ),
@@ -52,26 +46,32 @@ export const centerModeForGallery = {
   ),
   arrows: true,
 
+  centerPadding: '260px',
+  className: 'center',
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+
   responsive: [
     {
-      breakpoint: 1300,
+      breakpoint: 1270,
       settings: {
-        centerPadding: '250px',
+        centerPadding: '180px',
       },
     },
-
     {
       breakpoint: 1000,
       settings: {
-        centerPadding: '150px',
+        centerPadding: '100px',
       },
     },
 
     {
-      breakpoint: 680,
+      breakpoint: 740,
       settings: {
         centerMode: false,
-        centerPadding: '0',
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
   ],

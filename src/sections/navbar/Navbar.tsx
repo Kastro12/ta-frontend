@@ -13,6 +13,7 @@ import ShoppingCartList from './shoppingCart/ShoppingCartList';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
 import { clearActivityAction } from '@/store/vacation/vacationReducer';
+import Image from 'next/image';
 
 const Navbar = () => {
   const pages = useMemo(
@@ -61,7 +62,14 @@ const Navbar = () => {
         <Container maxWidth='lg' className='custom-container'>
           <Toolbar disableGutters>
             <Link href={'/'} className='logo'>
-              <img src='/logo/android-chrome-256x256.png' />
+              <Image
+                src='/logo/android-chrome-256x256.png'
+                alt='tailor-made vacations logo'
+                loading='lazy'
+                width={42}
+                height={42}
+              />
+
               <span className='content'>
                 <span className='text'>Tailor-made vacations</span>
                 <span className='destination'>Serbia & surroundings</span>

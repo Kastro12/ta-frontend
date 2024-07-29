@@ -2,17 +2,19 @@ import React from 'react';
 import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import SliderBarGallery from '@/sections/sliderBarGallery/SliderBarGallery';
-import { centerModeForGallery } from '@/components/sliderbar/settings';
+import Image from 'next/image';
 
 export default function VehicleFleet() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
-        <img
+        <Image
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
           alt='couple near car in nature'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          width={1141}
+          height={400}
         />
         <div className='content'>
           <Grid md={12} className='titles'>
@@ -56,33 +58,39 @@ export default function VehicleFleet() {
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 1,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 2,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 3,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 4,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 5,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 6,
               },
               {
                 imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
                 alt: 'Test alt',
+                id: 7,
               },
             ]}
-            setting={centerModeForGallery}
           />
         </Grid>
       </Grid>

@@ -20,15 +20,19 @@ import { button, greenButton } from '@/utils/re-styledComponents';
 import { settingThreeInRow } from '@/components/sliderbar/settings';
 import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section' sx={{ position: 'relative' }}>
-        <img
+        <Image
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt={'couple near car in nature'}
+          alt='couple near car in nature'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          width={1141}
+          height={400}
         />
         <div className='content'>
           <Grid md={12} className='titles'>

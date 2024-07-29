@@ -8,8 +8,7 @@ const topSeasonActivities = [
   {
     id: '2',
     title: 'Mountain bike',
-    imageLink:
-      'https://images.pexels.com/photos/20975683/pexels-photo-20975683/free-photo-of-a-black-and-white-photo-of-a-horse-jumping-over-an-obstacle.jpeg',
+    imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
     alt: 'couple near car in nature',
   },
   {
@@ -21,8 +20,7 @@ const topSeasonActivities = [
   {
     id: '4',
     title: 'Mountain bike',
-    imageLink:
-      'https://images.pexels.com/photos/20975683/pexels-photo-20975683/free-photo-of-a-black-and-white-photo-of-a-horse-jumping-over-an-obstacle.jpeg',
+    imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
     alt: 'couple near car in nature',
   },
   {
