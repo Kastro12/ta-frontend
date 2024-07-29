@@ -2,14 +2,12 @@ import React, { useMemo, useState } from 'react';
 import { DndContext, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import {
   SortableContext,
-  arrayMove,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { restrictToVerticalAxis } from '@dnd-kit/modifiers';
 import { SortableItem, SortableOverlay } from './components';
-
 
 const SortableListStyle = {
   display: 'flex',
@@ -20,8 +18,6 @@ const SortableListStyle = {
 };
 
 export function SortableList() {
-  const dispatch = useDispatch();
-
   const chosenActivities = useSelector((state) => state.vacation.chosenActivities);
 
   const [active, setActive] = useState(null);
@@ -52,21 +48,7 @@ export function SortableList() {
       onDragStart={({ active }) => {
         setActive(active);
       }}
-      onDragEnd={({ active, over }) => {
-        // let changedOrder;
-
-        // if (over && active.id !== over?.id) {
-        //   const activeIndex = chosenActivities.findIndex(
-        //     ({ id }) => id === active.id
-        //   );
-        //   const overIndex = chosenActivities.findIndex(
-        //     ({ id }) => id === over.id
-        //   );
-
-        //   changedOrder = arrayMove(chosenActivities, activeIndex, overIndex);
-        // }
-
-        // if (changedOrder) dispatch(updateImagesInCanvas(changedOrder));
+      onDragEnd={() => {
         setActive(null);
       }}
       onDragCancel={() => {

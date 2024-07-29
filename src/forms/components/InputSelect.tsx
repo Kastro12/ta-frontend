@@ -16,7 +16,7 @@ const InputSelect = ({
     <Controller
       name={name}
       control={control}
-      render={({ field: { onChange, value }, fieldState: { error }, formState }) => (
+      render={({ field: { onChange }, fieldState: { error }, formState }) => (
         <Select
           id={name}
           instanceId={name}
@@ -40,19 +40,3 @@ const InputSelect = ({
 };
 
 export default InputSelect;
-
-const topFilms = [
-  { value: 'The Shawshank Redemption', label: 'The Shawshank Redemption' },
-  { value: 'The Godfather', label: 'The Godfather' },
-  { value: 'The Godfather: Part II', label: 'The Godfather: Part II' },
-  { value: 'The Dark Knight', label: 'The Dark Knight' },
-  { value: '12 Angry Men', label: '12 Angry Men' },
-  { value: 'Pulp Fiction', label: 'Pulp Fiction' },
-
-  { value: 'The Shawshank Redemption', label: 'The Shawshank Redemption' },
-  { value: 'The Godfather', label: 'The Godfather' },
-  { value: 'The Godfather: Part II', label: 'The Godfather: Part II' },
-  { value: 'The Dark Knight', label: 'The Dark Knight' },
-  { value: '12 Angry Men', label: '12 Angry Men' },
-  { value: 'Pulp Fiction', label: 'Pulp Fiction' },
-];

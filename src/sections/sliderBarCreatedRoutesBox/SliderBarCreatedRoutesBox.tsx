@@ -2,7 +2,6 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CreatedRoute } from '@/components';
-import { Grid } from '@mui/material';
 
 interface CreatedRoutesBox {
   serverData: {

@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { useDispatch } from 'react-redux';
 
 const SortableItemContext = createContext({
   attributes: {},
@@ -10,7 +9,6 @@ const SortableItemContext = createContext({
 });
 
 export function SortableItem({ id }) {
-  const dispatch = useDispatch();
   const {
     attributes,
     isDragging,

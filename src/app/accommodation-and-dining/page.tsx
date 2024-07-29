@@ -1,18 +1,21 @@
 import React from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import SliderBarGallery from '@/sections/sliderBarGallery/SliderBarGallery';
 import { centerModeForGallery } from '@/components/sliderbar/settings';
+import Image from 'next/image';
 
 export default function AccommodationAndDining() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
-        <img
+        <Image
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
           alt='couple near car in nature'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          width={1141}
+          height={400}
         />
         <div className='content'>
           <Grid md={12} className='titles'>
@@ -30,10 +33,9 @@ export default function AccommodationAndDining() {
       <Grid container spacing={4}>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            We prioritize your comfort and culinary enjoyment. Our
-            accommodations are selected to provide you with the highest level of luxury and
-            relaxation. From cozy boutique hotels to lavish resorts, every option ensures a restful
-            and comfortable stay.
+            We prioritize your comfort and culinary enjoyment. Our accommodations are selected to
+            provide you with the highest level of luxury and relaxation. From cozy boutique hotels
+            to lavish resorts, every option ensures a restful and comfortable stay.
           </Typography>
         </Grid>
         <Grid xs={12} lg={4}>

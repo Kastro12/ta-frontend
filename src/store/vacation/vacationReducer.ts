@@ -51,9 +51,6 @@ export const vacationSlice = createSlice({
     },
 
     addActivity: (state, action: PayloadAction<Activity>) => {
-      console.log('state.startDate', state.startDate);
-      console.log('state.finishDate', state.finishDate);
-
       let maxNumberOfDaysForChosenActivities = action.payload.durationInDays;
       state.chosenActivities.forEach((activity) => {
         maxNumberOfDaysForChosenActivities += activity.durationInDays;
@@ -64,21 +61,10 @@ export const vacationSlice = createSlice({
         finishDate: state.finishDate,
       });
 
-      console.log('differenceBetweenStartFinishDate', differenceBetweenStartFinishDate);
-      console.log('maxNumberOfDaysForChosenActivities', maxNumberOfDaysForChosenActivities);
-
       if (
         differenceBetweenStartFinishDate != 0 &&
         differenceBetweenStartFinishDate < maxNumberOfDaysForChosenActivities
       ) {
-        // modal neka ponudi da se sacuva aktivnost i poveca datum vracanja,
-        // ili nemoj da dodas zeljenu aktivnost.
-        // I obavesti koliko je prekoraceno i koliko je ostalo vremena u
-        // zeljenom intervalu
-        console.log(
-          'Prikazi Modal sa obavestenjem da je korisnik prekoracio aktivnosti za odabrani vremenski period'
-        );
-
         state.confirmAddingActivity = {
           activity: action.payload,
           differenceBetweenStartFinishDate,

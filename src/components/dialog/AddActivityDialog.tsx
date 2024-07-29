@@ -1,19 +1,9 @@
 import * as React from 'react';
-import CloseIcon from '@mui/icons-material/Close';
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  Typography,
-  DialogActions,
-  IconButton,
-  Button,
-} from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, Typography, Button } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
 import { button, lightButton, greenButton } from '@/utils/re-styledComponents';
 import {
-  addActivity,
   removeActivity,
   changeTheDate,
   stopAddingActivity,
@@ -27,31 +17,40 @@ export default function AddActivityDialog() {
     (state: RootState) => state.vacation.confirmAddingActivity
   );
 
-  console.log('confirmAddingActivity', confirmAddingActivity);
-
   const finishDate = useSelector((state: RootState) => state.vacation.finishDate);
-
-  console.log('finishDate', finishDate);
 
   const finishDateFormatted = dateFromString(finishDate);
 
-  console.log('finishDateFormatted', finishDateFormatted);
-
-  const addDays = (date: any, days: number): Date => {
+  const addDays = (date: any, days: number | undefined): Date => {
     const result = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-    result.setDate(result.getDate() + days);
+    if (days) result.setDate(result.getDate() + days);
+
     return result;
   };
 
-  const newFinishDate = finishDateFormatted ? addDays(finishDateFormatted, 3) : null;
-  console.log('newFinishDate', newFinishDate);
+  let numberOfChosenMinusLastActivity;
+  let numberOfFreeDays;
+  let dateNumberIncrease;
+  if (confirmAddingActivity) {
+    numberOfChosenMinusLastActivity =
+      Math.round(confirmAddingActivity?.maxNumberOfDaysForChosenActivities) -
+      confirmAddingActivity?.activity.durationInDays;
+
+    numberOfFreeDays =
+      confirmAddingActivity.differenceBetweenStartFinishDate - numberOfChosenMinusLastActivity;
+
+    dateNumberIncrease = confirmAddingActivity?.activity.durationInDays - numberOfFreeDays;
+  }
+
+  const newFinishDate = finishDateFormatted
+    ? addDays(finishDateFormatted, dateNumberIncrease)
+    : null;
 
   const newFinishDateString = newFinishDate ? stringFromDate(newFinishDate) : null;
 
   return (
     <React.Fragment>
       <Dialog
-        // onClose={handleClose}
         aria-labelledby='customized-dialog-title'
         open={confirmAddingActivity == null ? false : true}
         className='dialog-wrapper'
@@ -59,18 +58,7 @@ export default function AddActivityDialog() {
         <DialogTitle sx={{ m: 0, p: 2 }} id='customized-dialog-title'>
           Activity overflow
         </DialogTitle>
-        {/* <IconButton
-          aria-label='close'
-          onClick={handleClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 12,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton> */}
+
         <DialogContent>
           <Typography variant='body1' sx={{ mb: '9px', fontSize: '16px' }}>
             The dates you&apos;ve selected result in a{' '}
@@ -87,9 +75,6 @@ export default function AddActivityDialog() {
             variant='outlined'
             className='actions'
             onClick={() => {
-              if (confirmAddingActivity?.activity)
-                dispatch(addActivity(confirmAddingActivity.activity));
-
               dispatch(changeTheDate({ type: 'finishDate', date: newFinishDateString }));
 
               dispatch(stopAddingActivity());

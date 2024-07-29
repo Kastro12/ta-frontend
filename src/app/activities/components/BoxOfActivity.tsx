@@ -8,28 +8,15 @@ import { useDispatch } from 'react-redux';
 import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
 import { activityDurationInString } from '@/utils/string';
 
-interface BoxOfActivity {
+interface BoxOfActivityProps {
   data: Activity;
   isSelected: boolean;
 }
 
-export default function BoxOfActivity({ data, isSelected }: BoxOfActivity) {
+export default function BoxOfActivity({ data, isSelected }: BoxOfActivityProps) {
   const dispatch = useDispatch();
 
   const { durationInDays, title, imageLink, description, id, category, location } = data;
-
-  let durationText: string = 'It takes ';
-  switch (durationInDays) {
-    case 1:
-      durationText += '1 day';
-      break;
-    case 0.5:
-      durationText += 'half a day';
-      break;
-    default:
-      durationText += `${durationInDays} days`;
-      break;
-  }
 
   return (
     <Paper elevation={3} className='BoxOfActivity'>

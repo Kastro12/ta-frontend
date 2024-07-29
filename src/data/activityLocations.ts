@@ -1,5 +1,3 @@
-import { ReactSelectOptions } from '@/forms/form.interface';
-
 const activityLocations = [
   {
     id: '1',

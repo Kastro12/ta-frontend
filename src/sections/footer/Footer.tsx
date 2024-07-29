@@ -7,7 +7,6 @@ import { button, transparentLightButton } from '@/utils/re-styledComponents/inde
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 

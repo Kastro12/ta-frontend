@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Paper, Typography, Box, Button } from '@mui/material';
+import { Typography, Box, Button } from '@mui/material';
 import { button, linkGreenButton } from '@/utils/re-styledComponents';
 import Link from 'next/link';
 import { truncateText } from '@/utils/string';
@@ -18,7 +18,6 @@ interface SliderBarProps {
 export default function CreatedRoute({ data }: SliderBarProps) {
   return (
     <Link className='CreatedRouteComponent' href={data.link}>
-      {/* <Paper elevation={3} className='CreatedRouteComponent'> */}
       <Box className='content'>
         <Box className='text'>
           <Typography variant='h3'>{data.title}</Typography>
@@ -35,7 +34,6 @@ export default function CreatedRoute({ data }: SliderBarProps) {
         </Box>
         <img src={data.imageLink} alt={data.alt} loading='lazy' />
       </Box>
-      {/* </Paper> */}
     </Link>
   );
 }

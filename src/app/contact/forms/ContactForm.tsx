@@ -27,7 +27,7 @@ const ContactForm = () => {
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: {},
   } = useForm<BookVacationProps>({
     defaultValues: {
       honeypot: '',

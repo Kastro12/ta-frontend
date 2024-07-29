@@ -12,8 +12,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  console.log(process.env.NEXT_PUBLIC_USERNAME);
-
   useEffect(() => {
     const loggedIn = Cookies.get('isLoggedIn');
 

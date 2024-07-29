@@ -1,13 +1,13 @@
 'use client';
-import { useRef, useState, useEffect } from 'react';
 import { Container, Typography } from '@mui/material';
 import ContactForm from './forms/ContactForm';
 
 export default function Contact() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Typography variant='h1' sx={{mb:'32px'}}>Contact</Typography>
-
+      <Typography variant='h1' sx={{ mb: '32px' }}>
+        Contact
+      </Typography>
 
       <Typography
         variant='body1'
@@ -23,14 +23,11 @@ export default function Contact() {
         Telephone: +44 7987 030 451
       </Typography>
 
-
       <div className='form-background in-container' style={{ maxWidth: '940px', margin: '0 auto' }}>
         <div className='form-personal-data'>
           <ContactForm />
         </div>
       </div>
-
-
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
-import { Container, Typography, Alert } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 import CalendarFormWithHandleCalendarDate from './forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from './forms/NumberOfPersonsFormWithHandle';
@@ -15,10 +15,10 @@ import {
   updateCurrentPage,
   clearActivities,
 } from '@/store/activities/activitiesReducer';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 
 import AddActivityDialog from '@/components/dialog/AddActivityDialog';
+import { Alert } from '@/components';
 
 export default function Activities() {
   const dispatch = useDispatch();
@@ -31,6 +31,8 @@ export default function Activities() {
   const activitiesToDisplay = useSelector(
     (state: RootState) => state.activities.activitiesToDisplay
   );
+
+  const pageAlert = useSelector((state: RootState) => state.alerts.pageAlert);
 
   const [IsAllActivitiesLoaded, setIsAllActivitiesLoaded] = useState<boolean>(false);
 
@@ -93,14 +95,14 @@ export default function Activities() {
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Alert
-        severity='warning'
-        className='page-alert'
-        icon={<InfoOutlinedIcon fontSize='small' />}
-        onClose={() => {}}
-      >
-        This is a warning Alert.
-      </Alert>
+      {pageAlert && (
+        <Alert
+          severity={pageAlert.severity}
+          className='page-alert'
+          message={pageAlert.message}
+          timeout={pageAlert.timeout}
+        />
+      )}
 
       <Typography variant='h1'>Create your Vacation</Typography>
       <AddActivityDialog />

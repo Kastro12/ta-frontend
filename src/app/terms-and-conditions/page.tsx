@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Typography, Button } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import { Container, Typography } from '@mui/material';
 
 export default function AboutUs() {
   return (

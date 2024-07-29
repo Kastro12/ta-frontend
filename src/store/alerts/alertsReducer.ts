@@ -1,10 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { AlertsProps } from '@/utils/interfaces';
 
-export interface AlertsProps {
-  severity: 'success' | 'info' | 'warning' | 'error';
-  message: string;
-  timeout: number;
-}
 const initialState: { pageAlert: AlertsProps | null } = {
   pageAlert: null,
 };

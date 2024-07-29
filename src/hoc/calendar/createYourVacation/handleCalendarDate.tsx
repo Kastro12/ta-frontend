@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import { changeTheDate } from '@/store/vacation/vacationReducer';
+import { createPageAlert } from '@/store/alerts/alertsReducer';
 import {
   stringFromDate,
   dateFromString,
@@ -46,10 +47,14 @@ const handleCalendarDate = (Component: React.ComponentType<any>) => {
           finishDate: stringDate,
         });
 
-        console.log(
-          `You have time for activities of ${
-            differenceBetweenStartFinishDate - maxNumberOfDaysForChosenActivities
-          } days`
+        dispatch(
+          createPageAlert({
+            severity: 'warning',
+            message: `Based on your chosen dates, you have ${
+              differenceBetweenStartFinishDate - maxNumberOfDaysForChosenActivities
+            } days left for more activities.`,
+            timeout: 15000,
+          })
         );
       }
 

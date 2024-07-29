@@ -6,7 +6,7 @@ import activitiesReducer from './activities/activitiesReducer';
 
 export const store = configureStore({
   reducer: {
-    alert: alertsReducer,
+    alerts: alertsReducer,
     vacation: vacationReducer,
     predefinedVacation: predefinedVacationReducer,
     activities: activitiesReducer,
