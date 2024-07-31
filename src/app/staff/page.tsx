@@ -16,7 +16,7 @@ export default function Staff() {
         />
         <div className='content'>
           <Grid md={12} className='titles'>
-            <Typography variant='h1'>Meet our team</Typography>
+            <Typography variant='h1'>Meet our staff</Typography>
           </Grid>
         </div>
       </Grid>
@@ -30,7 +30,7 @@ export default function Staff() {
       <Grid container spacing={4}>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            At [Your Company Name], our staff consists of highly trained and experienced
+            At &apos;Tailor-made vacations&apos;, our staff consists of highly trained and experienced
             professionals who are dedicated to ensuring you have an unforgettable experience. Our
             guides are not only experts in their fields but also passionate about sharing their
             knowledge and making your journey enjoyable and informative.
@@ -46,7 +46,7 @@ export default function Staff() {
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
             We pride ourselves on having a team that is friendly, approachable, and ready to go the
-            extra mile to meet your needs. Rest assured, with [Your Company Name], you are in the
+            extra mile to meet your needs. Rest assured, with &apos;Tailor-made vacations&apos;, you are in the
             best hands.
           </Typography>
         </Grid>

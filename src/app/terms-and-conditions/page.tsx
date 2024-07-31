@@ -11,7 +11,7 @@ export default function AboutUs() {
       <Typography variant='h2'>1. Introduction</Typography>
 
       <Typography variant='body1'>
-        Welcome to [Your Company Name]. By accessing and using our services, you agree to comply
+        Welcome to &apos;Tailor-made vacations&apos;. By accessing and using our services, you agree to comply
         with and be bound by the following terms and conditions. Please review them carefully.
       </Typography>
 

@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Select from 'react-select';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { activityCategories, activityLocations } from '@/data';
@@ -19,6 +19,27 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
   const pathname = usePathname();
   const categoryParam = searchParams.get('category');
   const locationParam = searchParams.get('location');
+
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Funkcija za proveru širine ekrana
+    function checkIfMobile() {
+      const isMobileDevice = window.innerWidth <= 768;
+      setIsMobile(isMobileDevice);
+    }
+
+    // Provera prilikom inicijalnog rendera
+    checkIfMobile();
+
+    // Dodavanje event listener-a za promenu veličine prozora
+    window.addEventListener('resize', checkIfMobile);
+
+    // Uklanjanje event listener-a prilikom unmount-a
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
   useEffect(() => {
     dispatch(filterActivityList({ category: categoryParam, location: locationParam }));
@@ -66,7 +87,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
           isDisabled={false}
           isLoading={false}
           isClearable={true}
-          isSearchable={true}
+          isSearchable={!isMobile}
           name='category'
           options={activityCategories}
           defaultValue={activityCategories.filter((category) => category.value == categoryParam)}
@@ -86,7 +107,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
           isDisabled={false}
           isLoading={false}
           isClearable={true}
-          isSearchable={true}
+          isSearchable={!isMobile}
           name='location'
           options={activityLocations}
           defaultValue={activityLocations.filter((location) => location.value == locationParam)}

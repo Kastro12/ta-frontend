@@ -15,9 +15,7 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
     const children = useSelector((state: RootState) => state.vacation.children);
     const childrenYears = useSelector((state: RootState) => state.vacation.childrenYears);
 
-    const [isOpenChildrenField, setIsOpenChildrenField] = useState<boolean>(
-      children > 0 ? true : false
-    );
+    const [isOpenChildrenField, setIsOpenChildrenField] = useState<boolean>(false);
 
     const extraHandleIncrement = () => {
       if (children === 1) {
@@ -40,6 +38,8 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
         dispatch(removeChildrenYears(currentData.position));
       } else if (value) {
         dispatch(addChildrenYears({ years: value.value, position: index }));
+
+        if (childrenYears.length + 1 == children) setIsOpenChildrenField(false);
       }
     };
 

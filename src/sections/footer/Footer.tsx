@@ -153,7 +153,7 @@ const Footer = () => {
 
         <Grid container spacing={3}>
           <Grid xs={12} md={8}>
-            <Typography variant='body2' style={{ fontSize: '12px', fontWeight: '300' }}>
+            <Typography variant='body2' style={{ fontSize: '12px', fontWeight: '300', display:'flex',alignItems:'center' }}>
               Copyright ©2024 www.vacationinserbia.com | Vacation in Serbia - All Rights Reserved
             </Typography>
           </Grid>
