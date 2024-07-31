@@ -19,11 +19,19 @@ const CalendarForm = ({
   handleDateChange: (type: 'startDate' | 'finishDate', date: any) => void;
   minFinishDate: Date | null;
 }) => {
-  const ExampleCustomInput = forwardRef(({ value, onClick, className }: any, ref: any) => (
-    <button className={className} onClick={onClick} ref={ref} style={{ textAlign: 'left' }}>
-      {value ? value : 'Start date'}
-    </button>
-  ));
+  const ExampleCustomInput = forwardRef(
+    ({ value, onClick, className, placeholderText, disabled }: any, ref: any) => (
+      <button
+        disabled={disabled}
+        className={className}
+        onClick={onClick}
+        ref={ref}
+        style={{ textAlign: 'left' }}
+      >
+        {value ? value : placeholderText}
+      </button>
+    )
+  );
 
   ExampleCustomInput.displayName = 'ExampleCustomInput';
 
@@ -45,7 +53,13 @@ const CalendarForm = ({
           isClearable={true}
           required
           onFocus={(e) => e.target.blur()}
-          customInput={<ExampleCustomInput className='example-custom-input' />}
+          customInput={
+            <ExampleCustomInput
+              className='example-custom-input'
+              placeholderText='Start date'
+              disabled={disabledStartDate}
+            />
+          }
         />
       </div>
       <div className='calendar-field'>
@@ -62,6 +76,13 @@ const CalendarForm = ({
           dateFormat='d MMMM, yyyy'
           isClearable={!disabledFinishDate}
           onFocus={(e) => e.target.blur()}
+          customInput={
+            <ExampleCustomInput
+              className='example-custom-input'
+              placeholderText='Finish date'
+              disabled={disabledFinishDate}
+            />
+          }
         />
       </div>
     </div>
