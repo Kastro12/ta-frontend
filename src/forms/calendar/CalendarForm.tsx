@@ -25,6 +25,8 @@ const CalendarForm = ({
     </button>
   ));
 
+  ExampleCustomInput.displayName = 'ExampleCustomInput';
+
   return (
     <div className='CalendarForm'>
       <div className='calendar-field'>

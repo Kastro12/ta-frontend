@@ -44,7 +44,7 @@ export default function VehicleFleet() {
         </Grid>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            Our main goal is for you to focus on your vacation and enjoy the ride. Whether it’s a
+            Our main goal is for you to focus on your vacation and enjoy the ride. Whether it&apos;s a
             scenic drive or transportation between activities, we provide a seamless, comfortable,
             and safe travel experience from start to finish.
           </Typography>
