@@ -80,7 +80,8 @@ export default function AddActivityDialog() {
               dispatch(stopAddingActivity());
             }}
           >
-            Extend the finish date to {newFinishDateString}
+            Extend the finish date to 
+            {/* {newFinishDateString} */}
           </Button>
 
           <Button
