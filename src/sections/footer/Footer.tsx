@@ -152,8 +152,8 @@ const Footer = () => {
         <Divider sx={{ my: 2 }} />
 
         <Grid container spacing={3}>
-          <Grid xs={12} md={8}>
-            <Typography variant='body2' style={{ fontSize: '12px', fontWeight: '300', display:'flex',alignItems:'center' }}>
+          <Grid xs={12} md={8} sx={{ display: 'flex', alignItems: 'center' }}>
+            <Typography variant='body2' style={{ fontSize: '12px', fontWeight: '300' }}>
               Copyright ©2024 www.vacationinserbia.com | Vacation in Serbia - All Rights Reserved
             </Typography>
           </Grid>
