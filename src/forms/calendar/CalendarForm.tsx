@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
@@ -19,6 +19,12 @@ const CalendarForm = ({
   handleDateChange: (type: 'startDate' | 'finishDate', date: any) => void;
   minFinishDate: Date | null;
 }) => {
+  const ExampleCustomInput = forwardRef(({ value, onClick, className }: any, ref: any) => (
+    <button className={className} onClick={onClick} ref={ref} style={{ textAlign: 'left' }}>
+      {value ? value : 'Start date'}
+    </button>
+  ));
+
   return (
     <div className='CalendarForm'>
       <div className='calendar-field'>
@@ -37,6 +43,7 @@ const CalendarForm = ({
           isClearable={true}
           required
           onFocus={(e) => e.target.blur()}
+          customInput={<ExampleCustomInput className='example-custom-input' />}
         />
       </div>
       <div className='calendar-field'>
