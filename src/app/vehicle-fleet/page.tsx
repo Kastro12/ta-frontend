@@ -9,8 +9,8 @@ export default function VehicleFleet() {
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
         <Image
-          src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt='couple near car in nature'
+          src='/main-banner/mercedes-benz-v220d.jpg'
+          alt='mercedes benz v220d'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           width={1141}
@@ -44,8 +44,8 @@ export default function VehicleFleet() {
         </Grid>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            Our main goal is for you to focus on your vacation and enjoy the ride. Whether it&apos;s a
-            scenic drive or transportation between activities, we provide a seamless, comfortable,
+            Our main goal is for you to focus on your vacation and enjoy the ride. Whether it&apos;s
+            a scenic drive or transportation between activities, we provide a seamless, comfortable,
             and safe travel experience from start to finish.
           </Typography>
         </Grid>
@@ -56,39 +56,24 @@ export default function VehicleFleet() {
           <SliderBarGallery
             serverData={[
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-1.jpg',
+                alt: 'Mercedes Benz V200d 4 matik 4x4 Extralang 1',
                 id: 1,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-2.jpg',
+                alt: 'Mercedes Benz V200d 4 matik 4x4 Extralang 2',
                 id: 2,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/vehicle-fleet/audi_a6-white1.jpg',
+                alt: 'Audi a6 white 1',
                 id: 3,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/vehicle-fleet/audi_a6_white2.jpg',
+                alt: 'Audi a6 white 2',
                 id: 4,
-              },
-              {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
-                id: 5,
-              },
-              {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
-                id: 6,
-              },
-              {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
-                id: 7,
               },
             ]}
           />

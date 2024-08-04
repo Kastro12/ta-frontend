@@ -7,8 +7,8 @@ export default function Staff() {
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
         <Image
-          src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt='couple near car in nature'
+          src='/main-banner/team_of_5_people.jpg'
+          alt='team of 5 people'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           width={1141}
@@ -30,10 +30,10 @@ export default function Staff() {
       <Grid container spacing={4}>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            At &apos;Tailor-made vacations&apos;, our staff consists of highly trained and experienced
-            professionals who are dedicated to ensuring you have an unforgettable experience. Our
-            guides are not only experts in their fields but also passionate about sharing their
-            knowledge and making your journey enjoyable and informative.
+            At &apos;Tailor-made vacations&apos;, our staff consists of highly trained and
+            experienced professionals who are dedicated to ensuring you have an unforgettable
+            experience. Our guides are not only experts in their fields but also passionate about
+            sharing their knowledge and making your journey enjoyable and informative.
           </Typography>
         </Grid>
         <Grid xs={12} lg={4}>
@@ -46,8 +46,8 @@ export default function Staff() {
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
             We pride ourselves on having a team that is friendly, approachable, and ready to go the
-            extra mile to meet your needs. Rest assured, with &apos;Tailor-made vacations&apos;, you are in the
-            best hands.
+            extra mile to meet your needs. Rest assured, with &apos;Tailor-made vacations&apos;, you
+            are in the best hands.
           </Typography>
         </Grid>
       </Grid>
@@ -58,52 +58,40 @@ export default function Staff() {
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
             <Image
-              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-              alt='couple near car in nature'
+              src='/staff/aleksandar.jpg'
+              alt='aleksandar'
               loading='lazy'
               width={500}
               height={280}
             />
-            <Typography variant='h3'>Aleksandar Kastratovic</Typography>
+            <Typography variant='h3'>Aleksandar</Typography>
             <Typography variant='h4'>CEO</Typography>
           </div>
         </Grid>
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
-            <Image
-              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-              alt='couple near car in nature'
-              loading='lazy'
-              width={500}
-              height={280}
-            />
-            <Typography variant='h3'>Elena Acevska</Typography>
+            <Image src='/staff/elena.jpg' alt='elena' loading='lazy' width={500} height={280} />
+            <Typography variant='h3'>Elena</Typography>
             <Typography variant='h4'>Biologist</Typography>
           </div>
         </Grid>
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
-            <Image
-              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-              alt='couple near car in nature'
-              loading='lazy'
-              width={500}
-              height={280}
-            />
-            <Typography variant='h3'>Dragoje Kastratovic</Typography>
+            <Image src='/staff/drago.jpg' alt='Dragoje' loading='lazy' width={500} height={280} />
+            <Typography variant='h3'>Dragoje</Typography>
             <Typography variant='h4'>Medical doctor</Typography>
           </div>
         </Grid>
         <Grid xs={12} sm={6} lg={3}>
           <div className='content'>
             <Image
-              src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
+              src='/staff/marijana.jpg'
               alt='couple near car in nature'
               loading='lazy'
               width={500}
               height={280}
             />
-            <Typography variant='h3'>Marijana Milenkovic</Typography>
+            <Typography variant='h3'>Marijana</Typography>
             <Typography variant='h4'>Medical doctor</Typography>
           </div>
         </Grid>

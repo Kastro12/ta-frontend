@@ -9,8 +9,8 @@ export default function Jobs() {
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
         <Image
-          src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt='couple near car in nature'
+          src='/main-banner/join_our_team.jpg'
+          alt='join our team'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           width={1141}

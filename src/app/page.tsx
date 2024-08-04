@@ -27,8 +27,8 @@ export default function Home() {
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section' sx={{ position: 'relative' }}>
         <Image
-          src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt='couple near car in nature'
+          src='/main-banner/road_through_colorful_forest.jpg'
+          alt='Road through colorful forest'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           width={1141}

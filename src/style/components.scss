@@ -84,6 +84,20 @@
     }
   }
 
+  .slick-list {
+    .slick-slide {
+      img {
+        filter: brightness(50%);
+      }
+
+      &.slick-current {
+        img {
+          filter: brightness(1);
+        }
+      }
+    }
+  }
+
   @media screen and (min-width: 740px) {
     .slick-list {
       margin: 0 !important;

@@ -9,8 +9,8 @@ export default function AccommodationAndDining() {
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
         <Image
-          src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt='couple near car in nature'
+          src='/main-banner/apartment_3_living_room.jpg'
+          alt='apartment living room'
           loading='lazy'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           width={1141}
@@ -59,38 +59,38 @@ export default function AccommodationAndDining() {
           <SliderBarGallery
             serverData={[
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/accommodation-and-dining/apartment_3_living_room.jpg',
+                alt: 'apartment 3 living room',
                 id: 1,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/accommodation-and-dining/apartment_3_room.jpg',
+                alt: 'apartment 3 room',
                 id: 2,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/accommodation-and-dining/apartment_1_living_room.jpg',
+                alt: 'apartment 1 living room',
                 id: 3,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/accommodation-and-dining/apartment_1_room.jpg',
+                alt: 'apartment 1 room',
                 id: 4,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/accommodation-and-dining/food1.jpg',
+                alt: 'food - pasta with wine',
                 id: 5,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/accommodation-and-dining/food2.jpg',
+                alt: 'food - dried meat on a board',
                 id: 6,
               },
               {
-                imgLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-                alt: 'Test alt',
+                imgLink: '/accommodation-and-dining/food3.jpg',
+                alt: 'food - cake and wine',
                 id: 7,
               },
             ]}
