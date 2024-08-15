@@ -1,4 +1,5 @@
 import { Activity } from '@/utils/interfaces';
+
 const allActivities: Activity[] = [
   {
     id: '6625fb90e351da77e46bea8c',

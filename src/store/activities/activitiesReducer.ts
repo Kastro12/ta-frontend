@@ -7,12 +7,14 @@ export interface IssueInitialState {
   activitiesToDisplay: Activity[] | null;
   activityListSize: number;
   currentPage: number;
+  zoomedActivity: null | Activity;
 }
 const initialState: IssueInitialState = {
   activityListSize: 8,
   activityList: null,
   activitiesToDisplay: null,
   currentPage: 1,
+  zoomedActivity: null,
 };
 
 export const activitySlice = createSlice({
@@ -75,10 +77,24 @@ export const activitySlice = createSlice({
       state.currentPage = action.payload;
     },
 
+    zoomActivity: (state, action: PayloadAction<Activity>) => {
+      state.zoomedActivity = action.payload;
+    },
+
+    removeZoomedActivity: (state) => {
+      state.zoomedActivity = null;
+    },
+
     clearActivities: () => initialState,
   },
 });
 
-export const { filterActivityList, updateActivitiesToDisplay, updateCurrentPage, clearActivities } =
-  activitySlice.actions;
+export const {
+  filterActivityList,
+  updateActivitiesToDisplay,
+  updateCurrentPage,
+  clearActivities,
+  zoomActivity,
+  removeZoomedActivity,
+} = activitySlice.actions;
 export default activitySlice.reducer;

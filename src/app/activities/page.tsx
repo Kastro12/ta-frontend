@@ -18,6 +18,7 @@ import {
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 
 import AddActivityDialog from '@/components/dialog/AddActivityDialog';
+import ZoomedBoxOfActivity from './components/ZoomedBoxOfActivity';
 import { Alert } from '@/components';
 
 export default function Activities() {
@@ -106,6 +107,7 @@ export default function Activities() {
 
       <Typography variant='h1'>Create your Vacation</Typography>
       <AddActivityDialog />
+      <ZoomedBoxOfActivity />
       <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
           <CalendarFormWithHandleCalendarDate />

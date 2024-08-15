@@ -214,11 +214,6 @@
       flex-direction: column;
       justify-content: space-between;
 
-      .gray-label {
-        font-size: 13px;
-        color: $gray2;
-      }
-
       .text {
         h3 {
           margin: 10px 0 6px 0;
@@ -246,6 +241,37 @@
     }
   }
 } //BoxOfActivity END
+
+.ZoomedBoxOfActivity.MuiDialog-root.dialog-wrapper {
+  height: calc(100vh - 64px);
+  margin: 16px;
+  .MuiDialog-container {
+    align-items: flex-start;
+    .MuiDialog-paper {
+      box-shadow: none;
+      max-height: 100%;
+      height: auto;
+      margin-top: 74px;
+      .MuiDialogContent-root {
+        padding: 0;
+        img {
+          width: 100%;
+          border-radius: 4px;
+        }
+        .content {
+          margin: 10px 0 6px 0;
+          padding: 0 16px;
+          h3 {
+            margin: 10px 0 6px 0;
+          }
+          .description {
+            margin: 16px 0;
+          }
+        }
+      }
+    }
+  }
+}
 
 .shoppingCartList {
   background-color: $white1;
@@ -400,8 +426,6 @@
           width: calc(100% - 46px);
         }
         .gray-label {
-          font-size: 13px;
-          color: $gray2;
           padding: 0 12px;
           line-height: 22px !important;
           font-weight: 300;

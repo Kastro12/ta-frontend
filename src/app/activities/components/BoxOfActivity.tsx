@@ -7,6 +7,7 @@ import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { useDispatch } from 'react-redux';
 import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
 import { activityDurationInString } from '@/utils/string';
+import { zoomActivity } from '@/store/activities/activitiesReducer';
 
 interface BoxOfActivityProps {
   data: Activity;
@@ -21,7 +22,12 @@ export default function BoxOfActivity({ data, isSelected }: BoxOfActivityProps) 
   return (
     <Paper elevation={3} className='BoxOfActivity'>
       <Box className='content-wrapper'>
-        <img src={imageLink} alt={title} loading='lazy' />
+        <img
+          src={imageLink}
+          alt={title}
+          loading='lazy'
+          onClick={() => dispatch(zoomActivity(data))}
+        />
         <Box className='content'>
           <Box className='text'>
             <Typography variant='h3'>{title}</Typography>
