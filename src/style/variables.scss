@@ -21,7 +21,7 @@ $navyBlue1: #212b3b;
 
 $orange1: #f5a950;
 $orange2: #ffa235;
-$transparentOrange1: rgba(245, 169, 80, 0.06);
+$transparentOrange1: rgba(245, 169, 80, 0.4);
 
 $red1: #ef5350;
 $red2: #d32f2f;
@@ -56,37 +56,5 @@ $xl: 1536px;
   li {
     font-size: 16px;
     line-height: 24px;
-  }
-}
-
-@mixin scroll_arrow_button {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  background-color: transparent;
-  z-index: 1;
-  color: $white2;
-  outline: none;
-  border: 0;
-  font-size: 22px;
-  &:hover,
-  &:focus {
-    color: $white2;
-  }
-
-  &.small {
-    svg {
-      font-size: 18px;
-    }
-  }
-  &.disabled {
-    color: $gray3;
-  }
-  &::before {
-    display: none;
   }
 }

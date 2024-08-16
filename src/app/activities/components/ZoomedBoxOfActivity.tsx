@@ -1,16 +1,14 @@
-import * as React from 'react';
-import { Dialog, DialogTitle, DialogContent, Paper, Typography, Box, Button } from '@mui/material';
+import React, { useCallback } from 'react';
+import { Dialog, DialogContent, Typography, Box, Button } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
-import { button, lightButton, greenButton, selectedActivity } from '@/utils/re-styledComponents';
+import { button, greenButton, selectedActivity } from '@/utils/re-styledComponents';
 import { removeZoomedActivity } from '@/store/activities/activitiesReducer';
-import { dateFromString, stringFromDate } from '@/utils/date';
 import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
 import { activityDurationInString } from '@/utils/string';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+import Gallery from './Gallery';
 
 export default function ZoomedBoxOfActivity() {
   const dispatch = useDispatch();
@@ -21,54 +19,49 @@ export default function ZoomedBoxOfActivity() {
 
   console.log('zoomedActivity', zoomedActivity);
 
+  const handleDialogClose = useCallback(() => {
+    dispatch(removeZoomedActivity());
+  }, [dispatch]);
+
   return (
-    <React.Fragment>
-      <Dialog
-        aria-labelledby='customized-dialog-title'
-        open={zoomedActivity == null ? false : true}
-        className='dialog-wrapper ZoomedBoxOfActivity'
-        onClose={() => dispatch(removeZoomedActivity())}
-      >
-        <IconButton
-          aria-label='close'
-          onClick={() => dispatch(removeZoomedActivity())}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-        <DialogContent>
-          <img src={zoomedActivity?.imageLink} alt={zoomedActivity?.title} loading='lazy' />
-          <Box className='content'>
-            <Box className='text'>
-              <Typography variant='h3'>{zoomedActivity?.title}</Typography>
+    <Dialog
+      aria-labelledby='customized-dialog-title'
+      open={zoomedActivity == null ? false : true}
+      className='dialog-wrapper ZoomedBoxOfActivity'
+      onClose={handleDialogClose}
+    >
+      <DialogContent>
+        <Gallery />
 
-              <Typography variant='body1' className='description'>
-                {zoomedActivity?.description}
+        <Box className='content'>
+          <Box className='text'>
+            <Typography variant='h3'>{zoomedActivity?.title}</Typography>
+
+            {zoomedActivity?.longDescritpion.map((desc: string, index) => (
+              <Typography variant='body1' sx={{ mb: 1 }} key={index}>
+                {desc}
               </Typography>
+            ))}
 
-              <Typography variant='body1' sx={{ fontSize: '13px' }}>
-                Category: <span className='gray-label'>{zoomedActivity?.category}</span>
-              </Typography>
+            <Typography variant='body1' sx={{ mt: 2, fontSize: '15px' }}>
+              <span style={{ width: '94px', display: 'inline-block' }}>Category:</span>
+              <span className='gray2_color'>{zoomedActivity?.category}</span>
+            </Typography>
 
-              <Typography variant='body1' sx={{ fontSize: '13px' }}>
-                Location: <span className='gray-label'>{zoomedActivity?.location}</span>
-              </Typography>
+            <Typography variant='body1' sx={{ mt: 1, mb: 1, fontSize: '15px' }}>
+              <span style={{ width: '94px', display: 'inline-block' }}>Location:</span>
+              <span className='gray2_color'>{zoomedActivity?.location}</span>
+            </Typography>
 
-              <Typography variant='body1' sx={{ fontSize: '13px' }}>
-                Time:{' '}
-                <span className='gray-label'>
-                  {zoomedActivity && activityDurationInString(zoomedActivity?.durationInDays)}
-                </span>
-              </Typography>
-            </Box>
+            <Typography variant='body1' sx={{ mb: 1, fontSize: '15px' }}>
+              <span style={{ width: '94px', display: 'inline-block' }}>Time:</span>
+              <span className='gray2_color'>
+                {zoomedActivity && activityDurationInString(zoomedActivity?.durationInDays)}
+              </span>
+            </Typography>
+          </Box>
 
-
-            <div className='buttons'>
+          <div className='buttons'>
             <Button
               sx={{
                 ...button,
@@ -88,13 +81,9 @@ export default function ZoomedBoxOfActivity() {
             >
               {isSelected ? 'Remove' : 'Choose'}
             </Button>
-            </div>
-
-
-
-          </Box>
-        </DialogContent>
-      </Dialog>
-    </React.Fragment>
+          </div>
+        </Box>
+      </DialogContent>
+    </Dialog>
   );
 }

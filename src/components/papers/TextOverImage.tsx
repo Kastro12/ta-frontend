@@ -14,8 +14,7 @@ interface TextOverImageProps {
 export default function TextOverImage({ data }: TextOverImageProps) {
   return (
     <Paper elevation={3} className='TextOverImageComponent'>
-      {/* <img src={data.imageLink} alt={data.alt} loading='lazy' /> */}
-      <Image src={data.imageLink} alt={data.alt} loading='lazy' width={420} height={280} />
+      <Image src={data.imageLink} alt={data.alt} loading='lazy' fill />
       <Box className='text'>
         <Typography variant='h3'>{data.title}</Typography>
       </Box>

@@ -11,10 +11,10 @@ export default function VehicleFleet() {
         <Image
           src='/main-banner/mercedes-benz-v220d.jpg'
           alt='mercedes benz v220d'
-          loading='lazy'
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          width={1141}
-          height={400}
+          style={{ objectFit: 'cover' }}
+          sizes='100vw'
+          fill
+          priority
         />
         <div className='content'>
           <Grid md={12} className='titles'>
@@ -56,22 +56,22 @@ export default function VehicleFleet() {
           <SliderBarGallery
             serverData={[
               {
-                imgLink: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-1.jpg',
+                link: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-1.jpg',
                 alt: 'Mercedes Benz V200d 4 matik 4x4 Extralang 1',
                 id: 1,
               },
               {
-                imgLink: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-2.jpg',
+                link: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-2.jpg',
                 alt: 'Mercedes Benz V200d 4 matik 4x4 Extralang 2',
                 id: 2,
               },
               {
-                imgLink: '/vehicle-fleet/audi_a6-white1.jpg',
+                link: '/vehicle-fleet/audi_a6-white1.jpg',
                 alt: 'Audi a6 white 1',
                 id: 3,
               },
               {
-                imgLink: '/vehicle-fleet/audi_a6_white2.jpg',
+                link: '/vehicle-fleet/audi_a6_white2.jpg',
                 alt: 'Audi a6 white 2',
                 id: 4,
               },

@@ -30,7 +30,7 @@
 .DefaultImageCarouselComponent {
   height: 100%;
   button {
-    top: calc(50% - 28px);
+    top: calc(50% - 15px);
     height: auto;
     padding: 0;
     opacity: 0.6;
@@ -39,8 +39,11 @@
     background-color: transparent !important;
     height: 100%;
     margin: 0;
-    padding: 16px 8px;
-
+    padding: 0px;
+    .arrow-style {
+      width: 32px;
+      height: 32px;
+    }
     &:hover {
       opacity: 1 !important;
       background-color: transparent;
@@ -50,65 +53,6 @@
     }
   }
 } //DefaultImageCarouselComponent END
-
-.slick-initialized {
-  .scroll-arrow-button,
-  .slick-prev,
-  .slick-next {
-    @include scroll-arrow-button;
-  }
-  padding: 0;
-  ::before {
-    display: none;
-  }
-  &.arrowInSlickRow {
-    .slick-list {
-      margin: 0 -12px;
-
-      .slick-track {
-        margin: 0;
-      }
-    }
-
-    .slick-arrow {
-      opacity: 0.6;
-      &.slick-next {
-        right: -16px;
-
-        &.outside {
-          right: -22px;
-        }
-        &.background {
-          background-color: $gray1;
-        }
-      }
-      &.slick-prev {
-        left: -16px;
-
-        &.outside {
-          left: -22px;
-        }
-        &.background {
-          background-color: $gray1;
-        }
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &.slick-disabled {
-        visibility: hidden;
-      }
-    }
-    .slick-slide {
-      .TextOverImageComponent,
-      .BoxOfActivity {
-        margin: 8px 12px;
-      }
-    }
-  } //arrowInSlickRow END
-} //slick-initialized END
 
 .drawerComponent {
   width: 100%;
@@ -269,5 +213,74 @@
     width: 100%;
     height: 54px;
     white-space: normal;
+  }
+}
+
+.glide_activity {
+  position: relative;
+  .glide__slides {
+    li {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      position: relative;
+
+      @media screen and (min-width: $xs) {
+        height: 390px;
+      }
+    }
+  }
+}
+
+.glide_arrows_center {
+  .glide__arrows {
+    position: absolute;
+    top: calc(50% - 15px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.glide_top_activity {
+  position: relative;
+  .glide__slides {
+    li {
+      height: 280px;
+      object-fit: cover;
+      position: relative;
+
+      .text {
+        bottom: 0;
+        z-index: 1;
+        padding: 0 16px 6px 16px;
+        position: absolute;
+        color: $white2;
+      }
+    }
+  }
+}
+
+.glide_slider_bar_gallery {
+  position: relative;
+  .glide__slides {
+    li {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      position: relative;
+
+      @media screen and (min-width: $xs) {
+        height: 390px;
+      }
+
+      @media screen and (min-width: $lg) {
+        height: 460px;
+      }
+    }
+  }
+  @media screen and (min-width: $lg) {
+    margin: 0 auto;
+    width: 70%;
   }
 }

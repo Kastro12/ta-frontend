@@ -2,13 +2,15 @@ export interface Activity {
   id: string;
   title: string;
   description: string;
+  longDescritpion: string[];
   location: string;
   locationValue?: string;
   cost: number;
-  imageLink: string;
+  images: { link: string; alt: string }[];
   durationInDays: number;
   category: 'History & culture' | 'Adventure' | 'Landscape';
   categoryValue: 'history_and_culture' | 'adventure' | 'landscape';
+  subCategory: string;
 }
 
 export interface AlertsProps {

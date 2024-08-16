@@ -33,7 +33,7 @@ const DefaultImageCarousel = ({
       height={'100%'}
       navButtonsWrapperProps={{
         style: {
-          top: 'calc(50% - 28px)',
+          top: 'calc(50% - 15px)',
           height: 'auto',
         },
       }}

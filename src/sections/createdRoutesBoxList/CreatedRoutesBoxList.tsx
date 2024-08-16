@@ -1,6 +1,4 @@
 'use client';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import { CreatedRoute } from '@/components';
 
 interface CreatedRoutesBox {
@@ -14,7 +12,7 @@ interface CreatedRoutesBox {
   }[];
 }
 
-const SliderBarCreatedRoutesBox = ({ serverData }: CreatedRoutesBox) => {
+const CreatedRoutesBoxList = ({ serverData }: CreatedRoutesBox) => {
   return (
     <div className='CreatedRouteComponent_wrap'>
       {serverData && serverData.map((data) => <CreatedRoute data={data} key={data.id} />)}
@@ -22,4 +20,4 @@ const SliderBarCreatedRoutesBox = ({ serverData }: CreatedRoutesBox) => {
   );
 };
 
-export default SliderBarCreatedRoutesBox;
+export default CreatedRoutesBoxList;

@@ -11,10 +11,10 @@ export default function Jobs() {
         <Image
           src='/main-banner/join_our_team.jpg'
           alt='join our team'
-          loading='lazy'
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          width={1141}
-          height={400}
+          style={{ objectFit: 'cover' }}
+          sizes='100vw'
+          fill
+          priority
         />
         <div className='content'>
           <Grid md={12} className='titles'>

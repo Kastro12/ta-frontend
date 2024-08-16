@@ -4,30 +4,34 @@ import Image from 'next/image';
 import Glide from '@glidejs/glide';
 import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRounded';
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
 
-const SliderBarGallery = ({ serverData }: any) => {
+const Gallery = () => {
+  const zoomedActivity = useSelector((state: RootState) => state.activities.zoomedActivity);
+
   useEffect(() => {
-    new Glide('.glide_slider_bar_gallery', {
+    new Glide('.glide_activity', {
       type: 'slider',
       startAt: 0,
       perView: 1,
       keyboard: true,
+      rewind: false,
     }).mount();
   }, []);
 
   return (
-    <div className='glide_slider_bar_gallery glide_arrows_center'>
+    <div className='glide_activity glide_arrows_center'>
       <div className='glide__track' data-glide-el='track'>
         <ul className='glide__slides'>
-          {serverData &&
-            serverData.map((img: { link: string; alt: string; id: string }) => (
-              <li key={img.id}>
+          {zoomedActivity &&
+            zoomedActivity.images.map((img: { link: string; alt: string }, index: number) => (
+              <li key={index}>
                 <Image
                   src={img.link}
                   alt={img.alt}
                   fill
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 100vw'
-                  style={{ objectFit: 'cover', borderRadius: '4px' }}
                 />
               </li>
             ))}
@@ -45,4 +49,4 @@ const SliderBarGallery = ({ serverData }: any) => {
   );
 };
 
-export default SliderBarGallery;
+export default Gallery;

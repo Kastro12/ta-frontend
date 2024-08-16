@@ -1,285 +1,41 @@
 import { Activity } from '@/utils/interfaces';
 
-const allActivities: Activity[] = [
+const adventure: Activity[] = [
   {
-    id: '6625fb90e351da77e46bea8c',
+    id: 'adventure-rafting-tara',
     title: 'Rafting on the Tara River',
     description:
-      "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
+      'Embark on an exhilarating rafting adventure on the Tara River, one of the most stunning rivers in the Balkans. Experience the thrill of navigating through breathtaking canyons, surrounded by untouched nature.',
+    longDescritpion: [
+      'Rafting on the Tara River, often called the "Tear of Europe," is an adventure that combines the thrill of rapids with breathtaking natural beauty. Flowing through Europe\'s deepest canyon, the river offers both serene stretches for enjoying the stunning landscapes and exciting rapids that cater to different skill levels.',
+      'Most tours cover 18 to 25 kilometers, passing by towering cliffs, dense forests, and cascading waterfalls. With rapids classified as Class III to IV, the experience is thrilling yet safe, guided by professionals who provide all necessary equipment.',
+      'After the adventure, you can unwind by the river, savor a traditional meal, and take in the pristine surroundings. Rafting on the Tara River is not just about excitement; it’s a chance to connect with nature in one of Europe’s most unspoiled environments.',
+      "Perfect for a weekend getaway or a highlight of your Balkan tour, this is an experience you'll cherish.",
+    ],
     location: 'Tara',
     locationValue: 'tara',
     cost: 180,
-    imageLink:
-      'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
+    images: [
+      {
+        link: '/activities/adventure/rafting/tara_river/rafting_tara_1.jpg',
+        alt: 'rafting on the Tara river',
+      },
+      {
+        link: '/activities/adventure/rafting/tara_river/rafting_tara_2.jpg',
+        alt: 'rafting on the Tara river 2',
+      },
+      {
+        link: '/activities/adventure/rafting/tara_river/rafting_tara_3.jpg',
+        alt: 'rafting on the Tara river 3',
+      },
+    ],
     durationInDays: 3,
     category: 'Adventure',
     categoryValue: 'adventure',
-  },
-  {
-    id: '6625fc51e351da77e46bea90',
-    title: 'Gondola ride',
-    description:
-      'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
-    location: 'Zlatibor',
-    locationValue: 'zlatibor',
-    cost: 20,
-    imageLink:
-      'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
-    durationInDays: 1,
-    category: 'Landscape',
-    categoryValue: 'landscape',
-  },
-  {
-    id: '6625fd44e351da77e46bea93',
-    title: 'Golubac Fortress',
-    description:
-      "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
-    location: 'Golubac',
-    locationValue: 'golubac',
-    cost: 100,
-    imageLink:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-  },
-  {
-    id: '662602b8410dc2dad9938982',
-    title: 'Mountain biking',
-    description:
-      'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
-    location: 'Kopaonik',
-    locationValue: 'kopaonik',
-    cost: 100,
-    imageLink:
-      'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
-    durationInDays: 1,
-    category: 'Adventure',
-    categoryValue: 'adventure',
-  },
-  {
-    id: '662606c2410dc2dad993898d',
-    title: 'Archaeological site Vinca',
-    description:
-      'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
-    location: 'Grocka',
-    locationValue: 'grocka',
-    cost: 170,
-    imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-  },
-
-  {
-    id: '1 6625fb90e351da77e46bea8c',
-    title: '1 Rafting on the Tara River',
-    description:
-      "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
-    location: 'Tara',
-    locationValue: 'tara',
-    cost: 180,
-    imageLink:
-      'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
-    durationInDays: 3,
-    category: 'Adventure',
-    categoryValue: 'adventure',
-  },
-  {
-    id: '1 6625fc51e351da77e46bea90',
-    title: '1 Gondola ride',
-    description:
-      'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
-    location: 'Zlatibor',
-    locationValue: 'zlatibor',
-    cost: 20,
-    imageLink:
-      'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
-    durationInDays: 1,
-    category: 'Landscape',
-    categoryValue: 'landscape',
-  },
-  {
-    id: '1 6625fd44e351da77e46bea93',
-    title: '1 Golubac Fortress',
-    description:
-      "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
-    location: 'Golubac',
-    locationValue: 'golubac',
-    cost: 100,
-    imageLink:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-  },
-  {
-    id: '1 662602b8410dc2dad9938982',
-    title: '1 Mountain biking',
-    description:
-      'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
-    location: 'Kopaonik',
-    locationValue: 'kopaonik',
-    cost: 100,
-    imageLink:
-      'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
-    durationInDays: 1,
-    category: 'Adventure',
-    categoryValue: 'adventure',
-  },
-  {
-    id: '1 662606c2410dc2dad993898d',
-    title: '1 Archaeological site Vinca',
-    description:
-      'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
-    location: 'Grocka',
-    locationValue: 'grocka',
-    cost: 170,
-    imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-  },
-
-  {
-    id: '2 6625fb90e351da77e46bea8c',
-    title: '2 Rafting on the Tara River',
-    description:
-      "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
-    location: 'Tara',
-    locationValue: 'tara',
-    cost: 180,
-    imageLink:
-      'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
-    durationInDays: 3,
-    category: 'Adventure',
-    categoryValue: 'adventure',
-  },
-  {
-    id: '2 6625fc51e351da77e46bea90',
-    title: '2 Gondola ride',
-    description:
-      'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
-    location: 'Zlatibor',
-    locationValue: 'zlatibor',
-    cost: 20,
-    imageLink:
-      'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
-    durationInDays: 1,
-    category: 'Landscape',
-    categoryValue: 'landscape',
-  },
-  {
-    id: '2 6625fd44e351da77e46bea93',
-    title: '2 Golubac Fortress',
-    description:
-      "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
-    location: 'Golubac',
-    locationValue: 'golubac',
-    cost: 100,
-    imageLink:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-  },
-  {
-    id: '2 662602b8410dc2dad9938982',
-    title: '2 Mountain biking',
-    description:
-      'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
-    location: 'Kopaonik',
-    locationValue: 'kopaonik',
-    cost: 100,
-    imageLink:
-      'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
-    durationInDays: 1,
-    category: 'Adventure',
-    categoryValue: 'adventure',
-  },
-  {
-    id: '2 662606c2410dc2dad993898d',
-    title: '2 Archaeological site Vinca',
-    description:
-      'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
-    location: 'Grocka',
-    locationValue: 'grocka',
-    cost: 170,
-    imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-  },
-
-  {
-    id: '3 6625fb90e351da77e46bea8c',
-    title: '3 Rafting on the Tara River',
-    description:
-      "Experience exhilarating rafting through Europe's largest canyon, Tara, surrounded by stunning natural beauty.",
-    location: 'Tara',
-    locationValue: 'tara',
-    cost: 180,
-    imageLink:
-      'https://www.raftingtara.com/files/images/ponude/trodnevni-rafting-skraceni-bg-600x300.jpg',
-    durationInDays: 3,
-    category: 'Adventure',
-    categoryValue: 'adventure',
-  },
-  {
-    id: '3 6625fc51e351da77e46bea90',
-    title: '3 Gondola ride',
-    description:
-      'Embark on a serene gondola ride in Zlatibor, beholding panoramic vistas of the majestic Zlatibor mountain range, a Balkan gem.',
-    location: 'Zlatibor',
-    locationValue: 'zlatibor',
-    cost: 20,
-    imageLink:
-      'https://admin.goldgondola.rs/server/storage/media/5717dfbd8b890b3f1ecfc0cecd835a9ce25f772d.jpeg',
-    durationInDays: 1,
-    category: 'Landscape',
-    categoryValue: 'landscape',
-  },
-  {
-    id: '3 6625fd44e351da77e46bea93',
-    title: '3 Golubac Fortress',
-    description:
-      "Discover the captivating Golubac Fortress on the Danube River. A testament to medieval architecture and the region's turbulent past.",
-    location: 'Golubac',
-    locationValue: 'golubac',
-    cost: 100,
-    imageLink:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg/1200px-Golubac_Fortress_%28%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86%29.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-  },
-  {
-    id: '3 662602b8410dc2dad9938982',
-    title: '3 Mountain biking',
-    description:
-      'Explore the untamed wilderness of Kopaonik mountain with an adrenaline-pumping mountain biking Adventure, perfect for thrill-seekers.',
-    location: 'Kopaonik',
-    locationValue: 'kopaonik',
-    cost: 100,
-    imageLink:
-      'https://www.infokop.net/images/stories/aktivan-odmor/bike-park/07-bike-park-kopaonik.jpg',
-    durationInDays: 1,
-    category: 'Adventure',
-    categoryValue: 'adventure',
-  },
-  {
-    id: '3 662606c2410dc2dad993898d',
-    title: '3 Archaeological site Vinca',
-    description:
-      'Delve into the ancient Vinca culture spanning from the 6th to the 3rd millennium BC, at the intriguing archaeological site in Grocka.',
-    location: 'Grocka',
-    locationValue: 'grocka',
-    cost: 170,
-    imageLink: 'https://beleske.com/wp-content/uploads/2014/06/lepenski-vir-srbija.jpg',
-    durationInDays: 0.5,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
+    subCategory: 'Rafting',
   },
 ];
+
+const allActivities: Activity[] = [...adventure];
 
 export default allActivities;

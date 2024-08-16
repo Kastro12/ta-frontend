@@ -58,7 +58,14 @@ const GalleryWithCarousel = ({ images }: { images: { imgLink: string; alt: strin
   return (
     <div style={{ position: 'relative', height: '100%' }}>
       <ZoomInOutlinedIcon
-        sx={{ position: 'absolute', right: '12px', top: '12px', zIndex: 2 }}
+        sx={{
+          position: 'absolute',
+          right: '0px',
+          top: '0px',
+          zIndex: 2,
+          height: '32px',
+          width: '32px',
+        }}
         className='zoom-icon'
         onClick={handleOpen}
       />

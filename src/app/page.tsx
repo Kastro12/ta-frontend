@@ -13,11 +13,10 @@
 'use client';
 import { Container, Button, Typography } from '@mui/material';
 import { InfoWithBackgroundImage } from '@/components';
-import { SliderBarActivities, SliderBarCreatedRoutesBox } from '@/sections';
+import { SliderBarActivities, CreatedRoutesBoxList } from '@/sections';
 import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import { button, greenButton } from '@/utils/re-styledComponents';
-import { settingThreeInRow } from '@/components/sliderbar/settings';
 import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
 import Image from 'next/image';
@@ -29,10 +28,10 @@ export default function Home() {
         <Image
           src='/main-banner/road_through_colorful_forest.jpg'
           alt='Road through colorful forest'
-          loading='lazy'
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          width={1141}
-          height={400}
+          style={{ objectFit: 'cover' }}
+          sizes='100vw'
+          fill
+          priority
         />
         <div className='content'>
           <Grid md={12} className='titles'>
@@ -55,17 +54,13 @@ export default function Home() {
 
       <Typography variant='h2'>Choose one of our predefined vacations</Typography>
 
-      <SliderBarCreatedRoutesBox serverData={organizedVacations} />
+      <CreatedRoutesBoxList serverData={organizedVacations} />
 
       <Typography variant='h2' sx={{ mt: '12px', mb: '26px' }}>
         Top season activities
       </Typography>
 
-      <SliderBarActivities
-        serverData={topSeasonActivities}
-        setting={settingThreeInRow}
-        className='arrowInSlickRow'
-      />
+      <SliderBarActivities serverData={topSeasonActivities} />
 
       <Typography variant='h2' sx={{ mt: '28px' }}>
         Activity categories

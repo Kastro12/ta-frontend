@@ -17,14 +17,14 @@ interface BoxOfActivityProps {
 export default function BoxOfActivity({ data, isSelected }: BoxOfActivityProps) {
   const dispatch = useDispatch();
 
-  const { durationInDays, title, imageLink, description, id, category, location } = data;
+  const { durationInDays, title, images, description, id, category, location } = data;
 
   return (
     <Paper elevation={3} className='BoxOfActivity'>
       <Box className='content-wrapper'>
         <img
-          src={imageLink}
-          alt={title}
+          src={images[0].link}
+          alt={images[0].alt}
           loading='lazy'
           onClick={() => dispatch(zoomActivity(data))}
         />
