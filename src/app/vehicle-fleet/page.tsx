@@ -66,7 +66,7 @@ export default function VehicleFleet() {
                 id: 2,
               },
               {
-                link: '/vehicle-fleet/audi_a6-white1.jpg',
+                link: '/vehicle-fleet/audi_a6_white1.jpg',
                 alt: 'Audi a6 white 1',
                 id: 3,
               },
