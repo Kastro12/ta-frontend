@@ -268,4 +268,344 @@ const kayaking: Activity[] = [
   },
 ];
 
-export const allAdventure: Activity[] = [...paragliding, ...rafting, ...kayaking];
+const jeep_safary: Activity[] = [
+  {
+    id: 'adventure-jeep_safari_durmitor_rings',
+    title: 'Jeep Safari Around Durmitor Ring',
+    description:
+      'Experience a thrilling jeep safari around Durmitor Ring, ideal for adrenaline junkies and off-road enthusiasts eager to explore rugged terrains and hidden beauties.',
+    longDescritpion: [
+      'Experience an unforgettable jeep safari around the Durmitor Ring, perfect for adventure enthusiasts and off-road lovers. This thrilling tour takes you through challenging terrains in robust vehicles like Land Rover, Nissan, and Toyota.',
+      'Explore wild landscapes and discover the hidden gems of Durmitor while enjoying an exhilarating ride. Ideal for those seeking to immerse themselves in the raw beauty of Montenegro’s rugged wilderness.',
+    ],
+    location: 'Durmitor',
+    locationValue: 'durmitor',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/jeep_safary/durmitor_rings/jeep-safari-durmitor-1.jpg',
+        alt: 'Jeep Safari around durmitor rings',
+      },
+      {
+        link: '/activities/adventure/jeep_safary/durmitor_rings/jeep-safari-durmitor-2.jpg',
+        alt: 'Jeep Safari around durmitor rings 2',
+      },
+      {
+        link: '/activities/adventure/jeep_safary/durmitor_rings/jeep-safari-durmitor-3.jpg',
+        alt: 'Jeep Safari around durmitor rings 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'jeep_safari',
+  },
+];
+
+const horse_riding: Activity[] = [
+  {
+    id: 'horse_riding_tara',
+    title: 'Horse riding on Tara mountain',
+    description:
+      'Experience the beauty of Tara Mountain with guided horseback riding, perfect for both beginners and seasoned riders. Enjoy stunning landscapes and a memorable adventure.',
+    longDescritpion: [
+      'Immerse yourself in the majestic landscapes of Tara Mountain with a unique horseback riding experience. Established in 2019, this service offers a range of horses, including thoroughbreds and Anglo-Arabians. Experienced riders can explore scenic trails past pine-covered hills, viewpoints, and serene streams.',
+      "If you're new to riding, recreational sessions provide a gentle introduction, with options for shorter rides through the surrounding nature. A comprehensive riding school is also available, offering a ten-session package to help you master the basics. For those traveling with their horses, boarding options are provided, allowing both you and your horse to enjoy a well-deserved break in the heart of Tara.",
+    ],
+    location: 'Tara',
+    locationValue: 'tara',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-1.jpg',
+        alt: 'horse riding on Tara mountain',
+      },
+      {
+        link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-2.jpg',
+        alt: 'horse riding on Tara mountain 2',
+      },
+      {
+        link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-3.jpg',
+        alt: 'horse riding on Tara mountain 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'Horse riding',
+  },
+
+  {
+    id: 'horse_riding_fruska_gora',
+    title: 'Horse riding on Fruska Gora',
+    description:
+      'Embark on a horseback riding adventure across the stunning landscapes of Fruška Gora, ideal for riders of all levels, offering a memorable and scenic experience.',
+    longDescritpion: [
+      'Discover the beauty of Fruška Gora on horseback, riding through rolling hills, serene lakes, and lush forests. Suitable for both seasoned riders and beginners, the trails offer a safe and exciting experience for everyone.',
+      "Guided by experienced leaders, you'll explore diverse terrain, with options to ride at a leisurely pace or pick up the speed for more thrill. The adventure begins at Šumska štala, where booking in advance ensures a perfect outdoor experience on Fruška Gora.",
+    ],
+    location: 'Fruska gora',
+    locationValue: 'fruska_gora',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/horse_riding/fruska_gora/horse-riding-on-fruska-gora-1.jpg',
+        alt: 'horse riding on Fruska gora',
+      },
+      {
+        link: '/activities/adventure/horse_riding/fruska_gora/horse-riding-on-fruska-gora-2.jpg',
+        alt: 'horse riding on Fruska gora 2',
+      },
+      {
+        link: '/activities/adventure/horse_riding/fruska_gora/horse-riding-on-fruska-gora-3.jpg',
+        alt: 'horse riding on Fruska gora 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'Horse riding',
+  },
+];
+
+const hiking: Activity[] = [
+  {
+    id: 'hiking_rtanj_mountain',
+    title: 'Hiking on Rtanj mountain',
+    description:
+      'Explore the mystical Rtanj Mountain, famous for its pyramid shape and legends of hidden treasures. A hike to its peak, Šiljak, offers adventure and breathtaking views.',
+    longDescritpion: [
+      'Rtanj Mountain, located in eastern Serbia, is renowned for its striking pyramid-shaped peak, Šiljak, which rises to 1,565 meters. This karst terrain is rich in natural beauty and local legends, making it a captivating destination for hikers.',
+      "Steeped in mystery, Rtanj is said to hide a wizard's treasure within its slopes. At the summit, you'll find the remnants of a chapel dedicated to St. George, built in 1932 by a local miner's wife. Though in ruins, the chapel adds to Rtanj's enigmatic atmosphere.",
+      "Hiking Rtanj is more than just a physical challenge; it's a journey through history and legend, offering breathtaking views and a deep connection to the region’s cultural heritage.",
+    ],
+    location: 'Sokobanja',
+    locationValue: 'sokobanja',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/hiking/rtanj_mountain/rtanj-mountain-1.jpg',
+        alt: 'Hiking on Rtanj Mountain',
+      },
+      {
+        link: '/activities/adventure/hiking/rtanj_mountain/rtanj-mountain-2.jpg',
+        alt: 'Hiking on Rtanj Mountain 2',
+      },
+      {
+        link: '/activities/adventure/hiking/rtanj_mountain/rtanj-mountain-3.jpg',
+        alt: 'Hiking on Rtanj Mountain 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'hiking',
+  },
+];
+
+const fishing: Activity[] = [
+  {
+    id: 'fishing-adventure-on-the-drina-river',
+    title: 'Fishing Adventure on the Drina River',
+    description:
+      'Enjoy a peaceful yet exciting fishing experience on the Drina River, renowned for its rich fish population and stunning natural beauty. Perfect for anglers of all levels.',
+    longDescritpion: [
+      "The Drina River, one of Serbia's most beautiful and clean rivers, offers an exceptional fishing experience. Known for its abundance of fish, including huchen (Danube salmon), brown trout, grayling, chub, and barbel, the Drina’s clear waters and varied ecosystems are perfect for both recreational and sport fishing.",
+      'Stretching through stunning landscapes, the river provides numerous fishing spots with unique challenges and rewards. Whether fishing from the banks or by boat, you’ll enjoy the serene beauty of the Drina and its surroundings.',
+      "Fishing on the Drina is more than just catching fish—it's about the tranquil environment, the thrill of the sport, and the chance to land a trophy fish. Ideal for seasoned anglers and beginners alike, this adventure connects you with nature and the excitement of the catch.",
+    ],
+    location: 'Bajina basta',
+    locationValue: 'bajina_basta',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/fishing/drina_river/fishing-drina-river-1.jpg',
+        alt: 'Fishing Adventure on the Drina River',
+      },
+      {
+        link: '/activities/adventure/fishing/drina_river/fishing-drina-river-2.jpg',
+        alt: 'Fishing Adventure on the Drina River 2',
+      },
+      {
+        link: '/activities/adventure/fishing/drina_river/fishing-drina-river-3.jpg',
+        alt: 'Fishing Adventure on the Drina River 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'fishing',
+  },
+
+  {
+    id: 'fishing-adventure-on-the-tara-river',
+    title: 'Fishing on the Tara River',
+    description:
+      'Experience fishing on the Tara River, with its pristine waters and abundant fish species. This serene setting is an ideal escape for anglers of all skill levels.',
+    longDescritpion: [
+      "The Tara River, flowing through Montenegro and Bosnia and Herzegovina, is a Balkan gem known for its clear, turquoise waters and dramatic canyon landscapes. As one of Europe's cleanest rivers, it offers an excellent fishing environment.",
+      "Home to trout, grayling, and huchen, the Tara River is ideal for both experienced anglers and beginners. Fishing here provides a peaceful retreat into nature, surrounded by stunning scenery. Enjoy the river's tranquility, the thrill of the catch, and the beauty of its untouched wilderness, making the Tara River a top fishing destination.",
+    ],
+    location: 'Tara',
+    locationValue: 'tara',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/fishing/tara_river/fishing-on-tara-river-1.jpg',
+        alt: 'Fishing on the Tara River',
+      },
+      {
+        link: '/activities/adventure/fishing/tara_river/fishing-on-tara-river-2.jpg',
+        alt: 'Fishing on the Tara River 2',
+      },
+      {
+        link: '/activities/adventure/fishing/tara_river/fishing-on-tara-river-3.jpg',
+        alt: 'Fishing on the Tara River 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'fishing',
+  },
+];
+
+const cycling: Activity[] = [
+  {
+    id: 'cycling_kopaonik',
+    title: 'Mountain Biking on Kopaonik',
+    description:
+      'Kopaonik offers thrilling mountain biking trails with stunning views and convenient parking nearby. Ideal for adventure seekers and outdoor enthusiasts.',
+    longDescritpion: [
+      'Kopaonik, Serbia’s largest mountain range and premier ski resort, becomes a mountain biking paradise in the warmer months. It offers trails for all skill levels, from beginner-friendly paths through lush forests to challenging downhill routes with steep descents and sharp turns.',
+      'The well-marked trails provide stunning views of the surrounding mountains and valleys. Kopaonik’s biking infrastructure includes bike rentals, guided tours, and lifts to transport bikers and their equipment to higher elevations for longer rides.',
+      'The area is easily accessible by road with parking at various trail entry points. For the best experience, ensure your bike is equipped for mountain terrain, wear protective gear, and bring water. Check local resources for trail maps, lift schedules, and biking events to enhance your Kopaonik adventure.',
+    ],
+    location: 'Kopaonik',
+    locationValue: 'kopaonik',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/cycling/kopaonik/mountain-biking-kopaonik-1.jpg',
+        alt: 'Mountain Biking on Kopaonik',
+      },
+      {
+        link: '/activities/adventure/cycling/kopaonik/mountain-biking-kopaonik-2.jpg',
+        alt: 'Mountain Biking on Kopaonik 2',
+      },
+      {
+        link: '/activities/adventure/cycling/kopaonik/mountain-biking-kopaonik-3.jpg',
+        alt: 'Mountain Biking on Kopaonik 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'cycling',
+  },
+
+  {
+    id: 'cycling_tara',
+    title: 'Mountain Biking on Tara',
+    description:
+      'Embark on a thrilling mountain biking journey through Tara, exploring its breathtaking landscapes and scenic views for an unforgettable adventure.',
+    longDescritpion: [
+      'Experience the allure of Tara Mountain with an exciting MTB tour through its stunning wilderness. The elevation of Tara adds to the thrill as you cycle through dense pine forests and along towering cliffs with expansive views.',
+      'With over 75 kilometers of cycling routes in Tara National Park, starting from various tourist centers, this adventure offers a chance to explore Tara’s rich natural beauty. Pedal through lush meadows and visit spectacular viewpoints, immersing yourself in the serene and majestic landscapes that make Tara a must-see for mountain biking enthusiasts.',
+    ],
+    location: 'Tara',
+    locationValue: 'tara',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/cycling/tara/mountain-biking-tara-1.jpg',
+        alt: 'Mountain Biking on Tara',
+      },
+      {
+        link: '/activities/adventure/cycling/tara/mountain-biking-tara-2.jpg',
+        alt: 'Mountain Biking on Tara 2',
+      },
+      {
+        link: '/activities/adventure/cycling/tara/mountain-biking-tara-3.jpg',
+        alt: 'Mountain Biking on Tara 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'cycling',
+  },
+];
+
+const canyoning: Activity[] = [
+  {
+    id: 'canyoning_nevidio',
+    title: 'Nevidio Canyon Adventure',
+    description:
+      "Discover Montenegro's hidden marvels with an exhilarating canyoning experience in Nevidio Canyon, nestled on Durmitor's southern slopes.",
+    longDescritpion: [
+      "The Nevidio Canyon, on the southern slopes of Montenegro's Durmitor mountain, offers an awe-inspiring canyoning adventure. Formed by the Mala Komarnica River, this 2-kilometer canyon features a dramatic 125-meter altitude drop, from 935 meters above sea level at the entrance to 810 meters at the exit.",
+      "As you navigate the canyon, you'll be captivated by its wild beauty and hidden natural wonders. Ideal for thrill-seekers and nature lovers, the Nevidio Canyon is a must-visit for an unforgettable outdoor adventure.",
+    ],
+    location: 'Durmitor',
+    locationValue: 'durmitor',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/canyoning/nevidio/canyoning-nevidio-1.jpg',
+        alt: 'Nevidio Canyon Adventure',
+      },
+      {
+        link: '/activities/adventure/canyoning/nevidio/canyoning-nevidio-2.jpg',
+        alt: 'Nevidio Canyon Adventure 2',
+      },
+      {
+        link: '/activities/adventure/canyoning/nevidio/canyoning-nevidio-3.jpg',
+        alt: 'Nevidio Canyon Adventure 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'canyoning',
+  },
+];
+
+const bungee_jump: Activity[] = [
+  {
+    id: 'bungee_jump_ada_ciganlija',
+    title: 'Bungee Jump at Ada Ciganlija',
+    description:
+      'Take the plunge with a thrilling bungee jump at Ada Ciganlija, Belgrade’s top spot for adrenaline seekers. Experience the ultimate rush!',
+    longDescritpion: [
+      'Bungee jumping is an extreme adventure sport, and Ada Ciganlija features one of the world’s most stunning and tallest bungee centers. With a crane towering 55 meters above the water, it offers breathtaking jumps.',
+      'The center is staffed by a well-trained team and certified professionals with international credentials. Since its opening in 1996, over 15,000 jumps have been completed, making it the only bungee sports facility in the country.',
+    ],
+    location: 'Belgrade',
+    locationValue: 'belgrade',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/bungee_jump/bungee-jump-belgrade.jpg',
+        alt: 'Bungee Jump at Ada Ciganlija',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'Bungee jumb',
+  },
+];
+
+export const allAdventure: Activity[] = [
+  ...paragliding,
+  ...rafting,
+  ...kayaking,
+  ...jeep_safary,
+  ...horse_riding,
+  ...hiking,
+  ...fishing,
+  ...cycling,
+  ...canyoning,
+  ...bungee_jump,
+];

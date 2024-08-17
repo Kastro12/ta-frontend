@@ -69,7 +69,7 @@ export default function AccommodationAndDining() {
                 id: 2,
               },
               {
-                link: '/accommodation-and-dining/apartment_1_living_room.jpg',
+                link: '/accommodation-and-dining/apartment-1-living-room.jpg',
                 alt: 'apartment 1 living room',
                 id: 3,
               },
