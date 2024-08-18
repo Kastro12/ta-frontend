@@ -94,8 +94,6 @@ export default function Activities() {
     }
   }, [currentPage, IsAllActivitiesLoaded, activityList]);
 
-  console.log('root component activitiesToDisplay ', activitiesToDisplay);
-
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       {pageAlert && (

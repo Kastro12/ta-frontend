@@ -8,6 +8,8 @@ import { useDispatch } from 'react-redux';
 import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
 import { activityDurationInString } from '@/utils/string';
 import { zoomActivity } from '@/store/activities/activitiesReducer';
+import Image from 'next/image';
+
 
 interface BoxOfActivityProps {
   data: Activity;
@@ -22,12 +24,17 @@ export default function BoxOfActivity({ data, isSelected }: BoxOfActivityProps) 
   return (
     <Paper elevation={3} className='BoxOfActivity'>
       <Box className='content-wrapper'>
-        <img
+        <div className='image-wrapper'>
+        <Image
           src={images[0].link}
           alt={images[0].alt}
           loading='lazy'
           onClick={() => dispatch(zoomActivity(data))}
+          style={{ objectFit: 'cover' }}
+          sizes='100%'
+          fill
         />
+        </div>
         <Box className='content'>
           <Box className='text'>
             <Typography variant='h3'>{title}</Typography>

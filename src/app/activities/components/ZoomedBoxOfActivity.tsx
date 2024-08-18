@@ -17,8 +17,6 @@ export default function ZoomedBoxOfActivity() {
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const isSelected = chosenActivities.find((activity) => activity.id === zoomedActivity?.id);
 
-  console.log('zoomedActivity', zoomedActivity);
-
   const handleDialogClose = useCallback(() => {
     dispatch(removeZoomedActivity());
   }, [dispatch]);
