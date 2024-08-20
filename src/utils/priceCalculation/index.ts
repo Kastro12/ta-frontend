@@ -1,4 +1,4 @@
-import { activityLocations } from '@/data';
+// import { activityLocations } from '@/data';
 import { useMaxNumberOfDaysForChosenActivities, useCalculateDaysDifference } from '@/utils/date';
 import {
   insuranceCosts,
@@ -36,9 +36,9 @@ export const useSummaryDrivingPrice = () => {
 
   const numberOfDays = numOfDay == 0 ? maxNumberOfDaysForChosenActivities : numOfDay;
   const numberOfPerson = useNumberOfPerson();
-  const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
+  // const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
 
-  const DEFAULT_DISTANCE = 100;
+  // const DEFAULT_DISTANCE = 100;
   const FUEL_PRICE_PER_LITER = 1.8;
 
   let totalDriverPrice =
@@ -49,28 +49,28 @@ export const useSummaryDrivingPrice = () => {
   //********* totalDriverPrice END *********
 
   let totalKmPerVehicle = 0;
-  let previousLocation: any;
+  // let previousLocation: any;
 
-  chosenActivities.forEach((activity, index) => {
-    const currentLocation = activityLocations.find(
-      (location) => location.value == activity.locationValue
-    );
+  // chosenActivities.forEach((activity, index) => {
+  //   const currentLocation = activityLocations.find(
+  //     (location) => location.value == activity.locationValue
+  //   );
 
-    if (index == 0) {
-      totalKmPerVehicle += currentLocation?.distancesBetweenLocations.beograd
-        ? currentLocation?.distancesBetweenLocations.beograd
-        : DEFAULT_DISTANCE;
-    } else {
-      totalKmPerVehicle += previousLocation.distancesBetweenLocations[`${currentLocation?.value}`];
-      if (chosenActivities.length == index + 1) {
-        totalKmPerVehicle += currentLocation?.distancesBetweenLocations.beograd
-          ? currentLocation?.distancesBetweenLocations.beograd
-          : DEFAULT_DISTANCE;
-      }
-    }
+  //   if (index == 0) {
+  //     totalKmPerVehicle += currentLocation?.distancesBetweenLocations.beograd
+  //       ? currentLocation?.distancesBetweenLocations.beograd
+  //       : DEFAULT_DISTANCE;
+  //   } else {
+  //     totalKmPerVehicle += previousLocation?.distancesBetweenLocations[`${currentLocation?.value}`];
+  //     if (chosenActivities.length == index + 1) {
+  //       totalKmPerVehicle += currentLocation?.distancesBetweenLocations.beograd
+  //         ? currentLocation?.distancesBetweenLocations.beograd
+  //         : DEFAULT_DISTANCE;
+  //     }
+  //   }
 
-    previousLocation = currentLocation;
-  });
+  //   previousLocation = currentLocation;
+  // });
   //********* totalKmPerVehicle END *********
 
   let totalFuelPrice;

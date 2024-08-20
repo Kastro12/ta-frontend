@@ -10,7 +10,7 @@ const cruise: Activity[] = [
       "Experience the magic of the Drina River on a scenic cruise from Perućac to Višegrad and back, traversing one of the deepest canyons in the world. As you glide through the serene, green-hued waters, you'll be surrounded by dramatic forested cliffs and stunning natural landscapes.",
       "This cruise offers a perfect blend of tranquility and majesty, allowing you to immerse yourself in the breathtaking beauty of the canyon. Along the way, you'll reach Višegrad, a historic town famous for its iconic bridge, providing a unique fusion of natural splendor and cultural heritage.",
     ],
-    location: 'Bajina basta',
+    location: 'Bajina Basta',
     locationValue: 'bajina_basta',
     cost: 180,
     images: [
@@ -43,7 +43,7 @@ const cruise: Activity[] = [
       'For a more immersive experience, the two-hour cruise departs from Tekija, traveling 22 km upstream from Kladovo. This cruise takes you through the narrowest (154 m) and deepest (93 m) parts of the Danube, offering breathtaking views of Europe’s most beautiful gorge. Savor a glass of fine Negotin wine and freshly grilled perch, accompanied by a live tamburitza ensemble. The cruise also includes a buffet-style ethno lunch showcasing the culinary delights of Eastern Serbia.',
       'Whether for a business event, a wedding, or a leisurely escape, the Đerdap river cruise promises a truly memorable experience.',
     ],
-    location: 'Djerdap',
+    location: 'Đerdap',
     locationValue: 'djerdap',
     cost: 180,
     images: [
@@ -52,7 +52,7 @@ const cruise: Activity[] = [
         alt: 'Đerdap River cruise',
       },
       {
-        link: '/activities/landscape/cruise/djerdap_cruise/cdjerdap-river-1.jpg',
+        link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-1.jpg',
         alt: 'Đerdap River 1',
       },
       {
@@ -75,7 +75,7 @@ const cruise: Activity[] = [
       "The route takes you through the narrowest part of the Danube, where it reaches its greatest depth in Europe at 93 meters. Along the way, you'll pass iconic landmarks such as Trajan's Plaque, the statue of King Decebalus, and the Mrakonia Monastery on the Romanian bank. The tour also includes sights like Hajdučka Vodenica before returning to Tekija.",
       'Experience the Đerdap Gorge’s stunning landscapes from a unique perspective and enjoy an adventure-filled journey through this remarkable natural wonder.',
     ],
-    location: 'Djerdap',
+    location: 'Đerdap',
     locationValue: 'djerdap',
     cost: 180,
     images: [
@@ -110,7 +110,7 @@ const caves: Activity[] = [
       'The cave is easily accessible by road, with parking conveniently located near the entrance. Guided tours are available, providing insights into the cave’s various chambers and formations as well as its geological history. The cool, serene environment of the cave makes it a perfect escape into nature, appealing to both caving enthusiasts and casual visitors.',
       'For a rewarding visit, wear comfortable shoes suitable for uneven terrain and bring a camera to capture the cave’s extraordinary beauty. Check local information for tour schedules, safety guidelines, and additional tips to enhance your adventure in Rajkova Cave.',
     ],
-    location: 'Djerdap',
+    location: 'Đerdap',
     locationValue: 'djerdap',
     cost: 180,
     images: [
@@ -211,7 +211,7 @@ const all: Activity[] = [
       'Accessible by road with parking available near the entrance, visitors can explore well-marked trails that wind through the site, offering close-up views of these striking formations. The combination of unusual geological features and local legends makes Đavolja Varoš a fascinating destination for nature enthusiasts, photographers, and those interested in natural curiosities.',
       'For a great visit, wear comfortable walking shoes and bring a camera to capture the surreal landscape. Check local visitor information for tips, guided tour options, and safety guidelines to enhance your experience at Đavolja Varoš.',
     ],
-    location: 'Krusumlija',
+    location: 'Krušumlija',
     locationValue: 'krusumlija',
     cost: 180,
     images: [
@@ -277,7 +277,7 @@ const all: Activity[] = [
       "Accessing the park is straightforward, with parking available at key attractions and trailheads. The park offers a network of hiking trails with stunning panoramic views of the Danube and its dramatic gorges. It's a great destination for birdwatching and enjoying diverse flora and fauna.",
       'For a fulfilling visit, bring hiking gear, a camera, and a picnic to enjoy in the scenic surroundings. Check local visitor information for details on guided tours and historical insights to enhance your experience at Đerdap National Park.',
     ],
-    location: 'Djerdap',
+    location: 'Đerdap',
     locationValue: 'djerdap',
     cost: 180,
     images: [
@@ -500,7 +500,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_zlatibor_gondola',
-    title: 'Zlatibor gold gondola – ride above the mountains',
+    title: 'Gold gondola – ride above the mountains',
     description:
       'The Zlatibor Gold Gondola offers stunning mountain views on a scenic ride. Easily accessible with parking nearby, it’s ideal for sightseeing and nature lovers.',
     longDescritpion: [

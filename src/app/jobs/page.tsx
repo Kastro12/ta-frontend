@@ -11,7 +11,7 @@ export default function Jobs() {
         <Image
           src='/main-banner/join_our_team.jpg'
           alt='join our team'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover',borderRadius:'4px' }}
           sizes='100vw'
           fill
           priority

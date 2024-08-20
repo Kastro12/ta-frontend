@@ -180,7 +180,7 @@ const kayaking: Activity[] = [
       "Experience the grandeur of Europe’s second-longest river, the Danube, with our kayaking tour through the Iron Gate. As you paddle through Serbia, you'll encounter breathtaking monuments and archaeological sites from the Middle Ages to the First Century AD.",
       'Enjoy spectacular scenery and pristine nature while navigating this iconic region. No prior experience is needed; we provide all equipment and guidance, allowing you to fully immerse in the adventure and the stunning views.',
     ],
-    location: 'Djerdap',
+    location: 'Đerdap',
     locationValue: 'djerdap',
     cost: 180,
     images: [
@@ -344,7 +344,7 @@ const horse_riding: Activity[] = [
       'Discover the beauty of Fruška Gora on horseback, riding through rolling hills, serene lakes, and lush forests. Suitable for both seasoned riders and beginners, the trails offer a safe and exciting experience for everyone.',
       "Guided by experienced leaders, you'll explore diverse terrain, with options to ride at a leisurely pace or pick up the speed for more thrill. The adventure begins at Šumska štala, where booking in advance ensures a perfect outdoor experience on Fruška Gora.",
     ],
-    location: 'Fruska gora',
+    location: 'Fruska Gora',
     locationValue: 'fruska_gora',
     cost: 180,
     images: [
@@ -414,7 +414,7 @@ const fishing: Activity[] = [
       'Stretching through stunning landscapes, the river provides numerous fishing spots with unique challenges and rewards. Whether fishing from the banks or by boat, you’ll enjoy the serene beauty of the Drina and its surroundings.',
       "Fishing on the Drina is more than just catching fish—it's about the tranquil environment, the thrill of the sport, and the chance to land a trophy fish. Ideal for seasoned anglers and beginners alike, this adventure connects you with nature and the excitement of the catch.",
     ],
-    location: 'Bajina basta',
+    location: 'Bajina Basta',
     locationValue: 'bajina_basta',
     cost: 180,
     images: [

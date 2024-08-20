@@ -11,7 +11,7 @@ export default function VehicleFleet() {
         <Image
           src='/main-banner/mercedes-benz-v220d.jpg'
           alt='mercedes benz v220d'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover',borderRadius:'4px' }}
           sizes='100vw'
           fill
           priority

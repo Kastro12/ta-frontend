@@ -62,7 +62,7 @@ export default function BookVacation() {
         <Image
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
           alt='couple near car in nature'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover',borderRadius:'4px' }}
           sizes='100vw'
           fill
           priority

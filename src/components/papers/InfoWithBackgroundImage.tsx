@@ -19,15 +19,28 @@ export default function InfoWithBackgroundImage({
   return (
     <div className='TextImage1 categoryBox'>
       <div className='text'>
-        <div>
-          <Typography variant='h3'>{title}</Typography>
-          <Typography variant='body1'>{description}</Typography>
-        </div>
-        <div className='button-wrap'>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Typography sx={{ display: 'inline-block' }} variant='h3'>
+            {title}
+          </Typography>{' '}
           <Button
             sx={{ ...button, ...linkGreenButton }}
             variant='outlined'
             size='small'
+            LinkComponent={Link}
+            href={link}
+            className='mobile-button'
+          >
+            activities
+          </Button>
+        </div>
+
+        <Typography variant='body1'>{description}</Typography>
+
+        <div className='desktop-button'>
+          <Button
+            sx={{ ...button, ...linkGreenButton, ml: '16px' }}
+            variant='outlined'
             LinkComponent={Link}
             href={link}
           >

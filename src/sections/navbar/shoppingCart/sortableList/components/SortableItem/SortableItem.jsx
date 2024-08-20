@@ -66,7 +66,7 @@ export function SortableItem({ id, activity }) {
       >
         <li>
           <div className={`image-wrap`}>
-            <img src={activity.imageLink} />
+            <img src={activity.images[0].link} />
           </div>
 
           <div className='content'>

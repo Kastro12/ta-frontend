@@ -70,12 +70,12 @@ export default function ZoomedBoxOfActivity() {
               }}
               variant='outlined'
               startIcon={isSelected ? <CloseOutlinedIcon /> : <AddShoppingCartOutlinedIcon />}
-              onClick={() =>
+              onClick={() => {
                 zoomedActivity &&
-                dispatch(
-                  isSelected ? removeActivity(zoomedActivity?.id) : addActivity(zoomedActivity)
-                )
-              }
+                  dispatch(
+                    isSelected ? removeActivity(zoomedActivity?.id) : addActivity(zoomedActivity)
+                  );
+              }}
             >
               {isSelected ? 'Remove' : 'Choose'}
             </Button>

@@ -64,7 +64,7 @@ const history_and_culture: Activity[] = [
   },
 
   {
-    id: 'history_and_culture-drvengrad–traditional-village',
+    id: 'history_and_culture-felix-romuliana–the-imperial-palace-of-galerius',
     title: 'Felix Romuliana – The Imperial Palace of Galerius',
     description:
       "Felix Romuliana, a UNESCO World Heritage site, features impressive Roman ruins. With convenient parking nearby, it's perfect for history enthusiasts and archaeology lovers.",
@@ -172,7 +172,7 @@ const history_and_culture: Activity[] = [
       'The visitor center features well-preserved ruins and exhibits of artifacts and sculptures, providing an educational experience about the site’s historical significance.',
       'Easily accessible by road with parking available, consider a guided tour for deeper insights. Bring a camera to capture the unique architecture and scenic Danube views. Check local information for museum hours, tour options, and special events.',
     ],
-    location: 'Djerdap',
+    location: 'Đerdap',
     locationValue: 'djerdap',
     cost: 180,
     images: [

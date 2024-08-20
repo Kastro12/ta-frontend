@@ -20,15 +20,17 @@ import { button, greenButton } from '@/utils/re-styledComponents';
 import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
 import Image from 'next/image';
+import ZoomedBoxOfActivity from '@/app/activities/components/ZoomedBoxOfActivity';
 
 export default function Home() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
+      <ZoomedBoxOfActivity />
       <Grid container className='header-section' sx={{ position: 'relative' }}>
         <Image
           src='/main-banner/road_through_colorful_forest.jpg'
           alt='Road through colorful forest'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
           fill
           priority

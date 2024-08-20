@@ -11,7 +11,7 @@ export default function AccommodationAndDining() {
         <Image
           src='/main-banner/apartment_3_living_room.jpg'
           alt='apartment living room'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover',borderRadius:'4px' }}
           sizes='100vw'
           fill
           priority

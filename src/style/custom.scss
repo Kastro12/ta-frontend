@@ -255,7 +255,12 @@
         z-index: 1;
         padding: 0 16px 6px 16px;
         position: absolute;
-        color: $white2;
+        color: $white1;
+        h3 {
+          white-space: break-spaces;
+          font-size: 16px;
+          font-weight: 500;
+        }
       }
     }
   }

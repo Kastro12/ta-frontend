@@ -5,6 +5,9 @@ import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRound
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
 import { Typography, Box } from '@mui/material';
 import Image from 'next/image';
+import { zoomActivity } from '@/store/activities/activitiesReducer';
+import { useDispatch } from 'react-redux';
+import ZoomInOutlinedIcon from '@mui/icons-material/ZoomInOutlined';
 
 const SliderBarActivities = ({ serverData }) => {
   useEffect(() => {
@@ -27,6 +30,8 @@ const SliderBarActivities = ({ serverData }) => {
     }).mount();
   }, []);
 
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className='glide_top_activity glide_arrows_center'>
@@ -35,9 +40,22 @@ const SliderBarActivities = ({ serverData }) => {
             {serverData &&
               serverData.map((data) => (
                 <li key={data.id}>
+                  <ZoomInOutlinedIcon
+                    sx={{
+                      position: 'absolute',
+                      right: '0px',
+                      top: '0px',
+                      zIndex: 2,
+                      height: '32px',
+                      width: '32px',
+                    }}
+                    className='zoom-icon'
+                    onClick={() => dispatch(zoomActivity(data))}
+                  />
+
                   <Image
-                    src={data.imageLink}
-                    alt={data.alt}
+                    src={data.images[0].link}
+                    alt={data.images[0].alt}
                     loading='lazy'
                     fill
                     style={{ objectFit: 'cover', borderRadius: '4px' }}

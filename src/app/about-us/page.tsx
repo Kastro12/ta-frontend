@@ -10,7 +10,7 @@ export default function AboutUs() {
         <Image
           src='/main-banner/maps_on_table.jpg'
           alt='Maps on table'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover',borderRadius:'4px' }}
           sizes='100vw'
           fill
           priority

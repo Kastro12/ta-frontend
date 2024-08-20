@@ -1,34 +1,15 @@
-const topSeasonActivities = [
-  {
-    id: '1',
-    title: 'Mountain bike',
-    imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-    alt: 'couple near car in nature',
-  },
-  {
-    id: '2',
-    title: 'Mountain bike',
-    imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-    alt: 'couple near car in nature',
-  },
-  {
-    id: '3',
-    title: 'Mountain bike',
-    imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-    alt: 'couple near car in nature',
-  },
-  {
-    id: '4',
-    title: 'Mountain bike',
-    imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-    alt: 'couple near car in nature',
-  },
-  {
-    id: '5',
-    title: 'Mountain bike',
-    imageLink: 'https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg',
-    alt: 'couple near car in nature',
-  },
+import allActivities from '@/data/activities/allActivities';
+
+const topActivitiesID = [
+  { id: 'cycling_kopaonik' },
+  { id: 'history_and_culture-golubac-fortress–medieval-stronghold' },
+  { id: 'landscape_zlatibor_gondola' },
+  { id: 'canyoning_nevidio' },
+  { id: 'landscape_vlasin_lake' },
 ];
+
+const topSeasonActivities = topActivitiesID.map((activity) =>
+  allActivities.find((allActivity) => allActivity.id == activity.id)
+);
 
 export default topSeasonActivities;

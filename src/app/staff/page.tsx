@@ -9,7 +9,7 @@ export default function Staff() {
         <Image
           src='/main-banner/team_of_5_people.jpg'
           alt='team of 5 people'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover',borderRadius:'4px' }}
           sizes='100vw'
           fill
           priority

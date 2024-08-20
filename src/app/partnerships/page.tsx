@@ -14,7 +14,7 @@ export default function Partnerships() {
         <Image
           src='/main-banner/partnership.jpg'
           alt='partnership'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover',borderRadius:'4px' }}
           sizes='100vw'
           fill
           priority
