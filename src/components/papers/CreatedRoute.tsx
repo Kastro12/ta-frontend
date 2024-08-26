@@ -1,39 +1,84 @@
 import * as React from 'react';
 import { Typography, Box, Button } from '@mui/material';
-import { button, linkGreenButton } from '@/utils/re-styledComponents';
+import { button, greenButton } from '@/utils/re-styledComponents';
 import Link from 'next/link';
-import { truncateText } from '@/utils/string';
+import { Activity } from '@/utils/interfaces';
+import allActivities from '@/data/activities/allActivities';
 
 interface SliderBarProps {
   data: {
     id: string;
     title: string;
     description: string;
-    imageLink: string;
-    alt: string;
     link: string;
+    activities: { id: string }[];
   };
 }
 
 export default function CreatedRoute({ data }: SliderBarProps) {
+  const uniqueActivities = data?.activities.map((activity: { id: string }) => {
+    return allActivities.find((all: Activity) => all.id == activity.id);
+  });
+
+  let fourActivities = uniqueActivities.slice(0, 4);
+
   return (
-    <Link className='CreatedRouteComponent' href={data.link}>
+    <div className='CreatedRouteComponent'>
       <Box className='content'>
-        <Box className='text'>
-          <Typography variant='h3'>{data.title}</Typography>
-          <Typography variant='subtitle1'>
-            {truncateText({ text: data.description, maxLength: 200 })}
+        <Typography variant='h3'>{data.title}</Typography>
+        <Typography variant='body1' className='text'>
+          {data.description}
+        </Typography>
+
+        <div className='list-wrapper'>
+          <Typography variant='body1' className='list-title'>
+            Activities
           </Typography>
+          <ul>
+            {fourActivities.map((activity: Activity | undefined) => (
+              <li key={activity?.title}>{activity?.title}</li>
+            ))}
+
+            <li>...</li>
+          </ul>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Button
-            sx={{ ...button, ...linkGreenButton, width: '90px' }}
+            sx={{ ...button, ...greenButton }}
             variant='outlined'
-            size='small'
+            LinkComponent={Link}
+            href={data.link}
+            className='link-button'
           >
             Read more
           </Button>
-        </Box>
-        <img src={data.imageLink} alt={data.alt} loading='lazy' />
+        </div>
+        {/* <img src={data.imageLink} alt={data.alt} loading='lazy' /> */}
       </Box>
-    </Link>
+    </div>
   );
 }
+
+// export default function CreatedRoute({ data }: SliderBarProps) {
+//   return (
+//     <Link className='CreatedRouteComponent' href={data.link}>
+//       <Box className='content'>
+//         <Box className='text'>
+//           <Typography variant='h3'>{data.title}</Typography>
+//           <Typography variant='subtitle1'>
+//             {truncateText({ text: data.description, maxLength: 200 })}
+//           </Typography>
+//           <Button
+//             sx={{ ...button, ...linkGreenButton, width: '90px' }}
+//             variant='outlined'
+//             size='small'
+//           >
+//             Read more
+//           </Button>
+//         </Box>
+//         <img src={data.imageLink} alt={data.alt} loading='lazy' />
+//       </Box>
+//     </Link>
+//   );
+// }

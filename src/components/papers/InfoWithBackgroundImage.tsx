@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { Typography, Button } from '@mui/material';
-import { GalleryWithCarousel } from '../../components';
+import { GalleryWithCarousel } from '@/components';
 import Link from 'next/link';
 import { button, linkGreenButton } from '@/utils/re-styledComponents';
 
@@ -13,11 +13,11 @@ export default function InfoWithBackgroundImage({
 }: {
   title: string;
   description: string;
-  images: { imgLink: string; alt: string }[];
+  images: { link: string; alt: string }[];
   link: string;
 }) {
   return (
-    <div className='TextImage1 categoryBox'>
+    <div className='TextImage1'>
       <div className='text'>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Typography sx={{ display: 'inline-block' }} variant='h3'>

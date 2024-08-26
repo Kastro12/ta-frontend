@@ -3,7 +3,7 @@ import { Activity } from '@/utils/interfaces';
 const rafting: Activity[] = [
   {
     id: 'adventure-rafting-tara',
-    title: 'Rafting on the Tara River',
+    title: 'Rafting on the Tara river',
     description:
       "Embark on an exhilarating rafting adventure on the Tara River, one of the Balkans' most stunning rivers. Navigate breathtaking canyons and experience untouched nature.",
     longDescritpion: [
@@ -17,15 +17,15 @@ const rafting: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/rafting/tara_river/rafting_tara_1.jpg',
+        link: '/activities/adventure/rafting/tara_river/rafting-tara-1.jpg',
         alt: 'rafting on the Tara river',
       },
       {
-        link: '/activities/adventure/rafting/tara_river/rafting_tara_2.jpg',
+        link: '/activities/adventure/rafting/tara_river/rafting-tara-2.jpg',
         alt: 'rafting on the Tara river 2',
       },
       {
-        link: '/activities/adventure/rafting/tara_river/rafting_tara_3.jpg',
+        link: '/activities/adventure/rafting/tara_river/rafting-tara-3.jpg',
         alt: 'rafting on the Tara river 3',
       },
     ],
@@ -37,7 +37,7 @@ const rafting: Activity[] = [
 
   {
     id: 'adventure-rafting-ibar',
-    title: 'Rafting on the Ibar River',
+    title: 'Rafting on the Ibar river',
     description:
       'Experience the thrill of rafting on the Ibar River through the scenic Valley of Serbian Kings, past the majestic Maglič Castle. This adventure blends adrenaline and stunning landscapes.',
     longDescritpion: [
@@ -51,15 +51,15 @@ const rafting: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/rafting/ibar_river/rafting_ibar_1.jpg',
+        link: '/activities/adventure/rafting/ibar_river/rafting-ibar-1.jpg',
         alt: 'rafting on the Ibar river',
       },
       {
-        link: '/activities/adventure/rafting/ibar_river/rafting_ibar_2.jpg',
+        link: '/activities/adventure/rafting/ibar_river/rafting-ibar-2.jpg',
         alt: 'rafting on the Ibar river 2',
       },
       {
-        link: '/activities/adventure/rafting/ibar_river/rafting_ibar_3.jpg',
+        link: '/activities/adventure/rafting/ibar_river/rafting-ibar-3.jpg',
         alt: 'rafting on the Ibar river 3',
       },
     ],
@@ -86,15 +86,15 @@ const paragliding: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/paragliding/zlatibor/paragliding_zlatibor_1.jpg',
+        link: '/activities/adventure/paragliding/zlatibor/paragliding-zlatibor-1.jpg',
         alt: 'paragliding zlatibor',
       },
       {
-        link: '/activities/adventure/paragliding/zlatibor/paragliding_zlatibor_2.jpg',
+        link: '/activities/adventure/paragliding/zlatibor/paragliding-zlatibor-2.jpg',
         alt: 'paragliding zlatibor 2',
       },
       {
-        link: '/activities/adventure/paragliding/zlatibor/paragliding_zlatibor_3.jpg',
+        link: '/activities/adventure/paragliding/zlatibor/paragliding-zlatibor-3.jpg',
         alt: 'paragliding zlatibor 3',
       },
     ],
@@ -119,15 +119,15 @@ const paragliding: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/paragliding/budva/paragliding_budva_1.jpg',
+        link: '/activities/adventure/paragliding/budva/paragliding-budva-1.jpg',
         alt: 'paragliding budva',
       },
       {
-        link: '/activities/adventure/paragliding/budva/paragliding_budva_2.jpg',
+        link: '/activities/adventure/paragliding/budva/paragliding-budva-2.jpg',
         alt: 'paragliding budva 2',
       },
       {
-        link: '/activities/adventure/paragliding/budva/paragliding_budva_3.jpg',
+        link: '/activities/adventure/paragliding/budva/paragliding-budva-3.jpg',
         alt: 'paragliding budva 3',
       },
     ],
@@ -141,7 +141,7 @@ const paragliding: Activity[] = [
 const kayaking: Activity[] = [
   {
     id: 'adventure-kayaking-drina',
-    title: 'Drina Kayak Adventure',
+    title: 'Drina Kayak adventure',
     description:
       'Embark on an unforgettable 22 km kayaking journey down the Drina River. Explore stunning landscapes, the majestic Vrelo Waterfall, and the iconic house on the rock.',
     longDescritpion: [
@@ -153,15 +153,15 @@ const kayaking: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/kayaking/drina/kayak_drina_1.jpg',
+        link: '/activities/adventure/kayaking/drina/kayak-drina-1.jpg',
         alt: 'Drina Kayak Adventure',
       },
       {
-        link: '/activities/adventure/kayaking/drina/kayak_drina_2.jpg',
+        link: '/activities/adventure/kayaking/drina/kayak-drina-2.jpg',
         alt: 'Drina Kayak Adventure 2',
       },
       {
-        link: '/activities/adventure/kayaking/drina/kayak_drina_3.jpg',
+        link: '/activities/adventure/kayaking/drina/kayak-drina-3.jpg',
         alt: 'Drina Kayak Adventure 3',
       },
     ],
@@ -173,7 +173,7 @@ const kayaking: Activity[] = [
 
   {
     id: 'adventure-kayaking-danube-iron-gate',
-    title: 'Kayaking the Danube Iron Gate',
+    title: 'Kayaking the Danube iron gate',
     description:
       'Explore the majestic Danube River on a kayaking tour through Serbia’s Iron Gate. Discover historic sites, stunning views, and pristine nature along the way.',
     longDescritpion: [
@@ -185,15 +185,15 @@ const kayaking: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/kayaking/danube_iron_gate/kayak_danube_iron_gate_1.jpg',
+        link: '/activities/adventure/kayaking/danube_iron_gate/kayak-danube-iron-gate-1.jpg',
         alt: 'Kayaking the Danube Iron Gate',
       },
       {
-        link: '/activities/adventure/kayaking/danube_iron_gate/kayak_danube_iron_gate_2.jpg',
+        link: '/activities/adventure/kayaking/danube_iron_gate/kayak-danube-iron-gate-2.jpg',
         alt: 'Kayaking the Danube Iron Gate 2',
       },
       {
-        link: '/activities/adventure/kayaking/danube_iron_gate/kayak_danube_iron_gate_3.jpg',
+        link: '/activities/adventure/kayaking/danube_iron_gate/kayak-danube-iron-gate-3.jpg',
         alt: 'Kayaking the Danube Iron Gate 3',
       },
     ],
@@ -205,7 +205,7 @@ const kayaking: Activity[] = [
 
   {
     id: 'adventure-kayaking-uvac',
-    title: 'Uvac Kayak Adventure',
+    title: 'Uvac kayak adventure',
     description:
       'Paddle through the breathtaking meanders of Uvac Lake and uncover its hidden wonders on a serene and picturesque kayaking journey.',
     longDescritpion: [
@@ -217,15 +217,15 @@ const kayaking: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/kayaking/uvac/kayak_uvac_1.jpg',
+        link: '/activities/adventure/kayaking/uvac/kayak-uvac-1.jpg',
         alt: 'Uvac Kayak Adventure',
       },
       {
-        link: '/activities/adventure/kayaking/uvac/kayak_uvac_2.jpg',
+        link: '/activities/adventure/kayaking/uvac/kayak-uvac-2.jpg',
         alt: 'Uvac Kayak Adventure 2',
       },
       {
-        link: '/activities/adventure/kayaking/uvac/kayak_uvac_3.jpg',
+        link: '/activities/adventure/kayaking/uvac/kayak-uvac-3.jpg',
         alt: 'Uvac Kayak Adventure 3',
       },
     ],
@@ -237,7 +237,7 @@ const kayaking: Activity[] = [
 
   {
     id: 'adventure-war-island-kayak',
-    title: 'War Island Kayak Adventure',
+    title: 'War Island kayak adventure',
     description:
       'Explore the picturesque War Island in Belgrade from a unique vantage point with our exhilarating kayak tour. Enjoy stunning views and a refreshing adventure.',
     longDescritpion: [
@@ -249,16 +249,12 @@ const kayaking: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/adventure/kayaking/war_island/kayak_war_island_belgrade_1.jpg',
+        link: '/activities/adventure/kayaking/war_island/kayak-war-island-belgrade-1.jpg',
         alt: 'War Island Kayak Adventure',
       },
       {
-        link: '/activities/adventure/kayaking/war_island/kayak_war_island_belgrade_2.jpg',
+        link: '/activities/adventure/kayaking/war_island/kayak-war-island-belgrade-2.jpg',
         alt: 'War Island Kayak Adventure 2',
-      },
-      {
-        link: '/activities/adventure/kayaking/war_island/kayak_war_island_belgrade_3.jpg',
-        alt: 'War Island Kayak Adventure 3',
       },
     ],
     durationInDays: 1,
@@ -271,7 +267,7 @@ const kayaking: Activity[] = [
 const jeep_safary: Activity[] = [
   {
     id: 'adventure-jeep_safari_durmitor_rings',
-    title: 'Jeep Safari Around Durmitor Ring',
+    title: 'Jeep safari around Durmitor ring',
     description:
       'Experience a thrilling jeep safari around Durmitor Ring, ideal for adrenaline junkies and off-road enthusiasts eager to explore rugged terrains and hidden beauties.',
     longDescritpion: [
@@ -406,7 +402,7 @@ const hiking: Activity[] = [
 const fishing: Activity[] = [
   {
     id: 'fishing-adventure-on-the-drina-river',
-    title: 'Fishing Adventure on the Drina River',
+    title: 'Fishing on the Drina river',
     description:
       'Enjoy a peaceful yet exciting fishing experience on the Drina River, renowned for its rich fish population and stunning natural beauty. Perfect for anglers of all levels.',
     longDescritpion: [
@@ -420,15 +416,15 @@ const fishing: Activity[] = [
     images: [
       {
         link: '/activities/adventure/fishing/drina_river/fishing-drina-river-1.jpg',
-        alt: 'Fishing Adventure on the Drina River',
+        alt: 'Fishing on the Drina river',
       },
       {
         link: '/activities/adventure/fishing/drina_river/fishing-drina-river-2.jpg',
-        alt: 'Fishing Adventure on the Drina River 2',
+        alt: 'Fishing on the Drina river 2',
       },
       {
         link: '/activities/adventure/fishing/drina_river/fishing-drina-river-3.jpg',
-        alt: 'Fishing Adventure on the Drina River 3',
+        alt: 'Fishing on the Drina river 3',
       },
     ],
     durationInDays: 1,
@@ -439,7 +435,7 @@ const fishing: Activity[] = [
 
   {
     id: 'fishing-adventure-on-the-tara-river',
-    title: 'Fishing on the Tara River',
+    title: 'Fishing on the Tara river',
     description:
       'Experience fishing on the Tara River, with its pristine waters and abundant fish species. This serene setting is an ideal escape for anglers of all skill levels.',
     longDescritpion: [
@@ -473,7 +469,7 @@ const fishing: Activity[] = [
 const cycling: Activity[] = [
   {
     id: 'cycling_kopaonik',
-    title: 'Mountain Biking on Kopaonik',
+    title: 'Mountain biking on Kopaonik',
     description:
       'Kopaonik offers thrilling mountain biking trails with stunning views and convenient parking nearby. Ideal for adventure seekers and outdoor enthusiasts.',
     longDescritpion: [
@@ -506,7 +502,7 @@ const cycling: Activity[] = [
 
   {
     id: 'cycling_tara',
-    title: 'Mountain Biking on Tara',
+    title: 'Mountain biking on Tara',
     description:
       'Embark on a thrilling mountain biking journey through Tara, exploring its breathtaking landscapes and scenic views for an unforgettable adventure.',
     longDescritpion: [
@@ -540,7 +536,7 @@ const cycling: Activity[] = [
 const canyoning: Activity[] = [
   {
     id: 'canyoning_nevidio',
-    title: 'Nevidio Canyon Adventure',
+    title: 'Nevidio canyon adventure',
     description:
       "Discover Montenegro's hidden marvels with an exhilarating canyoning experience in Nevidio Canyon, nestled on Durmitor's southern slopes.",
     longDescritpion: [
@@ -574,7 +570,7 @@ const canyoning: Activity[] = [
 const bungee_jump: Activity[] = [
   {
     id: 'bungee_jump_ada_ciganlija',
-    title: 'Bungee Jump at Ada Ciganlija',
+    title: 'Bungee jump at Ada Ciganlija',
     description:
       'Take the plunge with a thrilling bungee jump at Ada Ciganlija, Belgrade’s top spot for adrenaline seekers. Experience the ultimate rush!',
     longDescritpion: [

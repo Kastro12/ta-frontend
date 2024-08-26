@@ -5,15 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import Grid from '@mui/material/Unstable_Grid2';
 import { button, greenButton } from '@/utils/re-styledComponents';
-import { oldAndNew } from '@/data/organizedVacations';
+import { pannonianPlain } from '@/data/organizedVacations';
 import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
 import CalendarFormWithHandleCalendarDate from '../_forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHandle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
 import { useRouter } from 'next/navigation';
-import TextImage1 from '@/components/boxes/TextImage1';
 import Image from 'next/image';
+import DailyOrganizationBox from '../_components/DailyOrganizationBox';
 
 export default function BookVacation() {
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
@@ -34,7 +34,7 @@ export default function BookVacation() {
   const uniqueActivities: { activityTitle: string }[] = [];
   const seenActivities = new Set();
 
-  oldAndNew.dailyOgranization.forEach((item) => {
+  pannonianPlain.dailyOgranization.forEach((item) => {
     if (!seenLocations.has(item.location)) {
       seenLocations.add(item.location);
       uniqueLocations.push({ location: item.location });
@@ -47,7 +47,7 @@ export default function BookVacation() {
   });
 
   useEffect(() => {
-    dispatch(addPredefinedVacation(oldAndNew.title));
+    dispatch(addPredefinedVacation(pannonianPlain.title));
   }, []);
 
   let errorAlert = null;
@@ -90,7 +90,7 @@ export default function BookVacation() {
         variant='h3'
         sx={{ maxWidth: '640px', m: '32px auto 32px auto', fontWeight: '400', textAlign: 'center' }}
       >
-        {oldAndNew.description}
+        {pannonianPlain.description}
       </Typography>
 
       <div className='vacation-summary'>
@@ -115,7 +115,7 @@ export default function BookVacation() {
         <div className='box'>
           <Typography variant='h2'>Duration</Typography>
           <Typography variant='body1'>
-            {oldAndNew.dailyOgranization.length} days, you choose started day
+            {pannonianPlain.dailyOgranization.length} days, you choose started day
           </Typography>
         </div>
 
@@ -131,8 +131,8 @@ export default function BookVacation() {
         <Typography variant='h2'>Daily organization</Typography>
 
         <div className='items'>
-          {oldAndNew.dailyOgranization.map((item) => (
-            <TextImage1
+          {pannonianPlain.dailyOgranization.map((item) => (
+            <DailyOrganizationBox
               key={item.id}
               title={item.title}
               description={item.description}
@@ -150,7 +150,7 @@ export default function BookVacation() {
 
       <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
-          <CalendarFormWithHandleCalendarDate duration={oldAndNew.dailyOgranization.length} />
+          <CalendarFormWithHandleCalendarDate duration={pannonianPlain.dailyOgranization.length} />
           <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
         </div>

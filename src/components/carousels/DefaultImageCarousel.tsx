@@ -5,7 +5,7 @@ import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRound
 
 export interface DefaultImageCarouselProps {
   images: {
-    imgLink: string;
+    link: string;
     alt: string;
   }[];
   setActiveImage: (activeImage: number | undefined) => void;
@@ -39,7 +39,9 @@ const DefaultImageCarousel = ({
       }}
     >
       {images.map((image, i) => (
-        <img key={i} src={image.imgLink} alt={image.alt} loading='lazy' />
+        <div className='image-wrap' key={i}>
+          <img src={image.link} alt={image.alt} loading='lazy' />
+        </div>
       ))}
     </Carousel>
   );

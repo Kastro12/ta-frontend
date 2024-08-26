@@ -135,6 +135,27 @@
         flex-wrap: wrap;
       }
     }
+
+    @media screen and (min-width: $lg) {
+      .items {
+        .TextImage1 {
+          .image {
+            height: 340px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1360px) {
+      .items {
+        .TextImage1 {
+          .image {
+            height: 400px;
+          }
+        }
+      }
+    }
+
   } // daily-organization END
 }
 

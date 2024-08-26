@@ -6,9 +6,8 @@ interface CreatedRoutesBox {
     id: string;
     title: string;
     description: string;
-    imageLink: string;
-    alt: string;
     link: string;
+    activities: { id: string }[];
   }[];
 }
 

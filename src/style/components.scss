@@ -184,11 +184,17 @@
 .ZoomedBoxOfActivity.MuiDialog-root.dialog-wrapper {
   height: calc(100vh - 64px);
   margin: 16px;
+
   .MuiDialog-container {
     align-items: flex-start;
+    height: calc(100vh - 30px);
+    background-color: transparent;
     .MuiDialog-paper {
       box-shadow: none;
-      margin-top: 74px;
+      max-height: 100%;
+      max-width: 640px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
       .MuiDialogContent-root {
         padding: 0;
         &::-webkit-scrollbar {
@@ -226,6 +232,10 @@
           .description {
             margin: 16px 0;
           }
+          .buttons {
+            display: flex;
+            justify-content: space-between;
+          }
         }
       }
     }
@@ -240,6 +250,11 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    .MuiDialog-container {
     }
   }
 }
@@ -691,9 +706,9 @@
   }
 
   .text {
-    padding: 16px;
+    padding: 0 16px 16px 16px;
     h3 {
-      margin-bottom: 6px;
+      padding: 16px 16px 16px 0;
       line-height: 26px;
     }
     .desktop-button {
@@ -706,6 +721,7 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+      border-radius: 4px;
     }
   }
 
@@ -720,8 +736,7 @@
       flex-direction: column;
       margin-right: 12px;
       h3 {
-        padding: 16px 14px 16px 16px;
-        margin-bottom: 0;
+        padding: 16px;
       }
       p {
         padding: 0 0 0 16px;
@@ -734,10 +749,6 @@
       width: 50%;
       height: 300px;
       margin-left: 12px;
-      img {
-        border-radius: 4px;
-        width: 100%;
-      }
     }
   }
 
@@ -753,9 +764,6 @@
   @media screen and (min-width: $lg) {
     .text {
       position: relative;
-      h3 {
-        margin: 12px 0;
-      }
       p {
         padding-right: 20px;
       }

@@ -54,7 +54,7 @@ export default function Home() {
         <span id='predefined-vacations' style={{ position: 'absolute', bottom: '56px' }}></span>
       </Grid>
 
-      <Typography variant='h2'>Choose one of our predefined vacations</Typography>
+      <Typography variant='h2'>Predefined vacations</Typography>
 
       <CreatedRoutesBoxList serverData={organizedVacations} />
 

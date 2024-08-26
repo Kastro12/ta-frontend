@@ -12,8 +12,11 @@ import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHand
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
 import { useRouter } from 'next/navigation';
-import TextImage1 from '@/components/boxes/TextImage1';
 import Image from 'next/image';
+import { Activity } from '@/utils/interfaces';
+import allActivities from '@/data/activities/allActivities';
+import DailyOrganizationBox from '../_components/DailyOrganizationBox';
+
 
 export default function BookVacation() {
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
@@ -31,20 +34,21 @@ export default function BookVacation() {
   const uniqueLocations: { location: string }[] = [];
   const seenLocations = new Set();
 
-  const uniqueActivities: { activityTitle: string }[] = [];
-  const seenActivities = new Set();
-
-  challengeAndHedonism.dailyOgranization.forEach((item) => {
-    if (!seenLocations.has(item.location)) {
-      seenLocations.add(item.location);
-      uniqueLocations.push({ location: item.location });
-    }
-
-    if (!seenActivities.has(item.activityTitle)) {
-      seenActivities.add(item.activityTitle);
-      uniqueActivities.push({ activityTitle: item.activityTitle });
-    }
+  const uniqueActivities = challengeAndHedonism?.activities.map((activity: { id: string }) => {
+    return allActivities.find((all: Activity) => all.id == activity.id);
   });
+
+  console.log('uniqueActivities', uniqueActivities);
+
+  uniqueActivities.forEach((item) => {
+    if (item)
+      if (!seenLocations.has(item.location)) {
+        seenLocations.add(item.location);
+        uniqueLocations.push({ location: item.location });
+      }
+  });
+
+  console.log('uniqueLocations', uniqueLocations);
 
   useEffect(() => {
     dispatch(addPredefinedVacation(challengeAndHedonism.title));
@@ -62,7 +66,7 @@ export default function BookVacation() {
         <Image
           src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
           alt='couple near car in nature'
-          style={{ objectFit: 'cover',borderRadius:'4px' }}
+          style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
           fill
           priority
@@ -97,8 +101,8 @@ export default function BookVacation() {
         <div className='box'>
           <Typography variant='h2'>Activities</Typography>
           <ul>
-            {uniqueActivities.map((activity) => (
-              <li key={activity.activityTitle}>{activity.activityTitle}</li>
+            {uniqueActivities.map((activity: Activity | undefined) => (
+              <li key={activity?.title}>{activity?.title}</li>
             ))}
           </ul>
         </div>
@@ -132,12 +136,11 @@ export default function BookVacation() {
 
         <div className='items'>
           {challengeAndHedonism.dailyOgranization.map((item) => (
-            <TextImage1
+            <DailyOrganizationBox
               key={item.id}
               title={item.title}
               description={item.description}
-              imageLink={item.imageLink}
-              alt={item.alt}
+              images={item.images}
             />
           ))}
         </div>

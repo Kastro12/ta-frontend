@@ -2,7 +2,12 @@ import React, { useCallback } from 'react';
 import { Dialog, DialogContent, Typography, Box, Button } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
-import { button, greenButton, selectedActivity } from '@/utils/re-styledComponents';
+import {
+  button,
+  greenButton,
+  selectedActivity,
+  linkGreenButton,
+} from '@/utils/re-styledComponents';
 import { removeZoomedActivity } from '@/store/activities/activitiesReducer';
 import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
 import { activityDurationInString } from '@/utils/string';
@@ -64,9 +69,9 @@ export default function ZoomedBoxOfActivity() {
               sx={{
                 ...button,
                 ...(isSelected ? selectedActivity : greenButton),
-                width: '100%',
                 marginTop: '16px',
                 marginBottom: '12px',
+                width: '108px',
               }}
               variant='outlined'
               startIcon={isSelected ? <CloseOutlinedIcon /> : <AddShoppingCartOutlinedIcon />}
@@ -78,6 +83,20 @@ export default function ZoomedBoxOfActivity() {
               }}
             >
               {isSelected ? 'Remove' : 'Choose'}
+            </Button>
+
+            <Button
+              sx={{
+                ...button,
+                ...linkGreenButton,
+                marginTop: '16px',
+                marginBottom: '12px',
+                padding: '0 16px',
+              }}
+              variant='outlined'
+              onClick={handleDialogClose}
+            >
+              Close
             </Button>
           </div>
         </Box>

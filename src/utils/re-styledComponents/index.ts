@@ -65,6 +65,17 @@ export const greenButton = {
   },
 };
 
+export const lightGreenButton = {
+  color: '#21817d',
+  backgroundColor: 'rgba(33, 129, 125, 0.06)',
+  border: '1px solid  transparent',
+  '&:hover': {
+    color: '#1e706c',
+    backgroundColor: 'rgba(33, 129, 125, 0.36)',
+    border: '1px solid transparent',
+  },
+};
+
 export const linkGreenButton = {
   padding: '0 3px',
   color: '#21817d',

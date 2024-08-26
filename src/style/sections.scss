@@ -29,7 +29,7 @@
   }
 
   @media screen and (min-width: $md) {
-    height: 400px;
+    height: 416px;
     .content {
       width: 100%;
       h1 {
@@ -73,47 +73,46 @@ footer {
       text-decoration: none;
       color: #212b3b;
       display: flex;
-      flex-direction: column-reverse;
-
-      img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 4px;
-      }
+      flex-direction: column;
+      padding: 16px;
       .text {
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        h3 {
-          margin-bottom: 6px;
-          line-height: 26px;
-          width: calc(100% - 32px);
+        font-size: 15px;
+        line-height: 24px;
+      }
+      h3 {
+        margin-bottom: 16px;
+        line-height: 26px;
+      }
+      .list-title {
+        margin: 12px 0 7px 0;
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      ul {
+        li {
+          color: $green2;
+          font-size: 15px;
+          line-height: 23px;
+          margin-bottom: 12px;
         }
-        h6 {
-          margin-bottom: 6px;
-          font-size: 14px;
-          width: calc(100% - 32px);
-        }
-        a {
-          width: 100px;
-        }
+      }
+
+      .link-button {
+        width: 120px;
+        margin-top: 9px;
       }
     }
   }
-  @media screen and (min-width: 760px) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 -12px;
+
+  @media screen and (min-width: 767px) {
     .CreatedRouteComponent {
-      width: calc(50% - 24px);
       .content {
-        .text {
-          min-height: 268px;
-          h3 {
-            min-height: 78px;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            width: 50%;
           }
         }
       }
@@ -121,61 +120,19 @@ footer {
   }
 
   @media screen and (min-width: $md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -12px;
     .CreatedRouteComponent {
+      width: calc(50% - 24px);
       .content {
-        .text {
-          min-height: 220px;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 1000px) {
-    .CreatedRouteComponent {
-      .content {
-        .text {
-          min-height: 200px;
-          h3 {
-            min-height: 52px;
+        ul {
+          display: block;
+          li {
+            width: 100%;
+            margin-bottom: 4px;
           }
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: $lg) {
-    .CreatedRouteComponent {
-      .content {
-        .text {
-          min-height: 180px;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 1260px) {
-    .CreatedRouteComponent {
-      .content {
-        flex-direction: row;
-        img {
-          width: 262px;
-          height: 280px;
-        }
-        .text {
-          padding: 16px 6px 16px 16px;
-          h3 {
-            min-height: auto;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 1360px) {
-    .CreatedRouteComponent {
-      .content {
-        img {
-          width: 280px;
         }
       }
     }

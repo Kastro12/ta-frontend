@@ -1,15 +1,14 @@
 import { Typography } from '@mui/material';
+import { GalleryWithCarousel } from '@/components';
 
-const TextImage1 = ({
+const DailyOrganizationBox = ({
   title,
   description,
-  imageLink,
-  alt,
+  images,
 }: {
   title: string;
   description: string;
-  imageLink: string;
-  alt: string;
+  images: { link: string; alt: string }[];
 }) => {
   return (
     <div className='TextImage1'>
@@ -18,10 +17,10 @@ const TextImage1 = ({
         <Typography variant='body1'>{description}</Typography>
       </div>
       <div className='image'>
-        <img src={imageLink} alt={alt} loading='lazy' />
+        <GalleryWithCarousel images={images} />
       </div>
     </div>
   );
 };
 
-export default TextImage1;
+export default DailyOrganizationBox;

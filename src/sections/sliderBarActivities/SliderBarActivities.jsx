@@ -7,7 +7,7 @@ import { Typography, Box } from '@mui/material';
 import Image from 'next/image';
 import { zoomActivity } from '@/store/activities/activitiesReducer';
 import { useDispatch } from 'react-redux';
-import ZoomInOutlinedIcon from '@mui/icons-material/ZoomInOutlined';
+import AspectRatioIcon from '@mui/icons-material/AspectRatio';
 
 const SliderBarActivities = ({ serverData }) => {
   useEffect(() => {
@@ -40,14 +40,14 @@ const SliderBarActivities = ({ serverData }) => {
             {serverData &&
               serverData.map((data) => (
                 <li key={data.id}>
-                  <ZoomInOutlinedIcon
+                  <AspectRatioIcon
                     sx={{
                       position: 'absolute',
-                      right: '0px',
-                      top: '0px',
+                      right: '6px',
+                      top: '6px',
                       zIndex: 2,
-                      height: '32px',
-                      width: '32px',
+                      height: '28px',
+                      width: '28px',
                     }}
                     className='zoom-icon'
                     onClick={() => dispatch(zoomActivity(data))}
@@ -76,16 +76,6 @@ const SliderBarActivities = ({ serverData }) => {
           </button>
         </div>
       </div>
-
-      {/* {serverData && (
-        <Slider {...setting} className={className}>
-          {serverData.map((data) => (
-            <div key={data.id} style={{ padding: '0 16px' }}>
-              <TextOverImage data={data} />
-            </div>
-          ))}
-        </Slider>
-      )} */}
     </>
   );
 };

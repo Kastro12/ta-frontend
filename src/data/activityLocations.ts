@@ -15,6 +15,11 @@ const activityLocations = [
     label: 'Belgrade',
   },
   {
+    id: 'Berane_id',
+    value: 'berane',
+    label: 'Berane',
+  },
+  {
     id: '4',
     value: 'budva',
     label: 'Budva',
@@ -103,6 +108,11 @@ const activityLocations = [
     id: '21',
     value: 'tara',
     label: 'Tara',
+  },
+  {
+    id: 'topola_id',
+    value: 'topola',
+    label: 'Topola',
   },
   {
     id: '22',

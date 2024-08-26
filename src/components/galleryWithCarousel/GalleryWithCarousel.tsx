@@ -5,11 +5,12 @@ import { Modal } from '@mui/material';
 import { DefaultImageCarousel } from '../../components';
 import CloseIcon from '@mui/icons-material/Close';
 
+
 interface GalleryModalProps {
   isOpen: boolean;
   handleClose: (isOpen: boolean) => void;
   images: {
-    imgLink: string;
+    link: string;
     alt: string;
   }[];
   setActiveImage: (activeImage: number | undefined) => void;
@@ -48,7 +49,7 @@ const GalleryModal = ({
   );
 };
 
-const GalleryWithCarousel = ({ images }: { images: { imgLink: string; alt: string }[] }) => {
+const GalleryWithCarousel = ({ images }: { images: { link: string; alt: string }[] }) => {
   const [activeImage, setActiveImage] = useState<number | undefined>(0);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -60,11 +61,11 @@ const GalleryWithCarousel = ({ images }: { images: { imgLink: string; alt: strin
       <ZoomInOutlinedIcon
         sx={{
           position: 'absolute',
-          right: '0px',
-          top: '0px',
+          right: '3px',
+          top: '3px',
           zIndex: 2,
-          height: '32px',
-          width: '32px',
+          height: '34px',
+          width: '34px',
         }}
         className='zoom-icon'
         onClick={handleOpen}

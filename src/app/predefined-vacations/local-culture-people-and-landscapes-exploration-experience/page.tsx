@@ -12,8 +12,8 @@ import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHand
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
 import { useRouter } from 'next/navigation';
-import TextImage1 from '@/components/boxes/TextImage1';
 import Image from 'next/image';
+import DailyOrganizationBox from '../_components/DailyOrganizationBox';
 
 export default function BookVacation() {
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
@@ -132,7 +132,7 @@ export default function BookVacation() {
 
         <div className='items'>
           {localCulturePeopleLandscapes.dailyOgranization.map((item) => (
-            <TextImage1
+            <DailyOrganizationBox
               key={item.id}
               title={item.title}
               description={item.description}

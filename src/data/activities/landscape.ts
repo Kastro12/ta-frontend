@@ -3,7 +3,7 @@ import { Activity } from '@/utils/interfaces';
 const cruise: Activity[] = [
   {
     id: 'cruise-perucac-visegrad-and-back',
-    title: 'Cruise from Perućac to Višegrad and Back',
+    title: 'Cruise from Perućac to Višegrad and back',
     description:
       'Embark on an unforgettable cruise through the stunning Drina River canyon from Perućac to Višegrad and back. Experience natural beauty, history, and culture in one breathtaking journey.',
     longDescritpion: [
@@ -33,8 +33,8 @@ const cruise: Activity[] = [
     subCategory: 'Cruise',
   },
   {
-    id: 'cruise-djerdap',
-    title: 'Đerdap River Cruise Experience',
+    id: 'cruise_djerdap',
+    title: 'Đerdap river cruise',
     description:
       "Embark on a unique cruise through the stunning Đerdap Gorge aboard a well-equipped catamaran. Enjoy breathtaking views, gourmet cuisine, and Serbia's rich cultural heritage.",
     longDescritpion: [
@@ -49,7 +49,7 @@ const cruise: Activity[] = [
     images: [
       {
         link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-cruise-1.jpg',
-        alt: 'Đerdap River cruise',
+        alt: 'Đerdap river cruise',
       },
       {
         link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-1.jpg',
@@ -67,7 +67,7 @@ const cruise: Activity[] = [
   },
   {
     id: 'cruise-djerdap-Speedboat',
-    title: 'Speedboat Tour through Đerdap Gorge',
+    title: 'Speedboat through Đerdap gorge',
     description:
       'Experience the beauty of Europe’s most stunning gorge with a thrilling speedboat ride through the heart of Đerdap Gorge.',
     longDescritpion: [
@@ -102,7 +102,7 @@ const cruise: Activity[] = [
 const caves: Activity[] = [
   {
     id: 'landscape_rajkova_pecina',
-    title: 'Rajkova Cave – Speleological Beauty',
+    title: 'Rajkova cave',
     description:
       'Rajkova Cave features impressive stalactites and stalagmites. With parking nearby, it’s ideal for caving enthusiasts and nature lovers.',
     longDescritpion: [
@@ -135,7 +135,7 @@ const caves: Activity[] = [
 
   {
     id: 'landscape_resavska_pecina',
-    title: 'Resava cave – Stunning underground wonder',
+    title: 'Resava cave',
     description:
       'Resava Cave offers breathtaking stalactites and stalagmites. With parking nearby, it’s ideal for caving and exploring natural formations.',
     longDescritpion: [
@@ -168,7 +168,7 @@ const caves: Activity[] = [
 
   {
     id: 'landscape_stopica_pecina',
-    title: 'Stopića Cave – A Natural Marvel',
+    title: 'Stopića cave',
     description:
       'Stopića Cave features stunning limestone formations and cascading pools. With parking nearby, it’s perfect for nature lovers and explorers.',
     longDescritpion: [
@@ -203,7 +203,7 @@ const caves: Activity[] = [
 const all: Activity[] = [
   {
     id: 'landscape_djavolja_varos',
-    title: 'Đavolja Varoš – Eerie Natural Wonder',
+    title: 'Đavolja Varoš natural wonder',
     description:
       'Đavolja Varoš features unique earth pyramids and mineral springs. With parking nearby, it’s ideal for nature exploration and photography.',
     longDescritpion: [
@@ -236,7 +236,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_tara-canyon',
-    title: 'Tara River Canyon – Europe’s Deepest Canyon',
+    title: 'Tara river canyon, the deepest in Europe',
     description:
       "Tara River Canyon offers dramatic cliffs and crystal-clear waters. With parking nearby, it's ideal for rafting, hiking, and nature exploration.",
     longDescritpion: [
@@ -250,15 +250,15 @@ const all: Activity[] = [
     images: [
       {
         link: '/activities/landscape/kanjon_reke_tare/reka-tara-1.jpg',
-        alt: 'Tara River Canyon – Europe’s Deepest Canyon',
+        alt: 'Tara river canyon, the deepest in Europe',
       },
       {
         link: '/activities/landscape/kanjon_reke_tare/reka-tara-2.jpg',
-        alt: 'Tara River Canyon – Europe’s Deepest Canyon 2',
+        alt: 'Tara river canyon, the deepest in Europe 2',
       },
       {
         link: '/activities/landscape/kanjon_reke_tare/tara-canyon-bridge.jpg',
-        alt: 'Tara River Canyon – Europe’s Deepest Canyon bridge',
+        alt: 'Tara river canyon, the deepest in Europe bridge',
       },
     ],
     durationInDays: 1,
@@ -269,7 +269,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_nc_djerdap',
-    title: 'Đerdap National Park – The Iron Gates of the Danube',
+    title: 'Đerdap National Park',
     description:
       'Đerdap National Park features majestic cliffs and the Danube’s Iron Gates. With parking nearby, it’s ideal for hiking, history, and scenic views.',
     longDescritpion: [
@@ -335,7 +335,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_nc_kopaonik',
-    title: 'Kopaonik National Park – Winter Wonderland',
+    title: 'Kopaonik National Park',
     description:
       "Kopaonik National Park features majestic peaks and rich biodiversity. Easily accessible with parking nearby, it's ideal for hiking, skiing, and nature exploration.",
     longDescritpion: [
@@ -349,15 +349,15 @@ const all: Activity[] = [
     images: [
       {
         link: '/activities/landscape/nc_kopaonik/nacionalni-park-kopaonik-1.jpg',
-        alt: 'Kopaonik National Park – Winter Wonderland',
+        alt: 'Kopaonik National Park',
       },
       {
         link: '/activities/landscape/nc_kopaonik/nacionalni-park-kopaonik-2.jpg',
-        alt: 'Kopaonik National Park – Winter Wonderland 2',
+        alt: 'Kopaonik National Park 2',
       },
       {
         link: '/activities/landscape/nc_kopaonik/nacionalni-park-kopaonik-3.jpg',
-        alt: 'Kopaonik National Park – Winter Wonderland 3',
+        alt: 'Kopaonik National Park 3',
       },
     ],
     durationInDays: 1,
@@ -368,7 +368,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_nc_tara',
-    title: 'Tara National Park – Untouched Wilderness',
+    title: 'Tara National Park',
     description:
       'Tara National Park offers dense forests and breathtaking viewpoints. Easily accessible with parking nearby, it’s perfect for hiking, wildlife, and relaxation.',
     longDescritpion: [
@@ -382,15 +382,15 @@ const all: Activity[] = [
     images: [
       {
         link: '/activities/landscape/nc_tara/nacionalni-park-tara-1.jpg',
-        alt: 'Tara National Park – Untouched Wilderness',
+        alt: 'Tara National Park',
       },
       {
         link: '/activities/landscape/nc_tara/nacionalni-park-tara-2.jpg',
-        alt: 'Tara National Park – Untouched Wilderness 2',
+        alt: 'Tara National Park 2',
       },
       {
         link: '/activities/landscape/nc_tara/nacionalni-park-tara-3.jpg',
-        alt: 'Tara National Park – Untouched Wilderness 3',
+        alt: 'Tara National Park 3',
       },
     ],
     durationInDays: 1,
@@ -401,7 +401,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_ovcarsko_kablarska_klisura',
-    title: 'Ovčar-Kablar Gorge – Hidden Gem of Serenity',
+    title: 'Ovčar-Kablar gorge',
     description:
       'Ovčar-Kablar Gorge offers dramatic cliffs and tranquil rivers. With parking nearby, it’s ideal for hiking, visiting monasteries, and relaxation.',
     longDescritpion: [
@@ -434,7 +434,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_stara_planina',
-    title: 'Stara Planina – majestic mountain retreat',
+    title: 'Stara Planina majestic retreat',
     description:
       'Stara Planina offers dramatic peaks and diverse landscapes. With parking nearby, it’s ideal for hiking, skiing, and nature exploration.',
     longDescritpion: [
@@ -467,7 +467,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_vlasin_lake',
-    title: 'Vlasina Lake – pristine nature',
+    title: 'Vlasina lake',
     description:
       'Vlasina Lake offers crystal-clear waters and serene landscapes, ideal for nature walks and relaxation.',
     longDescritpion: [
@@ -500,7 +500,7 @@ const all: Activity[] = [
 
   {
     id: 'landscape_zlatibor_gondola',
-    title: 'Gold gondola – ride above the mountains',
+    title: 'Gold gondola ride',
     description:
       'The Zlatibor Gold Gondola offers stunning mountain views on a scenic ride. Easily accessible with parking nearby, it’s ideal for sightseeing and nature lovers.',
     longDescritpion: [

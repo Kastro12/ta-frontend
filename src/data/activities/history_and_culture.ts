@@ -1,9 +1,143 @@
 import { Activity } from '@/utils/interfaces';
 
-const history_and_culture: Activity[] = [
+const museums: Activity[] = [
+  {
+    id: 'muzej_nikola_tesla',
+    title: 'Nikola Tesla museum',
+    description:
+      'Discover the legacy of Nikola Tesla at the Nikola Tesla museum in Belgrade, showcasing his personal belongings, inventions, and archives.',
+    longDescritpion: [
+      "The Nikola Tesla museum in Belgrade is a tribute to one of history's most brilliant minds. Situated in the city's heart, the museum showcases an extensive collection of Tesla’s belongings, including his original manuscripts, scientific instruments, and over 160,000 original documents.",
+      "Visitors can explore interactive exhibits that highlight Tesla's groundbreaking contributions to electrical engineering, such as alternating current (AC) electricity, radio, and wireless energy transfer. The museum also offers insights into Tesla’s life, from his early years in Serbia to his impactful career in the United States, where he became a world-renowned inventor.",
+      'A visit to the Nikola Tesla museum provides an inspiring journey through the life and work of a man whose innovations continue to shape the modern world.',
+    ],
+    location: 'Belgrade',
+    locationValue: 'belgrade',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/muzej/muzej_nikola_tesla/muzej-nikole-tesle-1.jpg',
+        alt: 'Nikola Tesla museum 1',
+      },
+      {
+        link: '/activities/history_and_culture/muzej/muzej_nikola_tesla/muzej-nikole-tesle-2.jpg',
+        alt: 'Nikola Tesla museum 2',
+      },
+      {
+        link: '/activities/history_and_culture/muzej/muzej_nikola_tesla/muzej-nikole-tesle-3.jpg',
+        alt: 'Nikola Tesla museum 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'museum',
+  },
+
+  {
+    id: 'muzej_vazduhoplovstva',
+    title: 'Museum of Aviation',
+    description:
+      'Discover the history of aviation at the Museum of Aviation in Belgrade, featuring an extensive collection of aircraft and artifacts.',
+    longDescritpion: [
+      'The Museum of Aviation in Belgrade is one of the most significant aviation museums in the region, offering a comprehensive look at the history of flight through an extensive collection of aircraft, engines, and aviation memorabilia. Situated near Nikola Tesla Airport, the museum takes visitors on a fascinating journey through the evolution of aviation, from early flight attempts to the advancements of modern jet technology.',
+      "The museum's collection features over 200 aircraft, including early gliders, propeller planes, military jets, and helicopters. Highlights include World War II fighters, Cold War-era aircraft, and parts of the B-2 stealth bomber wreckage, which was downed during the 1999 NATO bombing of Yugoslavia.",
+      'Beyond the aircraft, the museum displays a variety of engines, flight instruments, and uniforms, offering a detailed exploration of aviation technology and its influence on both civilian and military flight.',
+      "Whether you're an aviation enthusiast or simply interested in the history of flight, the Museum of Aviation in Belgrade provides a unique and educational experience that deepens your appreciation for the wonders of aviation.",
+    ],
+    location: 'Belgrade',
+    locationValue: 'belgrade',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/muzej/muzej_vazduhoplovstva/muzej-vazduhoplovstva-1.jpg',
+        alt: 'Museum of Aviation Belgrade 1',
+      },
+      {
+        link: '/activities/history_and_culture/muzej/muzej_vazduhoplovstva/muzej-vazduhoplovstva-2.jpg',
+        alt: 'Museum of Aviation Belgrade 2',
+      },
+      {
+        link: '/activities/history_and_culture/muzej/muzej_vazduhoplovstva/muzej-vazduhoplovstva-3.jpg',
+        alt: 'Museum of Aviation Belgrade 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'museum',
+  },
+];
+
+const fortress: Activity[] = [
+  {
+    id: 'gardos_tower',
+    title: 'Gardoš Tower',
+    description:
+      'Visit Gardoš Tower, a historic landmark in Zemun, offering breathtaking views of the Danube River and the city of Belgrade.',
+    longDescritpion: [
+      'Gardoš Tower, also known as the Millennium Tower, is a striking landmark in the historic district of Zemun, Belgrade. Built in 1896 to commemorate a thousand years of Hungarian settlement in the Pannonian Basin, this iconic tower stands proudly atop Gardoš Hill, offering visitors breathtaking views of the Danube River, Zemun, and the distant Belgrade skyline.',
+      "The tower's architecture is a unique blend of Romanesque, Gothic, and Renaissance styles, making it an architectural treasure in the region. Inside, visitors can climb the winding staircase to the observation deck, where they can take in the stunning vistas and experience the tower's grandeur up close.",
+      'Beyond its architectural charm, Gardoš Tower is rich in history. The surrounding Gardoš Hill is a picturesque area with narrow streets, charming old houses, and a vibrant cultural scene. The neighborhood is home to art galleries, cafes, and restaurants, offering a delightful mix of history, culture, and relaxation.',
+    ],
+    location: 'Belgrade',
+    locationValue: 'belgrade',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/tvrdjava/gardos/gardos-zemun-1.jpg',
+        alt: 'Gardoš Tower',
+      },
+      {
+        link: '/activities/history_and_culture/tvrdjava/gardos/gardos-zemun-2.jpg',
+        alt: 'Gardoš Tower 2',
+      },
+      {
+        link: '/activities/history_and_culture/tvrdjava/gardos/gardos-zemun-3.jpg',
+        alt: 'Gardoš Tower 2',
+      },
+    ],
+    durationInDays: 3,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'Fortress',
+  },
+  {
+    id: 'maglic-fortress',
+    title: 'Maglič Fortress',
+    description:
+      'Explore the historic Maglič Fortress, perched high above the Ibar River, offering stunning views and a journey through medieval history.',
+    longDescritpion: [
+      "Maglič Fortress, a well-preserved medieval stronghold, majestically overlooks the scenic Ibar River in central Serbia. Built in the 13th century, this fortress served as a strategic defense against invasions, standing as a guardian of the surrounding region. Its location in the 'Valley of Serbian Kings,' an area steeped in medieval Serbian history, further enhances its historical importance.",
+      'Visitors to Maglič can explore its towering walls and well-preserved structures, including the central keep, churches, and former living quarters. The fortress provides breathtaking panoramic views of the Ibar River valley, making it a favorite spot for photography and a peaceful retreat into nature.',
+      'For history enthusiasts and adventurers alike, Maglič Fortress offers a captivating blend of historical exploration and natural beauty. The journey to the fortress is part of the adventure, involving a short hike through lush landscapes that enrich the overall experience.',
+    ],
+    location: 'Kraljevo',
+    locationValue: 'kraljevo',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-1.jpg',
+        alt: 'Maglič Fortress',
+      },
+      {
+        link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-2.jpg',
+        alt: 'Maglič Fortress 2',
+      },
+      {
+        link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-3.jpg',
+        alt: 'Maglič Fortress 2',
+      },
+    ],
+    durationInDays: 3,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'Fortress',
+  },
+
   {
     id: 'history_and_culture-backa-tvrdjava',
-    title: 'Bačka Fortress – A Medieval Stronghold',
+    title: 'Bačka Fortress',
     description:
       'Bačka Fortress offers a glimpse into medieval history with scenic river views and convenient parking nearby. Ideal for history enthusiasts and explorers.',
     longDescritpion: [
@@ -16,11 +150,11 @@ const history_and_culture: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/history_and_culture/backa_tvrdjava/backa-tvrdjava-bac-1.jpg',
+        link: '/activities/history_and_culture/tvrdjava/backa_tvrdjava/backa-tvrdjava-bac-1.jpg',
         alt: 'Bačka Fortress – A Medieval Stronghold',
       },
       {
-        link: '/activities/history_and_culture/backa_tvrdjava/backa-tvrdjava-bac-2.jpg',
+        link: '/activities/history_and_culture/tvrdjava/backa_tvrdjava/backa-tvrdjava-bac-2.jpg',
         alt: 'Bačka Fortress – A Medieval Stronghold 2',
       },
     ],
@@ -29,43 +163,9 @@ const history_and_culture: Activity[] = [
     categoryValue: 'history_and_culture',
     subCategory: '',
   },
-
-  {
-    id: 'history_and_culture-drvengrad–traditional-village',
-    title: 'Drvengrad – A Traditional Village',
-    description:
-      "Drvengrad is a charming wooden village with rich cultural attractions. Easily accessible with parking nearby, it's perfect for film enthusiasts and cultural exploration.",
-    longDescritpion: [
-      'Drvengrad, also known as Küstendorf, is a unique ethno village on Mokra Gora in western Serbia, created by renowned film director Emir Kusturica for his film Life is a Miracle. This wooden village blends traditional Serbian architecture with a vibrant cultural scene, hosting the annual Küstendorf Film and Music Festival, which attracts global artists and visitors.',
-      'Easily accessible by road with parking near the entrance, visitors can explore cobbled streets, admire wooden houses, and visit cultural venues like the cinema, art gallery, and workshops. Drvengrad also offers accommodation and dining options for a complete immersion in its artistic atmosphere.',
-      'Bring a camera to capture the village’s charm, and consider visiting during a cultural event or festival. Check local information for event schedules, guided tours, and accommodation options to enhance your experience.',
-    ],
-    location: 'Tara',
-    locationValue: 'tara',
-    cost: 180,
-    images: [
-      {
-        link: '/activities/history_and_culture/drvengrad/drvengrad-1.jpg',
-        alt: 'Drvengrad – A Traditional Village',
-      },
-      {
-        link: '/activities/history_and_culture/drvengrad/drvengrad-2.jpg',
-        alt: 'Drvengrad – A Traditional Village 2',
-      },
-      {
-        link: '/activities/history_and_culture/drvengrad/drvengrad-voz-3.jpg',
-        alt: 'Drvengrad – A Traditional Village 3',
-      },
-    ],
-    durationInDays: 1,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-    subCategory: '',
-  },
-
   {
     id: 'history_and_culture-felix-romuliana–the-imperial-palace-of-galerius',
-    title: 'Felix Romuliana – The Imperial Palace of Galerius',
+    title: 'Felix Romuliana imperial palace',
     description:
       "Felix Romuliana, a UNESCO World Heritage site, features impressive Roman ruins. With convenient parking nearby, it's perfect for history enthusiasts and archaeology lovers.",
     longDescritpion: [
@@ -78,16 +178,16 @@ const history_and_culture: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/history_and_culture/felix_romuliana/felix-romuliana-1.jpg',
-        alt: 'Felix Romuliana – The Imperial Palace of Galerius',
+        link: '/activities/history_and_culture/tvrdjava/felix_romuliana/felix-romuliana-1.jpg',
+        alt: 'Felix Romuliana imperial palace',
       },
       {
-        link: '/activities/history_and_culture/felix_romuliana/felix-romuliana-2.jpg',
-        alt: 'Felix Romuliana – The Imperial Palace of Galerius 2',
+        link: '/activities/history_and_culture/tvrdjava/felix_romuliana/felix-romuliana-2.jpg',
+        alt: 'Felix Romuliana imperial palace 2',
       },
       {
-        link: '/activities/history_and_culture/felix_romuliana/felix-romuliana-3.jpg',
-        alt: 'Felix Romuliana – The Imperial Palace of Galerius 3',
+        link: '/activities/history_and_culture/tvrdjava/felix_romuliana/felix-romuliana-3.jpg',
+        alt: 'Felix Romuliana imperial palace 3',
       },
     ],
     durationInDays: 1,
@@ -95,10 +195,9 @@ const history_and_culture: Activity[] = [
     categoryValue: 'history_and_culture',
     subCategory: '',
   },
-
   {
-    id: 'history_and_culture-golubac-fortress–medieval-stronghold',
-    title: 'Golubac Fortress – A Medieval Stronghold',
+    id: 'history_and_culture_golubac_fortress_medieval_stronghold',
+    title: 'Golubac Fortress',
     description:
       'Golubac Fortress offers stunning views and rich history by the Danube. With parking nearby, it’s ideal for history enthusiasts and photographers.',
     longDescritpion: [
@@ -111,16 +210,16 @@ const history_and_culture: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/history_and_culture/golubac/golubac-fortress-1.jpg',
-        alt: 'Golubac Fortress – A Medieval Stronghold',
+        link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-1.jpg',
+        alt: 'Golubac Fortress',
       },
       {
-        link: '/activities/history_and_culture/golubac/golubac-fortress-inside.jpg',
-        alt: 'Golubac Fortress – A Medieval Stronghold 2',
+        link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-inside.jpg',
+        alt: 'Golubac Fortress 2',
       },
       {
-        link: '/activities/history_and_culture/golubac/golubac-fortress-old-suits.jpg',
-        alt: 'Golubac Fortress – A Medieval Stronghold 3',
+        link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-old-suits.jpg',
+        alt: 'Golubac Fortress 3',
       },
     ],
     durationInDays: 1,
@@ -128,10 +227,9 @@ const history_and_culture: Activity[] = [
     categoryValue: 'history_and_culture',
     subCategory: '',
   },
-
   {
-    id: 'history_and_culture-kalemegdan',
-    title: 'Kalemegdan Fortress – Belgrade’s History',
+    id: 'history_and_culture_kalemegdan',
+    title: 'Kalemegdan Fortress',
     description:
       'Kalemegdan offers panoramic views and rich history in central Belgrade. Easily accessible with parking nearby, it’s perfect for sightseeing and cultural exploration.',
     longDescritpion: [
@@ -144,15 +242,15 @@ const history_and_culture: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/history_and_culture/kalemegdan/kalemegdan-1.jpg',
+        link: '/activities/history_and_culture/tvrdjava/kalemegdan/kalemegdan-1.jpg',
         alt: 'Kalemegdan Fortress',
       },
       {
-        link: '/activities/history_and_culture/kalemegdan/kalemegdan-2.jpg',
+        link: '/activities/history_and_culture/tvrdjava/kalemegdan/kalemegdan-2.jpg',
         alt: 'Kalemegdan Fortress 2',
       },
       {
-        link: '/activities/history_and_culture/kalemegdan/kalemegdan-3.jpg',
+        link: '/activities/history_and_culture/tvrdjava/kalemegdan/kalemegdan-3.jpg',
         alt: 'Kalemegdan Fortress 3',
       },
     ],
@@ -161,42 +259,8 @@ const history_and_culture: Activity[] = [
     categoryValue: 'history_and_culture',
     subCategory: '',
   },
-
   {
-    id: 'history_and_culture-lepenski-vir',
-    title: 'Lepenski Vir – An Ancient Archaeological',
-    description:
-      'Lepenski Vir is a prehistoric site with unique sculptures and rich history. With parking nearby, it’s ideal for archaeology enthusiasts and history buffs.',
-    longDescritpion: [
-      'Lepenski Vir, on the Danube River in eastern Serbia, is a crucial prehistoric site dating back to 9500–6000 BC. Known for its trapezoidal houses and stone sculptures, it offers insights into one of Europe’s earliest sedentary communities.',
-      'The visitor center features well-preserved ruins and exhibits of artifacts and sculptures, providing an educational experience about the site’s historical significance.',
-      'Easily accessible by road with parking available, consider a guided tour for deeper insights. Bring a camera to capture the unique architecture and scenic Danube views. Check local information for museum hours, tour options, and special events.',
-    ],
-    location: 'Đerdap',
-    locationValue: 'djerdap',
-    cost: 180,
-    images: [
-      {
-        link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-1.jpg',
-        alt: 'Lepenski Vir – An Ancient Archaeological',
-      },
-      {
-        link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-2.jpg',
-        alt: 'Lepenski Vir – An Ancient Archaeological 2',
-      },
-      {
-        link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-3.jpg',
-        alt: 'Lepenski Vir – An Ancient Archaeological 3',
-      },
-    ],
-    durationInDays: 1,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-    subCategory: '',
-  },
-
-  {
-    id: 'history_and_culture-petrovaradin',
+    id: 'history_and_culture_petrovaradin',
     title: 'Petrovaradin Fortress',
     description:
       "Petrovaradin Fortress offers expansive views and rich history. Easily accessible with parking nearby, it's perfect for history enthusiasts and panoramic sightseeing.",
@@ -210,16 +274,12 @@ const history_and_culture: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/history_and_culture/petrovaradin/petrovaradin-1.jpg',
+        link: '/activities/history_and_culture/tvrdjava/petrovaradin/petrovaradin-1.jpg',
         alt: 'Petrovaradin Fortress',
       },
       {
-        link: '/activities/history_and_culture/petrovaradin/petrovaradin-2.jpg',
+        link: '/activities/history_and_culture/tvrdjava/petrovaradin/petrovaradin-2.jpg',
         alt: 'Petrovaradin Fortress 2',
-      },
-      {
-        link: '/activities/history_and_culture/petrovaradin/petrovaradin-3.jpg',
-        alt: 'Petrovaradin Fortress 3',
       },
     ],
     durationInDays: 1,
@@ -227,10 +287,9 @@ const history_and_culture: Activity[] = [
     categoryValue: 'history_and_culture',
     subCategory: '',
   },
-
   {
-    id: 'history_and_culture-smederevo-fortress',
-    title: 'Smederevo Fortress – Majestic Medieval Citadel',
+    id: 'history_and_culture_smederevo_fortress',
+    title: 'Smederevo Fortress',
     description:
       'Smederevo Fortress offers expansive historical ruins and river views. With parking nearby, it’s ideal for history enthusiasts and explorers.',
     longDescritpion: [
@@ -242,16 +301,51 @@ const history_and_culture: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/history_and_culture/smederevska_tvrdjava/smederevska-tvrdjava-1.jpg',
+        link: '/activities/history_and_culture/tvrdjava/smederevska_tvrdjava/smederevska-tvrdjava-1.jpg',
         alt: 'Smederevo Fortress',
       },
       {
-        link: '/activities/history_and_culture/smederevska_tvrdjava/smederevska-tvrdjava-2.jpg',
+        link: '/activities/history_and_culture/tvrdjava/smederevska_tvrdjava/smederevska-tvrdjava-2.jpg',
         alt: 'Smederevo Fortress 2',
       },
       {
-        link: '/activities/history_and_culture/smederevska_tvrdjava/smederevska-tvrdjava-3.jpg',
+        link: '/activities/history_and_culture/tvrdjava/smederevska_tvrdjava/smederevska-tvrdjava-3.jpg',
         alt: 'Smederevo Fortress 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: '',
+  },
+];
+
+const history_and_culture: Activity[] = [
+  {
+    id: 'history_and_culture-drvengrad–traditional-village',
+    title: 'Drvengrad traditional village',
+    description:
+      "Drvengrad is a charming wooden village with rich cultural attractions. Easily accessible with parking nearby, it's perfect for film enthusiasts and cultural exploration.",
+    longDescritpion: [
+      'Drvengrad, also known as Küstendorf, is a unique ethno village on Mokra Gora in western Serbia, created by renowned film director Emir Kusturica for his film Life is a Miracle. This wooden village blends traditional Serbian architecture with a vibrant cultural scene, hosting the annual Küstendorf Film and Music Festival, which attracts global artists and visitors.',
+      'Easily accessible by road with parking near the entrance, visitors can explore cobbled streets, admire wooden houses, and visit cultural venues like the cinema, art gallery, and workshops. Drvengrad also offers accommodation and dining options for a complete immersion in its artistic atmosphere.',
+      'Bring a camera to capture the village’s charm, and consider visiting during a cultural event or festival. Check local information for event schedules, guided tours, and accommodation options to enhance your experience.',
+    ],
+    location: 'Tara',
+    locationValue: 'tara',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/drvengrad/drvengrad-1.jpg',
+        alt: 'Drvengrad traditional village',
+      },
+      {
+        link: '/activities/history_and_culture/drvengrad/drvengrad-2.jpg',
+        alt: 'Drvengrad traditional village 2',
+      },
+      {
+        link: '/activities/history_and_culture/drvengrad/drvengrad-voz-1.jpg',
+        alt: 'Drvengrad traditional village 3',
       },
     ],
     durationInDays: 1,
@@ -261,8 +355,37 @@ const history_and_culture: Activity[] = [
   },
 
   {
-    id: 'history_and_culture-sremski-karlovci',
-    title: 'Sremski Karlovci – Historic and cultural Gem',
+    id: 'history_and_culture_lepenski_vir',
+    title: 'Lepenski Vir archaeological site',
+    description:
+      'Lepenski Vir is a prehistoric site with unique sculptures and rich history. With parking nearby, it’s ideal for archaeology enthusiasts and history buffs.',
+    longDescritpion: [
+      'Lepenski Vir, on the Danube River in eastern Serbia, is a crucial prehistoric site dating back to 9500–6000 BC. Known for its trapezoidal houses and stone sculptures, it offers insights into one of Europe’s earliest sedentary communities.',
+      'The visitor center features well-preserved ruins and exhibits of artifacts and sculptures, providing an educational experience about the site’s historical significance.',
+      'Easily accessible by road with parking available, consider a guided tour for deeper insights. Bring a camera to capture the unique architecture and scenic Danube views. Check local information for museum hours, tour options, and special events.',
+    ],
+    location: 'Đerdap',
+    locationValue: 'djerdap',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-1.jpg',
+        alt: 'Lepenski Vir Archaeological Site',
+      },
+      {
+        link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-2.jpg',
+        alt: 'Lepenski Vir Archaeological Site 2',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: '',
+  },
+
+  {
+    id: 'history_and_culture_sremski_karlovci',
+    title: 'Sremski Karlovci historic gem',
     description:
       'Sremski Karlovci offers historical landmarks and charming architecture. Easily accessible with parking nearby, it’s perfect for cultural exploration and sightseeing.',
     longDescritpion: [
@@ -294,8 +417,8 @@ const history_and_culture: Activity[] = [
   },
 
   {
-    id: 'history_and_culture-viminacium',
-    title: 'Viminacium – Ancient Roman City',
+    id: 'history_and_culture_viminacium',
+    title: 'Viminacium ancient roman city',
     description:
       'Viminacium features extensive Roman ruins and artifacts. With parking nearby, it’s ideal for archaeology enthusiasts and history buffs.',
     longDescritpion: [
@@ -309,15 +432,15 @@ const history_and_culture: Activity[] = [
     images: [
       {
         link: '/activities/history_and_culture/viminicijum/viminacium-1.jpg',
-        alt: 'Viminacium – Ancient Roman City',
+        alt: 'Viminacium ancient roman city',
       },
       {
         link: '/activities/history_and_culture/viminicijum/viminacium-2.jpg',
-        alt: 'Viminacium – Ancient Roman City 2',
+        alt: 'Viminacium ancient roman city 2',
       },
       {
         link: '/activities/history_and_culture/viminicijum/viminacium-3.jpg',
-        alt: 'Viminacium – Ancient Roman City 3',
+        alt: 'Viminacium ancient roman city 3',
       },
     ],
     durationInDays: 1,
@@ -327,4 +450,174 @@ const history_and_culture: Activity[] = [
   },
 ];
 
-export const allHistoryAndCulture: Activity[] = [...history_and_culture];
+const religious_objects: Activity[] = [
+  {
+    id: 'st_sava_temple_belgrade',
+    title: 'St. Sava Temple, Belgrade',
+    description:
+      'Visit the magnificent St. Sava Temple in Belgrade, one of the largest Orthodox churches in the world, and experience its stunning architecture and spiritual ambiance.',
+    longDescritpion: [
+      'The St. Sava Temple in Belgrade is a monumental symbol of Serbian Orthodoxy and one of the largest Orthodox churches globally. Dedicated to St. Sava, the founder of the Serbian Orthodox Church, this stunning temple is built on the site where the Ottomans burned his remains in 1595. The temple’s construction began in 1935, and despite interruptions due to wars and political changes, it continues to stand as an enduring symbol of faith and national identity.',
+      "The temple's exterior is clad in white marble and granite, with a massive central dome that dominates the Belgrade skyline. The interior, still under decoration, features elaborate mosaics, some of the largest in the world, depicting scenes from the Bible and Orthodox Christian iconography. The temple also houses a crypt dedicated to the Serbian saints and a treasury with relics and artifacts from Serbian history.",
+    ],
+    location: 'Belgrade',
+    locationValue: 'belgrade',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/verski_objekat/hram_svetog_save/hram-svetog-save-1.jpg',
+        alt: 'Hram svetog Save 1',
+      },
+      {
+        link: '/activities/history_and_culture/verski_objekat/hram_svetog_save/hram-svetog-save-2.jpg',
+        alt: 'Hram svetog Save 2',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'Religious object',
+  },
+
+  {
+    id: 'tumane_monastery',
+    title: 'Tumane Monastery',
+    description:
+      'Experience the spiritual and historical significance of Tumane Monastery, a centuries-old sanctuary set in the serene landscape of eastern Serbia.',
+    longDescritpion: [
+      "Tumane Monastery, situated near Golubac in eastern Serbia, is a cherished Orthodox Christian site with deep historical and spiritual significance. Founded in the 14th century, the monastery is associated with Miloš Obilić, a legendary Serbian knight who built it as an act of penance after an accidental injury to a monk in the nearby forest. The name 'Tumane,' derived from 'tuman' meaning 'fog,' captures the mystical ambiance of this sacred site.",
+      "The monastery features a stunning church dedicated to Saint Gabriel, surrounded by monastic buildings, tranquil gardens, and a small spring believed to have healing properties. Inside the church, visitors can admire frescoes showcasing Serbian medieval art, including scenes from Christ's life and various saints.",
+      "Tumane Monastery has become a popular pilgrimage destination, attracting those seeking spiritual peace and healing. The serene surroundings and the monks' warm hospitality create a profound experience, connecting visitors with Serbia’s rich religious heritage.",
+    ],
+    location: 'Golubac',
+    locationValue: 'golubac',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/verski_objekat/manastir_tumane/manastir-tumane-1.jpg',
+        alt: 'Manastir Tumane 1',
+      },
+      {
+        link: '/activities/history_and_culture/verski_objekat/manastir_tumane/manastir-tumane-2.jpg',
+        alt: 'Manastir Tumane 2',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'Religious object',
+  },
+];
+
+const winery: Activity[] = [
+  {
+    id: 'winery_aleksandrovic_topola',
+    title: 'Winery Topola',
+    description:
+      'Enjoy the fine wines of Aleksandrović Winery, nestled in the heart of Serbia’s renowned Topola wine region, and discover traditional varieties.',
+    longDescritpion: [
+      'Aleksandrović Winery, nestled in the historic region of Topola, Serbia, stands as a beacon of Serbian winemaking tradition. Established by the Aleksandrović family, the winery revives the legacy of the Oplenac region, once home to King Peter I’s royal vineyards.',
+      "The winery is renowned for its exceptional wines, including the award-winning 'Trijumf,' a nod to a secret royal recipe. Other favorites such as 'Harizma' and 'Varijanta' highlight the unique terroir and the winery's dedication to quality.",
+      "Visitors can enjoy guided tours of the vineyards, learn about the winemaking process, and savor the exquisite flavors of the winery’s offerings. The picturesque landscape of Oplenac, combined with the winery's rich heritage, promises a memorable experience filled with delightful tastes and traditional varieties.",
+    ],
+    location: 'Topola',
+    locationValue: 'topola',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-1.jpg',
+        alt: 'Winery Topola 1',
+      },
+      {
+        link: '/activities/history_and_culture/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-2.jpg',
+        alt: 'Winery Topola 2',
+      },
+      {
+        link: '/activities/history_and_culture/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-3.jpg',
+        alt: 'Winery Topola 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'Winery',
+  },
+
+  {
+    id: 'winery_and_ethno_salas_zvonko_bogdan',
+    title: 'Winery ethno salaš Zvonko Bogdan',
+    description:
+      'Discover the elegance and tradition of Vinarija i Salaš Zvonko Bogdan, where winemaking art meets the rustic charm of the Pannonian plains.',
+    longDescritpion: [
+      "Vinarija i Salaš Zvonko Bogdan, located in the picturesque Pannonian plains near Subotica, offers an exquisite blend of tradition and modernity. The estate is a tribute to the region's rich cultural heritage, combining the serenity of a traditional salaš with state-of-the-art winemaking facilities.",
+      "Renowned for producing some of the finest wines in the region, the winery's vineyards are carefully cultivated to reflect the unique terroir of the area. Visitors can explore the entire winemaking process, from the vineyards to the cellar, where each bottle is crafted with precision and passion.",
+      "In addition to wine tastings, guests can experience the rustic charm of the salaš, a traditional Pannonian farmhouse, which has been elegantly restored to offer luxurious comfort. The estate also features a gourmet restaurant that serves dishes made from locally sourced ingredients, perfectly paired with the winery's exceptional wines.",
+      "Whether you're a wine enthusiast or simply seeking a tranquil escape, Vinarija i Salaš Zvonko Bogdan provides an unforgettable experience, combining the best of Pannonian hospitality with the elegance of fine winemaking.",
+    ],
+    location: 'Subotica',
+    locationValue: 'subotica',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-1.jpg',
+        alt: 'Winery ethno salaš Zvonko Bogdan 1',
+      },
+      {
+        link: '/activities/history_and_culture/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-2.jpg',
+        alt: 'Winery ethno salaš Zvonko Bogdan 2',
+      },
+      {
+        link: '/activities/history_and_culture/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-3.jpg',
+        alt: 'Winery ethno salaš Zvonko Bogdan 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'Winery',
+  },
+];
+
+const villages: Activity[] = [
+  {
+    id: 'rural-retreat-in-northern-montenegro',
+    title: 'Rural retreat northern Montenegro',
+    description:
+      'Enjoy a stay in the tranquil landscapes of rural Montenegro, featuring organic farm tours and scenic mountain excursions.',
+    longDescritpion: [
+      "Nestled in the tranquil landscapes of northern Montenegro, this rural household offers a unique retreat into the region's rich history and natural splendor. Guests are invited to enjoy accommodations that blend modern comfort with traditional Montenegrin charm.",
+      'During your stay, you can explore the working farm and witness sustainable organic farming practices while enjoying freshly harvested produce. The experience also includes visits to historic mountain huts (katuns), which offer a glimpse into the simpler life of the past.',
+      "The surrounding mountains provide stunning scenery and opportunities for guided tours, where you can immerse yourself in the breathtaking views and natural beauty. Whether you're hiking through rugged terrain or relaxing in the serene countryside, this rural escape offers a perfect mix of comfort and tradition.",
+    ],
+    location: 'Berane',
+    locationValue: 'berane',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
+        alt: 'Rural retreat northern Montenegro',
+      },
+      {
+        link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-2.jpg',
+        alt: 'Rural retreat northern Montenegro 2',
+      },
+      {
+        link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-3.jpg',
+        alt: 'Rural retreat northern Montenegro 2',
+      },
+    ],
+    durationInDays: 3,
+    category: 'History & culture',
+    categoryValue: 'history_and_culture',
+    subCategory: 'Village',
+  },
+];
+
+export const allHistoryAndCulture: Activity[] = [
+  ...history_and_culture,
+  ...museums,
+  ...fortress,
+  ...religious_objects,
+  ...winery,
+  ...villages,
+];

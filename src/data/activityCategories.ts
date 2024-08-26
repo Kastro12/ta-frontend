@@ -3,7 +3,7 @@ import { ReactSelectOptions } from '@/forms/form.interface';
 interface activityCategories extends ReactSelectOptions {
   description: string;
   link: string;
-  images: { imgLink: string; alt: string }[];
+  images: { link: string; alt: string }[];
 }
 
 const activityCategories: activityCategories[] = [
@@ -12,20 +12,20 @@ const activityCategories: activityCategories[] = [
     value: 'adventure',
     label: 'Adventure',
     description:
-      "The Adventure category offers thrilling activities like rugged mountain trails, pristine river navigation, and cycling through stunning landscapes. These adventures challenge your endurance and connect you with Serbia’s most captivating environments. Ideal for thrill-seekers and outdoor enthusiasts, these experiences promise unforgettable memories and a deep sense of accomplishment.",
+      'The Adventure category offers thrilling activities like rugged mountain trails, pristine river navigation, and cycling through stunning landscapes. These adventures challenge your endurance and connect you with Serbia’s most captivating environments. Ideal for thrill-seekers and outdoor enthusiasts, these experiences promise unforgettable memories and a deep sense of accomplishment.',
     link: 'http://localhost:3000/activities?category=adventure',
     images: [
       {
         alt: 'Rtanj mountain',
-        imgLink: '/activities/adventure/hiking/rtanj_mountain/rtanj-mountain-1.jpg',
+        link: '/activities/adventure/hiking/rtanj_mountain/rtanj-mountain-1.jpg',
       },
       {
         alt: 'Kayak danube iron gate',
-        imgLink: '/activities/adventure/kayaking/danube_iron_gate/kayak_danube_iron_gate_1.jpg',
+        link: '/activities/adventure/kayaking/danube_iron_gate/kayak-danube-iron-gate-1.jpg',
       },
       {
         alt: 'horse riding on tara mountain',
-        imgLink: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-1.jpg',
+        link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-1.jpg',
       },
     ],
   },
@@ -34,20 +34,20 @@ const activityCategories: activityCategories[] = [
     value: 'landscape',
     label: 'Landscape',
     description:
-      "Explore Serbia’s majestic natural wonders, from dramatic canyons and lush parks to tranquil lakes and rolling hills. Perfect for relaxation, exploration, and photography, each destination offers breathtaking scenery. Whether hiking through forests, admiring mountain views, or strolling along riverbanks, these landscapes promise a deep connection with nature and an enriching experience. Ideal for nature lovers and scenic enthusiasts.",
+      'Explore Serbia’s majestic natural wonders, from dramatic canyons and lush parks to tranquil lakes and rolling hills. Perfect for relaxation, exploration, and photography, each destination offers breathtaking scenery. Whether hiking through forests, admiring mountain views, or strolling along riverbanks, these landscapes promise a deep connection with nature and an enriching experience. Ideal for nature lovers and scenic enthusiasts.',
     link: 'http://localhost:3000/activities?category=landscape',
     images: [
       {
         alt: 'Nacionalni park tara',
-        imgLink: '/activities/landscape/nc_tara/nacionalni-park-tara-1.jpg',
+        link: '/activities/landscape/nc_tara/nacionalni-park-tara-1.jpg',
       },
       {
         alt: 'Fruska gore nacionalni park',
-        imgLink: '/activities/landscape/nc_fruska_gora/nacionalni-park-fruska-gora-1.jpg',
+        link: '/activities/landscape/nc_fruska_gora/nacionalni-park-fruska-gora-1.jpg',
       },
       {
         alt: 'Zlatibor gondola',
-        imgLink: '/activities/landscape/zlatibor_gondola/zlatibor-gondola-1.jpg',
+        link: '/activities/landscape/zlatibor_gondola/zlatibor-gondola-1.jpg',
       },
     ],
   },
@@ -61,15 +61,15 @@ const activityCategories: activityCategories[] = [
     images: [
       {
         alt: 'Viminicijum',
-        imgLink: '/activities/history_and_culture/viminicijum/viminacium-1.jpg',
+        link: '/activities/history_and_culture/viminicijum/viminacium-1.jpg',
       },
       {
         alt: 'Sremski karlovci',
-        imgLink: '/activities/history_and_culture/sremski_karlovci/sremski-karlovci-2.jpg',
+        link: '/activities/history_and_culture/sremski_karlovci/sremski-karlovci-2.jpg',
       },
       {
         alt: 'Felix romuliana',
-        imgLink: '/activities/history_and_culture/felix_romuliana/felix-romuliana-3.jpg',
+        link: '/activities/history_and_culture/felix_romuliana/felix-romuliana-3.jpg',
       },
     ],
   },
