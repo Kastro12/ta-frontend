@@ -105,6 +105,11 @@ const activityLocations = [
     label: 'Sokobanja',
   },
   {
+    id: 'subotica_id',
+    value: 'subotica',
+    label: 'Subotica',
+  },
+  {
     id: '21',
     value: 'tara',
     label: 'Tara',
@@ -123,8 +128,7 @@ const activityLocations = [
     id: '23',
     value: 'zlatibor',
     label: 'Zlatibor',
-  }
+  },
 ];
-
 
 export default activityLocations;

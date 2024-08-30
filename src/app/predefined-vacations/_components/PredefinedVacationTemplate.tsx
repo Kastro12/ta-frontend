@@ -5,49 +5,46 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import Grid from '@mui/material/Unstable_Grid2';
 import { button, greenButton } from '@/utils/re-styledComponents';
-import { pathwayFromAncientIimes } from '@/data/organizedVacations';
-import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
 import CalendarFormWithHandleCalendarDate from '../_forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHandle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import { Activity } from '@/utils/interfaces';
+import allActivities from '@/data/activities/allActivities';
 import DailyOrganizationBox from '../_components/DailyOrganizationBox';
+import { PredefinedVacationProps } from '@/data/organizedVacations';
 
-export default function BookVacation() {
+interface PredefinedVacationTemplateProps {
+  organizedVacations: PredefinedVacationProps;
+}
+
+export default function PredefinedVacationTemplate({
+  organizedVacations,
+}: PredefinedVacationTemplateProps) {
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
   const router = useRouter();
   const dispatch = useDispatch();
   const bookVacationRef = useRef<HTMLSpanElement>(null);
   const startDate = useSelector((state: RootState) => state.predefinedVacation.startDate);
-  const handleScrollToBookVacation = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    if (bookVacationRef.current) {
-      bookVacationRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const uniqueLocations: { location: string }[] = [];
   const seenLocations = new Set();
 
-  const uniqueActivities: { activityTitle: string }[] = [];
-  const seenActivities = new Set();
+  const uniqueActivities = organizedVacations?.activities.map((activity: { id: string }) => {
+    return allActivities.find((all: Activity) => all.id == activity.id);
+  });
 
-  pathwayFromAncientIimes.dailyOgranization.forEach((item) => {
-    if (!seenLocations.has(item.location)) {
-      seenLocations.add(item.location);
-      uniqueLocations.push({ location: item.location });
-    }
-
-    if (!seenActivities.has(item.activityTitle)) {
-      seenActivities.add(item.activityTitle);
-      uniqueActivities.push({ activityTitle: item.activityTitle });
-    }
+  uniqueActivities.forEach((item) => {
+    if (item)
+      if (!seenLocations.has(item.location)) {
+        seenLocations.add(item.location);
+        uniqueLocations.push({ location: item.location });
+      }
   });
 
   useEffect(() => {
-    dispatch(addPredefinedVacation(pathwayFromAncientIimes.title));
+    dispatch(addPredefinedVacation(organizedVacations.title));
   }, []);
 
   let errorAlert = null;
@@ -58,47 +55,43 @@ export default function BookVacation() {
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Grid container className='header-section'>
-        <Image
-          src='https://i.ibb.co/k9XSMGr/full-shot-couple-near-car.jpg'
-          alt='couple near car in nature'
-          style={{ objectFit: 'cover',borderRadius:'4px' }}
-          sizes='100vw'
-          fill
-          priority
-        />
-        <div className='content'>
-          <Grid md={12} className='titles'>
-            <Typography variant='h1'>
-              Challenge and hedonism
-              <br /> adventure vacation
-            </Typography>
-          </Grid>
-          <Grid md={12} sx={{ textAlign: 'center' }}>
-            <Button
-              sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '16px' } }}
-              variant='outlined'
-              onClick={handleScrollToBookVacation}
-              endIcon={<ArrowCircleDownOutlinedIcon />}
-            >
-              Book a vacation
-            </Button>
-          </Grid>
-        </div>
-      </Grid>
+      <Typography variant='h1' sx={{ m: '60px auto 0 auto', maxWidth: '600px' }}>
+        {organizedVacations.title}
+      </Typography>
+
       <Typography
-        variant='h3'
-        sx={{ maxWidth: '640px', m: '32px auto 32px auto', fontWeight: '400', textAlign: 'center' }}
+        variant='body1'
+        sx={{ maxWidth: '640px', m: '32px auto 32px auto', textAlign: 'center' }}
       >
-        {pathwayFromAncientIimes.description}
+        {organizedVacations.description}
+      </Typography>
+
+      <div className='daily-organization'>
+        <Typography variant='h2'>Daily organization</Typography>
+
+        <div className='items'>
+          {organizedVacations.dailyOgranization.map((item) => (
+            <DailyOrganizationBox
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              images={item.images}
+            />
+          ))}
+        </div>
+        <span className='__' ref={bookVacationRef}></span>
+      </div>
+
+      <Typography variant='h2' sx={{ mt: 6 }}>
+        Summary
       </Typography>
 
       <div className='vacation-summary'>
         <div className='box'>
           <Typography variant='h2'>Activities</Typography>
           <ul>
-            {uniqueActivities.map((activity) => (
-              <li key={activity.activityTitle}>{activity.activityTitle}</li>
+            {uniqueActivities.map((activity: Activity | undefined) => (
+              <li key={activity?.title}>{activity?.title}</li>
             ))}
           </ul>
         </div>
@@ -115,7 +108,7 @@ export default function BookVacation() {
         <div className='box'>
           <Typography variant='h2'>Duration</Typography>
           <Typography variant='body1'>
-            {pathwayFromAncientIimes.dailyOgranization.length} days, you choose started day
+            {organizedVacations.dailyOgranization.length} days, you choose started day
           </Typography>
         </div>
 
@@ -127,23 +120,6 @@ export default function BookVacation() {
         </div>
       </div>
 
-      <div className='daily-organization'>
-        <Typography variant='h2'>Daily organization</Typography>
-
-        <div className='items'>
-          {pathwayFromAncientIimes.dailyOgranization.map((item) => (
-            <DailyOrganizationBox
-              key={item.id}
-              title={item.title}
-              description={item.description}
-              imageLink={item.imageLink}
-              alt={item.alt}
-            />
-          ))}
-        </div>
-        <span className='__' ref={bookVacationRef}></span>
-      </div>
-
       <Typography variant='h2' sx={{ textAlign: 'center', marginTop: '60px' }}>
         Choose the start date and number of people
       </Typography>
@@ -151,7 +127,7 @@ export default function BookVacation() {
       <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
           <CalendarFormWithHandleCalendarDate
-            duration={pathwayFromAncientIimes.dailyOgranization.length}
+            duration={organizedVacations.dailyOgranization.length}
           />
           <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>

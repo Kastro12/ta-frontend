@@ -74,6 +74,8 @@
     .box {
       h2 {
         margin: 16px 0;
+        font-size: 18px;
+        line-height: 26px;
       }
       ul {
         li {
@@ -92,23 +94,24 @@
     }
 
     @media screen and (min-width: 760px) {
-      margin: 48px 0;
-
       .box {
         display: flex;
         align-items: flex-start;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
         h2 {
           margin: 0;
-          width: 200px;
+          width: 140px;
+          font-size: 16px;
+          line-height: 28px;
         }
         ul {
           display: flex;
           flex-wrap: wrap;
-          width: calc(100% - 200px);
+          width: calc(100% - 140px);
           li {
             width: auto;
             margin: 0 32px 8px 8px;
+            line-height: 28px;
           }
         }
         p {
@@ -155,7 +158,6 @@
         }
       }
     }
-
   } // daily-organization END
 }
 

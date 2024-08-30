@@ -149,7 +149,7 @@ const kayaking: Activity[] = [
       'Relax on serene beaches during lunch breaks and enjoy the beauty around you. No prior kayaking experience is required; our stable kayaks and expert guides ensure a safe, enjoyable experience for everyone. Explore the wonders of the Drina River like a true adventurer!',
     ],
     location: 'Bajina Basta',
-    locationValue: 'bajina-basta',
+    locationValue: 'bajina_basta',
     cost: 180,
     images: [
       {
@@ -593,6 +593,41 @@ const bungee_jump: Activity[] = [
   },
 ];
 
+const quad_bike: Activity[] = [
+  {
+    id: 'quad_bike_zlatibor',
+    title: 'Quad Bike Adventure in Zlatibor',
+    description:
+      'Embark on an exhilarating quad bike adventure in Zlatibor, navigating rugged terrains and breathtaking landscapes.',
+    longDescritpion: [
+      "Experience the thrill of a quad bike adventure in Zlatibor, one of Serbia's most picturesque mountain regions. This exhilarating activity takes you through rugged terrains, dense forests, and open meadows, all while soaking in the stunning natural beauty that Zlatibor is renowned for.",
+      "Designed for both beginners and experienced riders, the quad bike tours offer a range of routes varying in difficulty and length. Whether you prefer a short, scenic ride or a more challenging trek through the wilderness, you’ll enjoy panoramic views of Zlatibor's rolling hills and valleys.",
+      "Guided by experienced instructors, you'll learn how to safely handle the quad bikes, ensuring a fun and secure adventure. Along the way, you'll have the chance to pause, take in the views, capture photos, and even learn about the local flora and fauna from your guide.",
+    ],
+    location: 'Zlatibor',
+    locationValue: 'zlatibor',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/adventure/quad_bike/zlatibor/quad-bike-zlatibor-1.jpg',
+        alt: 'Quad Bike Adventure in Zlatibor 1',
+      },
+      {
+        link: '/activities/adventure/quad_bike/zlatibor/quad-bike-zlatibor-2.jpg',
+        alt: 'Quad Bike Adventure in Zlatibor 2',
+      },
+      {
+        link: '/activities/adventure/quad_bike/zlatibor/quad-bike-zlatibor-3.jpg',
+        alt: 'Quad Bike Adventure in Zlatibor 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Adventure',
+    categoryValue: 'adventure',
+    subCategory: 'Quad bike',
+  },
+];
+
 export const allAdventure: Activity[] = [
   ...paragliding,
   ...rafting,
@@ -604,4 +639,5 @@ export const allAdventure: Activity[] = [
   ...cycling,
   ...canyoning,
   ...bungee_jump,
+  ...quad_bike,
 ];

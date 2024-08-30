@@ -69,7 +69,7 @@ const activityCategories: activityCategories[] = [
       },
       {
         alt: 'Felix romuliana',
-        link: '/activities/history_and_culture/felix_romuliana/felix-romuliana-3.jpg',
+        link: '/activities/history_and_culture/tvrdjava/felix_romuliana/felix-romuliana-3.jpg',
       },
     ],
   },

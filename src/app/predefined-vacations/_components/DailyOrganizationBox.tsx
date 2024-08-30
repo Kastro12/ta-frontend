@@ -7,14 +7,18 @@ const DailyOrganizationBox = ({
   images,
 }: {
   title: string;
-  description: string;
+  description: string[] | undefined;
   images: { link: string; alt: string }[];
 }) => {
   return (
     <div className='TextImage1'>
       <div className='text'>
         <Typography variant='h3'>{title}</Typography>
-        <Typography variant='body1'>{description}</Typography>
+        {description?.map((desc: string, i) => (
+          <Typography key={i} variant='body1'>
+            {desc}
+          </Typography>
+        ))}
       </div>
       <div className='image'>
         <GalleryWithCarousel images={images} />

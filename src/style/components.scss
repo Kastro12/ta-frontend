@@ -688,9 +688,6 @@
     right: 0;
     margin: 0 auto;
   }
-
-  @media screen and (min-width: $md) {
-  }
 } //standard-alert END
 
 .TextImage1 {
@@ -700,7 +697,7 @@
   border-radius: 4px;
   margin-bottom: 32px;
   background-color: $white1;
-
+  width: 100%;
   &:last-of-type {
     margin-bottom: 0px;
   }

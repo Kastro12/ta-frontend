@@ -1,5 +1,5 @@
 'use client';
-import { challengeAndHedonism as organizedVacations } from '@/data/organizedVacations';
+import { pannonianPlain as organizedVacations } from '@/data/organizedVacations';
 import PredefinedVacationTemplate from '../_components/PredefinedVacationTemplate';
 
 export default function PredefinedVacation() {
