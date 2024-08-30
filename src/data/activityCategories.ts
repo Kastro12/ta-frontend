@@ -16,16 +16,16 @@ const activityCategories: activityCategories[] = [
     link: 'http://localhost:3000/activities?category=adventure',
     images: [
       {
-        alt: 'Rtanj mountain',
-        link: '/activities/adventure/hiking/rtanj_mountain/rtanj-mountain-1.jpg',
+        alt: 'Canyoning nevidio',
+        link: '/activities/adventure/canyoning/nevidio/canyoning-nevidio-1.jpg',
       },
       {
         alt: 'Kayak danube iron gate',
         link: '/activities/adventure/kayaking/danube_iron_gate/kayak-danube-iron-gate-1.jpg',
       },
       {
-        alt: 'horse riding on tara mountain',
-        link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-1.jpg',
+        alt: 'mountain biking on Tara',
+        link: '/activities/adventure/cycling/tara/mountain-biking-tara-1.jpg',
       },
     ],
   },
@@ -70,6 +70,29 @@ const activityCategories: activityCategories[] = [
       {
         alt: 'Felix romuliana',
         link: '/activities/history_and_culture/tvrdjava/felix_romuliana/felix-romuliana-3.jpg',
+      },
+    ],
+  },
+
+  {
+    id: '4',
+    value: 'relaxation_and_flavors',
+    label: 'Relaxation & flavors',
+    description:
+      "Indulge in a blend of serenity and exquisite tastes with our Relaxation & Flavors category. Whether you're unwinding at luxurious spas, exploring the rich traditions of wineries, or savoring local delicacies at ethno farms, this category offers experiences that nourish both body and soul. Perfect for those seeking tranquility and a deep connection with local culture, these activities promise a soothing escape into the heart of Serbia’s most relaxing and flavorful destinations.",
+    link: 'http://localhost:3000/activities?category=relaxation_and_flavors',
+    images: [
+      {
+        alt: 'Aleksandrovic vinarija',
+        link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-1.jpg',
+      },
+      {
+        alt: 'Fruske terme 1',
+        link: '/activities/relaxation_and_flavors/spa/fruske_terme/fruske-terme-1.jpg',
+      },
+      {
+        alt: 'Food',
+        link: '/accommodation-and-dining/food2.jpg',
       },
     ],
   },

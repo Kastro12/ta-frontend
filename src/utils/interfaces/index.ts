@@ -8,8 +8,8 @@ export interface Activity {
   cost: number;
   images: { link: string; alt: string }[];
   durationInDays: number;
-  category: 'History & culture' | 'Adventure' | 'Landscape';
-  categoryValue: 'history_and_culture' | 'adventure' | 'landscape';
+  category: 'History & culture' | 'Adventure' | 'Landscape' | 'Relaxation & flavors';
+  categoryValue: 'history_and_culture' | 'adventure' | 'landscape' | 'relaxation_and_flavors';
   subCategory: string;
 }
 

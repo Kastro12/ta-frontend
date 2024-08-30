@@ -187,8 +187,16 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/tvrdjava/kalemegdan/kalemegdan-1.jpg',
+          alt: 'Kalemegdan Fortress',
+        },
+        {
+          link: '/activities/history_and_culture/muzej/muzej_nikola_tesla/muzej-nikole-tesle-1.jpg',
+          alt: 'Nikola Tesla museum 1',
+        },
+        {
+          link: '/activities/history_and_culture/verski_objekat/hram_svetog_save/hram-svetog-save-1.jpg',
+          alt: 'Hram svetog Save 1',
         },
       ],
     },
@@ -202,8 +210,16 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/viminicijum/viminacium-2.jpg',
+          alt: 'Viminacium ancient roman city 2',
+        },
+        {
+          link: '/activities/history_and_culture/tvrdjava/smederevska_tvrdjava/smederevska-tvrdjava-1.jpg',
+          alt: 'Smederevo Fortress',
+        },
+        {
+          link: '/activities/history_and_culture/viminicijum/viminacium-1.jpg',
+          alt: 'Viminacium ancient roman city',
         },
       ],
     },
@@ -216,8 +232,20 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-1.jpg',
+          alt: 'Golubac Fortress',
+        },
+        {
+          link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-inside.jpg',
+          alt: 'Golubac Fortress 2',
+        },
+        {
+          link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-old-suits.jpg',
+          alt: 'Golubac Fortress 3',
+        },
+        {
+          link: '/activities/history_and_culture/verski_objekat/manastir_tumane/manastir-tumane-1.jpg',
+          alt: 'Manastir Tumane 1',
         },
       ],
     },
@@ -230,8 +258,20 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-1.jpg',
+          alt: 'Lepenski Vir Archaeological Site',
+        },
+        {
+          link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-2.jpg',
+          alt: 'Lepenski Vir Archaeological Site 2',
+        },
+        {
+          link: '/activities/landscape/cave/rajkova_pecina/rajkova-pecina-1.jpg',
+          alt: 'Rajkova Cave',
+        },
+        {
+          link: '/activities/landscape/cave/rajkova_pecina/rajkova-pecina-2.jpg',
+          alt: 'Rajkova Cave 2',
         },
       ],
     },
@@ -244,8 +284,16 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-cruise-1.jpg',
+          alt: 'Đerdap river cruise',
+        },
+        {
+          link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-1.jpg',
+          alt: 'Đerdap River 1',
+        },
+        {
+          link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-2.jpg',
+          alt: 'Đerdap River 2',
         },
       ],
     },
@@ -259,8 +307,16 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-1.jpg',
+          alt: 'Winery Topola 1',
+        },
+        {
+          link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-2.jpg',
+          alt: 'Winery Topola 2',
+        },
+        {
+          link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-3.jpg',
+          alt: 'Winery Topola 3',
         },
       ],
     },
@@ -290,8 +346,16 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/landscape/nc_tara/nacionalni-park-tara-1.jpg',
+          alt: 'Tara National Park',
+        },
+        {
+          link: '/activities/landscape/nc_tara/nacionalni-park-tara-2.jpg',
+          alt: 'Tara National Park 2',
+        },
+        {
+          link: '/activities/landscape/nc_tara/nacionalni-park-tara-3.jpg',
+          alt: 'Tara National Park 3',
         },
       ],
     },
@@ -304,8 +368,16 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-1.jpg',
+          alt: 'horse riding on Tara mountain',
+        },
+        {
+          link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-2.jpg',
+          alt: 'horse riding on Tara mountain 2',
+        },
+        {
+          link: '/activities/adventure/horse_riding/tara/horse-riding-on-tara-mountain-3.jpg',
+          alt: 'horse riding on Tara mountain 3',
         },
       ],
     },
@@ -318,8 +390,16 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/drvengrad/drvengrad-1.jpg',
+          alt: 'Drvengrad traditional village',
+        },
+        {
+          link: '/activities/history_and_culture/drvengrad/drvengrad-2.jpg',
+          alt: 'Drvengrad traditional village 2',
+        },
+        {
+          link: '/activities/history_and_culture/drvengrad/drvengrad-voz-1.jpg',
+          alt: 'Drvengrad traditional village 3',
         },
       ],
     },
@@ -332,8 +412,16 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
+          link: '/activities/relaxation_and_flavors/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
           alt: 'Rural retreat northern Montenegro',
+        },
+        {
+          link: '/activities/relaxation_and_flavors/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-2.jpg',
+          alt: 'Rural retreat northern Montenegro 2',
+        },
+        {
+          link: '/activities/relaxation_and_flavors/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-3.jpg',
+          alt: 'Rural retreat northern Montenegro 2',
         },
       ],
     },
@@ -346,8 +434,16 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/landscape/planina_lokve/planina-lokve-1.jpg',
+          alt: 'Planina Lokve Montenegro',
+        },
+        {
+          link: '/activities/landscape/planina_lokve/planina-lokve-2.jpg',
+          alt: 'Planina Lokve Montenegro 2',
+        },
+        {
+          link: '/activities/landscape/planina_lokve/planina-lokve-3.jpg',
+          alt: 'Planina Lokve Montenegro 3',
         },
       ],
     },
@@ -362,8 +458,16 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
 
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/landscape/planina_komovi/planina-komovi-1.jpg',
+          alt: 'Planina Komovi Montenegro',
+        },
+        {
+          link: '/activities/landscape/planina_komovi/planina-komovi-2.jpg',
+          alt: 'Planina Komovi Montenegro 2',
+        },
+        {
+          link: '/activities/landscape/planina_komovi/planina-komovi-3.jpg',
+          alt: 'Planina Komovi Montenegro 3',
         },
       ],
     },
@@ -377,8 +481,16 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-1.jpg',
+          alt: 'Maglič Fortress',
+        },
+        {
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-2.jpg',
+          alt: 'Maglič Fortress 2',
+        },
+        {
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-3.jpg',
+          alt: 'Maglič Fortress 2',
         },
       ],
     },
@@ -410,8 +522,12 @@ export const pannonianPlain: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/tvrdjava/gardos/gardos-zemun-1.jpg',
+          alt: 'Gardos zemun',
+        },
+        {
+          link: '/activities/history_and_culture/muzej/muzej_vazduhoplovstva/muzej-vazduhoplovstva-1.jpg',
+          alt: 'Museum of Aviation Belgrade 1',
         },
       ],
     },
@@ -424,8 +540,16 @@ export const pannonianPlain: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/history_and_culture/sremski_karlovci/sremski-karlovci-1.jpg',
+          alt: 'Sremski Karlovci',
+        },
+        {
+          link: '/activities/history_and_culture/sremski_karlovci/sremski-karlovci-3.jpg',
+          alt: 'Sremski Karlovci 3',
+        },
+        {
+          link: '/activities/history_and_culture/tvrdjava/petrovaradin/petrovaradin-1.jpg',
+          alt: 'Petrovaradin Fortress',
         },
       ],
     },
@@ -438,50 +562,63 @@ export const pannonianPlain: PredefinedVacationProps = {
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/landscape/nc_fruska_gora/nacionalni-park-fruska-gora-1.jpg',
+          alt: 'Fruška Gora National Park',
         },
-      ],
-    },
-    {
-      id: '4',
-      title: 'Day four',
-      description: [
-        'Today we head north to the beautiful Palić Lake. Spend the day enjoying the tranquility of the lake, known for its clean water and picturesque landscapes.',
-        'The area around the lake features promenades and parks ideal for relaxation, and Palić is also known for its historic villas and rich tourist offerings.',
-      ],
-      images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/landscape/nc_fruska_gora/nacionalni-park-fruska-gora-2.jpg',
+          alt: 'Fruška Gora National Park 2',
         },
-      ],
-    },
-    {
-      id: '5',
-      title: 'Day five',
-      description: [
-        'We start the day with a visit to an ethno farm near Subotica, where you’ll experience traditional Vojvodina lifestyle.',
-        'Afterward, we’ll visit the renowned Zvonko Bogdan Winery, where you’ll have the opportunity to taste premium wines and learn about the rich winemaking tradition of the region. Enjoy the authentic atmosphere of the farm and the beautiful vineyard setting.',
-      ],
-      images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/relaxation_and_flavors/spa/fruske_terme/fruske-terme-1.jpg',
+          alt: 'Fruške Terme spa 1',
+        },
+        {
+          link: '/activities/relaxation_and_flavors/spa/fruske_terme/fruske-terme-2.jpg',
+          alt: 'Fruške Terme spa 2',
         },
       ],
     },
 
     {
-      id: '6',
-      title: 'Day six',
+      id: '4',
+      title: 'Day four',
       description: [
-        'Our final day is reserved for returning to Belgrade. After days filled with cultural, natural, and gastronomic delights, we return with wonderful memories of the Panonian plain.',
+        'Today we head north to an ethno farm near Subotica, where you’ll experience the traditional Vojvodina lifestyle.',
+        'Afterward, we’ll visit the renowned Zvonko Bogdan Winery, where you’ll have the opportunity to taste premium wines and learn about the rich winemaking tradition of the region. Enjoy the authentic atmosphere of the farm and the beautiful vineyard setting.',
       ],
       images: [
         {
-          link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-          alt: 'Rural retreat northern Montenegro',
+          link: '/activities/relaxation_and_flavors/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-1.jpg',
+          alt: 'Winery ethno salaš Zvonko Bogdan 1',
+        },
+        {
+          link: '/activities/relaxation_and_flavors/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-2.jpg',
+          alt: 'Winery ethno salaš Zvonko Bogdan 2',
+        },
+        {
+          link: '/activities/relaxation_and_flavors/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-3.jpg',
+          alt: 'Winery ethno salaš Zvonko Bogdan 3',
+        },
+      ],
+    },
+
+    {
+      id: '5',
+      title: 'Day five',
+      description: [
+        'We will spend this day enjoying the peace of the lake, known for its clear water and picturesque landscapes.',
+        'The area around the lake features promenades and parks ideal for relaxation, and Palić is also known for its historic villas and rich tourist offerings.',
+        'Afterward, we return to Belgrade, carrying beautiful memories of this unforgettable journey.',
+      ],
+      images: [
+        {
+          link: '/activities/landscape/palicko_jezero/palicko-jezero-3.jpg',
+          alt: 'Palicko jezero 3',
+        },
+        {
+          link: '/activities/landscape/palicko_jezero/palicko-jezero-2.jpg',
+          alt: 'Palicko jezero 2',
         },
       ],
     },

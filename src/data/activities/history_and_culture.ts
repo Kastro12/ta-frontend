@@ -92,10 +92,6 @@ const fortress: Activity[] = [
         link: '/activities/history_and_culture/tvrdjava/gardos/gardos-zemun-2.jpg',
         alt: 'Gardoš Tower 2',
       },
-      {
-        link: '/activities/history_and_culture/tvrdjava/gardos/gardos-zemun-3.jpg',
-        alt: 'Gardoš Tower 2',
-      },
     ],
     durationInDays: 3,
     category: 'History & culture',
@@ -509,115 +505,9 @@ const religious_objects: Activity[] = [
   },
 ];
 
-const winery: Activity[] = [
-  {
-    id: 'winery_aleksandrovic_topola',
-    title: 'Winery Topola',
-    description:
-      'Enjoy the fine wines of Aleksandrović Winery, nestled in the heart of Serbia’s renowned Topola wine region, and discover traditional varieties.',
-    longDescritpion: [
-      'Aleksandrović Winery, nestled in the historic region of Topola, Serbia, stands as a beacon of Serbian winemaking tradition. Established by the Aleksandrović family, the winery revives the legacy of the Oplenac region, once home to King Peter I’s royal vineyards.',
-      "The winery is renowned for its exceptional wines, including the award-winning 'Trijumf,' a nod to a secret royal recipe. Other favorites such as 'Harizma' and 'Varijanta' highlight the unique terroir and the winery's dedication to quality.",
-      "Visitors can enjoy guided tours of the vineyards, learn about the winemaking process, and savor the exquisite flavors of the winery’s offerings. The picturesque landscape of Oplenac, combined with the winery's rich heritage, promises a memorable experience filled with delightful tastes and traditional varieties.",
-    ],
-    location: 'Topola',
-    locationValue: 'topola',
-    cost: 180,
-    images: [
-      {
-        link: '/activities/history_and_culture/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-1.jpg',
-        alt: 'Winery Topola 1',
-      },
-      {
-        link: '/activities/history_and_culture/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-2.jpg',
-        alt: 'Winery Topola 2',
-      },
-      {
-        link: '/activities/history_and_culture/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-3.jpg',
-        alt: 'Winery Topola 3',
-      },
-    ],
-    durationInDays: 1,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-    subCategory: 'Winery',
-  },
-
-  {
-    id: 'winery_and_ethno_salas_zvonko_bogdan',
-    title: 'Winery ethno salaš Zvonko Bogdan',
-    description:
-      'Discover the elegance and tradition of Vinarija i Salaš Zvonko Bogdan, where winemaking art meets the rustic charm of the Pannonian plains.',
-    longDescritpion: [
-      "Vinarija i Salaš Zvonko Bogdan, located in the picturesque Pannonian plains near Subotica, offers an exquisite blend of tradition and modernity. The estate is a tribute to the region's rich cultural heritage, combining the serenity of a traditional salaš with state-of-the-art winemaking facilities.",
-      "Renowned for producing some of the finest wines in the region, the winery's vineyards are carefully cultivated to reflect the unique terroir of the area. Visitors can explore the entire winemaking process, from the vineyards to the cellar, where each bottle is crafted with precision and passion.",
-      "In addition to wine tastings, guests can experience the rustic charm of the salaš, a traditional Pannonian farmhouse, which has been elegantly restored to offer luxurious comfort. The estate also features a gourmet restaurant that serves dishes made from locally sourced ingredients, perfectly paired with the winery's exceptional wines.",
-      "Whether you're a wine enthusiast or simply seeking a tranquil escape, Vinarija i Salaš Zvonko Bogdan provides an unforgettable experience, combining the best of Pannonian hospitality with the elegance of fine winemaking.",
-    ],
-    location: 'Subotica',
-    locationValue: 'subotica',
-    cost: 180,
-    images: [
-      {
-        link: '/activities/history_and_culture/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-1.jpg',
-        alt: 'Winery ethno salaš Zvonko Bogdan 1',
-      },
-      {
-        link: '/activities/history_and_culture/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-2.jpg',
-        alt: 'Winery ethno salaš Zvonko Bogdan 2',
-      },
-      {
-        link: '/activities/history_and_culture/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-3.jpg',
-        alt: 'Winery ethno salaš Zvonko Bogdan 3',
-      },
-    ],
-    durationInDays: 1,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-    subCategory: 'Winery',
-  },
-];
-
-const villages: Activity[] = [
-  {
-    id: 'rural-retreat-in-northern-montenegro',
-    title: 'Rural retreat northern Montenegro',
-    description:
-      'Enjoy a stay in the tranquil landscapes of rural Montenegro, featuring organic farm tours and scenic mountain excursions.',
-    longDescritpion: [
-      "Nestled in the tranquil landscapes of northern Montenegro, this rural household offers a unique retreat into the region's rich history and natural splendor. Guests are invited to enjoy accommodations that blend modern comfort with traditional Montenegrin charm.",
-      'During your stay, you can explore the working farm and witness sustainable organic farming practices while enjoying freshly harvested produce. The experience also includes visits to historic mountain huts (katuns), which offer a glimpse into the simpler life of the past.',
-      "The surrounding mountains provide stunning scenery and opportunities for guided tours, where you can immerse yourself in the breathtaking views and natural beauty. Whether you're hiking through rugged terrain or relaxing in the serene countryside, this rural escape offers a perfect mix of comfort and tradition.",
-    ],
-    location: 'Berane',
-    locationValue: 'berane',
-    cost: 180,
-    images: [
-      {
-        link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-1.jpg',
-        alt: 'Rural retreat northern Montenegro',
-      },
-      {
-        link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-2.jpg',
-        alt: 'Rural retreat northern Montenegro 2',
-      },
-      {
-        link: '/activities/history_and_culture/selo/kastratovic/seosko-domacinstvo-u-crnoj-gori-3.jpg',
-        alt: 'Rural retreat northern Montenegro 2',
-      },
-    ],
-    durationInDays: 3,
-    category: 'History & culture',
-    categoryValue: 'history_and_culture',
-    subCategory: 'Village',
-  },
-];
-
 export const allHistoryAndCulture: Activity[] = [
   ...history_and_culture,
   ...museums,
   ...fortress,
   ...religious_objects,
-  ...winery,
-  ...villages,
 ];

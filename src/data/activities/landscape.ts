@@ -466,6 +466,73 @@ const all: Activity[] = [
   },
 
   {
+    id: 'landscape_lokve_planina',
+    title: 'Hidden gem of Lokve mountain',
+    description:
+      'Experience Lokve Mountain, a serene and lesser-known destination in Montenegro, ideal for nature lovers and adventurers alike.',
+    longDescritpion: [
+      'Lokve Mountain, located in northern Montenegro, is a hidden gem for nature lovers seeking a tranquil retreat. This unspoiled mountain offers breathtaking landscapes, rich biodiversity, and an atmosphere of peace that only such a remote location can provide.',
+      "The mountain's untouched environment is perfect for hiking, with trails that take you through dense forests, rolling hills, and along clear, flowing streams. As you traverse these paths, you'll discover a diverse range of flora and fauna unique to the region, making it an ideal destination for nature enthusiasts.",
+      'In addition to its natural beauty, Lokve Mountain allows visitors to experience the traditional Montenegrin lifestyle. The nearby villages preserve their age-old customs, welcoming guests with authentic local hospitality. You can savor home-cooked meals made from organic, locally sourced ingredients, offering a true taste of Montenegrin culture.',
+      'With its fresh mountain air and stunning vistas, Lokve Mountain is a perfect destination for those looking to reconnect with nature and enjoy the simplicity and serenity of rural life.',
+    ],
+    location: 'Berane',
+    locationValue: 'berane',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/landscape/planina_lokve/planina-lokve-1.jpg',
+        alt: 'Planina Lokve Montenegro',
+      },
+      {
+        link: '/activities/landscape/planina_lokve/planina-lokve-2.jpg',
+        alt: 'Planina Lokve Montenegro 2',
+      },
+      {
+        link: '/activities/landscape/planina_lokve/planina-lokve-3.jpg',
+        alt: 'Planina Lokve Montenegro 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Landscape',
+    categoryValue: 'landscape',
+    subCategory: '',
+  },
+
+  {
+    id: 'landscape_komovi_planina',
+    title: 'Majestic Komovi mountain',
+    description:
+      'Embark on an adventure in the Komovi Mountains, one of Montenegro’s most stunning landscapes, offering breathtaking views and exhilarating activities.',
+    longDescritpion: [
+      'The Komovi Mountains, located in eastern Montenegro, are a paradise for nature enthusiasts and adventurers alike. Part of the Dinaric Alps, this mountain range is renowned for its dramatic peaks, verdant valleys, and the rich cultural heritage of the surrounding villages.',
+      'The three prominent peaks—Kom Kučki, Kom Ljevoriječki, and Kom Vasojevićki—create a striking landscape and offer diverse challenges for hikers and climbers. With trails ranging from moderate to strenuous, the Komovi Mountains cater to both experienced mountaineers and those seeking a more relaxed hike. As you ascend, you’ll be rewarded with breathtaking views of the surrounding mountains, dense forests, and meandering rivers.',
+      'Beyond its natural beauty, the Komovi region invites visitors to immerse themselves in the traditional Montenegrin way of life. The nearby villages are steeped in history and offer warm hospitality, with opportunities to savor home-cooked meals made from locally sourced ingredients.',
+    ],
+    location: 'Berane',
+    locationValue: 'berane',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/landscape/planina_komovi/planina-komovi-1.jpg',
+        alt: 'Planina Komovi Montenegro',
+      },
+      {
+        link: '/activities/landscape/planina_komovi/planina-komovi-2.jpg',
+        alt: 'Planina Komovi Montenegro 2',
+      },
+      {
+        link: '/activities/landscape/planina_komovi/planina-komovi-3.jpg',
+        alt: 'Planina Komovi Montenegro 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Landscape',
+    categoryValue: 'landscape',
+    subCategory: '',
+  },
+
+  {
     id: 'landscape_vlasin_lake',
     title: 'Vlasina lake',
     description:
@@ -490,6 +557,40 @@ const all: Activity[] = [
       {
         link: '/activities/landscape/vlasinsko_jezero/vlasinsko-jezero-3.jpg',
         alt: 'Vlasinsko jezero 3',
+      },
+    ],
+    durationInDays: 1,
+    category: 'Landscape',
+    categoryValue: 'landscape',
+    subCategory: '',
+  },
+
+  {
+    id: 'landscape_palic_lake',
+    title: 'Palić Lake',
+    description:
+      'Experience the serene beauty of Palić Lake, a natural oasis in northern Serbia, ideal for relaxation and outdoor activities.',
+    longDescritpion: [
+      "Palić Lake, located near Subotica in northern Serbia, is a beloved natural attraction known for its serene beauty and diverse range of activities. Surrounded by lush parks and picturesque promenades, the lake offers something for everyone, whether you're looking to relax or be active.",
+      'Visitors can unwind by the water, enjoy leisurely boat rides, or explore the charming art nouveau architecture and pavilions around the lake. The area is also home to numerous restaurants serving traditional Serbian cuisine, perfect for a relaxing meal in a tranquil setting.',
+      "For those seeking adventure, Palić Lake provides opportunities for swimming, sailing, and fishing. Nearby attractions include the Palić Zoo and the Wine Route of Subotica-Horgoš, adding to the area's appeal.",
+      'Palić Lake is a year-round destination, offering vibrant summer activities, beautiful autumn and spring landscapes ideal for hiking and cycling, and a peaceful winter retreat away from city life.',
+    ],
+    location: 'Subotica',
+    locationValue: 'subotica',
+    cost: 180,
+    images: [
+      {
+        link: '/activities/landscape/palicko_jezero/palicko-jezero-1.jpg',
+        alt: 'Palicko jezero',
+      },
+      {
+        link: '/activities/landscape/palicko_jezero/palicko-jezero-2.jpg',
+        alt: 'Palicko jezero 2',
+      },
+      {
+        link: '/activities/landscape/palicko_jezero/palicko-jezero-3.jpg',
+        alt: 'Palicko jezero 3',
       },
     ],
     durationInDays: 1,
