@@ -3,7 +3,5 @@ import { pathwayFromAncientIimes as organizedVacations } from '@/data/organizedV
 import PredefinedVacationTemplate from '../_components/PredefinedVacationTemplate';
 
 export default function PredefinedVacation() {
-  console.log('organizedVacations', organizedVacations);
-
   return <PredefinedVacationTemplate organizedVacations={organizedVacations} />;
 }

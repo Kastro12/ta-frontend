@@ -225,6 +225,15 @@
       width: calc(50% - 12px);
     }
   }
+
+  @media screen and (min-width: $lg) {
+    .NumberOfPersonsForm {
+      width: calc(50% - 24px);
+      .content {
+        justify-content: space-between;
+      }
+    }
+  }
 } //form-calendar-persons END
 
 .react-international-phone-input-container.custom {
@@ -312,6 +321,41 @@
     color: $red2;
     &:hover {
       background-color: $transparentred1;
+    }
+  }
+}
+
+.ChooseServicesForm {
+  display: flex;
+  flex-direction: column;
+  .accommodation {
+    margin-top: 26px;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $md) {
+    flex-direction: row;
+    justify-content: space-between;
+    .accommodation,
+    .transportation {
+      margin-top: 26px;
+      margin-bottom: 0px;
+      width: calc(50% - 12px);
+    }
+  }
+
+  @media screen and (min-width: 1023px) {
+    .transportation {
+      > label,
+      > div {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg) {
+    .transportation {
+      margin-right: 6px;
     }
   }
 }

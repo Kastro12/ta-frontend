@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import { pannonianPlain as organizedVacations } from '@/data/organizedVacations';
 
 export const metadata: Metadata = {
-  title: 'Old and new: business, leisure, and social traditions experience',
-  description: 'Old and new: business, leisure, and social traditions experience',
-};
+  title: `${organizedVacations.title}`,
+  description: `${organizedVacations.description}`,
+}
+
+
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className='page predefined-vacations'>{children}</div>;

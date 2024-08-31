@@ -7,6 +7,8 @@ export interface IssueInitialState {
   children: number;
   childrenYears: { years: '1-2' | '2-4' | '4-7' | '7+'; position: number }[];
   chosenPredefinedVacation: null | string;
+  accommodation_radio: 'accommodation_yes' | 'accommodation_no' | null | string;
+  transportation_radio: 'transportation_yes' | 'transportation_no' | null | string;
 }
 const initialState: IssueInitialState = {
   startDate: null,
@@ -15,6 +17,8 @@ const initialState: IssueInitialState = {
   adults: 1,
   children: 0,
   childrenYears: [],
+  accommodation_radio: 'accommodation_yes',
+  transportation_radio: 'transportation_yes',
 };
 
 export interface TheDateChangeProps {
@@ -24,6 +28,17 @@ export interface TheDateChangeProps {
 
 interface handleIncrementDecrement {
   type: 'adults' | 'children';
+}
+
+export interface RadioGroupProps {
+  type: 'accommodation_radio' | 'transportation_radio';
+  value:
+    | 'accommodation_yes'
+    | 'accommodation_no'
+    | 'transportation_yes'
+    | 'transportation_no'
+    | string
+    | null;
 }
 
 export const predefinedVacationSlice = createSlice({
@@ -38,6 +53,11 @@ export const predefinedVacationSlice = createSlice({
         if (action.payload.type == 'startDate') state.finishDate = null;
         state[`${action.payload.type}`] = null;
       }
+    },
+
+    changeRadioGroup: (state, action: PayloadAction<RadioGroupProps>) => {
+      if (typeof action.payload.type == 'string')
+        state[`${action.payload.type}`] = action.payload.value;
     },
 
     addPredefinedVacation: (state, action: PayloadAction<string>) => {
@@ -97,5 +117,6 @@ export const {
   addChildrenYears,
   removeChildrenYears,
   clearVacation,
+  changeRadioGroup,
 } = predefinedVacationSlice.actions;
 export default predefinedVacationSlice.reducer;

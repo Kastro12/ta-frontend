@@ -14,6 +14,7 @@ import { Activity } from '@/utils/interfaces';
 import allActivities from '@/data/activities/allActivities';
 import DailyOrganizationBox from '../_components/DailyOrganizationBox';
 import { PredefinedVacationProps } from '@/data/organizedVacations';
+import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
 
 interface PredefinedVacationTemplateProps {
   organizedVacations: PredefinedVacationProps;
@@ -50,7 +51,7 @@ export default function PredefinedVacationTemplate({
   let errorAlert = null;
 
   if (!startDate) {
-    errorAlert = 'Choose the start date and number of people.';
+    errorAlert = 'Choose the start date.';
   }
 
   return (
@@ -121,7 +122,7 @@ export default function PredefinedVacationTemplate({
       </div>
 
       <Typography variant='h2' sx={{ textAlign: 'center', marginTop: '60px' }}>
-        Choose the start date and number of people
+        Fill out the form and book your vacation
       </Typography>
 
       <div className='form-background in-container calendar-persons'>
@@ -132,6 +133,7 @@ export default function PredefinedVacationTemplate({
           <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
         </div>
+        <ChooseServicesForm />
       </div>
 
       <Grid container>

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
+import { challengeAndHedonism as organizedVacations } from '@/data/organizedVacations';
 
 export const metadata: Metadata = {
-  title: 'Book vacation - Challenge and hedonism adventure vacation',
-  description: 'Book vacation - Challenge and hedonism adventure vacation',
+  title: `Book vacation - ${organizedVacations.title}`,
+  description: `Book vacation - ${organizedVacations.description}`,
 };
 
-export default function ActivitiesLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className='page predefined-vacations'>{children}</div>;
 }

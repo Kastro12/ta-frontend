@@ -299,7 +299,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
     },
 
     {
-      id: '5',
+      id: '6',
       title: 'Day six',
       description: [
         ' Our final day begins in Topola, where we’ll visit one of the region’s renowned wineries. You’ll enjoy a tasting of premium wines, followed by an authentic lunch that will round off this unforgettable journey.',
