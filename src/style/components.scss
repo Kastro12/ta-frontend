@@ -744,8 +744,11 @@
 
     .image {
       width: 50%;
-      height: 300px;
       margin-left: 12px;
+      height: 300px;
+      .glide_default_image_carousel .glide__slides li {
+        height: 300px;
+      }
     }
   }
 
@@ -776,6 +779,9 @@
 
     .image {
       height: 400px;
+      .glide_default_image_carousel .glide__slides li {
+        height: 400px;
+      }
     }
   }
 } // TextImage1 END

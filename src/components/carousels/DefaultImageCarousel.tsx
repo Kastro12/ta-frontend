@@ -1,49 +1,63 @@
 'use client';
-import Carousel from 'react-material-ui-carousel';
+import { useEffect } from 'react';
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
 import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRounded';
+import Glide from '@glidejs/glide';
 
 export interface DefaultImageCarouselProps {
   images: {
     link: string;
     alt: string;
   }[];
-  setActiveImage: (activeImage: number | undefined) => void;
-  activeImage: number | undefined;
+  glide_classname: string;
+  setActiveImage: (activeImage: number) => void;
+  activeImage: number;
 }
 
 const DefaultImageCarousel = ({
   images,
   setActiveImage,
   activeImage,
+  glide_classname,
 }: DefaultImageCarouselProps) => {
+  useEffect(() => {
+    const glide = new Glide(`.${glide_classname}`, {
+      type: 'slider',
+      startAt: activeImage,
+      perView: 1,
+      keyboard: true,
+      rewind: false,
+      bound: true,
+    });
+
+    glide.on('run.after', function () {
+      setActiveImage(glide.index);
+    });
+
+    glide.mount();
+  }, [activeImage]);
+
   return (
-    <Carousel
-      className='DefaultImageCarouselComponent'
-      index={activeImage}
-      onChange={(e) => setActiveImage(e)}
-      fullHeightHover={false}
-      NextIcon={<ArrowCircleRightRoundedIcon className='arrow-style prev' />}
-      PrevIcon={<ArrowCircleLeftRoundedIcon className='arrow-style next' />}
-      navButtonsAlwaysVisible
-      duration={0}
-      indicators={false}
-      cycleNavigation={false}
-      autoPlay={false}
-      height={'100%'}
-      navButtonsWrapperProps={{
-        style: {
-          top: 'calc(50% - 15px)',
-          height: 'auto',
-        },
-      }}
-    >
-      {images.map((image, i) => (
-        <div className='image-wrap' key={i}>
-          <img src={image.link} alt={image.alt} loading='lazy' />
-        </div>
-      ))}
-    </Carousel>
+    <div className={`glide_default_image_carousel glide_arrows_center ${glide_classname}`}>
+      <div className='glide__track' data-glide-el='track'>
+        <ul className='glide__slides'>
+          {images &&
+            images.map((data, i) => (
+              <li key={i}>
+                <img src={data.link} alt={data.alt} />
+              </li>
+            ))}
+        </ul>
+      </div>
+      <div className='glide__arrows' data-glide-el='controls'>
+        <button className='glide__arrow glide__arrow--left' data-glide-dir='<'>
+          <ArrowCircleLeftRoundedIcon />
+        </button>
+        <button className='glide__arrow glide__arrow--right' data-glide-dir='>'>
+          <ArrowCircleRightRoundedIcon />
+        </button>
+      </div>
+    </div>
   );
 };
 

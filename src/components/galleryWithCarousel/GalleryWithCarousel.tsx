@@ -5,7 +5,6 @@ import { Modal } from '@mui/material';
 import { DefaultImageCarousel } from '../../components';
 import CloseIcon from '@mui/icons-material/Close';
 
-
 interface GalleryModalProps {
   isOpen: boolean;
   handleClose: (isOpen: boolean) => void;
@@ -13,8 +12,9 @@ interface GalleryModalProps {
     link: string;
     alt: string;
   }[];
-  setActiveImage: (activeImage: number | undefined) => void;
-  activeImage: number | undefined;
+  glide_classname: string;
+  setActiveImage: (activeImage: number) => void;
+  activeImage: number;
 }
 
 const GalleryModal = ({
@@ -23,6 +23,7 @@ const GalleryModal = ({
   images,
   setActiveImage,
   activeImage,
+  glide_classname,
 }: GalleryModalProps) => {
   return (
     <Modal
@@ -43,14 +44,21 @@ const GalleryModal = ({
           images={images}
           setActiveImage={setActiveImage}
           activeImage={activeImage}
+          glide_classname={`modal${glide_classname}`}
         />
       </div>
     </Modal>
   );
 };
 
-const GalleryWithCarousel = ({ images }: { images: { link: string; alt: string }[] }) => {
-  const [activeImage, setActiveImage] = useState<number | undefined>(0);
+const GalleryWithCarousel = ({
+  images,
+  glide_classname,
+}: {
+  images: { link: string; alt: string }[];
+  glide_classname: string;
+}) => {
+  const [activeImage, setActiveImage] = useState<number>(0);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const handleOpen = () => setIsOpen(true);
@@ -75,6 +83,7 @@ const GalleryWithCarousel = ({ images }: { images: { link: string; alt: string }
         images={images}
         setActiveImage={setActiveImage}
         activeImage={activeImage}
+        glide_classname={glide_classname}
       />
 
       <GalleryModal
@@ -83,6 +92,7 @@ const GalleryWithCarousel = ({ images }: { images: { link: string; alt: string }
         images={images}
         setActiveImage={setActiveImage}
         activeImage={activeImage}
+        glide_classname={glide_classname}
       />
     </div>
   );

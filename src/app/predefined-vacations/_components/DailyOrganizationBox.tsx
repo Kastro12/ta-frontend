@@ -5,10 +5,12 @@ const DailyOrganizationBox = ({
   title,
   description,
   images,
+  id,
 }: {
   title: string;
   description: string[] | undefined;
   images: { link: string; alt: string }[];
+  id: string;
 }) => {
   return (
     <div className='TextImage1'>
@@ -21,7 +23,7 @@ const DailyOrganizationBox = ({
         ))}
       </div>
       <div className='image'>
-        <GalleryWithCarousel images={images} />
+        <GalleryWithCarousel images={images} glide_classname={id} />
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export interface PredefinedVacationProps {
 }
 
 export const challengeAndHedonism: PredefinedVacationProps = {
-  id: '1',
+  id: 'challenge_and_hedonism_adventure',
   title: 'Challenge and hedonism adventure',
   description:
     'Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities.',
@@ -27,7 +27,7 @@ export const challengeAndHedonism: PredefinedVacationProps = {
   ],
   dailyOgranization: [
     {
-      id: '1',
+      id: 'challenge_and_hedonism_adventure_1',
       title: 'Day one',
       description: [
         'We depart from Belgrade to begin our adventure in the stunning Ovčar-Kablar Gorge.',
@@ -47,7 +47,7 @@ export const challengeAndHedonism: PredefinedVacationProps = {
       ],
     },
     {
-      id: '2',
+      id: 'challenge_and_hedonism_adventure_2',
       title: 'Day two',
       description: [
         'An exciting day awaits you in Zlatibor!',
@@ -75,7 +75,7 @@ export const challengeAndHedonism: PredefinedVacationProps = {
       ],
     },
     {
-      id: '3',
+      id: 'challenge_and_hedonism_adventure_3',
       title: 'Day three',
 
       description: [
@@ -92,10 +92,14 @@ export const challengeAndHedonism: PredefinedVacationProps = {
           link: '/activities/adventure/cycling/tara/mountain-biking-tara-2.jpg',
           alt: 'Mountain Biking on Tara 2',
         },
+        {
+          link: '/activities/adventure/cycling/tara/mountain-biking-tara-3.jpg',
+          alt: 'Mountain Biking on Tara 3',
+        },
       ],
     },
     {
-      id: '4',
+      id: 'challenge_and_hedonism_adventure_4',
       title: 'Day four',
       description: [
         'Today, we explore Tara National Park.',
@@ -118,7 +122,7 @@ export const challengeAndHedonism: PredefinedVacationProps = {
       ],
     },
     {
-      id: '5',
+      id: 'challenge_and_hedonism_adventure_5',
       title: 'Day five',
 
       description: [
@@ -142,7 +146,7 @@ export const challengeAndHedonism: PredefinedVacationProps = {
     },
 
     {
-      id: '6',
+      id: 'challenge_and_hedonism_adventure_6',
       title: 'Day six',
       description: [
         'The last day is reserved for our return to Belgrade, carrying with us a wealth of new memories and experiences from this unforgettable adventure through the natural wonders of Serbia.',
@@ -158,7 +162,7 @@ export const challengeAndHedonism: PredefinedVacationProps = {
 };
 
 export const pathwayFromAncientIimes: PredefinedVacationProps = {
-  id: '2',
+  id: 'from_ancient_to_modern_history',
   title: 'From Ancient to Modern History',
   description:
     "Explore ancient ruins, medieval castles, and modern landmarks, experiencing the region's evolution from ancient times to today.",
@@ -178,7 +182,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
   ],
   dailyOgranization: [
     {
-      id: '1',
+      id: 'from_ancient_to_modern_history_1',
       title: 'Day one',
       description: [
         'Our tour of Belgrade begins with a stroll through the magnificent Kalemegdan, where you’ll enjoy panoramic views of the confluence of the Sava and Danube rivers.',
@@ -201,7 +205,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '2',
+      id: 'from_ancient_to_modern_history_2',
       title: 'Day two',
       description: [
         'In the morning, we head to the Smederevo Fortress, one of the most beautiful medieval fortresses in Serbia, which holds stories of glorious times.',
@@ -224,7 +228,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '3',
+      id: 'from_ancient_to_modern_history_3',
       title: 'Day three',
       description: [
         'We begin the day with a visit to the Golubac Fortress, an impressive medieval structure guarding the Danube.',
@@ -250,7 +254,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '4',
+      id: 'from_ancient_to_modern_history_4',
       title: 'Day four',
       description: [
         'Our journey continues with a visit to Lepenski Vir, one of the most significant archaeological sites from the prehistoric period. This site will bring you closer to the life of one of Europe’s oldest civilizations.',
@@ -276,7 +280,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '5',
+      id: 'from_ancient_to_modern_history_5',
       title: 'Day five',
       description: [
         'Today, enjoy a unique boat ride through the Đerdap Gorge, also known as the “Iron Gates,” where you’ll take in the untouched nature and towering cliffs surrounding the Danube. ',
@@ -299,7 +303,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
     },
 
     {
-      id: '6',
+      id: 'from_ancient_to_modern_history_6',
       title: 'Day six',
       description: [
         ' Our final day begins in Topola, where we’ll visit one of the region’s renowned wineries. You’ll enjoy a tasting of premium wines, followed by an authentic lunch that will round off this unforgettable journey.',
@@ -324,7 +328,7 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
 };
 
 export const localCultureAndLandscapes: PredefinedVacationProps = {
-  id: '3',
+  id: 'exploring_local_culture_and_landscapes',
   title: 'Exploring local culture and landscapes',
   description:
     'Immerse in vibrant local culture and breathtaking landscapes. Discover local life, traditions, and unique scenic views.',
@@ -338,7 +342,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
   ],
   dailyOgranization: [
     {
-      id: '1',
+      id: 'exploring_local_culture_and_landscapes_1',
       title: 'Day one',
       description: [
         " Our adventure begins with a trip to Tara National Park, where you'll have the opportunity to admire the spectacular landscapes of this natural paradise. We’ll explore numerous viewpoints offering breathtaking views of dense forests, emerald-green rivers, and crystal-clear lakes.",
@@ -360,7 +364,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '2',
+      id: 'exploring_local_culture_and_landscapes_2',
       title: 'Day two',
       description: [
         'Today is dedicated to exciting horseback riding through the beautiful terrain of Tara. This activity will allow you to connect with nature in a special way, enjoying the peace and tranquility of mountain trails.',
@@ -382,7 +386,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '3',
+      id: 'exploring_local_culture_and_landscapes_3',
       title: 'Day three',
       description: [
         'Our exploration continues with a visit to Drvengrad, a charming ethno-village created by the famous director Emir Kusturica. This unique complex of wooden houses and museums offers a fascinating glimpse into traditional ways of life, while the atmosphere of the place makes the visit unforgettable. ',
@@ -404,7 +408,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '4',
+      id: 'exploring_local_culture_and_landscapes_4',
       title: 'Day four',
       description: [
         'We travel to an ethno homestead in Montenegro, where you’ll have the chance to tour a farm and enjoy a tasting of organic food. This day offers a unique opportunity to learn about traditional agricultural practices and taste local specialties.',
@@ -426,7 +430,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       ],
     },
     {
-      id: '5',
+      id: 'exploring_local_culture_and_landscapes_5',
       title: 'Day five',
       description: [
         'During the summer, people migrated from villages to the mountains due to the abundance of food and water. Today, we will follow these historic paths to the mountains, where at the destination we will be greeted with a meal prepared using traditional recipes from the area.',
@@ -449,7 +453,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
     },
 
     {
-      id: '6',
+      id: 'exploring_local_culture_and_landscapes_6',
       title: 'Day six',
       description: [
         'Climbing Mount Komovi is a challenge for all nature and adventure enthusiasts. As you ascend this magnificent mountain, you will enjoy spectacular views of the surrounding landscape, feeling a deep connection with nature.',
@@ -473,7 +477,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
     },
 
     {
-      id: '7',
+      id: 'exploring_local_culture_and_landscapes_7',
       title: 'Day seven',
       description: [
         'At the end of our tour, we will visit the old town of Maglič, a historical site known for its rich cultural heritage and charming ruins. As we explore the remains of this once-important city, we will learn more about its significance and history.',
@@ -498,7 +502,7 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
 };
 
 export const pannonianPlain: PredefinedVacationProps = {
-  id: '4',
+  id: 'heritage_of_the_pannonian_plain',
   title: 'Heritage of the Pannonian Plain',
   description:
     'Discover the rich heritage of the Pannonian Plains, where history and tradition blend with serene landscapes.',
@@ -513,7 +517,7 @@ export const pannonianPlain: PredefinedVacationProps = {
   ],
   dailyOgranization: [
     {
-      id: '1',
+      id: 'heritage_of_the_pannonian_plain_1',
       title: 'Day one',
       description: [
         "The Panonian tour begins with a visit to the Aviation Museum, where you'll uncover the fascinating history of aviation through a rich collection of aircraft and exhibits. ",
@@ -532,7 +536,7 @@ export const pannonianPlain: PredefinedVacationProps = {
       ],
     },
     {
-      id: '2',
+      id: 'heritage_of_the_pannonian_plain_2',
       title: 'Day two',
       description: [
         'Today takes us to Sremski Karlovci, a charming Baroque town renowned for its rich cultural heritage and famous wineries. We’ll explore historical landmarks, including the Karlovci Gymnasium and the Patriarchal Residence.',
@@ -554,7 +558,7 @@ export const pannonianPlain: PredefinedVacationProps = {
       ],
     },
     {
-      id: '3',
+      id: 'heritage_of_the_pannonian_plain_3',
       title: 'Day three',
       description: [
         'This day is dedicated to exploring Fruška Gora, one of Serbia’s most beautiful natural reserves. We’ll visit monasteries that have preserved the spiritual and cultural heritage of the region for centuries.',
@@ -581,7 +585,7 @@ export const pannonianPlain: PredefinedVacationProps = {
     },
 
     {
-      id: '4',
+      id: 'heritage_of_the_pannonian_plain_4',
       title: 'Day four',
       description: [
         'Today we head north to an ethno farm near Subotica, where you’ll experience the traditional Vojvodina lifestyle.',
@@ -604,7 +608,7 @@ export const pannonianPlain: PredefinedVacationProps = {
     },
 
     {
-      id: '5',
+      id: 'heritage_of_the_pannonian_plain_5',
       title: 'Day five',
       description: [
         'We will spend this day enjoying the peace of the lake, known for its clear water and picturesque landscapes.',

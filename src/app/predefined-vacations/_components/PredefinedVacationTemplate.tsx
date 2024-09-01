@@ -77,6 +77,7 @@ export default function PredefinedVacationTemplate({
               title={item.title}
               description={item.description}
               images={item.images}
+              id={item.id}
             />
           ))}
         </div>

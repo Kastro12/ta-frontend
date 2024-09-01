@@ -18,53 +18,29 @@
   }
 }
 
-.DefaultImageCarouselComponent {
-  height: 100%;
-  .image-wrap {
-    height: 100%;
-  }
-  button {
-    top: calc(50% - 15px);
-    height: auto;
-    padding: 0;
-    opacity: 0.6;
-
-    border: none;
-    background-color: transparent !important;
-    height: 100%;
-    margin: 0;
-    padding: 0px;
-    .arrow-style {
-      width: 32px;
-      height: 32px;
-      color: $gray1;
-    }
-    &:hover {
-      opacity: 1 !important;
-      background-color: transparent;
-      .arrow-style {
-        color: $white2;
-      }
-    }
-  }
-} //DefaultImageCarouselComponent END
-
 .modal-with-image-carousel {
   .content {
     height: 100%;
     background-color: $black1;
-    .DefaultImageCarouselComponent {
-      .image-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-          max-width: 620px;
-        }
-      }
 
-      button:hover {
-        opacity: 1 !important;
+    .glide_default_image_carousel {
+      height: 100%;
+      .glide__track {
+        height: 100%;
+        .glide__slides {
+          height: 100%;
+          li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 100%;
+              max-width: 700px;
+              border-radius: 4px;
+            }
+          }
+        }
       }
     }
   }
@@ -307,6 +283,16 @@
   @media screen and (min-width: $lg) {
     margin: 0 auto;
     width: 70%;
+  }
+}
+
+.glide_default_image_carousel {
+  position: relative;
+  .glide__slides {
+    li {
+      height: 280px;
+      object-fit: cover;
+    }
   }
 }
 

@@ -136,6 +136,26 @@
       .items {
         flex-direction: row;
         flex-wrap: wrap;
+        .TextImage1 {
+          .image {
+            .glide_default_image_carousel .glide__slides li {
+              height: 280px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: $md) {
+      .items {
+        .TextImage1 {
+          .image {
+            height: 310px;
+            .glide_default_image_carousel .glide__slides li {
+              height: 310px;
+            }
+          }
+        }
       }
     }
 
@@ -144,16 +164,9 @@
         .TextImage1 {
           .image {
             height: 340px;
-          }
-        }
-      }
-    }
-
-    @media screen and (min-width: 1360px) {
-      .items {
-        .TextImage1 {
-          .image {
-            height: 400px;
+            .glide_default_image_carousel .glide__slides li {
+              height: 340px;
+            }
           }
         }
       }

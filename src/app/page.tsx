@@ -68,13 +68,14 @@ export default function Home() {
         Activity categories
       </Typography>
       <Grid container>
-        {activityCategories.map((category) => (
+        {activityCategories.map((category, i) => (
           <Grid md={12} key={category.label} sx={{ mb: '32px' }}>
             <InfoWithBackgroundImage
               title={category.label}
               description={category.description}
               images={category.images}
               link={category.link}
+              glide_classname={`glid_${i}`}
             />
           </Grid>
         ))}
