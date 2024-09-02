@@ -112,16 +112,23 @@ export default function PredefinedVacationTemplate({
 
         <div className='box'>
           <Typography variant='h2'>Duration</Typography>
-          <Typography variant='body1'>
+          <Typography variant='body1' sx={{ fontSize: '15px' }}>
             {organizedVacations.dailyOgranization.length} days, you choose started day
           </Typography>
         </div>
 
         <div className='box'>
-          <Typography variant='h2'>Price</Typography>
-          <Typography variant='body1'>
-            3000&#8364; - <span className='info'>Price does not include flight cost</span>
-          </Typography>
+          <Typography variant='h2'>Price overview:</Typography>
+
+          <ul className='price'>
+            <li>Activity cost + €34 booking fee</li>
+            <li>
+              Accommodation cost + €34 booking fee <span>(optional)</span>
+            </li>
+            <li>
+              Transportation cost + €34 booking fee <span>(optional)</span>
+            </li>
+          </ul>
         </div>
       </div>
 

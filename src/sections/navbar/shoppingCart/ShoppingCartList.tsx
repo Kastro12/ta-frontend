@@ -79,6 +79,32 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
         </Grid>
 
         <Grid
+          md={12}
+          sx={{
+            display: 'flex',
+            width: '100%',
+            flexDirection: 'column',
+          }}
+          className='chosen-activities'
+        >
+          <Typography
+            variant='body1'
+            sx={{ marginTop: '18px', display: 'flex', justifyContent: 'space-between' }}
+          >
+            <span>Chosen activities ({chosenActivities.length})</span>
+            {chosenActivities.length > 0 ? (
+              <span style={{ fontSize: '13px' }}>
+                All takes <strong>{maxNumberOfDaysForChosenActivities} days</strong>
+              </span>
+            ) : (
+              ''
+            )}
+          </Typography>
+
+          <SortableList />
+        </Grid>
+
+        <Grid
           md={6}
           sx={{
             display: 'flex',
@@ -121,31 +147,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           </Typography>
         </Grid>
 
-        <Grid
-          md={12}
-          sx={{
-            display: 'flex',
-            width: '100%',
-            flexDirection: 'column',
-          }}
-          className='chosen-activities'
-        >
-          <Typography
-            variant='body1'
-            sx={{ marginTop: '18px', display: 'flex', justifyContent: 'space-between' }}
-          >
-            <span>Chosen activities ({chosenActivities.length})</span>
-            {chosenActivities.length > 0 ? (
-              <span style={{ fontSize: '13px' }}>
-                All takes <strong>{maxNumberOfDaysForChosenActivities} days</strong>
-              </span>
-            ) : (
-              ''
-            )}
-          </Typography>
 
-          <SortableList />
-        </Grid>
         <Grid
           md={12}
           sx={{

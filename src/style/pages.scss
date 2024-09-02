@@ -82,6 +82,15 @@
           line-height: 32px;
           font-weight: 400;
           color: $green1;
+          font-size: 15px;
+        }
+        &.price {
+          li {
+            span {
+              font-size: 13px;
+              font-style: italic;
+            }
+          }
         }
       }
       .info {
@@ -100,7 +109,7 @@
         margin-bottom: 24px;
         h2 {
           margin: 0;
-          width: 140px;
+          width: 170px;
           font-size: 16px;
           line-height: 28px;
         }
@@ -112,6 +121,9 @@
             width: auto;
             margin: 0 32px 8px 8px;
             line-height: 28px;
+          }
+          &.price {
+            flex-direction: column;
           }
         }
         p {
