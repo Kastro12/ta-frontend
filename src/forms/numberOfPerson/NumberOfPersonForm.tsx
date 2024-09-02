@@ -58,6 +58,7 @@ const NumberOfPersonForm = ({
             extraHandleDecrement={extraHandleIncrement}
             handleDecrement={handleDecrement}
             handleIncrement={handleIncrement}
+            handleChildAgeChange={handleChildAgeChange}
           />
 
           {isOpenChildrenField && (

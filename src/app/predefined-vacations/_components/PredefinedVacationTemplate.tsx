@@ -8,7 +8,10 @@ import { button, greenButton } from '@/utils/re-styledComponents';
 import CalendarFormWithHandleCalendarDate from '../_forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHandle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { addPredefinedVacation } from '@/store/vacation/predefinedVacationReducer';
+import {
+  addPredefinedVacation,
+  changeRadioGroup,
+} from '@/store/vacation/predefinedVacationReducer';
 import { useRouter } from 'next/navigation';
 import { Activity } from '@/utils/interfaces';
 import allActivities from '@/data/activities/allActivities';
@@ -134,7 +137,7 @@ export default function PredefinedVacationTemplate({
           <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
         </div>
-        <ChooseServicesForm />
+        <ChooseServicesForm changeRadioGroup={changeRadioGroup} />
       </div>
 
       <Grid container>

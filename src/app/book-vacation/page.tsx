@@ -1,9 +1,22 @@
 'use client';
+import { useEffect } from 'react';
 import { Container, Typography } from '@mui/material';
 import BookVacationFormWithSubmitHandle from './forms/BookVacationFormWithSubmitHandle';
 import { bookVacationInfo } from '@/data/commonText';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
+import { useRouter } from 'next/navigation';
 
 export default function BookVacation() {
+  const router = useRouter();
+  const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
+
+  useEffect(() => {
+    if (chosenActivities.length < 1) {
+      router.push('./activities');
+    }
+  }, []);
+
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Typography variant='h1' sx={{ mb: '0' }}>

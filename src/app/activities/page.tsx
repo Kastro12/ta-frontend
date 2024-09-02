@@ -4,6 +4,7 @@ import { Container, Typography } from '@mui/material';
 
 import CalendarFormWithHandleCalendarDate from './forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from './forms/NumberOfPersonsFormWithHandle';
+import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
 
 import FilterForm from './forms/FilterForm';
 import BoxOfActivity from './components/BoxOfActivity';
@@ -20,6 +21,7 @@ import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import AddActivityDialog from '@/components/dialog/AddActivityDialog';
 import ZoomedBoxOfActivity from './components/ZoomedBoxOfActivity';
 import { Alert } from '@/components';
+import { changeRadioGroup } from '@/store/vacation/vacationReducer';
 
 export default function Activities() {
   const dispatch = useDispatch();
@@ -119,6 +121,7 @@ export default function Activities() {
           <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
         </div>
+        <ChooseServicesForm changeRadioGroup={changeRadioGroup} />
       </div>
 
       <div className='title-filter'>

@@ -22,7 +22,6 @@ const handleBookVacationSubmit = (Component: React.ComponentType<any>) => {
       (state: RootState) => state.predefinedVacation.chosenPredefinedVacation
     );
     const childrenYears = useSelector((state: RootState) => state.predefinedVacation.childrenYears);
-
     const accommodation_radio = useSelector(
       (state: RootState) => state.predefinedVacation.accommodation_radio
     );
@@ -68,13 +67,12 @@ const handleBookVacationSubmit = (Component: React.ComponentType<any>) => {
       formData.append('adults', `${adults}`);
       formData.append('children', `${children}`);
 
-
       formData.append('accommodation_radio', `${accommodation_radio}`);
       formData.append('transportation_radio', `${transportation_radio}`);
 
       if (children > 0 && childrenYears.length > 0) {
-        childrenYears.forEach((age, index) => {
-          formData.append(`childrenAge[${index}]`, `${age}`);
+        childrenYears.forEach((data, index) => {
+          formData.append(`childrenAge[${index}]`, `${data.years}`);
         });
       }
 

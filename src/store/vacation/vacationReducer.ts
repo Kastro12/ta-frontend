@@ -15,6 +15,8 @@ export interface IssueInitialState {
     differenceBetweenStartFinishDate: number;
     maxNumberOfDaysForChosenActivities: number;
   };
+  accommodation_radio: 'accommodation_yes' | 'accommodation_no' | null | string;
+  transportation_radio: 'transportation_yes' | 'transportation_no' | null | string;
 }
 const initialState: IssueInitialState = {
   startDate: null,
@@ -25,6 +27,8 @@ const initialState: IssueInitialState = {
   children: 0,
   childrenYears: [],
   confirmAddingActivity: null,
+  accommodation_radio: 'accommodation_yes',
+  transportation_radio: 'transportation_yes',
 };
 
 export interface TheDateChangeProps {
@@ -34,6 +38,17 @@ export interface TheDateChangeProps {
 
 interface handleIncrementDecrement {
   type: 'adults' | 'children';
+}
+
+export interface RadioGroupProps {
+  type: 'accommodation_radio' | 'transportation_radio';
+  value:
+    | 'accommodation_yes'
+    | 'accommodation_no'
+    | 'transportation_yes'
+    | 'transportation_no'
+    | string
+    | null;
 }
 
 export const vacationSlice = createSlice({
@@ -48,6 +63,11 @@ export const vacationSlice = createSlice({
         state[`${action.payload.type}`] = null;
       }
       if (action.payload.type == 'startDate') state.finishDate = null;
+    },
+
+    changeRadioGroup: (state, action: PayloadAction<RadioGroupProps>) => {
+      if (typeof action.payload.type == 'string')
+        state[`${action.payload.type}`] = action.payload.value;
     },
 
     addActivity: (state, action: PayloadAction<Activity>) => {
@@ -151,5 +171,6 @@ export const {
   removeChildrenYears,
   clearVacation,
   stopAddingActivity,
+  changeRadioGroup,
 } = vacationSlice.actions;
 export default vacationSlice.reducer;

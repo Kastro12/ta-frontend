@@ -38,7 +38,6 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
         dispatch(removeChildrenYears(currentData.position));
       } else if (value) {
         dispatch(addChildrenYears({ years: value.value, position: index }));
-
         if (childrenYears.length + 1 == children) setIsOpenChildrenField(false);
       }
     };

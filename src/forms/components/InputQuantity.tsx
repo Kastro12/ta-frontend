@@ -10,6 +10,7 @@ interface QuantityInput {
   extraHandleIncrement?: (() => void) | null;
   handleDecrement: any;
   handleIncrement: any;
+  handleChildAgeChange?: (index: number, value: any) => void;
 }
 
 const QuantityInput = ({
@@ -19,6 +20,7 @@ const QuantityInput = ({
   extraHandleIncrement,
   handleDecrement,
   handleIncrement,
+  handleChildAgeChange,
 }: QuantityInput) => {
   const dispatch = useDispatch();
 
@@ -29,6 +31,10 @@ const QuantityInput = ({
         onClick={() => {
           dispatch(handleDecrement({ type }));
           if (extraHandleDecrement && extraHandleDecrement !== null) extraHandleDecrement();
+
+          if (handleChildAgeChange && quantity > 0 && type === 'children') {
+            handleChildAgeChange(quantity - 1, null);
+          }
         }}
       >
         <RemoveOutlinedIcon />

@@ -11,7 +11,6 @@ import {
 } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { useDispatch } from 'react-redux';
-import { changeRadioGroup } from '@/store/vacation/predefinedVacationReducer';
 
 export const radioStyle = {
   color: '#899199',
@@ -49,7 +48,7 @@ const FormLabelStyle = {
   },
 };
 
-const ChooseServicesForm = () => {
+const ChooseServicesForm = ({ changeRadioGroup }: any) => {
   const dispatch = useDispatch();
 
   const [accommodationPopover, setAccommodationPopover] = useState<HTMLButtonElement | null>(null);

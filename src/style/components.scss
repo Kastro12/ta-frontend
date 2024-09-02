@@ -182,12 +182,11 @@
 } //BoxOfActivity END
 
 .ZoomedBoxOfActivity.MuiDialog-root.dialog-wrapper {
-  height: calc(100vh - 64px);
-  margin: 16px;
+  margin: 46px 16px;
 
   .MuiDialog-container {
     align-items: flex-start;
-    height: calc(100vh - 30px);
+    height: calc(100vh - 92px);
     background-color: transparent;
     .MuiDialog-paper {
       box-shadow: none;
@@ -222,6 +221,7 @@
           height: 200px;
           border-radius: 4px;
           object-fit: cover;
+          border-top-right-radius: 0;
         }
         .content {
           margin: 10px 0 6px 0;
@@ -253,8 +253,10 @@
     }
   }
 
-  @media screen and (min-width: $md) {
+  @media screen and (min-width: $lg) {
+    margin: 16px;
     .MuiDialog-container {
+      height: calc(100vh - 32px);
     }
   }
 }
