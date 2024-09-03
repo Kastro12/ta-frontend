@@ -4,18 +4,16 @@ import { Divider, Container, Typography } from '@mui/material';
 import Link from 'next/link';
 import { Button } from '@mui/material';
 import { button, transparentLightButton } from '@/utils/re-styledComponents/index';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+// import InstagramIcon from '@mui/icons-material/Instagram';
+// import FacebookIcon from '@mui/icons-material/Facebook';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
-import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 
 const Footer = () => {
   const pages = useMemo(
     () => [
       { name: 'Create your vacation', icon: CreateOutlinedIcon, link: '/activities' },
-      { name: 'Predefined', icon: RouteOutlinedIcon, link: '/predefined-vacation' },
-      { name: 'Contact', icon: MailOutlineOutlinedIcon, link: '/contact' },
+      { name: 'Predefined vacations', icon: RouteOutlinedIcon, link: '/#predefined-vacations' },
     ],
     []
   );
@@ -24,9 +22,9 @@ const Footer = () => {
     <footer>
       <Container maxWidth='lg' className='custom-container'>
         <Grid container spacing={3}>
-          <Grid xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={4}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>
-              General
+              Services
             </Typography>
 
             <ul>
@@ -47,7 +45,7 @@ const Footer = () => {
             </ul>
           </Grid>
 
-          <Grid xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={4}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>
               Overview
             </Typography>
@@ -76,15 +74,6 @@ const Footer = () => {
                 <Button
                   sx={{ ...button, ...transparentLightButton }}
                   LinkComponent={Link}
-                  href={'/staff'}
-                >
-                  Staff
-                </Button>
-              </li>
-              <li className='list'>
-                <Button
-                  sx={{ ...button, ...transparentLightButton }}
-                  LinkComponent={Link}
                   href={'/vehicle-fleet'}
                 >
                   Vehicle fleet
@@ -93,7 +82,7 @@ const Footer = () => {
             </ul>
           </Grid>
 
-          <Grid xs={12} sm={6} md={3}>
+          <Grid xs={12} sm={6} md={4}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>
               Opportunities
             </Typography>
@@ -117,10 +106,20 @@ const Footer = () => {
                   Partnerships
                 </Button>
               </li>
+
+              <li className='list'>
+                <Button
+                  sx={{ ...button, ...transparentLightButton }}
+                  LinkComponent={Link}
+                  href={'/contact'}
+                >
+                  Contact us
+                </Button>
+              </li>
             </ul>
           </Grid>
 
-          <Grid xs={12} sm={6} md={3}>
+          {/* <Grid xs={12} sm={6} md={3}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>
               Connect with us
             </Typography>
@@ -146,7 +145,7 @@ const Footer = () => {
                 </Button>
               </li>
             </ul>
-          </Grid>
+          </Grid> */}
         </Grid>
 
         <Divider sx={{ my: 2 }} />

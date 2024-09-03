@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { button, transparentLightButton } from '@/utils/re-styledComponents/index';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
-import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import DrawerList from './DrawerList';
 import ShoppingCartList from './shoppingCart/ShoppingCartList';
@@ -18,13 +17,13 @@ import Image from 'next/image';
 const Navbar = () => {
   const pages = useMemo(
     () => [
-      { name: 'Create your vacation', icon: CreateOutlinedIcon, link: '/activities' },
+      { name: 'About us', link: '/about-us' },
+      { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/activities' },
       {
         name: 'Predefined vacations',
         icon: RouteOutlinedIcon,
         link: '/#predefined-vacations',
       },
-      { name: 'Contact', icon: MailOutlineOutlinedIcon, link: '/contact' },
     ],
     []
   );
@@ -90,7 +89,7 @@ const Navbar = () => {
                 aria-controls='menu-appbar'
                 aria-haspopup='true'
                 onClick={handleOpenNavMenu}
-                sx={{ ...button, ...transparentLightButton, p: 0, mr: 1 }}
+                sx={{ ...button, ...transparentLightButton, p: '12px' }}
               >
                 <MenuIcon sx={{ fontSize: '26px' }} />
               </IconButton>
@@ -101,7 +100,7 @@ const Navbar = () => {
                 onClose={handleOpenNavMenu}
                 className='drawerComponent'
               >
-                <DrawerList pages={pages} handleOpenDrawer={handleOpenNavMenu} />
+                <DrawerList handleOpenDrawer={handleOpenNavMenu} />
               </Drawer>
             </Box>
             <Box
@@ -116,7 +115,7 @@ const Navbar = () => {
                   <Button
                     key={page.name}
                     sx={{ ...button, ...transparentLightButton, ...{ my: 2, mr: 2 } }}
-                    startIcon={<page.icon />}
+                    startIcon={page.icon ? <page.icon /> : false}
                     LinkComponent={Link}
                   >
                     {page.name}
@@ -127,7 +126,7 @@ const Navbar = () => {
 
             <Box sx={{ flexGrow: 0 }}>
               <IconButton
-                sx={{ ...button, ...transparentLightButton, p: '13px!important' }}
+                sx={{ ...button, ...transparentLightButton, p: '12px!important' }}
                 id='shoppingCartIcon'
                 onClick={handleOpenShoppingCart}
                 size='small'

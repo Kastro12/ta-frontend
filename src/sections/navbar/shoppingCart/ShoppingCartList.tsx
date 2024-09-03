@@ -13,7 +13,7 @@ interface DrawerList {
   handleOpenDrawer: () => void;
   pages: {
     name: string;
-    icon: SvgIconComponent;
+    icon?: SvgIconComponent | React.ElementType;
     link: string;
   }[];
 }
@@ -62,8 +62,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             sx={{
               ...button,
               cursor: 'pointer',
-              padding: '8px!important',
-              right: '-4px',
+              padding: '12px!important',
               color: '#212b3b',
             }}
             onClick={handleOpenDrawer}

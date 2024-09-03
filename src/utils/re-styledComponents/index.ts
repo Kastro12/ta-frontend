@@ -49,7 +49,7 @@ export const lightButton = {
 };
 
 export const transparentLightButton = {
-  color: '#f5f5f5',
+  color: '#fff',
   '&:hover': {
     color: '#fff',
     backgroundColor: 'rgba(245, 245, 245, 0.14)',
