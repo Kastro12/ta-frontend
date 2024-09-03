@@ -3,13 +3,11 @@ import { SvgIconComponent } from '@mui/icons-material';
 import { button, greenButton, disabledButton } from '@/utils/re-styledComponents/index';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
-import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { SortableList } from './sortableList';
 import { useRouter, usePathname } from 'next/navigation';
 import { useMaxNumberOfDaysForChosenActivities } from '@/utils/date';
-
-import { useTotalPrice } from '@/utils/priceCalculation';
+import ActivityList from './component/ActivityList';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -29,7 +27,6 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
   const adults = useSelector((state: RootState) => state.vacation.adults);
   const children = useSelector((state: RootState) => state.vacation.children);
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
-
   let errorAlert = null;
 
   if (!startDate && chosenActivities.length == 0) {
@@ -39,8 +36,6 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
   } else if (chosenActivities.length == 0) {
     errorAlert = 'Choose activities.';
   }
-
-  const totalPrice = useTotalPrice();
 
   const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
 
@@ -74,7 +69,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             onClick={handleOpenDrawer}
             title='Close cart'
           >
-            <ArrowRightAltOutlinedIcon />
+            <CloseOutlinedIcon />
           </IconButton>
         </Grid>
 
@@ -89,11 +84,16 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
         >
           <Typography
             variant='body1'
-            sx={{ marginTop: '18px', display: 'flex', justifyContent: 'space-between' }}
+            sx={{
+              marginTop: '18px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              marginBottom: '6px',
+            }}
           >
-            <span>Chosen activities ({chosenActivities.length})</span>
+            <span>Chosen activities:</span>
             {chosenActivities.length > 0 ? (
-              <span style={{ fontSize: '13px' }}>
+              <span style={{ fontSize: '12px' }}>
                 All takes <strong>{maxNumberOfDaysForChosenActivities} days</strong>
               </span>
             ) : (
@@ -101,11 +101,13 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             )}
           </Typography>
 
-          <SortableList />
+          {chosenActivities.map((activity, i) => {
+            return <ActivityList activity={activity} key={i} />;
+          })}
         </Grid>
 
         <Grid
-          md={6}
+          md={12}
           sx={{
             display: 'flex',
             alignItems: 'flex-start',
@@ -114,40 +116,44 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             width: '100%',
           }}
         >
-          <Typography variant='body1' sx={{ marginTop: '18px', fontWeight: '600' }}>
-            <span className={'date-label'}>
-              Start date <span className='required-start'>*&nbsp;</span>:
-            </span>
-            {startDate ? startDate : <span className='no-data required'>No date</span>}
-          </Typography>
-
-          <Typography variant='body1' sx={{ marginTop: '18px', fontWeight: '600' }}>
-            <span className='date-label'>Finish date:</span>
-            {finishDate ? finishDate : <span className='no-data'>No date</span>}
+          <Typography variant='body1' sx={{ marginTop: '16px', fontWeight: '600' }}>
+            <span className={'date-label'}>Dates:</span>
+            {startDate ? startDate : <span className='no-data required'>Start date</span>}{' '}
+            &nbsp;-&nbsp;
+            {finishDate ? finishDate : <span className='no-data'>Finish date</span>}
           </Typography>
         </Grid>
 
-        <Grid
-          md={6}
-          sx={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            width: '100%',
-          }}
-        >
-          <Typography variant='body1' sx={{ marginTop: '18px', fontWeight: '600' }}>
-            <span className={'date-label'}>Adults:</span>
-            {adults ? adults : <span className='no-data required'>No date</span>}
+        <div className='persons'>
+          <div>
+            <Typography variant='body1' sx={{ marginTop: '16px', fontWeight: '600' }}>
+              <span className={'date-label'}>Adults:</span>
+              {adults}
+            </Typography>
+          </div>
+          <div>
+            <Typography variant='body1' sx={{ marginTop: '16px', fontWeight: '600' }}>
+              <span className='date-label'>Children:</span>
+              {children}
+            </Typography>
+          </div>
+        </div>
+
+        <Grid md={12} className='price_overview'>
+          <Typography variant='body1' sx={{ mt: 0 }}>
+            Price overview:
           </Typography>
-          <Typography variant='body1' sx={{ marginTop: '18px', fontWeight: '600' }}>
-            <span className='date-label'>Children:</span>
-            {children}
-          </Typography>
+
+          <ul className='price_list'>
+            <li>Activities + €34 booking fee</li>
+            <li>
+              Accommodations + €34 booking fee <span>(optional)</span>
+            </li>
+            <li>
+              Transportations + €34 booking fee <span>(optional)</span>
+            </li>
+          </ul>
         </Grid>
-
-
         <Grid
           md={12}
           sx={{
@@ -162,20 +168,6 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             <Alert severity='warning' icon={<InfoOutlinedIcon fontSize='small' />}>
               {errorAlert}
             </Alert>
-          )}
-
-          {!errorAlert && totalPrice && (
-            <div>
-              <Typography variant='body1' sx={{ marginTop: '18px', fontWeight: '600' }}>
-                <span style={{ fontWeight: '300', margin: '0 12px 0 0' }}>Price:</span>
-                {Math.round(totalPrice)} &#8364;
-              </Typography>
-
-              <Typography variant='body1' sx={{ marginTop: '6px!important', marginBottom: '18px' }}>
-                The price is not fixed and may be lower. After you book, our team will create a
-                detailed and optimized plan for all activities, potentially reducing costs.
-              </Typography>
-            </div>
           )}
 
           {pathname !== '/book-vacation' && (

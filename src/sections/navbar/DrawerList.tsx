@@ -2,7 +2,7 @@ import { Box, Button, Grid, Typography, IconButton } from '@mui/material';
 import { SvgIconComponent } from '@mui/icons-material';
 import Link from 'next/link';
 import { button, transparentLightButton } from '@/utils/re-styledComponents/index';
-import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -53,12 +53,12 @@ const DrawerList = ({ handleOpenDrawer, pages }: DrawerList) => {
               padding: '8px!important',
               right: '-4px',
               color: '#f5f5f5',
-              top:'12px'
+              top: '12px',
             }}
             onClick={handleOpenDrawer}
             title='Close cart'
           >
-            <ArrowRightAltOutlinedIcon />
+            <CloseOutlinedIcon />
           </IconButton>
         </Grid>
       </Grid>

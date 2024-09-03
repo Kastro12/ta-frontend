@@ -111,10 +111,6 @@ export const vacationSlice = createSlice({
       state.chosenActivitiesAction = null;
     },
 
-    updateChosenActivities: (state, action: PayloadAction<Activity[]>) => {
-      state.chosenActivities = action.payload;
-    },
-
     deleteVacation: (state) => {
       state = initialState;
     },
@@ -163,7 +159,6 @@ export const {
   changeTheDate,
   addActivity,
   removeActivity,
-  updateChosenActivities,
   clearActivityAction,
   handleIncrement,
   handleDecrement,

@@ -121,12 +121,12 @@ export default function PredefinedVacationTemplate({
           <Typography variant='h2'>Price overview:</Typography>
 
           <ul className='price'>
-            <li>Activity cost + €34 booking fee</li>
+            <li>Activities + €34 booking fee</li>
             <li>
-              Accommodation cost + €34 booking fee <span>(optional)</span>
+              Accommodations + €34 booking fee <span>(optional)</span>
             </li>
             <li>
-              Transportation cost + €34 booking fee <span>(optional)</span>
+              Transportations + €34 booking fee <span>(optional)</span>
             </li>
           </ul>
         </div>

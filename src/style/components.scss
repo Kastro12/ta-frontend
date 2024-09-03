@@ -276,7 +276,7 @@
       display: flex;
       align-items: center;
       font-size: 14px;
-      margin-top: 18px;
+      margin-top: 16px;
     }
 
     .date-label {
@@ -334,6 +334,32 @@
       }
     }
 
+    .persons {
+      display: flex;
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+
+    .price_overview {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 16px;
+      .MuiTypography-root {
+        margin-top: 0;
+      }
+      .price_list {
+        li {
+          font-size: 14px;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
     @media screen and (min-width: $md) {
       .main-title {
         margin-bottom: 20px;
@@ -341,6 +367,10 @@
     }
 
     @media screen and (min-width: $lg) {
+      .MuiTypography-root {
+        font-size: 15px;
+      }
+
       .submit-wrapper {
         display: flex;
         align-items: center;
@@ -363,6 +393,9 @@
 .shoppingCartActivityList {
   margin-bottom: 12px;
   box-shadow: $boxShadow1;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
   li {
     display: flex;
     width: 100%;
@@ -434,18 +467,12 @@
           right: 0;
           top: 0;
         }
-        &.drag {
-          left: 0;
-          top: 0;
-          background-color: $transparentwhite2;
-          border-radius: 4px;
+      }
 
-          .MuiButtonBase-root {
-            svg {
-              width: 18px;
-              height: 18px;
-              color: $navyBlue1;
-            }
+      @media screen and (min-width: $lg) {
+        .info {
+          p {
+            font-size: 15px;
           }
         }
       }

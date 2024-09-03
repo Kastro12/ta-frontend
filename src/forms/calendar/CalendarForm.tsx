@@ -49,7 +49,7 @@ const CalendarForm = ({
           minDate={new Date()}
           maxDate={maxFinishDate}
           placeholderText='Start date'
-          dateFormat='d MMMM, yyyy'
+          dateFormat='d MMM, yyyy'
           isClearable={true}
           required
           onFocus={(e) => e.target.blur()}
@@ -73,7 +73,7 @@ const CalendarForm = ({
           onChange={(date) => handleDateChange('finishDate', date)}
           minDate={minFinishDate}
           placeholderText='Finish date'
-          dateFormat='d MMMM, yyyy'
+          dateFormat='d MMM, yyyy'
           isClearable={!disabledFinishDate}
           onFocus={(e) => e.target.blur()}
           customInput={
