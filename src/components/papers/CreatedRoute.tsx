@@ -54,31 +54,7 @@ export default function CreatedRoute({ data }: SliderBarProps) {
             Read more
           </Button>
         </div>
-        {/* <img src={data.imageLink} alt={data.alt} loading='lazy' /> */}
       </Box>
     </div>
   );
 }
-
-// export default function CreatedRoute({ data }: SliderBarProps) {
-//   return (
-//     <Link className='CreatedRouteComponent' href={data.link}>
-//       <Box className='content'>
-//         <Box className='text'>
-//           <Typography variant='h3'>{data.title}</Typography>
-//           <Typography variant='subtitle1'>
-//             {truncateText({ text: data.description, maxLength: 200 })}
-//           </Typography>
-//           <Button
-//             sx={{ ...button, ...linkGreenButton, width: '90px' }}
-//             variant='outlined'
-//             size='small'
-//           >
-//             Read more
-//           </Button>
-//         </Box>
-//         <img src={data.imageLink} alt={data.alt} loading='lazy' />
-//       </Box>
-//     </Link>
-//   );
-// }

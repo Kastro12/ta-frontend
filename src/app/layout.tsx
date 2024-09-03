@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import '../style/appStyle.scss';
 
 export const metadata: Metadata = {
-  title: 'Vacation in Serbia',
-  description: 'Vacation in Serbia',
+  title: 'Tailor-made vacations',
+  description: 'Tailor-made vacations',
   robots: 'noindex, nofollow',
 };
 

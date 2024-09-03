@@ -107,7 +107,7 @@ export default function Activities() {
         />
       )}
 
-      <Typography variant='h1'>Create your Vacation</Typography>
+      <Typography variant='h1'>Create vacation</Typography>
 
       {activitiesToDisplay && activitiesToDisplay.length > 0 && (
         <>

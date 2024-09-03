@@ -47,7 +47,7 @@ export default function Home() {
               href={'./activities'}
               LinkComponent={Link}
             >
-              Create your vacation
+              Create vacation
             </Button>
           </Grid>
         </div>

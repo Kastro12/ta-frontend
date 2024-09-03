@@ -13,7 +13,7 @@ interface DrawerList {
 const DrawerList = ({ handleOpenDrawer }: DrawerList) => {
   const pages = useMemo(
     () => [
-      { name: 'Create your vacation', icon: CreateOutlinedIcon, link: '/activities' },
+      { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/activities' },
       { name: 'Predefined vacations', icon: RouteOutlinedIcon, link: '/#predefined-vacations' },
     ],
     []
