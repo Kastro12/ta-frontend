@@ -11,7 +11,7 @@ export default function AccommodationAndDining() {
         <Image
           src='/main-banner/apartment_3_living_room.jpg'
           alt='apartment living room'
-          style={{ objectFit: 'cover',borderRadius:'4px' }}
+          style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
           fill
           priority
@@ -32,9 +32,10 @@ export default function AccommodationAndDining() {
       <Grid container spacing={4}>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            We prioritize your comfort and culinary enjoyment. Our accommodations are selected to
-            provide you with the highest level of luxury and relaxation. From cozy boutique hotels
-            to lavish resorts, every option ensures a restful and comfortable stay.
+            If you choose our accommodation reservation service, we prioritize your comfort and
+            culinary enjoyment. Our accommodations are selected to provide you with the highest
+            level of luxury and relaxation. From cozy boutique hotels to lavish resorts, every
+            option ensures a restful and comfortable stay.
           </Typography>
         </Grid>
         <Grid xs={12} lg={4}>
@@ -49,7 +50,7 @@ export default function AccommodationAndDining() {
           <Typography variant='body1'>
             Whether you&apos;re unwinding after a day of adventures or enjoying a meal at one of our
             recommended establishments, our commitment to excellence guarantees that your
-            accommodation and dining experiences will be outstanding.{' '}
+            accommodation and dining experiences will be outstanding.
           </Typography>
         </Grid>
       </Grid>

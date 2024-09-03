@@ -11,7 +11,7 @@ export default function VehicleFleet() {
         <Image
           src='/main-banner/mercedes-benz-v220d.jpg'
           alt='mercedes benz v220d'
-          style={{ objectFit: 'cover',borderRadius:'4px' }}
+          style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
           fill
           priority
@@ -32,8 +32,9 @@ export default function VehicleFleet() {
       <Grid container spacing={4}>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            We ensure your journey is as comfortable and safe as it can be. Our fleet of luxury
-            vehicles is selected to provide you with the utmost comfort and reliability.
+            If you choose our transportation arrangement service, we ensure your journey is as
+            comfortable and safe as it can be. Our fleet of luxury vehicles is selected to provide
+            you with the utmost comfort and reliability.
           </Typography>
         </Grid>
         <Grid xs={12} lg={4}>
@@ -44,8 +45,8 @@ export default function VehicleFleet() {
         </Grid>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            Our main goal is for you to focus on your vacation and enjoy the ride. Whether it&apos;s
-            a scenic drive or transportation between activities, we provide a seamless, comfortable,
+            Our main goal is for you to focus on your vacation and enjoy the ride. Whether it's a
+            scenic drive or transportation between activities, we provide a seamless, comfortable,
             and safe travel experience from start to finish.
           </Typography>
         </Grid>
