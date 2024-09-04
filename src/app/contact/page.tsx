@@ -1,6 +1,9 @@
 'use client';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Button } from '@mui/material';
 import ContactForm from './forms/ContactForm';
+
+import Link from 'next/link';
+import { button, linkGreenButton } from '@/utils/re-styledComponents';
 
 export default function Contact() {
   return (
@@ -20,7 +23,15 @@ export default function Contact() {
         variant='body1'
         sx={{ maxWidth: '940px', m: '0 auto 32px auto', fontWeight: '300', textAlign: 'center' }}
       >
-        Telephone: +44 7987 030 451
+        Telephone:&nbsp;
+        <Button
+          sx={{ ...button, ...linkGreenButton, position: 'relative', top: '-1px' }}
+          variant='outlined'
+          LinkComponent={Link}
+          href={'tel:+381645431031'}
+        >
+          +381 64 543 1031
+        </Button>
       </Typography>
 
       <div className='form-background in-container' style={{ maxWidth: '940px', margin: '0 auto' }}>

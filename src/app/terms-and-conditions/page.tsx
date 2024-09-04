@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Button } from '@mui/material';
+import Link from 'next/link';
+import { button, linkGreenButton, greenButton } from '@/utils/re-styledComponents';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 export default function AboutUs() {
   return (
@@ -11,8 +14,9 @@ export default function AboutUs() {
       <Typography variant='h2'>1. Introduction</Typography>
 
       <Typography variant='body1'>
-        Welcome to &apos;Tailor-made vacations&apos;. By accessing and using our services, you agree to comply
-        with and be bound by the following terms and conditions. Please review them carefully.
+        Welcome to &apos;Tailor-made vacations&apos;. By accessing and using our services, you agree
+        to comply with and be bound by the following terms and conditions. Please review them
+        carefully.
       </Typography>
 
       <Typography variant='h2'>2. Booking and reservations</Typography>
@@ -164,15 +168,30 @@ export default function AboutUs() {
         For any questions or concerns regarding these terms and conditions, please contact us at:
       </Typography>
 
-      <ul style={{ marginBottom: '12px', paddingLeft: '30px', listStyle: 'disc' }}>
+      <ul style={{ marginBottom: '12px', paddingLeft: '0px' }}>
         <li>
           <Typography variant='body1'>
-            <strong>Email:</strong> [Your Email Address]
+            <Button
+              startIcon={<MailOutlineOutlinedIcon />}
+              sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '16px',mb: '9px' } }}
+              variant='outlined'
+              LinkComponent={Link}
+              href='/contact'
+            >
+              Contact
+            </Button>
           </Typography>
         </li>
         <li>
           <Typography variant='body1'>
-            <strong>Phone:</strong> [Your Phone Number]
+            <Button
+              sx={{ ...button, ...linkGreenButton }}
+              variant='outlined'
+              LinkComponent={Link}
+              href={'mailto:tailormadevacationserbia@gmail.com'}
+            >
+              tailormadevacationserbia@gmail.com
+            </Button>
           </Typography>
         </li>
       </ul>
