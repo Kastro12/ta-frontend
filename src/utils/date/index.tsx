@@ -76,19 +76,6 @@ export const useCalculateDaysDifference = () => {
   if (!startDate || !finishDate) return 0;
 
   return getDateDifference({ startDate, finishDate });
-
-  // const start = dateFromString(startDate);
-  // const finish = dateFromString(finishDate);
-
-  // if (!start || !finish) return 0;
-
-  // const startUTC = new Date(Date.UTC(start.getFullYear(), start.getMonth(), start.getDate()));
-  // const finishUTC = new Date(Date.UTC(finish.getFullYear(), finish.getMonth(), finish.getDate()));
-
-  // const diffTime = Math.abs(finishUTC.getTime() - startUTC.getTime());
-  // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  // return diffDays;
 };
 
 export const useMaxNumberOfDaysForChosenActivities = () => {

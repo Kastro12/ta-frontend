@@ -45,7 +45,7 @@ const ContactForm = () => {
         formData.append(key, data[key]);
       }
     }
-    formData.append('access_key', `${process.env.NEXT_PUBLIC_ACCESS_KEY}`);
+    formData.append('access_key', `${process.env.NEXT_PUBLIC_ACCESS_KEY_2}`);
 
     const object = Object.fromEntries(formData.entries());
     const json = JSON.stringify(object);
