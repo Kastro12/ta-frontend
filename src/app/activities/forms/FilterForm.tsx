@@ -42,6 +42,8 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
   }, []);
 
   useEffect(() => {
+    setIsAllActivitiesLoaded(false);
+    dispatch(updateCurrentPage(1));
     dispatch(filterActivityList({ category: categoryParam, location: locationParam }));
   }, [categoryParam, locationParam]);
 
@@ -52,8 +54,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
 
   const handleFilterChange = useCallback(
     (e: { label: string; value: string; id: string } | null, type: 'category' | 'location') => {
-      setIsAllActivitiesLoaded(false);
-      dispatch(updateCurrentPage(1));
+
       let filterObject = {};
 
       switch (type) {
