@@ -1,15 +1,3 @@
-// async function getActivities() {
-//   const res = await fetch('http://localhost:8080/activities', {
-//     cache: 'force-cache',
-//     // next: { revalidate: 0 },
-//   });
-
-//   if (!res.ok) {
-//     throw new Error('Failed to fetch data');
-//   }
-
-//   return res.json();
-// }
 'use client';
 import { Container, Button, Typography } from '@mui/material';
 import { InfoWithBackgroundImage } from '@/components';
@@ -20,7 +8,7 @@ import { button, greenButton } from '@/utils/re-styledComponents';
 import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
 import Image from 'next/image';
-import ZoomedBoxOfActivity from '@/app/activities/components/ZoomedBoxOfActivity';
+import ZoomedBoxOfActivity from '@/app/create-vacation/components/ZoomedBoxOfActivity';
 
 export default function Home() {
   return (
@@ -44,7 +32,7 @@ export default function Home() {
             <Button
               sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '16px' } }}
               variant='outlined'
-              href={'./activities'}
+              href={'./create-vacation'}
               LinkComponent={Link}
             >
               Create vacation

@@ -13,7 +13,7 @@ export default function BookVacation() {
 
   useEffect(() => {
     if (chosenActivities.length < 1) {
-      router.push('./activities');
+      router.push('./create-vacation');
     }
   }, []);
 

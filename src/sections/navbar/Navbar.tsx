@@ -18,7 +18,7 @@ const Navbar = () => {
   const pages = useMemo(
     () => [
       { name: 'About us', link: '/about-us' },
-      { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/activities' },
+      { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/create-vacation' },
       {
         name: 'Predefined vacations',
         icon: RouteOutlinedIcon,

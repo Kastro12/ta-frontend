@@ -13,7 +13,7 @@ const activityCategories: activityCategories[] = [
     label: 'Adventure',
     description:
       'The Adventure category offers thrilling activities like rugged mountain trails, pristine river navigation, and cycling through stunning landscapes. These adventures challenge your endurance and connect you with Serbia’s most captivating environments. Ideal for thrill-seekers and outdoor enthusiasts, these experiences promise unforgettable memories and a deep sense of accomplishment.',
-    link: 'http://localhost:3000/activities?category=adventure',
+    link: 'http://localhost:3000/create-vacation?category=adventure',
     images: [
       {
         alt: 'Canyoning nevidio',
@@ -35,7 +35,7 @@ const activityCategories: activityCategories[] = [
     label: 'Landscape',
     description:
       'Explore Serbia’s majestic natural wonders, from dramatic canyons and lush parks to tranquil lakes and rolling hills. Perfect for relaxation, exploration, and photography, each destination offers breathtaking scenery. Whether hiking through forests, admiring mountain views, or strolling along riverbanks, these landscapes promise a deep connection with nature and an enriching experience. Ideal for nature lovers and scenic enthusiasts.',
-    link: 'http://localhost:3000/activities?category=landscape',
+    link: 'http://localhost:3000/create-vacation?category=landscape',
     images: [
       {
         alt: 'Nacionalni park tara',
@@ -57,7 +57,7 @@ const activityCategories: activityCategories[] = [
     label: 'History & culture',
     description:
       "Immerse yourself in Serbia's rich history through ancient fortresses, archaeological sites, and historical landmarks. The History and Culture category invites you to explore past civilizations, medieval strongholds, and regional traditions. Perfect for history enthusiasts and culture seekers, these journeys promise to deepen your understanding and appreciation of Serbia’s storied past.",
-    link: 'http://localhost:3000/activities?category=history_and_culture',
+    link: 'http://localhost:3000/create-vacation?category=history_and_culture',
     images: [
       {
         alt: 'Viminicijum',
@@ -80,7 +80,7 @@ const activityCategories: activityCategories[] = [
     label: 'Relaxation & flavors',
     description:
       "Indulge in a blend of serenity and exquisite tastes with our Relaxation & Flavors category. Whether you're unwinding at luxurious spas, exploring the rich traditions of wineries, or savoring local delicacies at ethno farms, this category offers experiences that nourish both body and soul. Perfect for those seeking tranquility and a deep connection with local culture, these activities promise a soothing escape into the heart of Serbia’s most relaxing and flavorful destinations.",
-    link: 'http://localhost:3000/activities?category=relaxation_and_flavors',
+    link: 'http://localhost:3000/create-vacation?category=relaxation_and_flavors',
     images: [
       {
         alt: 'Aleksandrovic vinarija',

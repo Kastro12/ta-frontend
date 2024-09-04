@@ -12,7 +12,7 @@ import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 const Footer = () => {
   const pages = useMemo(
     () => [
-      { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/activities' },
+      { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/create-vacation' },
       { name: 'Predefined vacations', icon: RouteOutlinedIcon, link: '/#predefined-vacations' },
     ],
     []
