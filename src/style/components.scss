@@ -775,8 +775,21 @@
       width: 50%;
       margin-left: 12px;
       height: 300px;
-      .glide_default_image_carousel .glide__slides li {
-        height: 300px;
+      .glide_default_image_carousel {
+        height: 100%;
+        .glide__track {
+          height: 100%;
+          border-radius: 4px;
+          .glide__slides {
+            height: 100%;
+            li {
+              height: 300px;
+              width: 50% !important;
+              margin: 0 !important;
+              height: 100%;
+            }
+          }
+        }
       }
     }
   }
