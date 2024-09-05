@@ -51,6 +51,12 @@ export default function InfoWithBackgroundImage({
         </div>
       </div>
       <div className='image'>
+
+
+
+
+
+        
         <GalleryWithCarousel images={images} glide_classname={glide_classname} />
       </div>
     </div>
