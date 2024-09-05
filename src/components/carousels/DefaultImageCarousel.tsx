@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
 import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRounded';
 import Glide from '@glidejs/glide';
+import Image from 'next/image';
 
 export interface DefaultImageCarouselProps {
   images: {
@@ -52,8 +53,15 @@ const DefaultImageCarousel = ({
         <ul className='glide__slides'>
           {images &&
             images.map((data, i) => (
-              <li key={i}>
-                <img src={data.link} alt={data.alt} />
+              <li key={i} style={{position:'relative'}}>
+                <Image
+                  src={data.link}
+                  alt={data.alt}
+                  loading='lazy'
+                  fill
+                  style={{ objectFit: 'cover', borderRadius: '4px' }}
+                  sizes='100%'
+                />
               </li>
             ))}
         </ul>

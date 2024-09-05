@@ -60,6 +60,7 @@ const SliderBarActivities = ({ serverData }) => {
                     loading='lazy'
                     fill
                     style={{ objectFit: 'cover', borderRadius: '4px' }}
+                    sizes='100%'
                   />
                   <Box className='text'>
                     <Typography variant='h3'>{data.title}</Typography>
