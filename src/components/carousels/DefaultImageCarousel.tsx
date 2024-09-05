@@ -28,7 +28,7 @@ const DefaultImageCarousel = ({
       perView: 1,
       keyboard: true,
       rewind: false,
-      bound: true,
+      bound: false,
       gap: 1,
     });
 

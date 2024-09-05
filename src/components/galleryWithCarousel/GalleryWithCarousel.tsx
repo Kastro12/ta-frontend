@@ -48,41 +48,6 @@ const GalleryModal = ({
           activeImage={activeImage}
           glide_classname={`modal${glide_classname}`}
         />
-
-        {/* <div className={`glide_default_image_carousel glide_arrows_center modal_glide`}>
-          <div className='glide__track' data-glide-el='track'>
-            <ul className='glide__slides'>
-              {images &&
-                images.map((data, i) => (
-                  <li key={i} style={{ position: 'relative' }}>
-                    <Image
-                      src={data.link}
-                      alt={data.alt}
-                      loading='lazy'
-                      fill
-                      style={{ objectFit: 'cover', borderRadius: '4px' }}
-                      sizes='100%'
-                    />
-                  </li>
-                ))}
-            </ul>
-          </div>
-          <div className='glide__arrows' data-glide-el='controls'>
-            <button className='glide__arrow glide__arrow--left' data-glide-dir='<'>
-              <ArrowCircleLeftRoundedIcon />
-            </button>
-            <button className='glide__arrow glide__arrow--right' data-glide-dir='>'>
-              <ArrowCircleRightRoundedIcon />
-            </button>
-          </div>
-        </div> */}
-
-        {/* <DefaultImageCarousel
-          images={images}
-          setActiveImage={setActiveImage}
-          activeImage={activeImage}
-          glide_classname={`modal${glide_classname}`}
-        /> */}
       </div>
     </Modal>
   );
