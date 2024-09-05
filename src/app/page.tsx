@@ -56,9 +56,9 @@ export default function Home() {
       <Typography variant='h2' sx={{ mt: '28px' }}>
         Activity categories
       </Typography>
-      <Grid container>
+      {/* <Grid container> */}
         {activityCategories.map((category, i) => (
-          <Grid md={12} key={category.label} sx={{ mb: '32px' }}>
+          // <Grid md={12} key={category.label} sx={{ mb: '32px' }}>
             <InfoWithBackgroundImage
               title={category.label}
               description={category.description}
@@ -66,9 +66,9 @@ export default function Home() {
               link={category.link}
               glide_classname={`glid_${i}`}
             />
-          </Grid>
+          // </Grid>
         ))}
-      </Grid>
+      {/* </Grid> */}
     </Container>
   );
 }
