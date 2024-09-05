@@ -32,9 +32,9 @@ const DefaultImageCarousel = ({
       bound: true,
     });
 
-    glide.on('run.after', function () {
-      setActiveImage(glide.index);
-    });
+    // glide.on('run.after', function () {
+    //   setActiveImage(glide.index);
+    // });
 
     glide.mount();
   }, [activeImage]);
