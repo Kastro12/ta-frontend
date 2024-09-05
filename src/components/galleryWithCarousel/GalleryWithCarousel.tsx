@@ -64,6 +64,16 @@ const GalleryWithCarousel = ({
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
 
+  console.log(
+    'GalleryWithCarousel',
+    'images:',
+    images,
+    'glide_classname',
+    glide_classname,
+    'activeImage:',
+    activeImage
+  );
+
   return (
     <div style={{ position: 'relative', height: '100%' }}>
       <ZoomInOutlinedIcon

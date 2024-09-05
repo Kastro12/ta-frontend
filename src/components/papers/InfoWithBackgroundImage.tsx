@@ -18,6 +18,8 @@ export default function InfoWithBackgroundImage({
   link: string;
   glide_classname: string;
 }) {
+  console.log('InfoWithBackgroundImage', 'images:', images, 'glide_classname', glide_classname);
+
   return (
     <div className='TextImage1'>
       <div className='text'>
@@ -51,12 +53,6 @@ export default function InfoWithBackgroundImage({
         </div>
       </div>
       <div className='image'>
-
-
-
-
-
-        
         <GalleryWithCarousel images={images} glide_classname={glide_classname} />
       </div>
     </div>

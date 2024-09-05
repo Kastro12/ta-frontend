@@ -10,6 +10,8 @@ import { organizedVacations } from '@/data/organizedVacations';
 import Image from 'next/image';
 import ZoomedBoxOfActivity from '@/app/create-vacation/components/ZoomedBoxOfActivity';
 
+  console.log("HOMEPAGE activityCategories",activityCategories)
+
 export default function Home() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
