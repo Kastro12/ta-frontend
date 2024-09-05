@@ -28,6 +28,7 @@ const DefaultImageCarousel = ({
       keyboard: true,
       rewind: false,
       bound: true,
+      gap: 1,
     });
 
     glide.on('run.after', function () {
