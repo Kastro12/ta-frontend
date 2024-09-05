@@ -757,7 +757,7 @@
 
     .text {
       padding: 0;
-      width: 50%;
+      width: calc(50% - 12px);
       display: flex;
       flex-direction: column;
       margin-right: 12px;
@@ -772,7 +772,7 @@
     }
 
     .image {
-      width: 50%;
+      width: calc(50% - 12px);
       margin-left: 12px;
       height: 300px;
       .glide_default_image_carousel {

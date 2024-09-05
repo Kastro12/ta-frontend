@@ -79,7 +79,7 @@ const activityCategories: activityCategories[] = [
     value: 'relaxation_and_flavors',
     label: 'Relaxation & flavors',
     description:
-      "Indulge in a blend of serenity and exquisite tastes with our Relaxation & Flavors category. Whether you're unwinding at luxurious spas, exploring the rich traditions of wineries, or savoring local delicacies at ethno farms, this category offers experiences that nourish both body and soul. Perfect for those seeking tranquility and a deep connection with local culture, these activities promise a soothing escape into the heart of Serbia’s most relaxing and flavorful destinations.",
+      'Indulge in serenity and exquisite tastes with our Relaxation & Flavors category. From luxurious spas and traditional wineries to local delicacies at ethno farms, these experiences nourish body and soul. Perfect for those seeking tranquility and a deep connection with local culture, it’s a soothing escape into Serbia’s most relaxing and flavorful spots.',
     link: 'http://localhost:3000/create-vacation?category=relaxation_and_flavors',
     images: [
       {

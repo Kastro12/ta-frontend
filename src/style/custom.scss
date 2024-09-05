@@ -319,10 +319,13 @@
 
 .glide_default_image_carousel {
   position: relative;
-  .glide__slides {
-    li {
-      height: 280px;
-      object-fit: cover;
+  .glide__track {
+    .glide__slides {
+      border-radius: 4px;
+      li {
+        height: 280px;
+        object-fit: cover;
+      }
     }
   }
 }
