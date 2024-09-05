@@ -60,15 +60,15 @@ export default function AboutUs() {
           </Typography>
         </Grid>
 
-        <Grid container spacing={0}>
+        
           <Grid xs={12}>
             <Typography variant='h2' sx={{ m: 0 }}>
               Our services
             </Typography>
           </Grid>
-        </Grid>
+       
 
-        <Grid container spacing={4}>
+       
           <Grid xs={12} lg={6}>
             <Typography variant='h3' sx={{ mb: 2 }}>
               Create vacation
@@ -103,7 +103,7 @@ export default function AboutUs() {
             </Typography>
           </Grid>
         </Grid>
-      </Grid>
+     
     </Container>
   );
 }

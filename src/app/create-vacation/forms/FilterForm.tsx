@@ -54,7 +54,6 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
 
   const handleFilterChange = useCallback(
     (e: { label: string; value: string; id: string } | null, type: 'category' | 'location') => {
-
       let filterObject = {};
 
       switch (type) {
@@ -97,6 +96,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
           components={{
             IndicatorSeparator: () => null,
           }}
+          aria-label='Select a category'
         />
       </div>
       <div className='field'>
@@ -117,6 +117,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
           components={{
             IndicatorSeparator: () => null,
           }}
+          aria-label='Select a location'
         />
       </div>
     </div>
