@@ -20,6 +20,8 @@ const DefaultImageCarousel = ({
   activeImage,
   glide_classname,
 }: DefaultImageCarouselProps) => {
+  console.log("activeImage",activeImage)
+  console.log("images",images)
   useEffect(() => {
     const glide = new Glide(`.${glide_classname}`, {
       type: 'slider',
