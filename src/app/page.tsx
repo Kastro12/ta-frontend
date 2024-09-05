@@ -65,6 +65,7 @@ export default function Home() {
               images={category.images}
               link={category.link}
               glide_classname={`glid_${i}`}
+              key={i}
             />
           // </Grid>
         ))}
