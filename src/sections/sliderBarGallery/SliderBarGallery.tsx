@@ -34,10 +34,18 @@ const SliderBarGallery = ({ serverData }: any) => {
         </ul>
       </div>
       <div className='glide__arrows' data-glide-el='controls'>
-        <button className='glide__arrow glide__arrow--left' data-glide-dir='<'>
+        <button
+          className='glide__arrow glide__arrow--left'
+          data-glide-dir='<'
+          aria-label='Previous slide'
+        >
           <ArrowCircleLeftRoundedIcon />
         </button>
-        <button className='glide__arrow glide__arrow--right' data-glide-dir='>'>
+        <button
+          className='glide__arrow glide__arrow--right'
+          data-glide-dir='>'
+          aria-label='Next slide'
+        >
           <ArrowCircleRightRoundedIcon />
         </button>
       </div>

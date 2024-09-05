@@ -9,7 +9,6 @@ import { zoomActivity } from '@/store/activities/activitiesReducer';
 import { useDispatch } from 'react-redux';
 import ZoomInOutlinedIcon from '@mui/icons-material/ZoomInOutlined';
 
-
 const SliderBarActivities = ({ serverData }) => {
   useEffect(() => {
     new Glide('.glide_top_activity', {
@@ -70,10 +69,18 @@ const SliderBarActivities = ({ serverData }) => {
           </ul>
         </div>
         <div className='glide__arrows' data-glide-el='controls'>
-          <button className='glide__arrow glide__arrow--left' data-glide-dir='<'>
+          <button
+            className='glide__arrow glide__arrow--left'
+            data-glide-dir='<'
+            aria-label='Previous slide'
+          >
             <ArrowCircleLeftRoundedIcon />
           </button>
-          <button className='glide__arrow glide__arrow--right' data-glide-dir='>'>
+          <button
+            className='glide__arrow glide__arrow--right'
+            data-glide-dir='>'
+            aria-label='Next slide'
+          >
             <ArrowCircleRightRoundedIcon />
           </button>
         </div>

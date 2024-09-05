@@ -17,7 +17,7 @@ export default function Home() {
       <ZoomedBoxOfActivity />
       <Grid container className='header-section' sx={{ position: 'relative' }}>
         <Image
-          src='/main-banner/road_through_colorful_forest.jpg'
+          src='/main-banner/road_through_colorful_forest.webp'
           alt='Road through colorful forest'
           style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
@@ -56,9 +56,7 @@ export default function Home() {
       <Typography variant='h2' sx={{ mt: '28px' }}>
         Activity categories
       </Typography>
-      {/* <Grid container> */}
         {activityCategories.map((category, i) => (
-          // <Grid md={12} key={category.label} sx={{ mb: '32px' }}>
             <InfoWithBackgroundImage
               title={category.label}
               description={category.description}
@@ -67,9 +65,7 @@ export default function Home() {
               glide_classname={`glid_${i}`}
               key={i}
             />
-          // </Grid>
         ))}
-      {/* </Grid> */}
     </Container>
   );
 }
