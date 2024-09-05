@@ -34,10 +34,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            img {
+            .image_content {
               width: 100%;
-              max-width: 700px;
-              border-radius: 4px;
+              height: 100%;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    .content {
+      .glide_default_image_carousel {
+        .glide__track {
+          .glide__slides {
+            li {
+              .image_content {
+                width: 660px;
+              }
             }
           }
         }
@@ -64,7 +80,7 @@
       }
     }
 
-    .content{
+    .content {
       padding: 0 0 0 24px;
     }
   }

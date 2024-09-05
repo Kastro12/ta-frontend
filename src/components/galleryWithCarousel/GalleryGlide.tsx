@@ -5,7 +5,7 @@ import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRound
 import Glide from '@glidejs/glide';
 import Image from 'next/image';
 
-export interface DefaultImageCarouselProps {
+export interface GalleryGlideProps {
   images: {
     link: string;
     alt: string;
@@ -15,14 +15,14 @@ export interface DefaultImageCarouselProps {
   activeImage: number;
 }
 
-const DefaultImageCarousel = ({
+const GalleryGlide = ({
   images,
   setActiveImage,
   activeImage,
   glide_classname,
-}: DefaultImageCarouselProps) => {
+}: GalleryGlideProps) => {
   useEffect(() => {
-    const glide = new Glide(`.${glide_classname}`, {
+    const glide = new Glide(`.${glide_classname}_modal`, {
       type: 'slider',
       startAt: activeImage,
       perView: 1,
@@ -40,20 +40,22 @@ const DefaultImageCarousel = ({
   }, [activeImage]);
 
   return (
-    <div className={`glide_default_image_carousel glide_arrows_center ${glide_classname}`}>
+    <div className={`glide_default_image_carousel glide_arrows_center ${glide_classname}_modal`}>
       <div className='glide__track' data-glide-el='track'>
         <ul className='glide__slides'>
           {images &&
             images.map((data, i) => (
               <li key={i} style={{ position: 'relative' }}>
-                <Image
-                  src={data.link}
-                  alt={data.alt}
-                  loading='lazy'
-                  fill
-                  style={{ objectFit: 'cover', borderRadius: '4px' }}
-                  sizes='100%'
-                />
+                <div className='image_content'>
+                  <Image
+                    src={data.link}
+                    alt={data.alt}
+                    loading='lazy'
+                    fill
+                    style={{ objectFit: 'contain', borderRadius: '4px' }}
+                    sizes='100%'
+                  />
+                </div>
               </li>
             ))}
         </ul>
@@ -70,4 +72,4 @@ const DefaultImageCarousel = ({
   );
 };
 
-export default DefaultImageCarousel;
+export default GalleryGlide;
