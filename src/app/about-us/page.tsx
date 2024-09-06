@@ -60,50 +60,46 @@ export default function AboutUs() {
           </Typography>
         </Grid>
 
-        
-          <Grid xs={12}>
-            <Typography variant='h2' sx={{ m: 0 }}>
-              Our services
-            </Typography>
-          </Grid>
-       
-
-       
-          <Grid xs={12} lg={6}>
-            <Typography variant='h3' sx={{ mb: 2 }}>
-              Create vacation
-            </Typography>
-            <Typography variant='body1' className='text'>
-              With this service, you have the freedom to choose your activities, and we&apos;ll
-              handle the rest. We&apos;ll book your activities and can also find accommodations for
-              you, offering a selection of clean, well-equipped standard or luxury options. This
-              service costs €34.
-            </Typography>
-
-            <Typography variant='body1' className='text'>
-              We can also arrange transportation with standard or luxury vehicles, all in excellent
-              condition. The transportation service is €34. Additionally, we&apos;ll recommend
-              dining options, whether in restaurants or at your hotel.
-            </Typography>
-          </Grid>
-          <Grid xs={12} lg={6}>
-            <Typography variant='h3' sx={{ mb: 2 }}>
-              Predefined vacations
-            </Typography>
-            <Typography variant='body1' className='text'>
-              For those who prefer a set itinerary, we offer predefined vacation packages. These
-              vacations come with a fully planned schedule of activities, allowing you to simply
-              select your departure date and enjoy a worry-free experience. Everything is taken care
-              of, so all you need to do is pack your bags and go.
-            </Typography>
-
-            <Typography variant='body1' className='text'>
-              Both services allow you to choose the start date and specify the number of people in
-              your group, ensuring that the vacation is tailored to your needs.
-            </Typography>
-          </Grid>
+        <Grid xs={12}>
+          <Typography variant='h2' sx={{ m: 0 }}>
+            Our services
+          </Typography>
         </Grid>
-     
+
+        <Grid xs={12} lg={6}>
+          <Typography variant='h3' sx={{ mb: 2 }}>
+            Create vacation
+          </Typography>
+          <Typography variant='body1' className='text'>
+            With this service, you have the freedom to choose your activities, and we&apos;ll handle
+            the rest. We&apos;ll book your activities and can also find accommodations for you,
+            offering a selection of clean, well-equipped standard or luxury options. This service
+            costs €34.
+          </Typography>
+
+          <Typography variant='body1' className='text'>
+            We can also arrange transportation with standard or luxury vehicles, all in excellent
+            condition. The transportation service is €34. Additionally, we&apos;ll recommend dining
+            options, whether in restaurants or at your hotel.
+          </Typography>
+        </Grid>
+        <Grid xs={12} lg={6}>
+          <Typography variant='h3' sx={{ mb: 2 }}>
+            Predefined vacations
+          </Typography>
+          <Typography variant='body1' className='text'>
+            For those who prefer a set itinerary, we offer predefined vacation packages. These
+            vacations come with a fully planned schedule of activities, allowing you to simply
+            select your departure date and enjoy a worry-free experience. Everything is taken care
+            of, so all you need to do is pack your bags and go.
+          </Typography>
+
+          <Typography variant='body1' className='text'>
+            Both services allow you to choose the start date and specify the number of people in
+            your group, ensuring that the vacation is tailored to your needs.
+          </Typography>
+        </Grid>
+      </Grid>
     </Container>
   );
 }

@@ -321,16 +321,20 @@
     }
 
     .MuiAlert-root {
-      padding: 0 12px;
+      padding: 8 12px;
       color: $orange2;
       background-color: transparent;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       letter-spacing: 1px;
       .MuiAlert-icon {
         color: $orange2;
         margin-right: 10px;
+        padding: 0;
+      }
+      .MuiAlert-message {
+        padding: 0;
       }
     }
 
@@ -425,6 +429,7 @@
     }
     .content {
       width: 100%;
+      padding: 0 0 0 16px !important;
       .info {
         display: flex;
         flex-direction: column;
@@ -439,7 +444,7 @@
 
         p {
           margin: 0;
-          padding: 0 12px;
+          padding: 0 12px 0 0;
           font-size: 14px;
           line-height: 22px !important;
           font-weight: 600;
@@ -447,7 +452,7 @@
           width: calc(100% - 46px);
         }
         .gray-label {
-          padding: 0 12px;
+          padding: 0 12px 0 0;
           line-height: 22px !important;
           font-weight: 300;
         }
@@ -780,7 +785,7 @@
           .glide__slides {
             li {
               height: 300px;
-              width: 100%!important;
+              width: 100% !important;
             }
           }
         }

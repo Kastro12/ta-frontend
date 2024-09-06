@@ -8,6 +8,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { useRouter, usePathname } from 'next/navigation';
 import { useMaxNumberOfDaysForChosenActivities } from '@/utils/date';
 import ActivityList from './component/ActivityList';
+import Link from 'next/link';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -28,13 +29,17 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
   const children = useSelector((state: RootState) => state.vacation.children);
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   let errorAlert = null;
+  let errorAlertLink = null;
 
   if (!startDate && chosenActivities.length == 0) {
     errorAlert = 'Choose a start date and choose activities.';
+    errorAlertLink = '/create-vacation';
   } else if (!startDate) {
     errorAlert = 'Choose a start date.';
+    errorAlertLink = '/create-vacation';
   } else if (chosenActivities.length == 0) {
     errorAlert = 'Choose activities.';
+    errorAlertLink = '/create-vacation#activity_offer_position';
   }
 
   const maxNumberOfDaysForChosenActivities = useMaxNumberOfDaysForChosenActivities();
@@ -163,10 +168,14 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           }}
           className=' submit-wrapper'
         >
-          {errorAlert && (
-            <Alert severity='warning' icon={<InfoOutlinedIcon fontSize='small' />}>
-              {errorAlert}
-            </Alert>
+          {errorAlert && errorAlertLink && (
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Link href={errorAlertLink} className='alert-link' onClick={handleOpenDrawer}>
+                <Alert severity='warning' icon={<InfoOutlinedIcon fontSize='small' />}>
+                  {errorAlert}
+                </Alert>
+              </Link>
+            </div>
           )}
 
           {pathname !== '/book-vacation' && (

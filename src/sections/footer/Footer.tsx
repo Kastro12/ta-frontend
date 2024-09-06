@@ -13,7 +13,7 @@ const Footer = () => {
   const pages = useMemo(
     () => [
       { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/create-vacation' },
-      { name: 'Predefined vacations', icon: RouteOutlinedIcon, link: '/#predefined-vacations' },
+      { name: 'Predefined vacations', icon: RouteOutlinedIcon, link: '/#predefined-vacations-position' },
     ],
     []
   );

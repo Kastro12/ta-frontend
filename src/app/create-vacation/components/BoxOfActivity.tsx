@@ -10,7 +10,6 @@ import { activityDurationInString } from '@/utils/string';
 import { zoomActivity } from '@/store/activities/activitiesReducer';
 import Image from 'next/image';
 
-
 interface BoxOfActivityProps {
   data: Activity;
   isSelected: boolean;
@@ -25,19 +24,25 @@ export default function BoxOfActivity({ data, isSelected }: BoxOfActivityProps) 
     <Paper elevation={3} className='BoxOfActivity'>
       <Box className='content-wrapper'>
         <div className='image-wrapper'>
-        <Image
-          src={images[0].link}
-          alt={images[0].alt}
-          loading='lazy'
-          onClick={() => dispatch(zoomActivity(data))}
-          style={{ objectFit: 'cover' }}
-          sizes='100%'
-          fill
-        />
+          <Image
+            src={images[0].link}
+            alt={images[0].alt}
+            loading='lazy'
+            onClick={() => dispatch(zoomActivity(data))}
+            style={{ objectFit: 'cover' }}
+            sizes='100%'
+            fill
+          />
         </div>
         <Box className='content'>
           <Box className='text'>
-            <Typography variant='h3'>{title}</Typography>
+            <Typography
+              variant='h3'
+              sx={{ cursor: 'pointer' }}
+              onClick={() => dispatch(zoomActivity(data))}
+            >
+              {title}
+            </Typography>
             <div
               style={{
                 display: 'flex',

@@ -10,7 +10,6 @@ import { organizedVacations } from '@/data/organizedVacations';
 import Image from 'next/image';
 import ZoomedBoxOfActivity from '@/app/create-vacation/components/ZoomedBoxOfActivity';
 
-
 export default function Home() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
@@ -40,7 +39,10 @@ export default function Home() {
             </Button>
           </Grid>
         </div>
-        <span id='predefined-vacations' style={{ position: 'absolute', bottom: '56px' }}></span>
+        <span
+          id='predefined-vacations-position'
+          style={{ position: 'absolute', bottom: '56px' }}
+        ></span>
       </Grid>
 
       <Typography variant='h2'>Predefined vacations</Typography>
@@ -56,16 +58,16 @@ export default function Home() {
       <Typography variant='h2' sx={{ mt: '28px' }}>
         Activity categories
       </Typography>
-        {activityCategories.map((category, i) => (
-            <InfoWithBackgroundImage
-              title={category.label}
-              description={category.description}
-              images={category.images}
-              link={category.link}
-              glide_classname={`glid_${i}`}
-              key={i}
-            />
-        ))}
+      {activityCategories.map((category, i) => (
+        <InfoWithBackgroundImage
+          title={category.label}
+          description={category.description}
+          images={category.images}
+          link={category.link}
+          glide_classname={`glid_${i}`}
+          key={i}
+        />
+      ))}
     </Container>
   );
 }

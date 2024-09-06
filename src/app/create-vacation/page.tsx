@@ -125,6 +125,7 @@ export default function Activities() {
       </div>
 
       <div className='title-filter'>
+        <div style={{ position: 'absolute', top: '-96px' }} id='activity_offer_position'></div>
         <Typography variant='h2'>Activity offer ({activitiesLength})</Typography>
         <FilterForm setIsAllActivitiesLoaded={setIsAllActivitiesLoaded} />
       </div>

@@ -25,7 +25,9 @@ export default function CreatedRoute({ data }: SliderBarProps) {
   return (
     <div className='CreatedRouteComponent'>
       <Box className='content'>
-        <Typography variant='h3'>{data.title}</Typography>
+        <Typography variant='h3'>
+          <Link href={data.link}>{data.title}</Link>
+        </Typography>
         <Typography variant='body1' className='text'>
           {data.description}
         </Typography>

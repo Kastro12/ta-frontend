@@ -65,7 +65,13 @@ export default function PredefinedVacationTemplate({
 
       <Typography
         variant='body1'
-        sx={{ maxWidth: '640px', m: '32px auto 32px auto', textAlign: 'center' }}
+        sx={{
+          maxWidth: '640px',
+          m: '32px auto 32px auto',
+          textAlign: 'center',
+          fontSize: '18px',
+          lineHeight: '28px',
+        }}
       >
         {organizedVacations.description}
       </Typography>

@@ -22,7 +22,7 @@ const Navbar = () => {
       {
         name: 'Predefined vacations',
         icon: RouteOutlinedIcon,
-        link: '/#predefined-vacations',
+        link: '/#predefined-vacations-position',
       },
     ],
     []
