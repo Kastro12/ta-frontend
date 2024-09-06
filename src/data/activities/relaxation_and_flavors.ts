@@ -43,7 +43,6 @@ const winery: Activity[] = [
       "Vinarija i Salaš Zvonko Bogdan, located in the picturesque Pannonian plains near Subotica, offers an exquisite blend of tradition and modernity. The estate is a tribute to the region's rich cultural heritage, combining the serenity of a traditional salaš with state-of-the-art winemaking facilities.",
       "Renowned for producing some of the finest wines in the region, the winery's vineyards are carefully cultivated to reflect the unique terroir of the area. Visitors can explore the entire winemaking process, from the vineyards to the cellar, where each bottle is crafted with precision and passion.",
       "In addition to wine tastings, guests can experience the rustic charm of the salaš, a traditional Pannonian farmhouse, which has been elegantly restored to offer luxurious comfort. The estate also features a gourmet restaurant that serves dishes made from locally sourced ingredients, perfectly paired with the winery's exceptional wines.",
-      "Whether you're a wine enthusiast or simply seeking a tranquil escape, Vinarija i Salaš Zvonko Bogdan provides an unforgettable experience, combining the best of Pannonian hospitality with the elegance of fine winemaking.",
     ],
     location: 'Subotica',
     locationValue: 'subotica',

@@ -7,18 +7,17 @@ const rafting: Activity[] = [
     description:
       "Embark on an exhilarating rafting adventure on the Tara River, one of the Balkans' most stunning rivers. Navigate breathtaking canyons and experience untouched nature.",
     longDescritpion: [
-      'Rafting on the Tara River, often called the "Tear of Europe," is an adventure that combines the thrill of rapids with breathtaking natural beauty. Flowing through Europe\'s deepest canyon, the river offers both serene stretches for enjoying the stunning landscapes and exciting rapids that cater to different skill levels.',
+      'Rafting on the Tara, which is often called the "Tear of Europe", is an adventure that combines exciting rapids with the natural beauty of this river. Flowing through Europe\'s deepest canyon, the river offers both serene stretches for enjoying the stunning landscapes and exciting rapids that cater to different skill levels.',
       'Most tours cover 18 to 25 kilometers, passing by towering cliffs, dense forests, and cascading waterfalls. With rapids classified as Class III to IV, the experience is thrilling yet safe, guided by professionals who provide all necessary equipment.',
       'After the adventure, you can unwind by the river, savor a traditional meal, and take in the pristine surroundings. Rafting on the Tara River is not just about excitement; it’s a chance to connect with nature in one of Europe’s most unspoiled environments.',
-      "Perfect for a weekend getaway or a highlight of your Balkan tour, this is an experience you'll cherish.",
     ],
     location: 'Tara',
     locationValue: 'tara',
-    cost: 180,
+    cost: 300,
     images: [
       {
         link: '/activities/adventure/rafting/tara_river/rafting-tara-1.jpg',
-        alt: 'rafting on the Tara river',
+        alt: 'rafting on the Tara river 1',
       },
       {
         link: '/activities/adventure/rafting/tara_river/rafting-tara-2.jpg',
@@ -29,7 +28,7 @@ const rafting: Activity[] = [
         alt: 'rafting on the Tara river 3',
       },
     ],
-    durationInDays: 3,
+    durationInDays: 2,
     category: 'Adventure',
     categoryValue: 'adventure',
     subCategory: 'Rafting',
@@ -39,12 +38,11 @@ const rafting: Activity[] = [
     id: 'adventure-rafting-ibar',
     title: 'Rafting on the Ibar river',
     description:
-      'Experience the thrill of rafting on the Ibar River through the scenic Valley of Serbian Kings, past the majestic Maglič Castle. This adventure blends adrenaline and stunning landscapes.',
+      'Experience the thrill of rafting on the Ibar River through the scenic Valley of Serbian Kings, past the majestic Maglič Castle.',
     longDescritpion: [
       'The Ibar River, originating from Hajla mountain in Montenegro, flows through Serbia, offering an exciting rafting experience. Spanning 272 km, the river winds through stunning landscapes, including the Valley of Serbian Kings, passing by the medieval Maglič Castle.',
       "Rafting on the Ibar is a thrilling journey that combines Class III rapids with Serbia's rich history and natural beauty. The adventure begins in Ušće, where professional guides provide all necessary equipment and a safety briefing before starting the 15-kilometer route. Along the way, you'll navigate exciting rapids like Grmčić and Jagnjilo, with calmer sections offering breathtaking views of Maglič Castle and historical monuments.",
       'Opportunities to swim, relax on shingle beaches, and capture the stunning surroundings make this experience perfect for families, friends, and anyone looking to mix adventure with Serbian culture.',
-      'Whether you seek adrenaline or a leisurely exploration, rafting on the Ibar River offers unforgettable memories.',
     ],
     location: 'Kraljevo',
     locationValue: 'kraljevo',
@@ -52,7 +50,7 @@ const rafting: Activity[] = [
     images: [
       {
         link: '/activities/adventure/rafting/ibar_river/rafting-ibar-1.jpg',
-        alt: 'rafting on the Ibar river',
+        alt: 'rafting on the Ibar river 1',
       },
       {
         link: '/activities/adventure/rafting/ibar_river/rafting-ibar-2.jpg',
@@ -75,19 +73,18 @@ const paragliding: Activity[] = [
     id: 'adventure-paragliding-zlatibor',
     title: 'Paragliding Zlatibor',
     description:
-      "Experience the thrill of paragliding over Zlatibor's stunning landscapes. Soar from Čigota peak at 1,422 meters with professional guidance, capturing unforgettable views.",
+      "Experience the thrill of paragliding over Zlatibor's stunning landscapes. Soar from Čigota peaks at 1,422 meters with professional guidance, capturing unforgettable views.",
     longDescritpion: [
-      "Paragliding over Zlatibor offers a unique perspective of this stunning region. Launching from the Čigota peak at 1,422 meters above sea level, you'll enjoy a 15-minute tandem flight, soaring above Zlatibor's rolling hills, lush meadows, and dense forests.",
-      "No matter your experience level, you'll be in safe hands with Petar Lončar, a world-renowned paragliding pilot with over 15 years of experience. The flight package includes professional photos and videos, allowing you to relive the experience.",
-      'For a safe and thrilling adventure, paragliding over Zlatibor is an ideal choice. Book your flight in advance and prepare for an unforgettable journey through the skies.',
+      'Paragliding over Zlatibor offers a unique view of this stunning region. The flight starts from the Čigota peak at 1,422 meters above sea level and lasts 15 minutes, allowing you to soar above Zlatibor’s rolling hills, green meadows, and dense forests.',
+      "No matter your experience level, you'll be in safe hands. The experienced instructors ensure that all safety measures are strictly followed, providing you with a secure and enjoyable flight. From pre-flight preparations to a smooth landing, your safety and comfort are their top priorities, allowing you to fully enjoy the breathtaking views.",
     ],
     location: 'Zlatibor',
     locationValue: 'zlatibor',
-    cost: 180,
+    cost: 300,
     images: [
       {
         link: '/activities/adventure/paragliding/zlatibor/paragliding-zlatibor-1.jpg',
-        alt: 'paragliding zlatibor',
+        alt: 'paragliding zlatibor 1',
       },
       {
         link: '/activities/adventure/paragliding/zlatibor/paragliding-zlatibor-2.jpg',
@@ -110,17 +107,16 @@ const paragliding: Activity[] = [
     description:
       "Soar above Budva's Adriatic coast with a paragliding adventure. Glide from coastal mountains, capturing panoramic views of the vibrant sea and historic Old Town.",
     longDescritpion: [
-      "Paragliding in Budva, Montenegro, offers a thrilling way to experience the Adriatic coast from above. Taking off from the cliffs and mountains surrounding the town, you'll be greeted by breathtaking views of the crystal-clear Adriatic Sea, lush greenery, and Budva's historic Old Town.",
+      "Paragliding in Budva, Montenegro, offers a thrilling way to experience the Adriatic coast from above. Paragliding from the cliffs and mountains surrounding the town, you'll be greeted by breathtaking views of the crystal-clear Adriatic Sea, lush greenery, and Budva's historic Old Town.",
       "This adventure is perfect for both beginners and seasoned flyers, with experienced pilots guiding you through a smooth and exhilarating flight. Tandem flights are available for newcomers. Lasting 15 to 30 minutes, depending on the weather, the flight provides unparalleled views of Montenegro's rugged landscape, including beaches, coves, and the iconic Sveti Stefan island.",
-      "This is a must-do activity in Budva for those seeking adventure or simply wanting to see Montenegro's beauty from a new perspective. Be sure to book in advance to secure your spot for this unforgettable experience.",
     ],
     location: 'Budva',
     locationValue: 'budva',
-    cost: 180,
+    cost: 300,
     images: [
       {
         link: '/activities/adventure/paragliding/budva/paragliding-budva-1.jpg',
-        alt: 'paragliding budva',
+        alt: 'paragliding budva 1',
       },
       {
         link: '/activities/adventure/paragliding/budva/paragliding-budva-2.jpg',
@@ -154,7 +150,7 @@ const kayaking: Activity[] = [
     images: [
       {
         link: '/activities/adventure/kayaking/drina/kayak-drina-1.jpg',
-        alt: 'Drina Kayak Adventure',
+        alt: 'Drina Kayak Adventure 1',
       },
       {
         link: '/activities/adventure/kayaking/drina/kayak-drina-2.jpg',
@@ -178,7 +174,7 @@ const kayaking: Activity[] = [
       'Explore the majestic Danube River on a kayaking tour through Serbia’s Iron Gate. Discover historic sites, stunning views, and pristine nature along the way.',
     longDescritpion: [
       "Experience the grandeur of Europe’s second-longest river, the Danube, with our kayaking tour through the Iron Gate. As you paddle through Serbia, you'll encounter breathtaking monuments and archaeological sites from the Middle Ages to the First Century AD.",
-      'Enjoy spectacular scenery and pristine nature while navigating this iconic region. No prior experience is needed; we provide all equipment and guidance, allowing you to fully immerse in the adventure and the stunning views.',
+      'Enjoy spectacular scenery and pristine nature while navigating this iconic region. No prior experience is needed; all equipment and guidance will be provided, allowing you to fully immerse in the adventure and the stunning views.',
     ],
     location: 'Đerdap',
     locationValue: 'djerdap',
@@ -210,7 +206,7 @@ const kayaking: Activity[] = [
       'Paddle through the breathtaking meanders of Uvac Lake and uncover its hidden wonders on a serene and picturesque kayaking journey.',
     longDescritpion: [
       'Experience Uvac Lake’s beauty from a fresh perspective with our kayaking adventure. Known for its stunning curves and pristine nature, Uvac Lake offers a unique way to explore hidden gems. Paddle through mesmerizing landscapes, discover cave entrances inaccessible by land, and enjoy spectacular views from the Molitva viewpoint.',
-      'Suitable for both seasoned kayakers and beginners, our professional instructors ensure a safe and memorable experience. Leave the land behind and dive into the beauty of Uvac Lake with us.',
+      'Suitable for both seasoned kayakers and beginners, skilled instructors ensure a safe and memorable experience. Leave the land behind and dive into the beauty of Uvac Lake.',
     ],
     location: 'Nova Varos',
     locationValue: 'nova_varos',
@@ -250,7 +246,7 @@ const kayaking: Activity[] = [
     images: [
       {
         link: '/activities/adventure/kayaking/war_island/kayak-war-island-belgrade-1.jpg',
-        alt: 'War Island Kayak Adventure',
+        alt: 'War Island Kayak Adventure 1',
       },
       {
         link: '/activities/adventure/kayaking/war_island/kayak-war-island-belgrade-2.jpg',
@@ -280,7 +276,7 @@ const jeep_safary: Activity[] = [
     images: [
       {
         link: '/activities/adventure/jeep_safary/durmitor_rings/jeep-safari-durmitor-1.jpg',
-        alt: 'Jeep Safari around durmitor rings',
+        alt: 'Jeep Safari around durmitor rings 1',
       },
       {
         link: '/activities/adventure/jeep_safary/durmitor_rings/jeep-safari-durmitor-2.jpg',
@@ -303,10 +299,10 @@ const horse_riding: Activity[] = [
     id: 'horse_riding_tara',
     title: 'Horse riding on Tara mountain',
     description:
-      'Experience the beauty of Tara Mountain with guided horseback riding, perfect for both beginners and seasoned riders. Enjoy stunning landscapes and a memorable adventure.',
+      'Experience the beauty of Tara Mountain with guided horseback riding, perfect for both beginners and seasoned riders.',
     longDescritpion: [
-      'Immerse yourself in the majestic landscapes of Tara Mountain with a unique horseback riding experience. Established in 2019, this service offers a range of horses, including thoroughbreds and Anglo-Arabians. Experienced riders can explore scenic trails past pine-covered hills, viewpoints, and serene streams.',
-      "If you're new to riding, recreational sessions provide a gentle introduction, with options for shorter rides through the surrounding nature. A comprehensive riding school is also available, offering a ten-session package to help you master the basics. For those traveling with their horses, boarding options are provided, allowing both you and your horse to enjoy a well-deserved break in the heart of Tara.",
+      'Immerse yourself in the majestic landscapes of Tara Mountain with a unique horseback riding experience. This service offers a range of horses, including thoroughbreds and Anglo-Arabians. Experienced riders can explore scenic trails past pine-covered hills, viewpoints, and serene streams.',
+      "If you're new to riding, recreational sessions provide a gentle introduction, with options for shorter rides through the surrounding nature. A comprehensive riding school is also available.",
     ],
     location: 'Tara',
     locationValue: 'tara',
@@ -335,7 +331,7 @@ const horse_riding: Activity[] = [
     id: 'horse_riding_fruska_gora',
     title: 'Horse riding on Fruska Gora',
     description:
-      'Embark on a horseback riding adventure across the stunning landscapes of Fruška Gora, ideal for riders of all levels, offering a memorable and scenic experience.',
+      'Set off on a horseback riding adventure across the stunning landscapes of Fruška Gora, ideal for riders of all levels, offering a memorable and scenic experience.',
     longDescritpion: [
       'Discover the beauty of Fruška Gora on horseback, riding through rolling hills, serene lakes, and lush forests. Suitable for both seasoned riders and beginners, the trails offer a safe and exciting experience for everyone.',
       "Guided by experienced leaders, you'll explore diverse terrain, with options to ride at a leisurely pace or pick up the speed for more thrill. The adventure begins at Šumska štala, where booking in advance ensures a perfect outdoor experience on Fruška Gora.",
@@ -369,11 +365,10 @@ const hiking: Activity[] = [
     id: 'hiking_rtanj_mountain',
     title: 'Hiking on Rtanj mountain',
     description:
-      'Explore the mystical Rtanj Mountain, famous for its pyramid shape and legends of hidden treasures. A hike to its peak, Šiljak, offers adventure and breathtaking views.',
+      'Explore the mystical Rtanj Mountain, famous for its pyramid shape and legends of hidden treasures. A hike to its peak, Šiljak, offers an exciting adventure.',
     longDescritpion: [
       'Rtanj Mountain, located in eastern Serbia, is renowned for its striking pyramid-shaped peak, Šiljak, which rises to 1,565 meters. This karst terrain is rich in natural beauty and local legends, making it a captivating destination for hikers.',
       "Steeped in mystery, Rtanj is said to hide a wizard's treasure within its slopes. At the summit, you'll find the remnants of a chapel dedicated to St. George, built in 1932 by a local miner's wife. Though in ruins, the chapel adds to Rtanj's enigmatic atmosphere.",
-      "Hiking Rtanj is more than just a physical challenge; it's a journey through history and legend, offering breathtaking views and a deep connection to the region’s cultural heritage.",
     ],
     location: 'Sokobanja',
     locationValue: 'sokobanja',
@@ -407,8 +402,7 @@ const fishing: Activity[] = [
       'Enjoy a peaceful yet exciting fishing experience on the Drina River, renowned for its rich fish population and stunning natural beauty. Perfect for anglers of all levels.',
     longDescritpion: [
       "The Drina River, one of Serbia's most beautiful and clean rivers, offers an exceptional fishing experience. Known for its abundance of fish, including huchen (Danube salmon), brown trout, grayling, chub, and barbel, the Drina’s clear waters and varied ecosystems are perfect for both recreational and sport fishing.",
-      'Stretching through stunning landscapes, the river provides numerous fishing spots with unique challenges and rewards. Whether fishing from the banks or by boat, you’ll enjoy the serene beauty of the Drina and its surroundings.',
-      "Fishing on the Drina is more than just catching fish—it's about the tranquil environment, the thrill of the sport, and the chance to land a trophy fish. Ideal for seasoned anglers and beginners alike, this adventure connects you with nature and the excitement of the catch.",
+      'Stretching through untouched nature, the river provides numerous fishing spots with unique challenges and rewards. Whether fishing from the banks or by boat, you’ll enjoy the serene beauty of the Drina and its surroundings.',
     ],
     location: 'Bajina Basta',
     locationValue: 'bajina_basta',
@@ -416,7 +410,7 @@ const fishing: Activity[] = [
     images: [
       {
         link: '/activities/adventure/fishing/drina_river/fishing-drina-river-1.jpg',
-        alt: 'Fishing on the Drina river',
+        alt: 'Fishing on the Drina river 1',
       },
       {
         link: '/activities/adventure/fishing/drina_river/fishing-drina-river-2.jpg',
@@ -471,11 +465,10 @@ const cycling: Activity[] = [
     id: 'cycling_kopaonik',
     title: 'Mountain biking on Kopaonik',
     description:
-      'Kopaonik offers thrilling mountain biking trails with stunning views and convenient parking nearby. Ideal for adventure seekers and outdoor enthusiasts.',
+      'Kopaonik offers thrilling mountain biking trails with stunning views. Ideal for adventure seekers and outdoor enthusiasts.',
     longDescritpion: [
       'Kopaonik, Serbia’s largest mountain range and premier ski resort, becomes a mountain biking paradise in the warmer months. It offers trails for all skill levels, from beginner-friendly paths through lush forests to challenging downhill routes with steep descents and sharp turns.',
       'The well-marked trails provide stunning views of the surrounding mountains and valleys. Kopaonik’s biking infrastructure includes bike rentals, guided tours, and lifts to transport bikers and their equipment to higher elevations for longer rides.',
-      'The area is easily accessible by road with parking at various trail entry points. For the best experience, ensure your bike is equipped for mountain terrain, wear protective gear, and bring water. Check local resources for trail maps, lift schedules, and biking events to enhance your Kopaonik adventure.',
     ],
     location: 'Kopaonik',
     locationValue: 'kopaonik',
@@ -483,7 +476,7 @@ const cycling: Activity[] = [
     images: [
       {
         link: '/activities/adventure/cycling/kopaonik/mountain-biking-kopaonik-1.jpg',
-        alt: 'Mountain Biking on Kopaonik',
+        alt: 'Mountain Biking on Kopaonik 1',
       },
       {
         link: '/activities/adventure/cycling/kopaonik/mountain-biking-kopaonik-2.jpg',
@@ -504,7 +497,7 @@ const cycling: Activity[] = [
     id: 'cycling_tara',
     title: 'Mountain biking on Tara',
     description:
-      'Embark on a thrilling mountain biking journey through Tara, exploring its breathtaking landscapes and scenic views for an unforgettable adventure.',
+      'Set off on an exhilarating mountain biking adventure through Tara, exploring its stunning terrain and scenic views for an unforgettable experience.',
     longDescritpion: [
       'Experience the allure of Tara Mountain with an exciting MTB tour through its stunning wilderness. The elevation of Tara adds to the thrill as you cycle through dense pine forests and along towering cliffs with expansive views.',
       'With over 75 kilometers of cycling routes in Tara National Park, starting from various tourist centers, this adventure offers a chance to explore Tara’s rich natural beauty. Pedal through lush meadows and visit spectacular viewpoints, immersing yourself in the serene and majestic landscapes that make Tara a must-see for mountain biking enthusiasts.',
@@ -549,7 +542,7 @@ const canyoning: Activity[] = [
     images: [
       {
         link: '/activities/adventure/canyoning/nevidio/canyoning-nevidio-1.jpg',
-        alt: 'Nevidio Canyon Adventure',
+        alt: 'Nevidio Canyon Adventure 1',
       },
       {
         link: '/activities/adventure/canyoning/nevidio/canyoning-nevidio-2.jpg',
@@ -575,7 +568,7 @@ const bungee_jump: Activity[] = [
       'Take the plunge with a thrilling bungee jump at Ada Ciganlija, Belgrade’s top spot for adrenaline seekers. Experience the ultimate rush!',
     longDescritpion: [
       'Bungee jumping is an extreme adventure sport, and Ada Ciganlija features one of the world’s most stunning and tallest bungee centers. With a crane towering 55 meters above the water, it offers breathtaking jumps.',
-      'The center is staffed by a well-trained team and certified professionals with international credentials. Since its opening in 1996, over 15,000 jumps have been completed, making it the only bungee sports facility in the country.',
+      'The center is staffed by a well-trained team and certified professionals with international credentials. Since its opening in 1996, over 15,000 jumps have been completed, demonstrating its reliability and commitment to safety.',
     ],
     location: 'Belgrade',
     locationValue: 'belgrade',
@@ -598,9 +591,9 @@ const quad_bike: Activity[] = [
     id: 'quad_bike_zlatibor',
     title: 'Quad Bike Adventure in Zlatibor',
     description:
-      'Embark on an exhilarating quad bike adventure in Zlatibor, navigating rugged terrains and breathtaking landscapes.',
+      'Experience the thrill of quad biking in Zlatibor as you conquer rugged terrains and take in spectacular scenery.',
     longDescritpion: [
-      "Experience the thrill of a quad bike adventure in Zlatibor, one of Serbia's most picturesque mountain regions. This exhilarating activity takes you through rugged terrains, dense forests, and open meadows, all while soaking in the stunning natural beauty that Zlatibor is renowned for.",
+      "Experience the thrill of a quad bike adventure in Zlatibor, one of Serbia's most picturesque mountain regions. This exhilarating activity takes you through rugged terrains, dense forests, and open meadows, all while taking in the captivating natural beauty that Zlatibor is renowned for.",
       "Designed for both beginners and experienced riders, the quad bike tours offer a range of routes varying in difficulty and length. Whether you prefer a short, scenic ride or a more challenging trek through the wilderness, you’ll enjoy panoramic views of Zlatibor's rolling hills and valleys.",
       "Guided by experienced instructors, you'll learn how to safely handle the quad bikes, ensuring a fun and secure adventure. Along the way, you'll have the chance to pause, take in the views, capture photos, and even learn about the local flora and fauna from your guide.",
     ],
