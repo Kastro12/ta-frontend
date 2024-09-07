@@ -55,49 +55,45 @@ export default function AccommodationAndDining() {
         </Grid>
       </Grid>
 
-      <Grid container spacing={4} sx={{ mt: 5 }}>
-        <Grid md={12}>
-          <SliderBarGallery
-            serverData={[
-              {
-                link: '/accommodation-and-dining/apartment_3_living_room.jpg',
-                alt: 'apartment 3 living room',
-                id: 1,
-              },
-              {
-                link: '/accommodation-and-dining/apartment_3_room.jpg',
-                alt: 'apartment 3 room',
-                id: 2,
-              },
-              {
-                link: '/accommodation-and-dining/apartment-1-living-room.jpg',
-                alt: 'apartment 1 living room',
-                id: 3,
-              },
-              {
-                link: '/accommodation-and-dining/apartment_1_room.jpg',
-                alt: 'apartment 1 room',
-                id: 4,
-              },
-              {
-                link: '/accommodation-and-dining/food1.jpg',
-                alt: 'food - pasta with wine',
-                id: 5,
-              },
-              {
-                link: '/accommodation-and-dining/food2.jpg',
-                alt: 'food - dried meat on a board',
-                id: 6,
-              },
-              {
-                link: '/accommodation-and-dining/food3.jpg',
-                alt: 'food - cake and wine',
-                id: 7,
-              },
-            ]}
-          />
-        </Grid>
-      </Grid>
+      <SliderBarGallery
+        serverData={[
+          {
+            link: '/accommodation-and-dining/apartment_3_living_room.jpg',
+            alt: 'apartment 3 living room',
+            id: 1,
+          },
+          {
+            link: '/accommodation-and-dining/apartment_3_room.jpg',
+            alt: 'apartment 3 room',
+            id: 2,
+          },
+          {
+            link: '/accommodation-and-dining/apartment-1-living-room.jpg',
+            alt: 'apartment 1 living room',
+            id: 3,
+          },
+          {
+            link: '/accommodation-and-dining/apartment_1_room.jpg',
+            alt: 'apartment 1 room',
+            id: 4,
+          },
+          {
+            link: '/accommodation-and-dining/food1.jpg',
+            alt: 'food - pasta with wine',
+            id: 5,
+          },
+          {
+            link: '/accommodation-and-dining/food2.jpg',
+            alt: 'food - dried meat on a board',
+            id: 6,
+          },
+          {
+            link: '/accommodation-and-dining/food3.jpg',
+            alt: 'food - cake and wine',
+            id: 7,
+          },
+        ]}
+      />
     </Container>
   );
 }

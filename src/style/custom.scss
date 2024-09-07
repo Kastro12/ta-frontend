@@ -295,6 +295,7 @@
 
 .glide_slider_bar_gallery {
   position: relative;
+  margin-top: 56px;
   .glide__slides {
     li {
       width: 100%;
@@ -312,7 +313,7 @@
     }
   }
   @media screen and (min-width: $lg) {
-    margin: 0 auto;
+    margin: 56px auto 0 auto;
     width: 70%;
   }
 }

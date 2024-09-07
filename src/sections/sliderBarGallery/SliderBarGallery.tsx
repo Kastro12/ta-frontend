@@ -7,16 +7,21 @@ import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRou
 
 const SliderBarGallery = ({ serverData }: any) => {
   useEffect(() => {
-    new Glide('.glide_slider_bar_gallery', {
+    const glide = new Glide(`.glide_slider_bar_gallery`, {
       type: 'slider',
       startAt: 0,
       perView: 1,
       keyboard: true,
-    }).mount();
+      rewind: false,
+      bound: false,
+      gap: 0,
+    });
+
+    glide.mount();
   }, []);
 
   return (
-    <div className='glide_slider_bar_gallery glide_arrows_center'>
+    <div className=' glide_slider_bar_gallery glide_arrows_center'>
       <div className='glide__track' data-glide-el='track'>
         <ul className='glide__slides'>
           {serverData &&
@@ -25,9 +30,10 @@ const SliderBarGallery = ({ serverData }: any) => {
                 <Image
                   src={img.link}
                   alt={img.alt}
+                  loading='lazy'
                   fill
-                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 100vw'
                   style={{ objectFit: 'cover', borderRadius: '4px' }}
+                  sizes='100%'
                 />
               </li>
             ))}
