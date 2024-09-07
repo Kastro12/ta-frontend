@@ -532,7 +532,7 @@
         line-height: 24px;
         position: relative;
         .MuiSvgIcon-root {
-          color: $gray2;
+          color: $green1;
           position: absolute;
           top: 1px;
           right: 0;
@@ -540,7 +540,7 @@
 
         &.active {
           .MuiSvgIcon-root {
-            color: $navyBlue1;
+            color: $green2;
           }
         }
         &.clickable {
