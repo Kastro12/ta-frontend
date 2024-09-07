@@ -62,7 +62,13 @@ const SliderBarActivities = ({ serverData }) => {
                     sizes='100%'
                   />
                   <Box className='text'>
-                    <Typography variant='h3'>{data.title}</Typography>
+                    <Typography
+                      variant='h3'
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => dispatch(zoomActivity(data))}
+                    >
+                      {data.title}
+                    </Typography>
                   </Box>
                 </li>
               ))}

@@ -18,6 +18,8 @@ export default function InfoWithBackgroundImage({
   link: string;
   glide_classname: string;
 }) {
+
+  console.log("link",link)
   return (
     <div className='TextImage1'>
       <div className='text'>

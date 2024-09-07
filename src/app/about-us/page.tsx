@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Image from 'next/image';
+import Link from 'next/link';
+import { linkGreenButton } from '@/utils/re-styledComponents';
 
 export default function AboutUs() {
   return (
@@ -70,10 +72,16 @@ export default function AboutUs() {
             Create vacation
           </Typography>
           <Typography variant='body1' className='text'>
-            With this service, you have the freedom to choose your activities, and we&apos;ll handle
-            the rest. We&apos;ll book your activities and can also find accommodations for you,
-            offering a selection of clean, well-equipped standard or luxury options. This service
-            costs €34.
+            With{' '}
+            <Link
+              style={{ ...linkGreenButton, padding: '0', border: 'none' }}
+              href={'/create-vacation'}
+            >
+              create vacation
+            </Link>{' '}
+            service, you have the freedom to choose your activities, and we&apos;ll handle the rest.
+            We&apos;ll book your activities and can also find accommodations for you, offering a
+            selection of clean, well-equipped standard or luxury options. This service costs €34.
           </Typography>
 
           <Typography variant='body1' className='text'>
@@ -87,10 +95,16 @@ export default function AboutUs() {
             Predefined vacations
           </Typography>
           <Typography variant='body1' className='text'>
-            For those who prefer a set itinerary, we offer predefined vacation packages. These
-            vacations come with a fully planned schedule of activities, allowing you to simply
-            select your departure date and enjoy a worry-free experience. Everything is taken care
-            of, so all you need to do is pack your bags and go.
+            For those who prefer a set itinerary, we offer{' '}
+            <Link
+              style={{ ...linkGreenButton, padding: '0', border: 'none' }}
+              href={'/#predefined-vacations-position'}
+            >
+              predefined vacation
+            </Link>{' '}
+            packages. These vacations come with a fully planned schedule of activities, allowing you
+            to simply select your departure date and enjoy a worry-free experience. Everything is
+            taken care of, so all you need to do is pack your bags and go.
           </Typography>
 
           <Typography variant='body1' className='text'>

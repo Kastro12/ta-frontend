@@ -14,7 +14,11 @@ const DrawerList = ({ handleOpenDrawer }: DrawerList) => {
   const pages = useMemo(
     () => [
       { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/create-vacation' },
-      { name: 'Predefined vacations', icon: RouteOutlinedIcon, link: '/#predefined-vacations-position' },
+      {
+        name: 'Predefined vacations',
+        icon: RouteOutlinedIcon,
+        link: '/#predefined-vacations-position',
+      },
     ],
     []
   );
@@ -24,7 +28,6 @@ const DrawerList = ({ handleOpenDrawer }: DrawerList) => {
       className='drawerList'
       sx={{ width: 250 }}
       role='presentation'
-      onClick={handleOpenDrawer}
       style={{ backgroundColor: '#21817d', height: '100%', color: '#f5f5f5' }}
     >
       <Grid container className='container'>
