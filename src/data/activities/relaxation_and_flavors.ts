@@ -131,7 +131,7 @@ const villages: Activity[] = [
         alt: 'Rural retreat northern Montenegro 2',
       },
     ],
-    durationInDays: 3,
+    durationInDays: 1,
     category: 'Relaxation & flavors',
     categoryValue: 'relaxation_and_flavors',
     subCategory: 'Village',

@@ -41,15 +41,14 @@ export default function AboutUs() {
       <Grid container spacing={4}>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            At our vacation service, we tailor each trip to your preferences, managing activity
-            reservations, accommodations, and transportation, so you can relax and enjoy your
-            vacation.
+            At our service, we tailor each trip to your preferences, managing activity reservations,
+            accommodations, and transportation, so you can relax and enjoy your vacation.
           </Typography>
         </Grid>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
             We offer flexible options, whether you want a fully customized experience or a
-            pre-planned itinerary. Our goal is to turn your dream vacation into reality with
+            pre-planned itinerary. We aim to turn your dream vacation into reality with
             high-quality, personalized service.
           </Typography>
         </Grid>

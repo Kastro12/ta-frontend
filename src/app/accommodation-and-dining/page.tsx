@@ -33,24 +33,21 @@ export default function AccommodationAndDining() {
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
             If you choose our accommodation reservation service, we prioritize your comfort and
-            culinary enjoyment. Our accommodations are selected to provide you with the highest
-            level of luxury and relaxation. From cozy boutique hotels to lavish resorts, every
-            option ensures a restful and comfortable stay.
+            enjoyment. Accommodations are selected to provide you with the highest level of luxury
+            and relaxation.
           </Typography>
         </Grid>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            When it comes to dining, we recommend only the best and most reputable restaurants,
-            ensuring you enjoy top-quality cuisine. Our selections include a diverse array of dining
-            options to meet all tastes, providing you with memorable culinary experiences throughout
-            your vacation.
+            We recommend only the best restaurants, ensuring you enjoy top-quality cuisine. Our
+            selections cater to all tastes, offering memorable culinary experiences throughout your
+            vacation.
           </Typography>
         </Grid>
         <Grid xs={12} lg={4}>
           <Typography variant='body1'>
-            Whether you&apos;re unwinding after a day of adventures or enjoying a meal at one of our
-            recommended establishments, our commitment to excellence guarantees that your
-            accommodation and dining experiences will be outstanding.
+            Whether relaxing after a day of activities or enjoying a meal at one of our recommended
+            spots, our commitment ensures your stay will be exceptional.
           </Typography>
         </Grid>
       </Grid>
