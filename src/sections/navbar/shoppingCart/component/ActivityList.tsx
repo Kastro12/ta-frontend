@@ -4,6 +4,7 @@ import { button } from '@/utils/re-styledComponents/index';
 import { removeActivity } from '@/store/vacation/vacationReducer';
 import { useDispatch } from 'react-redux';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import Image from 'next/image';
 
 const ActivityList = ({ activity }: any) => {
   const pathname = usePathname();
@@ -26,7 +27,14 @@ const ActivityList = ({ activity }: any) => {
     <Paper elevation={3} key={activity.id} role='application' className='shoppingCartActivityList'>
       <li>
         <div className={`image-wrap`}>
-          <img src={activity.images[0].link} />
+          <Image
+            src={activity.images[0].link}
+            alt={activity.images[0].alt}
+            style={{ objectFit: 'cover', borderRadius: '4px' }}
+            sizes='100vw'
+            fill
+          />
+          {/* <img src={activity.images[0].link} /> */}
         </div>
 
         <div className='content'>

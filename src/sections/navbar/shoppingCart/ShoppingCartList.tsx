@@ -8,6 +8,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { useRouter, usePathname } from 'next/navigation';
 import { useMaxNumberOfDaysForChosenActivities } from '@/utils/date';
 import ActivityList from './component/ActivityList';
+import EmptyActivityList from './component/EmptyActivityList';
 import Link from 'next/link';
 
 interface DrawerList {
@@ -91,7 +92,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             sx={{
               marginTop: '18px',
               display: 'flex',
-              justifyContent: 'space-between',
+              justifyContent: chosenActivities.length > 0 ? 'space-between' : 'flex-start',
               marginBottom: '6px',
             }}
           >
@@ -101,13 +102,17 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
                 All takes <strong>{maxNumberOfDaysForChosenActivities} days</strong>
               </span>
             ) : (
-              ''
+              <></>
             )}
           </Typography>
 
-          {chosenActivities.map((activity, i) => {
-            return <ActivityList activity={activity} key={i} />;
-          })}
+          {chosenActivities.length > 0 ? (
+            chosenActivities.map((activity, i) => {
+              return <ActivityList activity={activity} key={i} />;
+            })
+          ) : (
+            <EmptyActivityList handleOpenDrawer={handleOpenDrawer} />
+          )}
         </Grid>
 
         <Grid
@@ -122,7 +127,15 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
         >
           <Typography variant='body1' sx={{ marginTop: '16px', fontWeight: '600' }}>
             <span className={'date-label'}>Dates:</span>
-            {startDate ? startDate : <span className='no-data required'>Start date</span>}{' '}
+            {startDate ? (
+              startDate
+            ) : (
+              <span className='no-data required'>
+                <Link href={'/create-vacation'} onClick={handleOpenDrawer}>
+                  Start date
+                </Link>
+              </span>
+            )}{' '}
             &nbsp;-&nbsp;
             {finishDate ? finishDate : <span className='no-data'>Finish date</span>}
           </Typography>

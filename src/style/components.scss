@@ -282,7 +282,7 @@
     .date-label {
       font-weight: 300;
       margin-right: 12px;
-      min-width: 90px;
+      min-width: 60px;
       font-size: 14px;
       font-weight: 300;
     }
@@ -290,6 +290,9 @@
       font-weight: 300;
       color: $gray1;
       font-size: 14px;
+      a {
+        color: $gray1;
+      }
       svg {
         position: relative;
         top: 5px;
@@ -353,10 +356,11 @@
       margin-top: 16px;
       .MuiTypography-root {
         margin-top: 0;
+        margin-bottom: 6px;
       }
       .price_list {
         li {
-          font-size: 14px;
+          font-size: 13px;
           span {
             font-size: 12px;
           }
@@ -371,10 +375,6 @@
     }
 
     @media screen and (min-width: $lg) {
-      .MuiTypography-root {
-        font-size: 15px;
-      }
-
       .submit-wrapper {
         display: flex;
         align-items: center;
@@ -408,7 +408,9 @@
     position: relative;
     .image-wrap {
       display: flex;
-      height: 80px;
+      height: 76px;
+      width: 114px;
+      position: relative;
       img {
         width: 90px;
         height: 100%;
@@ -428,8 +430,8 @@
       }
     }
     .content {
-      width: 100%;
-      padding: 0 0 0 16px !important;
+      width: calc(100% - 114px);
+      padding: 0 0 0 12px !important;
       .info {
         display: flex;
         flex-direction: column;
@@ -448,11 +450,11 @@
           font-size: 14px;
           line-height: 22px !important;
           font-weight: 600;
-          height: 50px;
-          width: calc(100% - 46px);
+          height: 46px;
+          width: calc(100% - 32px);
         }
         .gray-label {
-          padding: 0 12px 0 0;
+          padding: 0 8px 0 0;
           line-height: 22px !important;
           font-weight: 300;
         }
@@ -478,6 +480,35 @@
         .info {
           p {
             font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  &.EmptyActivityList {
+    li {
+      .image-wrap {
+        border: 4px solid $white2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background-color: $white2;
+        svg {
+          font-size: 44px;
+          color: $lightGray1;
+        }
+      }
+      .content {
+        padding: 0px !important;
+        .info {
+          p {
+            text-align: center;
+            height: auto;
+            color: $lightGray1;
+            font-weight: 500;
           }
         }
       }
