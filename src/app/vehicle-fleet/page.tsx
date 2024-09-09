@@ -9,8 +9,8 @@ export default function VehicleFleet() {
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
         <Image
-          src='/main-banner/mercedes-benz-v220d.jpg'
-          alt='mercedes benz v220d'
+          src='/main-banner/s-class-46-scaled.jpg'
+          alt='mercedes s class'
           style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
           fill
@@ -70,9 +70,14 @@ export default function VehicleFleet() {
             id: 3,
           },
           {
+            link: '/vehicle-fleet/mercedes-s-class.jpg',
+            alt: 'mercedes s class',
+            id: 4,
+          },
+          {
             link: '/vehicle-fleet/volkswagen-van-2.jpg',
             alt: 'volkswagen van navyblue',
-            id: 4,
+            id: 5,
           },
         ]}
       />
