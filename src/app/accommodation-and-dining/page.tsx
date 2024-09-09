@@ -9,7 +9,7 @@ export default function AccommodationAndDining() {
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
         <Image
-          src='/main-banner/apartment_3_living_room.jpg'
+          src='/main-banner/apartment-with-a-view-of-the-river-l.jpg'
           alt='apartment living room'
           style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
@@ -55,38 +55,49 @@ export default function AccommodationAndDining() {
       <SliderBarGallery
         serverData={[
           {
-            link: '/accommodation-and-dining/apartment_3_living_room.jpg',
-            alt: 'apartment 3 living room',
-            id: 1,
-          },
-          {
-            link: '/accommodation-and-dining/apartment_3_room.jpg',
-            alt: 'apartment 3 room',
-            id: 2,
-          },
-          {
-            link: '/accommodation-and-dining/apartment-1-living-room.jpg',
-            alt: 'apartment 1 living room',
-            id: 3,
-          },
-          {
-            link: '/accommodation-and-dining/apartment_1_room.jpg',
-            alt: 'apartment 1 room',
+            link: '/accommodation-and-dining/apartment-2.jpg',
+            alt: 'lux apartment',
             id: 4,
           },
           {
-            link: '/accommodation-and-dining/food1.jpg',
-            alt: 'food - pasta with wine',
+            link: '/accommodation-and-dining/room-2.jpg',
+            alt: 'lux bedroom',
             id: 5,
           },
           {
+            link: '/accommodation-and-dining/apartment-with-a-view-of-the-river-1.jpg',
+            alt: 'apartment with a view of the river in Belgrade',
+            id: 1,
+          },
+          {
+            link: '/accommodation-and-dining/room-with-a-view-of-the-river-1.jpg',
+            alt: 'bedroom with a view of the river in Belgrade',
+            id: 2,
+          },
+          {
+            link: '/accommodation-and-dining/bathroom-1.jpg',
+            alt: 'bathroom - cream color',
+            id: 3,
+          },
+
+          {
+            link: '/accommodation-and-dining/food1.jpg',
+            alt: 'food - Sarmice in greens with sour cream',
+            id: 6,
+          },
+          {
             link: '/accommodation-and-dining/food2.jpg',
-            alt: 'food - dried meat on a board',
+            alt: 'food - stuffed burger with milk cream',
             id: 6,
           },
           {
             link: '/accommodation-and-dining/food3.jpg',
-            alt: 'food - cake and wine',
+            alt: 'food - strawberry shortcake',
+            id: 7,
+          },
+          {
+            link: '/accommodation-and-dining/grapes-and-croissants.jpg',
+            alt: 'food - grapes and croissants',
             id: 7,
           },
         ]}

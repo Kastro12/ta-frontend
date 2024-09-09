@@ -55,23 +55,23 @@ export default function VehicleFleet() {
       <SliderBarGallery
         serverData={[
           {
-            link: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-1.jpg',
-            alt: 'Mercedes Benz V200d 4 matik 4x4 Extralang 1',
+            link: '/vehicle-fleet/mercedes-van-1.jpg',
+            alt: 'Mercedes Benz Van',
             id: 1,
           },
           {
-            link: '/vehicle-fleet/Mercedes-Benz-V200d-4-matik-4x4-Extralang-2.jpg',
-            alt: 'Mercedes Benz V200d 4 matik 4x4 Extralang 2',
+            link: '/vehicle-fleet/audi-a6.jpg',
+            alt: 'Audi A6 white',
             id: 2,
           },
           {
-            link: '/vehicle-fleet/audi_a6_white1.jpg',
-            alt: 'Audi a6 white 1',
+            link: '/vehicle-fleet/volkswagen-van-1.jpg',
+            alt: 'volkswagen van black',
             id: 3,
           },
           {
-            link: '/vehicle-fleet/audi_a6_white2.jpg',
-            alt: 'Audi a6 white 2',
+            link: '/vehicle-fleet/volkswagen-van-2.jpg',
+            alt: 'volkswagen van navyblue',
             id: 4,
           },
         ]}

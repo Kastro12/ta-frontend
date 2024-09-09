@@ -27,6 +27,10 @@ const activityCategories: activityCategories[] = [
         alt: 'mountain biking on Tara',
         link: '/activities/adventure/cycling/tara/mountain-biking-tara-1.jpg',
       },
+      {
+        link: '/activities/adventure/quad_bike/zlatibor/quad-bike-zlatibor-1.jpg',
+        alt: 'Quad Bike Adventure in Zlatibor 1',
+      },
     ],
   },
   {
@@ -49,6 +53,10 @@ const activityCategories: activityCategories[] = [
         alt: 'Zlatibor gondola',
         link: '/activities/landscape/zlatibor_gondola/zlatibor-gondola-1.jpg',
       },
+      {
+        link: '/activities/landscape/nc_djerdap/nacionalni-park-djerdap-1.jpg',
+        alt: 'Đerdap National Park 1',
+      },
     ],
   },
   {
@@ -62,6 +70,10 @@ const activityCategories: activityCategories[] = [
       {
         alt: 'Viminicijum',
         link: '/activities/history_and_culture/viminicijum/viminacium-1.jpg',
+      },
+      {
+        link: '/activities/history_and_culture/verski_objekat/hram_svetog_save/hram-svetog-save-1.jpg',
+        alt: 'Hram svetog Save 1',
       },
       {
         alt: 'Sremski karlovci',
@@ -87,12 +99,16 @@ const activityCategories: activityCategories[] = [
         link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-1.jpg',
       },
       {
+        alt: 'grapes and croissants',
+        link: '/accommodation-and-dining/grapes-and-croissants.jpg',
+      },
+      {
         alt: 'Fruske terme 1',
         link: '/activities/relaxation_and_flavors/spa/fruske_terme/fruske-terme-1.jpg',
       },
       {
-        alt: 'Food',
-        link: '/accommodation-and-dining/food2.jpg',
+        link: '/activities/relaxation_and_flavors/vinarija/zvonko_bogdan_subotica/vinarija-zvonko-bogdan-3.jpg',
+        alt: 'Winery ethno salaš Zvonko Bogdan 3',
       },
     ],
   },
