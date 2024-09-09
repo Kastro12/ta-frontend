@@ -48,7 +48,6 @@ export default function PredefinedVacationTemplate({
   });
 
   useEffect(() => {
-    console.log("organizedVacations",organizedVacations)
     dispatch(addPredefinedVacation(organizedVacations.title));
   }, []);
 

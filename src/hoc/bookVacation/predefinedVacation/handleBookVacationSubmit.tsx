@@ -38,9 +38,6 @@ const handleBookVacationSubmit = (Component: React.ComponentType<any>) => {
       fetchCountryCode();
     }, []);
 
-
-    console.log("chosenPredefinedVacation",chosenPredefinedVacation)
-
     const {
       control,
       handleSubmit,
