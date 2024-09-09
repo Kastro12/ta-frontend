@@ -15,20 +15,18 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
     const children = useSelector((state: RootState) => state.vacation.children);
     const childrenYears = useSelector((state: RootState) => state.vacation.childrenYears);
 
-    const [isOpenChildrenField, setIsOpenChildrenField] = useState<boolean>(false);
+    const [isOpenChildrenField, setIsOpenChildrenField] = useState<HTMLButtonElement | null>(null);
 
-    const extraHandleIncrement = () => {
-      if (children === 1) {
-        setIsOpenChildrenField(false);
-        return;
-      }
-
+    const extraHandleIncrement = (event: any) => {
       if (!isOpenChildrenField) {
-        setIsOpenChildrenField(true);
+        setIsOpenChildrenField(event.currentTarget);
         return;
       }
-
       return null;
+    };
+
+    const extraHandleDecrement = () => {
+      setIsOpenChildrenField(null);
     };
 
     const handleChildAgeChange = (index: number, value: any) => {
@@ -38,7 +36,7 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
         dispatch(removeChildrenYears(currentData.position));
       } else if (value) {
         dispatch(addChildrenYears({ years: value.value, position: index }));
-        if (childrenYears.length + 1 == children) setIsOpenChildrenField(false);
+        if (childrenYears.length + 1 == children) setIsOpenChildrenField(null);
       }
     };
 
@@ -50,6 +48,7 @@ const handleNumberOfPerson = (Component: React.ComponentType<any>) => {
         isOpenChildrenField={isOpenChildrenField}
         setIsOpenChildrenField={setIsOpenChildrenField}
         extraHandleIncrement={extraHandleIncrement}
+        extraHandleDecrement={extraHandleDecrement}
         handleChildAgeChange={handleChildAgeChange}
         handleDecrement={handleDecrement}
         handleIncrement={handleIncrement}

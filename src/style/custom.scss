@@ -343,3 +343,65 @@
     }
   }
 }
+
+.MuiPopover-root.NumberOfPersonForm_popover.MuiModal-root {
+  .MuiPaper-root {
+    box-shadow: none;
+    border: 1px solid $gray1;
+    max-width: 320px;
+    overflow: unset;
+    margin-top: 12px;
+    .MuiTypography-root {
+      font-size: 13px;
+      line-height: 22px;
+      padding: 8px 12px;
+    }
+
+    .children-age-info {
+      background-color: $white1;
+      padding: 12px;
+      border-radius: 4px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          width: calc(50% - 6px);
+          margin-bottom: 12px;
+          .select-input-field-container {
+            .select-input-field__control {
+              min-height: 38px;
+              border-color: $red1;
+              font-size: 13px;
+            }
+            .select-input-field__control--is-focused {
+              // border-color: $green2;
+              box-shadow: none;
+            }
+
+            .select-input-field__indicator {
+              padding: 8px 3px;
+              &.select-input-field__clear-indicator {
+                padding: 8px 0px;
+              }
+            }
+            .select-input-field__value-container {
+              padding: 2px 6px;
+            }
+
+            &.active {
+              .select-input-field__control {
+                border-color: $gray1;
+              }
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: $md) {
+        // width: calc(100% + 84px);
+        // left: -110px;
+      }
+    }
+  }
+}

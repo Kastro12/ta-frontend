@@ -3,6 +3,7 @@ import { InputQuantity } from '@/forms/components';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import Select from 'react-select';
 import { childrenAge } from '@/data';
+import { Popover } from '@mui/material';
 
 const NumberOfPersonForm = ({
   adults,
@@ -11,6 +12,7 @@ const NumberOfPersonForm = ({
   isOpenChildrenField,
   setIsOpenChildrenField,
   extraHandleIncrement,
+  extraHandleDecrement,
   handleChildAgeChange,
   handleDecrement,
   handleIncrement,
@@ -18,13 +20,20 @@ const NumberOfPersonForm = ({
   adults: number;
   children: number;
   childrenYears: any[];
-  isOpenChildrenField: boolean;
-  setIsOpenChildrenField: (isOpen: boolean) => void;
-  extraHandleIncrement: () => void;
+  isOpenChildrenField: HTMLButtonElement | null;
+  setIsOpenChildrenField: (isOpen: HTMLButtonElement | null) => void;
+  extraHandleIncrement: (event?: any) => void;
+  extraHandleDecrement: () => void;
   handleChildAgeChange: (index: number, value: any) => void;
   handleDecrement: (type: string) => void;
   handleIncrement: (type: string) => void;
 }) => {
+  const handleClosePopover = () => {
+    setIsOpenChildrenField(null);
+  };
+  const openPopover = Boolean(isOpenChildrenField);
+  const idPopover = openPopover ? 'simple-popover' : undefined;
+
   return (
     <div className='NumberOfPersonsForm'>
       <div className='content'>
@@ -37,14 +46,23 @@ const NumberOfPersonForm = ({
             handleIncrement={handleIncrement}
           />
         </div>
-        <div className='quantity-field children'>
+        <div
+          className='quantity-field children'
+          onClick={(event) => {
+            if (extraHandleIncrement && extraHandleIncrement !== null) {
+              extraHandleIncrement(event);
+            }
+          }}
+        >
           <span
             className={`label${isOpenChildrenField ? ' active' : ''} ${
               children > 0 ? ' clickable' : ''
             }`}
-            onClick={() => {
+            onClick={(event) => {
               if (children > 0) {
-                setIsOpenChildrenField(!isOpenChildrenField);
+                extraHandleIncrement(event);
+              } else {
+                event.stopPropagation();
               }
             }}
           >
@@ -54,14 +72,30 @@ const NumberOfPersonForm = ({
           <InputQuantity
             quantity={children}
             type='children'
-            extraHandleIncrement={!isOpenChildrenField ? () => setIsOpenChildrenField(true) : null}
-            extraHandleDecrement={extraHandleIncrement}
+            extraHandleIncrement={extraHandleIncrement}
+            extraHandleDecrement={handleClosePopover}
             handleDecrement={handleDecrement}
             handleIncrement={handleIncrement}
             handleChildAgeChange={handleChildAgeChange}
+            openPopover={openPopover}
           />
 
-          {isOpenChildrenField && (
+          <Popover
+            id={idPopover}
+            open={openPopover}
+            anchorEl={isOpenChildrenField}
+            onClose={handleClosePopover}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            className='NumberOfPersonForm_popover'
+            sx={{ overflow: 'unset' }}
+          >
             <div className='children-age-info'>
               <ul>
                 {[...Array(children)].map((_, index) => {
@@ -97,7 +131,45 @@ const NumberOfPersonForm = ({
                 safe trip.
               </p>
             </div>
-          )}
+          </Popover>
+
+          {/* {isOpenChildrenField && (
+            <div className='children-age-info'>
+              <ul>
+                {[...Array(children)].map((_, index) => {
+                  const currentData = childrenYears.find((year) => year.position === index);
+                  const currentValue = currentData
+                    ? childrenAge.find((age) => age.value === currentData.years)
+                    : null;
+
+                  return (
+                    <li key={index}>
+                      <Select
+                        name={'age-needed'}
+                        className={`select-input-field-container ${currentValue ? 'active' : ''}`}
+                        classNamePrefix={`select-input-field`}
+                        isDisabled={false}
+                        isLoading={false}
+                        isClearable={true}
+                        isSearchable={false}
+                        options={childrenAge}
+                        placeholder={'Age needed'}
+                        value={currentValue}
+                        onChange={(value) => handleChildAgeChange(index, value)}
+                        components={{
+                          IndicatorSeparator: () => null,
+                        }}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+              <p style={{ margin: '3px 0', fontSize: '13px' }}>
+                Please indicate the age of each child. It helps us ensure we have child seats for a
+                safe trip.
+              </p>
+            </div>
+          )} */}
         </div>
       </div>
     </div>

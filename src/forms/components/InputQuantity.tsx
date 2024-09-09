@@ -7,10 +7,11 @@ interface QuantityInput {
   quantity: number;
   type: 'adults' | 'children';
   extraHandleDecrement?: (() => void) | null;
-  extraHandleIncrement?: (() => void) | null;
+  extraHandleIncrement?: ((event?: any) => void) | null;
   handleDecrement: any;
   handleIncrement: any;
   handleChildAgeChange?: (index: number, value: any) => void;
+  openPopover?: boolean;
 }
 
 const QuantityInput = ({
@@ -21,16 +22,18 @@ const QuantityInput = ({
   handleDecrement,
   handleIncrement,
   handleChildAgeChange,
+  openPopover,
 }: QuantityInput) => {
   const dispatch = useDispatch();
 
   return (
-    <div className='quantity-input'>
+    <div className='quantity-input' style={openPopover ? { zIndex: '9999' } : {}}>
       <span
         className='decrement'
-        onClick={() => {
+        onClick={(event) => {
+          if (quantity == 1 && extraHandleDecrement) extraHandleDecrement();
+
           dispatch(handleDecrement({ type }));
-          if (extraHandleDecrement && extraHandleDecrement !== null) extraHandleDecrement();
 
           if (handleChildAgeChange && quantity > 0 && type === 'children') {
             handleChildAgeChange(quantity - 1, null);
@@ -39,12 +42,18 @@ const QuantityInput = ({
       >
         <RemoveOutlinedIcon />
       </span>
-      <span className='quantity'>{quantity}</span>
+      <span
+        className='quantity'
+        onClick={(event) => {
+          event.stopPropagation();
+        }}
+      >
+        {quantity}
+      </span>
       <span
         className='increment'
-        onClick={() => {
+        onClick={(event) => {
           dispatch(handleIncrement({ type }));
-          if (extraHandleIncrement && extraHandleIncrement !== null) extraHandleIncrement();
         }}
       >
         <AddOutlinedIcon />

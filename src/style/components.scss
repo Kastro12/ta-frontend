@@ -547,54 +547,6 @@
           cursor: pointer;
         }
       }
-
-      .children-age-info {
-        position: absolute;
-        width: calc(100% - 24px);
-        border: 1px solid $gray1;
-        border-radius: 4px;
-        top: 48px;
-        background-color: $white1;
-        z-index: 2;
-        padding: 12px;
-
-        ul {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          li {
-            width: calc(50% - 6px);
-            margin-bottom: 12px;
-            .select-input-field-container {
-              .select-input-field__control {
-                min-height: 38px;
-                border-color: $red1;
-                font-size: 13px;
-              }
-              .select-input-field__control--is-focused {
-                // border-color: $green2;
-                box-shadow: none;
-              }
-
-              .select-input-field__indicator {
-                padding: 8px 3px;
-                &.select-input-field__clear-indicator {
-                  padding: 8px 0px;
-                }
-              }
-              .select-input-field__value-container {
-                padding: 2px 6px;
-              }
-
-              &.active {
-                .select-input-field__control {
-                  border-color: $gray1;
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 
@@ -621,10 +573,6 @@
       justify-content: space-around;
       .quantity-field {
         width: auto;
-        .children-age-info {
-          width: calc(100% + 84px);
-          left: -110px;
-        }
         &.children {
           .label {
             min-width: 86px;
