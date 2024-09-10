@@ -4,8 +4,9 @@ import '../style/appStyle.scss';
 
 export const metadata: Metadata = {
   title: 'Tailor-made vacations',
-  description: 'Tailor-made vacations',
-  robots: 'noindex, nofollow',
+  description:
+    'Tailor-made vacations offer personalized trips across Serbia and the surrounding. Choose your vacation plan, with planning of accommodations and transport.',
+  robots: 'index, follow',
 };
 
 export const revalidate = 3600;

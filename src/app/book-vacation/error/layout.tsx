@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Booking Unsuccessful',
-  description: 'Booking Unsuccessful',
+  title: 'Booking Unsuccessful - Tailor-made vacations',
+  robots: 'noindex, follow',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

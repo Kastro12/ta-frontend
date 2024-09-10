@@ -3,7 +3,7 @@ import { localCultureAndLandscapes as organizedVacations } from '@/data/organize
 
 export const metadata: Metadata = {
   title: `${organizedVacations.title}`,
-  description: `${organizedVacations.description}`,
+  description: `Vacation in Serbia. ${organizedVacations.description}`,
 }
 
 

@@ -3,7 +3,7 @@ import { pathwayFromAncientIimes as organizedVacations } from '@/data/organizedV
 
 export const metadata: Metadata = {
   title: `${organizedVacations.title}`,
-  description: `${organizedVacations.description}`,
+  description: `Vacation in Serbia. ${organizedVacations.description}`,
 }
 
 

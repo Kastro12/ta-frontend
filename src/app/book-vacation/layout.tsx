@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Book vacation',
-  description: 'Book vacation',
+  title: 'Book vacation - Tailor-made vacations',
+  robots: 'noindex, follow',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

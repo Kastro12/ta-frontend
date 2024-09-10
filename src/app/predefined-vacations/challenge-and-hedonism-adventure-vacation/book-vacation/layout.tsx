@@ -3,7 +3,7 @@ import { challengeAndHedonism as organizedVacations } from '@/data/organizedVaca
 
 export const metadata: Metadata = {
   title: `Book vacation - ${organizedVacations.title}`,
-  description: `Book vacation - ${organizedVacations.description}`,
+  robots: 'noindex, follow',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

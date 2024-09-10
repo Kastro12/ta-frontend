@@ -3,7 +3,7 @@ import { pathwayFromAncientIimes as organizedVacations } from '@/data/organizedV
 
 export const metadata: Metadata = {
   title: `Book vacation - ${organizedVacations.title}`,
-  description: `${organizedVacations.description}`,
+  robots: 'noindex, follow',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
