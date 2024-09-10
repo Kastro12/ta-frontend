@@ -18,9 +18,3 @@ export interface AlertsProps {
   message: string;
   timeout: number;
 }
-
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}

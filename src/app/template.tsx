@@ -9,8 +9,8 @@ import Script from 'next/script';
 
 export default function Template({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    if (window.gtag) {
-      window.gtag('config', 'G-91VKNG6XWG', {
+    if (typeof window !== 'undefined') {
+      (window as any).gtag('config', 'G-91VKNG6XWG', {
         page_path: window.location.pathname,
       });
     }
