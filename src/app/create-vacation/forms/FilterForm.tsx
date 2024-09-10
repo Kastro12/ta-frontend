@@ -6,7 +6,6 @@ import { activityCategories, activityLocations } from '@/data';
 import { useDispatch } from 'react-redux';
 import { filterActivityList } from '@/store/activities/activitiesReducer';
 import { updateCurrentPage } from '@/store/activities/activitiesReducer';
-import { Suspense } from 'react';
 
 interface FilterFormProps {
   setIsAllActivitiesLoaded: React.Dispatch<React.SetStateAction<boolean>>;
@@ -77,53 +76,51 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
   );
 
   return (
-    <Suspense>
-      <div className='action-filter-wrapper'>
-        <span className='label'>Filter by:</span>
-        <div className='field'>
-          <Select
-            id='category'
-            instanceId='category'
-            className={`select-input-field-container just-line`}
-            classNamePrefix={`select-input-field`}
-            isDisabled={false}
-            isLoading={false}
-            isClearable={true}
-            isSearchable={!isMobile}
-            name='category'
-            options={activityCategories}
-            defaultValue={activityCategories.filter((category) => category.value == categoryParam)}
-            placeholder={'Category'}
-            onChange={(e) => handleFilterChange(e, 'category')}
-            components={{
-              IndicatorSeparator: () => null,
-            }}
-            aria-label='Select a category'
-          />
-        </div>
-        <div className='field'>
-          <Select
-            id='location'
-            instanceId='location'
-            className={`select-input-field-container just-line`}
-            classNamePrefix={`select-input-field`}
-            isDisabled={false}
-            isLoading={false}
-            isClearable={true}
-            isSearchable={!isMobile}
-            name='location'
-            options={activityLocations}
-            defaultValue={activityLocations.filter((location) => location.value == locationParam)}
-            placeholder={'Location'}
-            onChange={(e) => handleFilterChange(e, 'location')}
-            components={{
-              IndicatorSeparator: () => null,
-            }}
-            aria-label='Select a location'
-          />
-        </div>
+    <div className='action-filter-wrapper'>
+      <span className='label'>Filter by:</span>
+      <div className='field'>
+        <Select
+          id='category'
+          instanceId='category'
+          className={`select-input-field-container just-line`}
+          classNamePrefix={`select-input-field`}
+          isDisabled={false}
+          isLoading={false}
+          isClearable={true}
+          isSearchable={!isMobile}
+          name='category'
+          options={activityCategories}
+          defaultValue={activityCategories.filter((category) => category.value == categoryParam)}
+          placeholder={'Category'}
+          onChange={(e) => handleFilterChange(e, 'category')}
+          components={{
+            IndicatorSeparator: () => null,
+          }}
+          aria-label='Select a category'
+        />
       </div>
-    </Suspense>
+      <div className='field'>
+        <Select
+          id='location'
+          instanceId='location'
+          className={`select-input-field-container just-line`}
+          classNamePrefix={`select-input-field`}
+          isDisabled={false}
+          isLoading={false}
+          isClearable={true}
+          isSearchable={!isMobile}
+          name='location'
+          options={activityLocations}
+          defaultValue={activityLocations.filter((location) => location.value == locationParam)}
+          placeholder={'Location'}
+          onChange={(e) => handleFilterChange(e, 'location')}
+          components={{
+            IndicatorSeparator: () => null,
+          }}
+          aria-label='Select a location'
+        />
+      </div>
+    </div>
   );
 };
 

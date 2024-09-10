@@ -22,7 +22,7 @@ import AddActivityDialog from '@/components/dialog/AddActivityDialog';
 import ZoomedBoxOfActivity from './components/ZoomedBoxOfActivity';
 import { Alert } from '@/components';
 import { changeRadioGroup } from '@/store/vacation/vacationReducer';
-
+import { Suspense } from 'react';
 export default function Activities() {
   const dispatch = useDispatch();
 
@@ -97,57 +97,59 @@ export default function Activities() {
   }, [currentPage, IsAllActivitiesLoaded, activityList]);
 
   return (
-    <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      {pageAlert && (
-        <Alert
-          severity={pageAlert.severity}
-          className='page-alert'
-          message={pageAlert.message}
-          timeout={pageAlert.timeout}
-        />
-      )}
-
-      <Typography variant='h1'>Create vacation</Typography>
-
-      {activitiesToDisplay && activitiesToDisplay.length > 0 && (
-        <>
-          <AddActivityDialog />
-          <ZoomedBoxOfActivity />
-        </>
-      )}
-      <div className='form-background in-container calendar-persons'>
-        <div className='form-calendar-persons'>
-          <CalendarFormWithHandleCalendarDate />
-          <NumberOfPersonsFormWithHandle />
-          <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
-        </div>
-        <ChooseServicesForm changeRadioGroup={changeRadioGroup} />
-      </div>
-
-      <div className='title-filter'>
-        <div style={{ position: 'absolute', top: '-96px' }} id='activity_offer_position'></div>
-        <Typography variant='h2'>Activity offer ({activitiesLength})</Typography>
-        <FilterForm setIsAllActivitiesLoaded={setIsAllActivitiesLoaded} />
-      </div>
-
-      <div className='standard-box-wrapper'>
-        {activitiesToDisplay && activitiesToDisplay.length === 0 && (
-          <div className='empty-result'>
-            <AutoGraphIcon />
-            <div className='info'>
-              <p>No activities found.</p>
-              <p>Try other filters.</p>
-            </div>
-          </div>
+    <Suspense>
+      <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
+        {pageAlert && (
+          <Alert
+            severity={pageAlert.severity}
+            className='page-alert'
+            message={pageAlert.message}
+            timeout={pageAlert.timeout}
+          />
         )}
 
-        {activitiesToDisplay?.map((data) => {
-          const isSelected = chosenActivities.some((activity) => activity.id === data.id);
+        <Typography variant='h1'>Create vacation</Typography>
 
-          return <BoxOfActivity data={data} key={data.id} isSelected={isSelected} />;
-        })}
-      </div>
-      <div ref={loader} />
-    </Container>
+        {activitiesToDisplay && activitiesToDisplay.length > 0 && (
+          <>
+            <AddActivityDialog />
+            <ZoomedBoxOfActivity />
+          </>
+        )}
+        <div className='form-background in-container calendar-persons'>
+          <div className='form-calendar-persons'>
+            <CalendarFormWithHandleCalendarDate />
+            <NumberOfPersonsFormWithHandle />
+            <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
+          </div>
+          <ChooseServicesForm changeRadioGroup={changeRadioGroup} />
+        </div>
+
+        <div className='title-filter'>
+          <div style={{ position: 'absolute', top: '-96px' }} id='activity_offer_position'></div>
+          <Typography variant='h2'>Activity offer ({activitiesLength})</Typography>
+          <FilterForm setIsAllActivitiesLoaded={setIsAllActivitiesLoaded} />
+        </div>
+
+        <div className='standard-box-wrapper'>
+          {activitiesToDisplay && activitiesToDisplay.length === 0 && (
+            <div className='empty-result'>
+              <AutoGraphIcon />
+              <div className='info'>
+                <p>No activities found.</p>
+                <p>Try other filters.</p>
+              </div>
+            </div>
+          )}
+
+          {activitiesToDisplay?.map((data) => {
+            const isSelected = chosenActivities.some((activity) => activity.id === data.id);
+
+            return <BoxOfActivity data={data} key={data.id} isSelected={isSelected} />;
+          })}
+        </div>
+        <div ref={loader} />
+      </Container>
+    </Suspense>
   );
 }
