@@ -26,7 +26,7 @@ export default function Home() {
         <div className='content'>
           <Grid md={12} className='titles'>
             <Typography variant='h1'>Create your dream vacation</Typography>
-            <h2>Choose activities, organize your days...</h2>
+            <h2>Choose the activities and let us organize the rest</h2>
           </Grid>
           <Grid md={12} sx={{ textAlign: 'center' }}>
             <Button
