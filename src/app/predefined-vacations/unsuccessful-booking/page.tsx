@@ -8,10 +8,10 @@ import { useRouter } from 'next/navigation';
 export default function Error() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const isSubmitted = localStorage.getItem('formSubmitted') === 'true';
+
   useEffect(() => {
     dispatch(clearVacation());
-
+    const isSubmitted = localStorage.getItem('formSubmitted') === 'true';
     if (!isSubmitted) {
       router.push('/');
     } else {

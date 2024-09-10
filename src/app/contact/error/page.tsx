@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation';
 
 export default function BookVacation() {
   const router = useRouter();
-  const isSubmitted = localStorage.getItem('formSubmitted') === 'true';
 
   useEffect(() => {
+    const isSubmitted = localStorage.getItem('formSubmitted') === 'true';
     if (!isSubmitted) {
       router.push('/');
     } else {
