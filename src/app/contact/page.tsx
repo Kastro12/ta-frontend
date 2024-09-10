@@ -12,12 +12,12 @@ export default function Contact() {
         Contact
       </Typography>
 
-      <Typography
+      {/* <Typography
         variant='body1'
         sx={{ maxWidth: '940px', m: '0px auto 12px auto', fontWeight: '300', textAlign: 'center' }}
       >
         Head office: Kralja Aleksandra 163 11000 Belgrade, Serbia
-      </Typography>
+      </Typography> */}
 
       <Typography
         variant='body1'
