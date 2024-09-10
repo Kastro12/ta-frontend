@@ -14,7 +14,7 @@ export default function Partnerships() {
         <Image
           src='/main-banner/partnership.jpg'
           alt='partnership'
-          style={{ objectFit: 'cover',borderRadius:'4px' }}
+          style={{ objectFit: 'cover', borderRadius: '4px' }}
           sizes='100vw'
           fill
           priority
@@ -26,8 +26,16 @@ export default function Partnerships() {
         </div>
       </Grid>
       <Typography
-        variant='h3'
-        sx={{ maxWidth: '640px', m: '32px auto 32px auto', fontWeight: '400', textAlign: 'center' }}
+        variant='h2'
+        sx={{
+          maxWidth: '640px',
+          m: '32px auto 32px auto',
+          fontWeight: '400',
+          textAlign: 'center',
+          fontSize: '18px',
+          lineHeight: '30px',
+          letterSpacing: '0.02em',
+        }}
       >
         Join forces for mutual success
       </Typography>

@@ -99,7 +99,7 @@ export default function PredefinedVacationTemplate({
 
       <div className='vacation-summary'>
         <div className='box'>
-          <Typography variant='h2'>Activities</Typography>
+          <Typography variant='h3'>Activities</Typography>
           <ul>
             {uniqueActivities.map((activity: Activity | undefined) => (
               <li key={activity?.title}>{activity?.title}</li>
@@ -108,7 +108,7 @@ export default function PredefinedVacationTemplate({
         </div>
 
         <div className='box'>
-          <Typography variant='h2'>Locations</Typography>
+          <Typography variant='h3'>Locations</Typography>
           <ul>
             {uniqueLocations.map((location) => (
               <li key={location.location}>{location.location}</li>
@@ -117,14 +117,14 @@ export default function PredefinedVacationTemplate({
         </div>
 
         <div className='box'>
-          <Typography variant='h2'>Duration</Typography>
+          <Typography variant='h3'>Duration</Typography>
           <Typography variant='body1' sx={{ fontSize: '15px' }}>
             {organizedVacations.dailyOgranization.length} days, you choose started day
           </Typography>
         </div>
 
         <div className='box'>
-          <Typography variant='h2'>Price overview:</Typography>
+          <Typography variant='h3'>Price overview:</Typography>
 
           <ul className='price'>
             <li>Activities + €34 booking fee</li>

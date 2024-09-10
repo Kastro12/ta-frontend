@@ -27,15 +27,31 @@ export default function AboutUs() {
         </div>
       </Grid>
       <Typography
-        variant='h3'
-        sx={{ maxWidth: '640px', m: '32px auto 0 auto', fontWeight: '400', textAlign: 'center' }}
+        variant='h2'
+        sx={{
+          maxWidth: '640px',
+          m: '32px auto 0 auto',
+          fontWeight: '400',
+          textAlign: 'center',
+          fontSize: '18px',
+          lineHeight: '30px',
+          letterSpacing: '0.02em',
+        }}
       >
         Experience the best vacation planning service, where you can relax and enjoy your adventures
         without any worries.
       </Typography>
       <Typography
-        variant='h3'
-        sx={{ maxWidth: '640px', m: '0 auto 32px auto', fontWeight: '400', textAlign: 'center' }}
+        variant='h2'
+        sx={{
+          maxWidth: '640px',
+          m: '0 auto 32px auto',
+          fontWeight: '400',
+          textAlign: 'center',
+          fontSize: '18px',
+          lineHeight: '30px',
+          letterSpacing: '0.02em',
+        }}
       >
         Let us handle the details while you make lasting memories!
       </Typography>

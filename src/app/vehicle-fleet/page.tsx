@@ -23,8 +23,16 @@ export default function VehicleFleet() {
         </div>
       </Grid>
       <Typography
-        variant='h3'
-        sx={{ maxWidth: '640px', m: '32px auto 32px auto', fontWeight: '400', textAlign: 'center' }}
+        variant='h2'
+        sx={{
+          maxWidth: '640px',
+          m: '32px auto 32px auto',
+          fontWeight: '400',
+          textAlign: 'center',
+          fontSize: '18px',
+          lineHeight: '30px',
+          letterSpacing: '0.02em',
+        }}
       >
         Travel in comfort and safety
       </Typography>
