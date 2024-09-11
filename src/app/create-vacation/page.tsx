@@ -22,13 +22,10 @@ import { Alert } from '@/components';
 import { changeRadioGroup } from '@/store/vacation/vacationReducer';
 import { Suspense } from 'react';
 import { useRouter } from 'next/navigation';
-import { useSearchParams } from 'next/navigation';
 
 export default function Activities() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const category = searchParams.get('category');
 
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const ACTIVITY_LIST_SIZE = useSelector((state: RootState) => state.activities.activityListSize);
@@ -60,6 +57,8 @@ export default function Activities() {
   }, []);
 
   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
     if (category) {
       const element = document.getElementById('activity_offer_position');
 
