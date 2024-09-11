@@ -5,7 +5,6 @@ import { Container, Typography } from '@mui/material';
 import CalendarFormWithHandleCalendarDate from './forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from './forms/NumberOfPersonsFormWithHandle';
 import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
-
 import FilterForm from './forms/FilterForm';
 import BoxOfActivity from './components/BoxOfActivity';
 import { useSelector, useDispatch } from 'react-redux';
@@ -17,14 +16,19 @@ import {
   clearActivities,
 } from '@/store/activities/activitiesReducer';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
-
 import AddActivityDialog from '@/components/dialog/AddActivityDialog';
 import ZoomedBoxOfActivity from './components/ZoomedBoxOfActivity';
 import { Alert } from '@/components';
 import { changeRadioGroup } from '@/store/vacation/vacationReducer';
 import { Suspense } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
+
 export default function Activities() {
   const dispatch = useDispatch();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category');
 
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const ACTIVITY_LIST_SIZE = useSelector((state: RootState) => state.activities.activityListSize);
@@ -54,6 +58,21 @@ export default function Activities() {
       dispatch(clearActivities());
     };
   }, []);
+
+  useEffect(() => {
+    if (category) {
+      const element = document.getElementById('activity_offer_position');
+
+      if (element) {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 220);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [router]);
 
   useEffect(() => {
     if (IsAllActivitiesLoaded) return;
