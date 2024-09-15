@@ -194,14 +194,14 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
           link: '/activities/history_and_culture/tvrdjava/kalemegdan/kalemegdan-1.jpg',
           alt: 'Kalemegdan Fortress',
         },
-        {
-          link: '/activities/history_and_culture/muzej/muzej_nikola_tesla/muzej-nikole-tesle-1.jpg',
-          alt: 'Nikola Tesla museum 1',
-        },
-        {
-          link: '/activities/history_and_culture/verski_objekat/hram_svetog_save/hram-svetog-save-1.jpg',
-          alt: 'Hram svetog Save 1',
-        },
+        // {
+        //   link: '/activities/history_and_culture/muzej/muzej_nikola_tesla/muzej-nikole-tesle-1.jpg',
+        //   alt: 'Nikola Tesla museum 1',
+        // },
+        // {
+        //   link: '/activities/history_and_culture/verski_objekat/hram_svetog_save/hram-svetog-save-1.jpg',
+        //   alt: 'Hram svetog Save 1',
+        // },
       ],
     },
     {
@@ -213,14 +213,14 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
         "In the afternoon, we arrive in Golubac, where we’ll settle in and spend the night in this picturesque town on the Danube's banks.",
       ],
       images: [
-        {
-          link: '/activities/history_and_culture/viminicijum/viminacium-2.jpg',
-          alt: 'Viminacium ancient roman city 2',
-        },
-        {
-          link: '/activities/history_and_culture/tvrdjava/smederevska_tvrdjava/smederevska-tvrdjava-1.jpg',
-          alt: 'Smederevo Fortress',
-        },
+        // {
+        //   link: '/activities/history_and_culture/viminicijum/viminacium-2.jpg',
+        //   alt: 'Viminacium ancient roman city 2',
+        // },
+        // {
+        //   link: '/activities/history_and_culture/tvrdjava/smederevska_tvrdjava/smederevska-tvrdjava-1.jpg',
+        //   alt: 'Smederevo Fortress',
+        // },
         {
           link: '/activities/history_and_culture/viminicijum/viminacium-1.jpg',
           alt: 'Viminacium ancient roman city',
@@ -239,18 +239,18 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
           link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-1.jpg',
           alt: 'Golubac Fortress',
         },
-        {
-          link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-inside.jpg',
-          alt: 'Golubac Fortress 2',
-        },
-        {
-          link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-old-suits.jpg',
-          alt: 'Golubac Fortress 3',
-        },
-        {
-          link: '/activities/history_and_culture/verski_objekat/manastir_tumane/manastir-tumane-1.jpg',
-          alt: 'Manastir Tumane 1',
-        },
+        // {
+        //   link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-inside.jpg',
+        //   alt: 'Golubac Fortress 2',
+        // },
+        // {
+        //   link: '/activities/history_and_culture/tvrdjava/golubac/golubac-fortress-old-suits.jpg',
+        //   alt: 'Golubac Fortress 3',
+        // },
+        // {
+        //   link: '/activities/history_and_culture/verski_objekat/manastir_tumane/manastir-tumane-1.jpg',
+        //   alt: 'Manastir Tumane 1',
+        // },
       ],
     },
     {
@@ -265,18 +265,18 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
           link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-1.jpg',
           alt: 'Lepenski Vir Archaeological Site',
         },
-        {
-          link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-2.jpg',
-          alt: 'Lepenski Vir Archaeological Site 2',
-        },
-        {
-          link: '/activities/landscape/cave/rajkova_pecina/rajkova-pecina-1.jpg',
-          alt: 'Rajkova Cave',
-        },
-        {
-          link: '/activities/landscape/cave/rajkova_pecina/rajkova-pecina-2.jpg',
-          alt: 'Rajkova Cave 2',
-        },
+        // {
+        //   link: '/activities/history_and_culture/lepenski_vir/lepenski-vir-2.jpg',
+        //   alt: 'Lepenski Vir Archaeological Site 2',
+        // },
+        // {
+        //   link: '/activities/landscape/cave/rajkova_pecina/rajkova-pecina-1.jpg',
+        //   alt: 'Rajkova Cave',
+        // },
+        // {
+        //   link: '/activities/landscape/cave/rajkova_pecina/rajkova-pecina-2.jpg',
+        //   alt: 'Rajkova Cave 2',
+        // },
       ],
     },
     {
@@ -287,18 +287,18 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
         'This cruise offers a perfect opportunity to relax and capture the majestic landscapes with your camera.',
       ],
       images: [
-        {
-          link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-cruise-1.jpg',
-          alt: 'Đerdap river cruise',
-        },
+        // {
+        //   link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-cruise-1.jpg',
+        //   alt: 'Đerdap river cruise',
+        // },
         {
           link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-1.jpg',
           alt: 'Đerdap River 1',
         },
-        {
-          link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-2.jpg',
-          alt: 'Đerdap River 2',
-        },
+        // {
+        //   link: '/activities/landscape/cruise/djerdap_cruise/djerdap-river-2.jpg',
+        //   alt: 'Đerdap River 2',
+        // },
       ],
     },
 
@@ -310,14 +310,14 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
         'Afterward, we return to Belgrade, enriched with new experiences and memories.',
       ],
       images: [
-        {
-          link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-1.jpg',
-          alt: 'Winery Topola 1',
-        },
-        {
-          link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-2.jpg',
-          alt: 'Winery Topola 2',
-        },
+        // {
+        //   link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-1.jpg',
+        //   alt: 'Winery Topola 1',
+        // },
+        // {
+        //   link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-2.jpg',
+        //   alt: 'Winery Topola 2',
+        // },
         {
           link: '/activities/relaxation_and_flavors/vinarija/aleksandrovic_topola/aleksandrovic-vinarija-3.jpg',
           alt: 'Winery Topola 3',
