@@ -1,7 +1,6 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
 import { Container, Typography } from '@mui/material';
-
 import CalendarFormWithHandleCalendarDate from './forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from './forms/NumberOfPersonsFormWithHandle';
 import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
