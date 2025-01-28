@@ -61,7 +61,6 @@ export default function Activities() {
     const category = urlParams.get('category');
     if (category) {
       const element = document.getElementById('activity_offer_position');
-
       if (element) {
         window.scrollTo(0, 0);
         setTimeout(() => {
@@ -74,7 +73,7 @@ export default function Activities() {
   }, [router]);
 
   useEffect(() => {
-    if (IsAllActivitiesLoaded) return;
+    if (IsAllActivitiesLoaded || !loader.current) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -94,7 +93,7 @@ export default function Activities() {
         observer.unobserve(loader.current);
       }
     };
-  }, [IsAllActivitiesLoaded, currentPage]);
+  }, [IsAllActivitiesLoaded, currentPage, loader.current]);
 
   // load new activities by scroll
   useEffect(() => {
