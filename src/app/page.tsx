@@ -2,48 +2,17 @@
 import { Container, Button, Typography } from '@mui/material';
 import { InfoWithBackgroundImage } from '@/components';
 import { SliderBarActivities, CreatedRoutesBoxList } from '@/sections';
-import Grid from '@mui/material/Unstable_Grid2';
-import Link from 'next/link';
-import { button, greenButton } from '@/utils/re-styledComponents';
 import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
-import Image from 'next/image';
 import ZoomedBoxOfActivity from '@/app/create-vacation/components/ZoomedBoxOfActivity';
+import { SliderBarMainBanner } from '@/sections';
 
 export default function Home() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <ZoomedBoxOfActivity />
-      <Grid container className='header-section' sx={{ position: 'relative' }}>
-        <Image
-          src='/main-banner/road_through_colorful_forest.webp'
-          alt='Road through colorful forest'
-          style={{ objectFit: 'cover', borderRadius: '4px' }}
-          sizes='100vw'
-          fill
-          priority
-        />
-        <div className='content'>
-          <Grid md={12} className='titles'>
-            <Typography variant='h1'>Create your dream vacation</Typography>
-            <h2>Choose the activities and let us organize the rest</h2>
-          </Grid>
-          <Grid md={12} sx={{ textAlign: 'center' }}>
-            <Button
-              sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '16px' } }}
-              variant='outlined'
-              href={'./create-vacation'}
-              LinkComponent={Link}
-            >
-              Create vacation
-            </Button>
-          </Grid>
-        </div>
-        <span
-          id='predefined-vacations-position'
-          style={{ position: 'absolute', bottom: '56px' }}
-        ></span>
-      </Grid>
+
+      <SliderBarMainBanner />
 
       <Typography variant='h2'>Predefined vacations</Typography>
 
