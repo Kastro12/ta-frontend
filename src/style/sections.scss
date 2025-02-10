@@ -146,3 +146,19 @@ footer {
     }
   }
 } //CreatedRouteComponent_wrap END
+
+.FullWidthBanner {
+  display: block;
+  position: relative;
+  height: 640px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .MuiCircularProgress-circle {
+    stroke: $green2;
+  }
+  @media screen and (min-width: $xs) {
+    height: 350px;
+  }
+}

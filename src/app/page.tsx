@@ -6,6 +6,7 @@ import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
 import ZoomedBoxOfActivity from '@/app/create-vacation/components/ZoomedBoxOfActivity';
 import { SliderBarMainBanner } from '@/sections';
+import FullWidthBanner from '@/sections/ads/FullWidthBanner';
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Typography variant='h2'>Predefined vacations</Typography>
 
       <CreatedRoutesBoxList serverData={organizedVacations} />
+
+      <FullWidthBanner />
 
       <Typography variant='h2' sx={{ mt: '12px', mb: '26px' }}>
         Top season activities
