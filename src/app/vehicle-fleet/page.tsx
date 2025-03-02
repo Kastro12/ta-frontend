@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import SliderBarGallery from '@/sections/sliderBarGallery/SliderBarGallery';
 import Image from 'next/image';
 
@@ -17,7 +17,7 @@ export default function VehicleFleet() {
           priority
         />
         <div className='content'>
-          <Grid md={12} className='titles'>
+          <Grid size={{ md: 12 }} className='titles'>
             <Typography variant='h1'>Vehicle fleet</Typography>
           </Grid>
         </div>
@@ -38,20 +38,20 @@ export default function VehicleFleet() {
       </Typography>
 
       <Grid container spacing={4}>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             If you choose our transportation arrangement service, we ensure your journey is as
             comfortable and safe as it can be. Our fleet of luxury vehicles is selected to provide
             you with the utmost comfort and reliability.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             From the moment you arrive at the airport or begin your vacation, our professional
             drivers are there to transport you to all your destinations seamlessly.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             Our main goal is for you to focus on your vacation and enjoy the ride. Whether it&apos;s
             a scenic drive or transportation between activities, we provide a seamless, comfortable,

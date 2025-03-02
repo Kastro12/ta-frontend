@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Container, Typography, Button, Alert } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import CalendarFormWithHandleCalendarDate from '../_forms/CalendarFormWithHandleCalendarDate';
 import NumberOfPersonsFormWithHandle from '../_forms/NumberOfPersonsFormWithHandle';
@@ -154,7 +154,7 @@ export default function PredefinedVacationTemplate({
       </div>
 
       <Grid container>
-        <Grid md={12} sx={{ width: '100%', textAlign: 'center', position: 'relative' }}>
+        <Grid size={{ md: 12 }} sx={{ width: '100%', textAlign: 'center', position: 'relative' }}>
           <Button
             sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '32px' } }}
             variant='outlined'

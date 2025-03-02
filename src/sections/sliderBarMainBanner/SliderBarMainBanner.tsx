@@ -17,8 +17,6 @@ const SliderBarMainBanner = () => {
     arrows: false,
   };
 
-  console.log('mainBanners', mainBanners);
-
   return (
     <div className='slider-container' style={{ position: 'relative' }}>
       <Slider {...settings}>

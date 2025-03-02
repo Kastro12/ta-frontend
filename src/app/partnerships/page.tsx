@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Container, Typography, Button } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import Link from 'next/link';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
@@ -20,7 +20,7 @@ export default function Partnerships() {
           priority
         />
         <div className='content'>
-          <Grid md={12} className='titles'>
+          <Grid size={{ md: 12 }} className='titles'>
             <Typography variant='h1'>Partnership with us</Typography>
           </Grid>
         </div>
@@ -41,14 +41,14 @@ export default function Partnerships() {
       </Typography>
 
       <Grid container spacing={4}>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             We are always open to forming new partnerships and collaborations in our field. Whether
             you are an individual, a company, or an organization, we believe in the power of working
             together to achieve mutual success.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             Our team is dedicated to building strong and fruitful relationships that benefit all
             parties involved. By partnering with us, you will gain access to our extensive network,
@@ -56,7 +56,7 @@ export default function Partnerships() {
             unique and unforgettable experiences for our clients.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             If you are interested in exploring potential collaboration opportunities, please feel
             free to reach out to us using the{' '}
@@ -68,7 +68,7 @@ export default function Partnerships() {
           </Typography>
         </Grid>
 
-        <Grid md={12} sx={{ width: '100%', textAlign: 'center', position: 'relative' }}>
+        <Grid size={{ md: 12 }} sx={{ width: '100%', textAlign: 'center', position: 'relative' }}>
           <Button
             startIcon={<MailOutlineOutlinedIcon />}
             sx={{ ...button, ...greenButton, ...{ padding: '0 28px', mt: '16px' } }}

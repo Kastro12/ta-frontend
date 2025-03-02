@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
 import Image from 'next/image';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import Link from 'next/link';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -43,7 +43,7 @@ const FullWidthBanner = () => {
           />
           <div className='content'>
             {(adsBanner.title || adsBanner.description) && (
-              <Grid md={12} className='titles'>
+              <Grid size={{ md: 12 }} className='titles'>
                 {adsBanner.title && <Typography variant='h1'>{adsBanner.title}</Typography>}
                 {adsBanner.description && <h2>{adsBanner.description}</h2>}
               </Grid>

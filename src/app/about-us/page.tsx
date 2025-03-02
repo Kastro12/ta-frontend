@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import Image from 'next/image';
 import Link from 'next/link';
 import { linkGreenButton } from '@/utils/re-styledComponents';
@@ -18,7 +18,7 @@ export default function AboutUs() {
           priority
         />
         <div className='content'>
-          <Grid md={12} className='titles'>
+          <Grid size={{ md: 12 }} className='titles'>
             <Typography variant='h1'>
               Expert vacation planning
               <br /> for ultimate relaxation
@@ -57,33 +57,33 @@ export default function AboutUs() {
       </Typography>
 
       <Grid container spacing={4}>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             At our service, we tailor each trip to your preferences, managing activity reservations,
             accommodations, and transportation, so you can relax and enjoy your vacation.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             We offer flexible options, whether you want a fully customized experience or a
             pre-planned itinerary. We aim to turn your dream vacation into reality with
             high-quality, personalized service.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4}>
+        <Grid size={{ xs: 12, lg: 4 }}>
           <Typography variant='body1'>
             Transparency and quality guide our work. We carefully select the best accommodations and
             transport options, ensuring a seamless and enjoyable experience tailored to your needs.
           </Typography>
         </Grid>
 
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
           <Typography variant='h2' sx={{ m: 0 }}>
             Our services
           </Typography>
         </Grid>
 
-        <Grid xs={12} lg={6}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <Typography variant='h3' sx={{ mb: 2 }}>
             Create vacation
           </Typography>
@@ -106,7 +106,7 @@ export default function AboutUs() {
             options, whether in restaurants or at your hotel.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={6}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <Typography variant='h3' sx={{ mb: 2 }}>
             Predefined vacations
           </Typography>

@@ -1,7 +1,7 @@
 import { Typography, Button } from '@mui/material';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import Image from 'next/image';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import Link from 'next/link';
 import { MainBannersProps } from '@/data/mainBanners';
 
@@ -17,11 +17,11 @@ const MainBanner = ({ data }: { data: MainBannersProps }) => {
         priority
       />
       <div className='content'>
-        <Grid md={12} className='titles'>
+        <Grid size={{ md: 12 }} className='titles'>
           <Typography variant='h1'>{data.title}</Typography>
           <h2>{data.description}</h2>
         </Grid>
-        <Grid md={12} style={{ textAlign: 'center' }}>
+        <Grid size={{ md: 12 }} style={{ textAlign: 'center' }}>
           <Button
             sx={{ ...button, ...greenButton, padding: '0 28px', mt: '16px' }}
             variant='outlined'

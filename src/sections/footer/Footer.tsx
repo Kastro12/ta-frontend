@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import { Divider, Container, Typography } from '@mui/material';
 import Link from 'next/link';
 import { Button } from '@mui/material';
@@ -13,7 +13,11 @@ const Footer = () => {
   const pages = useMemo(
     () => [
       { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/create-vacation' },
-      { name: 'Predefined vacations', icon: RouteOutlinedIcon, link: '/#predefined-vacations-position' },
+      {
+        name: 'Predefined vacations',
+        icon: RouteOutlinedIcon,
+        link: '/#predefined-vacations-position',
+      },
     ],
     []
   );
@@ -22,7 +26,7 @@ const Footer = () => {
     <footer>
       <Container maxWidth='lg' className='custom-container'>
         <Grid container spacing={3}>
-          <Grid xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>
               Services
             </Typography>
@@ -45,7 +49,7 @@ const Footer = () => {
             </ul>
           </Grid>
 
-          <Grid xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>
               Overview
             </Typography>
@@ -82,7 +86,7 @@ const Footer = () => {
             </ul>
           </Grid>
 
-          <Grid xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Typography variant='h4' sx={{ mb: 3, fontWeight: '500' }}>
               Opportunities
             </Typography>
@@ -151,12 +155,12 @@ const Footer = () => {
         <Divider sx={{ my: 2 }} />
 
         <Grid container spacing={3}>
-          <Grid xs={12} md={8} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid size={{ xs: 12, md: 8 }} sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography variant='body2' style={{ fontSize: '12px', fontWeight: '300' }}>
               Copyright ©2024 Tailor-made vacations - All Rights Reserved
             </Typography>
           </Grid>
-          <Grid xs={12} md={4} className={'mobile_left_desktop_right_flex'}>
+          <Grid size={{ xs: 12, md: 4 }} className={'mobile_left_desktop_right_flex'}>
             <Button
               sx={{ ...button, ...transparentLightButton }}
               LinkComponent={Link}
