@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store/store';
 import { clearActivityAction } from '@/store/vacation/vacationReducer';
 import Image from 'next/image';
+import SwitchLanguage from './SwitchLanguage';
 
 const Navbar = () => {
   const pages = useMemo(
@@ -125,8 +126,15 @@ const Navbar = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
+              <SwitchLanguage />
+
               <IconButton
-                sx={{ ...button, ...transparentLightButton, p: '12px!important' }}
+                sx={{
+                  ...button,
+                  ...transparentLightButton,
+                  p: '12px!important',
+                  marginLeft: '12px',
+                }}
                 id='shoppingCartIcon'
                 onClick={handleOpenShoppingCart}
                 size='small'

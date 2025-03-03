@@ -1,19 +1,24 @@
 'use client';
-import { Container, Button, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { InfoWithBackgroundImage } from '@/components';
 import { SliderBarActivities, CreatedRoutesBoxList } from '@/sections';
 import { topSeasonActivities, activityCategories } from '@/data';
 import { organizedVacations } from '@/data/organizedVacations';
-import ZoomedBoxOfActivity from '@/app/create-vacation/components/ZoomedBoxOfActivity';
+import ZoomedBoxOfActivity from '@/app/[locale]/create-vacation/components/ZoomedBoxOfActivity';
 import { SliderBarMainBanner } from '@/sections';
 import FullWidthBanner from '@/sections/ads/FullWidthBanner';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('HomePage');
+
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <ZoomedBoxOfActivity />
 
       <SliderBarMainBanner />
+
+      <p>{t('title')}</p>
 
       <Typography variant='h2'>Predefined vacations</Typography>
 

@@ -15,7 +15,7 @@ import {
 import { useRouter } from 'next/navigation';
 import { Activity } from '@/utils/interfaces';
 import allActivities from '@/data/activities/allActivities';
-import DailyOrganizationBox from '../_components/DailyOrganizationBox';
+import DailyOrganizationBox from './DailyOrganizationBox';
 import { PredefinedVacationProps } from '@/data/organizedVacations';
 import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
 

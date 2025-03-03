@@ -22,7 +22,6 @@ const FullWidthBanner = () => {
 
   useEffect(() => {
     const isMobileDevice = window.innerWidth <= 600;
-    console.log(isMobileDevice);
     setIsMobile(isMobileDevice);
   }, []);
 

@@ -1,10 +1,11 @@
 import { useMemo } from 'react';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
-import { Box, Button, Grid, Typography, IconButton } from '@mui/material';
+import { Box, Button, Typography, IconButton } from '@mui/material';
 import Link from 'next/link';
 import { button, transparentLightButton } from '@/utils/re-styledComponents/index';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import Grid from '@mui/material/Grid2';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -32,7 +33,7 @@ const DrawerList = ({ handleOpenDrawer }: DrawerList) => {
     >
       <Grid container className='container'>
         <Grid
-          md={12}
+          size={{ md: 12 }}
           sx={{
             display: 'flex',
             alignItems: 'flex-start',
