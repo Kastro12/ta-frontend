@@ -26,7 +26,7 @@ export default function VehicleFleet() {
         variant='h2'
         sx={{
           maxWidth: '640px',
-          m: '32px auto 32px auto',
+          m: '32px auto 32px auto !important',
           fontWeight: '400',
           textAlign: 'center',
           fontSize: '18px',

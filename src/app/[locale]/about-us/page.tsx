@@ -27,7 +27,7 @@ export default function AboutUs() {
         </div>
       </Grid>
       <Typography
-        variant='h2'
+        variant='h3'
         sx={{
           maxWidth: '640px',
           m: '32px auto 0 auto',
@@ -42,7 +42,7 @@ export default function AboutUs() {
         without any worries.
       </Typography>
       <Typography
-        variant='h2'
+        variant='h3'
         sx={{
           maxWidth: '640px',
           m: '0 auto 32px auto',
@@ -76,13 +76,11 @@ export default function AboutUs() {
             transport options, ensuring a seamless and enjoyable experience tailored to your needs.
           </Typography>
         </Grid>
+      </Grid>
 
-        <Grid size={{ xs: 12 }}>
-          <Typography variant='h2' sx={{ m: 0 }}>
-            Our services
-          </Typography>
-        </Grid>
+      <Typography variant='h2'>Our services</Typography>
 
+      <Grid container spacing={4}>
         <Grid size={{ xs: 12, lg: 6 }}>
           <Typography variant='h3' sx={{ mb: 2 }}>
             Create vacation
