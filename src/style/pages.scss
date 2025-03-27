@@ -70,70 +70,70 @@
   }
 } //activities END
 
-.page.predefined-vacations {
-  .vacation-summary {
+.vacation-summary {
+  .box {
+    h3 {
+      margin: 16px 0;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    ul {
+      li {
+        line-height: 32px;
+        font-weight: 400;
+        color: $green1;
+        font-size: 15px;
+      }
+      &.price {
+        li {
+          span {
+            font-size: 13px;
+            font-style: italic;
+          }
+        }
+      }
+    }
+    .info {
+      font-size: 14px;
+    }
+    p {
+      font-weight: 400;
+      color: $green2;
+    }
+  }
+
+  @media screen and (min-width: 760px) {
     .box {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 24px;
       h3 {
-        margin: 16px 0;
-        font-size: 18px;
-        line-height: 26px;
+        margin: 0;
+        width: 170px;
+        font-size: 16px;
+        line-height: 28px;
       }
       ul {
-        li {
-          line-height: 32px;
-          font-weight: 400;
-          color: $green1;
-          font-size: 15px;
-        }
-        &.price {
-          li {
-            span {
-              font-size: 13px;
-              font-style: italic;
-            }
-          }
-        }
-      }
-      .info {
-        font-size: 14px;
-      }
-      p {
-        font-weight: 400;
-        color: $green2;
-      }
-    }
-
-    @media screen and (min-width: 760px) {
-      .box {
         display: flex;
-        align-items: flex-start;
-        margin-bottom: 24px;
-        h3 {
-          margin: 0;
-          width: 170px;
-          font-size: 16px;
+        flex-wrap: wrap;
+        width: calc(100% - 140px);
+        li {
+          width: auto;
+          margin: 0 32px 8px 8px;
           line-height: 28px;
         }
-        ul {
-          display: flex;
-          flex-wrap: wrap;
-          width: calc(100% - 140px);
-          li {
-            width: auto;
-            margin: 0 32px 8px 8px;
-            line-height: 28px;
-          }
-          &.price {
-            flex-direction: column;
-          }
-        }
-        p {
-          margin: 0 8px;
+        &.price {
+          flex-direction: column;
         }
       }
+      p {
+        margin: 0 8px;
+      }
     }
-  } //vacation-summary END
+  }
+} //vacation-summary END
 
+.page.predefined-vacations {
   .daily-organization {
     position: relative;
     .__ {

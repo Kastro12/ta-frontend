@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import "react-datepicker/dist/react-datepicker.css";
 
 const CalendarForm = ({
   startDate,

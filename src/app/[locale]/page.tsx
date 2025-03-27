@@ -26,13 +26,13 @@ export default function Home() {
 
       <FullWidthBanner />
 
-      <Typography variant='h2' sx={{ mt: '12px', mb: '26px' }}>
+      <Typography variant='h2'>
         Top season activities
       </Typography>
 
       <SliderBarActivities serverData={topSeasonActivities} />
 
-      <Typography variant='h2' sx={{ mt: '28px' }}>
+      <Typography variant='h2'>
         Activity categories
       </Typography>
       {activityCategories.map((category, i) => (

@@ -19,7 +19,7 @@ interface GalleryModalProps {
   activeImage: number;
 }
 
-const GalleryModal = ({
+export const GalleryModal = ({
   isOpen,
   handleClose,
   images,

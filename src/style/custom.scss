@@ -9,12 +9,18 @@
   }
 }
 
-.MuiTypography-root.MuiTypography-h1 {
-  font-size: 32px;
-  font-weight: 800;
+.MuiTypography-root {
+  &.MuiTypography-h2 {
+    margin: 50px 0 36px 0;
+  }
 
-  @media screen and (min-width: $md) {
-    font-size: 46px;
+  &.MuiTypography-h1 {
+    font-size: 32px;
+    font-weight: 800;
+
+    @media screen and (min-width: $md) {
+      font-size: 46px;
+    }
   }
 }
 

@@ -16,7 +16,6 @@ import {
 } from '@/store/activities/activitiesReducer';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import AddActivityDialog from '@/components/dialog/AddActivityDialog';
-import ZoomedBoxOfActivity from './components/ZoomedBoxOfActivity';
 import { Alert } from '@/components';
 import { changeRadioGroup } from '@/store/vacation/vacationReducer';
 import { Suspense } from 'react';
@@ -26,7 +25,6 @@ export default function Activities() {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const ACTIVITY_LIST_SIZE = useSelector((state: RootState) => state.activities.activityListSize);
   const activityList = useSelector((state: RootState) => state.activities.activityList);
   const currentPage = useSelector((state: RootState) => state.activities.currentPage);
@@ -129,7 +127,6 @@ export default function Activities() {
         {activitiesToDisplay && activitiesToDisplay.length > 0 && (
           <>
             <AddActivityDialog />
-            <ZoomedBoxOfActivity />
           </>
         )}
         <div className='form-background in-container calendar-persons'>
@@ -159,9 +156,7 @@ export default function Activities() {
           )}
 
           {activitiesToDisplay?.map((data) => {
-            const isSelected = chosenActivities.some((activity) => activity.id === data.id);
-
-            return <BoxOfActivity data={data} key={data.id} isSelected={isSelected} />;
+            return <BoxOfActivity data={data} key={data.id} />;
           })}
         </div>
         <div ref={loader} />
