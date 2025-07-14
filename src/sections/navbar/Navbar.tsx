@@ -14,6 +14,8 @@ import { RootState } from '@/store/store';
 import { clearActivityAction } from '@/store/vacation/vacationReducer';
 import Image from 'next/image';
 import SwitchLanguage from './SwitchLanguage';
+import { AppDispatch } from '@/store/store';
+import { loadChosenActivities } from '@/store/vacation/vacationReducer';
 
 const Navbar = () => {
   const pages = useMemo(
@@ -29,7 +31,7 @@ const Navbar = () => {
     []
   );
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const [isNavMenuOpened, setisNavMenuOpened] = useState<boolean>(false);
   const handleOpenNavMenu = () => {
@@ -46,6 +48,10 @@ const Navbar = () => {
   const chosenActivitiesAction = useSelector(
     (state: RootState) => state.vacation.chosenActivitiesAction
   );
+
+  useEffect(() => {
+    dispatch(loadChosenActivities());
+  }, []);
 
   useEffect(() => {
     if (chosenActivitiesAction !== null) {

@@ -27,7 +27,6 @@ export const activitySlice = createSlice({
     ) => {
       const category = action.payload.category;
       const location = action.payload.location;
-
       if (category === null && location === null) {
         state.activityList = allActivities;
         state.activitiesToDisplay = allActivities.slice(0, state.activityListSize);
@@ -74,6 +73,7 @@ export const activitySlice = createSlice({
     },
 
     updateCurrentPage: (state, action: PayloadAction<number>) => {
+      if (action.payload <= state.currentPage) return;
       state.currentPage = action.payload;
     },
 
@@ -85,7 +85,9 @@ export const activitySlice = createSlice({
       state.zoomedActivity = null;
     },
 
-    clearActivities: () => initialState,
+    clearActivities: () => {
+      return initialState;
+    },
   },
 });
 

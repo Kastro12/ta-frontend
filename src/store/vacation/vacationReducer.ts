@@ -1,6 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Activity } from '@/utils/interfaces/index';
 import { getDateDifference } from '@/utils/date';
+import { AppThunk } from '@/store/store';
+import {
+  saveChosenActivitiesToLocalStorage,
+  loadChosenActivitiesFromLocalStorage,
+} from '@/utils/localstorage';
 
 export interface IssueInitialState {
   startDate: null | string;
@@ -169,3 +174,32 @@ export const {
   changeRadioGroup,
 } = vacationSlice.actions;
 export default vacationSlice.reducer;
+
+// Thunk action for localStorage
+export const addActivityWithPersistence =
+  (activity: Activity): AppThunk =>
+  (dispatch, getState) => {
+    dispatch(addActivity(activity));
+    const { vacation } = getState();
+    saveChosenActivitiesToLocalStorage(vacation.chosenActivities);
+  };
+
+export const removeActivityWithPersistence =
+  (activityId: string): AppThunk =>
+  (dispatch, getState) => {
+    dispatch(removeActivity(activityId));
+    const { vacation } = getState();
+    saveChosenActivitiesToLocalStorage(vacation.chosenActivities);
+  };
+
+export const loadChosenActivities = (): AppThunk => (dispatch, getState) => {
+  const { vacation } = getState();
+  if (vacation.chosenActivities.length > 0) {
+    return;
+  }
+
+  const activities = loadChosenActivitiesFromLocalStorage();
+  activities.forEach((activity) => {
+    dispatch(addActivity(activity));
+  });
+};

@@ -5,9 +5,9 @@ import CalendarFormWithHandleCalendarDate from './forms/CalendarFormWithHandleCa
 import NumberOfPersonsFormWithHandle from './forms/NumberOfPersonsFormWithHandle';
 import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
 import FilterForm from './forms/FilterForm';
-import BoxOfActivity from './components/BoxOfActivity';
+import ActivitiesWrapper from './components/BoxOfActivity/ActivitiesWrapper';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '@/store/store';
+import { RootState, AppDispatch } from '@/store/store';
 import { Activity } from '@/utils/interfaces';
 import {
   updateActivitiesToDisplay,
@@ -38,7 +38,7 @@ export default function Activities() {
   const [IsAllActivitiesLoaded, setIsAllActivitiesLoaded] = useState<boolean>(false);
 
   const loader = useRef(null);
-
+  const lastPageRef = useRef(currentPage);
   const loadMoreData = (data: Activity[] | null, page: number, itemsPerPage: number) => {
     if (data === null) return;
 
@@ -70,12 +70,16 @@ export default function Activities() {
   }, [router]);
 
   useEffect(() => {
+    lastPageRef.current = currentPage;
+  }, [currentPage]);
+
+  useEffect(() => {
     if (IsAllActivitiesLoaded || !loader.current) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          dispatch(updateCurrentPage(currentPage + 1));
+          dispatch(updateCurrentPage(lastPageRef.current + 1));
         }
       },
       { threshold: 1.0 }
@@ -90,7 +94,7 @@ export default function Activities() {
         observer.unobserve(loader.current);
       }
     };
-  }, [IsAllActivitiesLoaded, currentPage, loader.current]);
+  }, [IsAllActivitiesLoaded, loader.current]);
 
   // load new activities by scroll
   useEffect(() => {
@@ -154,11 +158,10 @@ export default function Activities() {
               </div>
             </div>
           )}
-
-          {activitiesToDisplay?.map((data) => {
-            return <BoxOfActivity data={data} key={data.id} />;
-          })}
         </div>
+
+        <ActivitiesWrapper activities={activitiesToDisplay} />
+
         <div ref={loader} />
       </Container>
     </Suspense>

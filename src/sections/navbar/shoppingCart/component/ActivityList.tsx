@@ -1,14 +1,15 @@
 import { Paper, IconButton } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import { button } from '@/utils/re-styledComponents/index';
-import { removeActivity } from '@/store/vacation/vacationReducer';
+import { removeActivityWithPersistence } from '@/store/vacation/vacationReducer';
 import { useDispatch } from 'react-redux';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import Image from 'next/image';
+import { AppDispatch } from '@/store/store';
 
 const ActivityList = ({ activity }: any) => {
   const pathname = usePathname();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   let durationText = '';
   switch (activity.durationInDays) {
@@ -52,7 +53,7 @@ const ActivityList = ({ activity }: any) => {
                 <IconButton
                   sx={{ ...button }}
                   id='shoppingCartIcon'
-                  onClick={() => dispatch(removeActivity(activity.id))}
+                  onClick={() => dispatch(removeActivityWithPersistence(activity.id))}
                   size='small'
                   title='Remove activity'
                 >

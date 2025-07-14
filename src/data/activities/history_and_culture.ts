@@ -2,6 +2,7 @@ import { Activity } from '@/utils/interfaces';
 
 const museums: Activity[] = [
   {
+    paidAd: true,
     id: 'muzej_nikola_tesla',
     title: 'Nikola Tesla museum',
     description:
@@ -34,6 +35,7 @@ const museums: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'muzej_vazduhoplovstva',
     title: 'Museum of Aviation',
     description:
@@ -69,6 +71,7 @@ const museums: Activity[] = [
 
 const fortress: Activity[] = [
   {
+    paidAd: true,
     id: 'gardos_tower',
     title: 'Gardoš Tower',
     description:
@@ -97,6 +100,7 @@ const fortress: Activity[] = [
     subCategory: 'Fortress',
   },
   {
+    paidAd: true,
     id: 'maglic-fortress',
     title: 'Maglič Fortress',
     description:
@@ -130,6 +134,7 @@ const fortress: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'history_and_culture-backa-tvrdjava',
     title: 'Bačka Fortress',
     description:
@@ -157,6 +162,7 @@ const fortress: Activity[] = [
     subCategory: '',
   },
   {
+    paidAd: true,
     id: 'history_and_culture-felix-romuliana–the-imperial-palace-of-galerius',
     title: 'Felix Romuliana imperial palace',
     description:
@@ -188,6 +194,7 @@ const fortress: Activity[] = [
     subCategory: '',
   },
   {
+    paidAd: true,
     id: 'history_and_culture_golubac_fortress_medieval_stronghold',
     title: 'Golubac Fortress',
     description:
@@ -219,6 +226,7 @@ const fortress: Activity[] = [
     subCategory: '',
   },
   {
+    paidAd: true,
     id: 'history_and_culture_kalemegdan',
     title: 'Kalemegdan Fortress',
     description:
@@ -250,6 +258,7 @@ const fortress: Activity[] = [
     subCategory: '',
   },
   {
+    paidAd: true,
     id: 'history_and_culture_petrovaradin',
     title: 'Petrovaradin Fortress',
     description:
@@ -277,6 +286,7 @@ const fortress: Activity[] = [
     subCategory: '',
   },
   {
+    paidAd: true,
     id: 'history_and_culture_smederevo_fortress',
     title: 'Smederevo Fortress',
     description:
@@ -311,6 +321,7 @@ const fortress: Activity[] = [
 
 const history_and_culture: Activity[] = [
   {
+    paidAd: true,
     id: 'history_and_culture-drvengrad–traditional-village',
     title: 'Drvengrad traditional village',
     description:
@@ -343,6 +354,7 @@ const history_and_culture: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'history_and_culture_lepenski_vir',
     title: 'Lepenski Vir archaeological site',
     description:
@@ -371,6 +383,7 @@ const history_and_culture: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'history_and_culture_sremski_karlovci',
     title: 'Sremski Karlovci historic gem',
     description:
@@ -403,6 +416,7 @@ const history_and_culture: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'history_and_culture_viminacium',
     title: 'Viminacium ancient roman city',
     description:
@@ -437,6 +451,7 @@ const history_and_culture: Activity[] = [
 
 const religious_objects: Activity[] = [
   {
+    paidAd: true,
     id: 'st_sava_temple_belgrade',
     title: 'St. Sava Temple, Belgrade',
     description:
@@ -465,6 +480,7 @@ const religious_objects: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'tumane_monastery',
     title: 'Tumane Monastery',
     description:

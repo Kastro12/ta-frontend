@@ -3,6 +3,9 @@
   height: 460px;
   width: 100%;
   list-style: none;
+  &.bg-green{
+    background-color: $green1;
+  }
   .content {
     position: absolute;
     color: $white1;

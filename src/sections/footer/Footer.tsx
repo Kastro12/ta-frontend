@@ -96,6 +96,15 @@ const Footer = () => {
                 <Button
                   sx={{ ...button, ...transparentLightButton }}
                   LinkComponent={Link}
+                  href={'/digital-advertising'}
+                >
+                  Digital advertising
+                </Button>
+              </li>
+              <li className='list'>
+                <Button
+                  sx={{ ...button, ...transparentLightButton }}
+                  LinkComponent={Link}
                   href={'/jobs'}
                 >
                   Jobs

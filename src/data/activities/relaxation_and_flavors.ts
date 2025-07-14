@@ -2,6 +2,7 @@ import { Activity } from '@/utils/interfaces';
 
 const winery: Activity[] = [
   {
+    paidAd: false,
     id: 'winery_aleksandrovic_topola',
     title: 'Winery Topola',
     description:
@@ -35,6 +36,7 @@ const winery: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'winery_and_ethno_salas_zvonko_bogdan',
     title: 'Winery ethno salaš Zvonko Bogdan',
     description:
@@ -70,6 +72,7 @@ const winery: Activity[] = [
 
 const spa: Activity[] = [
   {
+    paidAd: false,
     id: 'fruske_terme_spa',
     title: 'Fruške Terme spa',
     description:
@@ -105,6 +108,7 @@ const spa: Activity[] = [
 
 const villages: Activity[] = [
   {
+    paidAd: false,
     id: 'rural-retreat-in-northern-montenegro',
     title: 'Rural retreat northern Montenegro',
     description:

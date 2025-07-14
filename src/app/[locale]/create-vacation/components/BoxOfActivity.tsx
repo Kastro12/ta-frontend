@@ -1,29 +1,32 @@
-'use client'
-import * as React from 'react';
+'use client';
 import { Paper, Typography, Box, Button } from '@mui/material';
 import { button, greenButton, selectedActivity } from '@/utils/re-styledComponents';
 import { Activity } from '@/utils/interfaces';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
-import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
+import {
+  addActivityWithPersistence,
+  removeActivityWithPersistence,
+} from '@/store/vacation/vacationReducer';
 import { activityDurationInString } from '@/utils/string';
 import Image from 'next/image';
 import Link from 'next/link';
-import { RootState } from '@/store/store';
+import { RootState, AppDispatch } from '@/store/store';
 import { useSelector, useDispatch } from 'react-redux';
 
 interface BoxOfActivityProps {
   data: Activity;
+  handleSnackbar: (message: 'REMOVE' | 'ADD') => void;
 }
 
-export default function BoxOfActivity({ data }: BoxOfActivityProps) {
-  const dispatch = useDispatch();
-  console.log('data', data);
+export default function BoxOfActivity({ data, handleSnackbar }: BoxOfActivityProps) {
+  const dispatch = useDispatch<AppDispatch>();
   const { durationInDays, title, images, description, id, category, location } = data;
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const isSelected = chosenActivities.some((activity) => activity.id === data.id);
+
   return (
-    <Paper elevation={3} className='BoxOfActivity'>
+    <Paper elevation={3} className={`BoxOfActivity${data?.paidAd ? ' paidAd' : ''}`}>
       <Box className='content-wrapper'>
         <div className='image-wrapper'>
           <Link href={data.id}>
@@ -65,7 +68,15 @@ export default function BoxOfActivity({ data }: BoxOfActivityProps) {
               sx={{ ...button, ...(isSelected ? selectedActivity : greenButton), width: '110px' }}
               variant='outlined'
               startIcon={isSelected ? <CloseOutlinedIcon /> : <AddShoppingCartOutlinedIcon />}
-              onClick={() => dispatch(isSelected ? removeActivity(id) : addActivity(data))}
+              onClick={() => {
+                if (isSelected) {
+                  dispatch(removeActivityWithPersistence(id));
+                  handleSnackbar('REMOVE');
+                } else {
+                  dispatch(addActivityWithPersistence(data));
+                  handleSnackbar('ADD');
+                }
+              }}
             >
               {isSelected ? 'Remove' : 'Choose'}
             </Button>

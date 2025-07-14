@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { Dialog, DialogContent, Typography, Box, Button } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '@/store/store';
+import { RootState, AppDispatch } from '@/store/store';
 import {
   button,
   greenButton,
@@ -9,14 +9,17 @@ import {
   linkGreenButton,
 } from '@/utils/re-styledComponents';
 import { removeZoomedActivity } from '@/store/activities/activitiesReducer';
-import { addActivity, removeActivity } from '@/store/vacation/vacationReducer';
+import {
+  addActivityWithPersistence,
+  removeActivityWithPersistence,
+} from '@/store/vacation/vacationReducer';
 import { activityDurationInString } from '@/utils/string';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import Gallery from './Gallery';
 
 export default function ZoomedBoxOfActivity() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const zoomedActivity = useSelector((state: RootState) => state.activities.zoomedActivity);
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
@@ -78,7 +81,9 @@ export default function ZoomedBoxOfActivity() {
               onClick={() => {
                 zoomedActivity &&
                   dispatch(
-                    isSelected ? removeActivity(zoomedActivity?.id) : addActivity(zoomedActivity)
+                    isSelected
+                      ? removeActivityWithPersistence(zoomedActivity?.id)
+                      : addActivityWithPersistence(zoomedActivity)
                   );
               }}
             >

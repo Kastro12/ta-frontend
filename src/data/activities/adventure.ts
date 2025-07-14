@@ -2,6 +2,7 @@ import { Activity } from '@/utils/interfaces';
 
 const rafting: Activity[] = [
   {
+    paidAd: true,
     id: 'adventure-rafting-tara',
     title: 'Rafting on the Tara river',
     description:
@@ -35,6 +36,7 @@ const rafting: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'adventure-rafting-ibar',
     title: 'Rafting on the Ibar river',
     description:
@@ -70,6 +72,7 @@ const rafting: Activity[] = [
 
 const paragliding: Activity[] = [
   {
+    paidAd: false,
     id: 'adventure-paragliding-zlatibor',
     title: 'Paragliding Zlatibor',
     description:
@@ -102,6 +105,7 @@ const paragliding: Activity[] = [
   },
 
   {
+    paidAd: true,
     id: 'adventure-paragliding-budva',
     title: 'Paragliding Budva, Montenegro',
     description:
@@ -136,6 +140,7 @@ const paragliding: Activity[] = [
 
 const kayaking: Activity[] = [
   {
+    paidAd: false,
     id: 'adventure-kayaking-drina',
     title: 'Drina Kayak adventure',
     description:
@@ -168,6 +173,7 @@ const kayaking: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'adventure-kayaking-danube-iron-gate',
     title: 'Kayaking the Danube iron gate',
     description:
@@ -200,6 +206,7 @@ const kayaking: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'adventure-kayaking-uvac',
     title: 'Uvac kayak adventure',
     description:
@@ -232,6 +239,7 @@ const kayaking: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'adventure-war-island-kayak',
     title: 'War Island kayak adventure',
     description:
@@ -262,6 +270,7 @@ const kayaking: Activity[] = [
 
 const jeep_safary: Activity[] = [
   {
+    paidAd: false,
     id: 'adventure-jeep_safari_durmitor_rings',
     title: 'Jeep safari around Durmitor ring',
     description:
@@ -296,6 +305,7 @@ const jeep_safary: Activity[] = [
 
 const horse_riding: Activity[] = [
   {
+    paidAd: false,
     id: 'horse_riding_tara',
     title: 'Horse riding on Tara mountain',
     description:
@@ -328,6 +338,7 @@ const horse_riding: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'horse_riding_fruska_gora',
     title: 'Horse riding on Fruska Gora',
     description:
@@ -362,6 +373,7 @@ const horse_riding: Activity[] = [
 
 const hiking: Activity[] = [
   {
+    paidAd: false,
     id: 'hiking_rtanj_mountain',
     title: 'Hiking on Rtanj mountain',
     description:
@@ -396,6 +408,7 @@ const hiking: Activity[] = [
 
 const fishing: Activity[] = [
   {
+    paidAd: false,
     id: 'fishing-adventure-on-the-drina-river',
     title: 'Fishing on the Drina river',
     description:
@@ -428,6 +441,7 @@ const fishing: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'fishing-adventure-on-the-tara-river',
     title: 'Fishing on the Tara river',
     description:
@@ -462,6 +476,7 @@ const fishing: Activity[] = [
 
 const cycling: Activity[] = [
   {
+    paidAd: false,
     id: 'cycling_kopaonik',
     title: 'Mountain biking on Kopaonik',
     description:
@@ -494,6 +509,7 @@ const cycling: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'cycling_tara',
     title: 'Mountain biking on Tara',
     description:
@@ -528,6 +544,7 @@ const cycling: Activity[] = [
 
 const canyoning: Activity[] = [
   {
+    paidAd: false,
     id: 'canyoning_nevidio',
     title: 'Nevidio canyon adventure',
     description:
@@ -562,6 +579,7 @@ const canyoning: Activity[] = [
 
 const bungee_jump: Activity[] = [
   {
+    paidAd: false,
     id: 'bungee_jump_ada_ciganlija',
     title: 'Bungee jump at Ada Ciganlija',
     description:
@@ -588,6 +606,7 @@ const bungee_jump: Activity[] = [
 
 const quad_bike: Activity[] = [
   {
+    paidAd: false,
     id: 'quad_bike_zlatibor',
     title: 'Quad Bike Adventure in Zlatibor',
     description:

@@ -2,25 +2,24 @@ import allActivities from '@/data/activities/allActivities';
 import { organizedVacations } from '@/data/organizedVacations';
 import { notFound } from 'next/navigation';
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Button, Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import Image from 'next/image';
 import Gallery from '@/sections/slideBarActivityGallery/Gallery';
 import Link from 'next/link';
-import BoxOfActivity from '@/app/[locale]/create-vacation/components/BoxOfActivity';
+import ActivitiesWrapper from '@/app/[locale]/create-vacation/components/BoxOfActivity/ActivitiesWrapper';
 import { getRecommendedActivities } from '@/utils/activities';
+import HeaderSection from './components/HeaderSection';
+import ChooseActivity from './components/ChooseActivity';
 
 export default async function ActivityPage({
   params,
 }: Readonly<{
   params: { locale: string; slug: string };
 }>) {
-  console.log('allActivities', allActivities);
+  const currentActivity = allActivities.find((activity) => activity.id === params?.slug[0]);
 
-  const currentParams = await params;
-  const currentActivity = allActivities.find((activity) => activity.id === currentParams?.slug[0]);
-
-  if (!currentActivity || currentParams.slug.length !== 1) {
+  if (!currentActivity || params.slug.length !== 1) {
     notFound();
   }
 
@@ -36,21 +35,7 @@ export default async function ActivityPage({
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <Grid container className='header-section'>
-        <Image
-          src={currentActivity.images[0].link}
-          alt={currentActivity.images[0].alt}
-          style={{ objectFit: 'cover', borderRadius: '4px' }}
-          sizes='100vw'
-          fill
-          priority
-        />
-        <div className='content'>
-          <Grid size={{ md: 12 }} className='titles'>
-            <Typography variant='h1'>{currentActivity.title}</Typography>
-          </Grid>
-        </div>
-      </Grid>
+      <HeaderSection currentActivity={currentActivity} />
 
       <Grid container>
         <Grid size={{ xs: 12, lg: 8 }}>
@@ -105,22 +90,28 @@ export default async function ActivityPage({
         </Grid>
         <Grid
           size={{ xs: 12, lg: 4 }}
-          sx={{ position: 'relative', pt: 6, display: 'flex', justifyContent: 'center' }}
+          sx={{
+            position: 'relative',
+            pt: 6,
+            display: 'flex',
+            justifyContent: 'start',
+            flexDirection: 'column',
+          }}
         >
-          <Image
-            src='/logo/android-chrome-256x256.png'
-            alt='tailor-made vacations logo'
-            loading='lazy'
-            width={142}
-            height={142}
-          />
+          <ChooseActivity currentActivity={currentActivity} />
+          <Box sx={{ marginTop: '32px', display: 'flex', justifyContent: 'center' }}>
+            <Image
+              src='/logo/android-chrome-256x256.png'
+              alt='tailor-made vacations logo'
+              loading='lazy'
+              width={142}
+              height={142}
+            />
+          </Box>
         </Grid>
         <Typography variant='h2'>Similar & nearby</Typography>
-        <div className='standard-box-wrapper'>
-          {recommendedActivities?.map((data) => {
-            return <BoxOfActivity data={data} key={data.id} />;
-          })}
-        </div>
+
+        <ActivitiesWrapper activities={recommendedActivities} />
       </Grid>
     </Container>
   );
@@ -132,7 +123,6 @@ export async function generateMetadata({
   params: { locale: string; slug: string };
 }>) {
   const currentParams = await params;
-  console.log('params', currentParams);
 
   const currentActivity = allActivities.find((activity) => activity.id === currentParams?.slug[0]);
 

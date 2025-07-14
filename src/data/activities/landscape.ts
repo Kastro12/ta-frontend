@@ -2,6 +2,7 @@ import { Activity } from '@/utils/interfaces';
 
 const cruise: Activity[] = [
   {
+    paidAd: false,
     id: 'cruise-perucac-visegrad-and-back',
     title: 'Cruise from Perućac to Višegrad and back',
     description:
@@ -33,6 +34,7 @@ const cruise: Activity[] = [
     subCategory: 'Cruise',
   },
   {
+    paidAd: false,
     id: 'cruise_djerdap',
     title: 'Đerdap river cruise',
     description:
@@ -64,6 +66,7 @@ const cruise: Activity[] = [
     subCategory: 'Cruise',
   },
   {
+    paidAd: false,
     id: 'cruise-djerdap-Speedboat',
     title: 'Speedboat through Đerdap gorge',
     description:
@@ -99,6 +102,7 @@ const cruise: Activity[] = [
 
 const caves: Activity[] = [
   {
+    paidAd: false,
     id: 'landscape_rajkova_pecina',
     title: 'Rajkova cave',
     description:
@@ -132,6 +136,7 @@ const caves: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_resavska_pecina',
     title: 'Resava cave',
     description:
@@ -165,6 +170,7 @@ const caves: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_stopica_pecina',
     title: 'Stopića cave',
     description:
@@ -200,6 +206,7 @@ const caves: Activity[] = [
 
 const all: Activity[] = [
   {
+    paidAd: false,
     id: 'landscape_djavolja_varos',
     title: 'Đavolja Varoš natural wonder',
     description:
@@ -232,6 +239,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_tara-canyon',
     title: 'Tara river canyon, the deepest in Europe',
     description:
@@ -264,6 +272,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_nc_djerdap',
     title: 'Đerdap National Park',
     description:
@@ -296,6 +305,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_nc_fruska_gora',
     title: 'Fruška Gora National Park',
     description:
@@ -328,6 +338,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_nc_kopaonik',
     title: 'Kopaonik National Park',
     description:
@@ -360,6 +371,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_nc_tara',
     title: 'Tara National Park',
     description:
@@ -392,6 +404,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_ovcarsko_kablarska_klisura',
     title: 'Ovčar-Kablar gorge',
     description:
@@ -424,6 +437,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_stara_planina',
     title: 'Stara Planina majestic retreat',
     description:
@@ -456,6 +470,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_lokve_planina',
     title: 'Hidden gem of Lokve mountain',
     description:
@@ -489,6 +504,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_komovi_planina',
     title: 'Majestic Komovi mountain',
     description:
@@ -522,6 +538,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_vlasin_lake',
     title: 'Vlasina lake',
     description:
@@ -554,6 +571,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_palic_lake',
     title: 'Palić Lake',
     description:
@@ -587,6 +605,7 @@ const all: Activity[] = [
   },
 
   {
+    paidAd: false,
     id: 'landscape_zlatibor_gondola',
     title: 'Gold gondola ride',
     description:

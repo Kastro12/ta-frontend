@@ -1,4 +1,8 @@
 {
   "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "i18n-ally.localesPaths": [
+    "messages",
+    "src/i18n"
+  ]
 }
