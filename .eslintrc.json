@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "next/core-web-vitals"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "next/core-web-vitals"],
   "rules": {
     "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
     "react-hooks/exhaustive-deps": "off",

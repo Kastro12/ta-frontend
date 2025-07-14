@@ -11,11 +11,12 @@ import ActivitiesWrapper from '@/app/[locale]/create-vacation/components/BoxOfAc
 import { getRecommendedActivities } from '@/utils/activities';
 import HeaderSection from './components/HeaderSection';
 import ChooseActivity from './components/ChooseActivity';
+import type { Metadata, ResolvingMetadata } from 'next';
 
 export default async function ActivityPage({
   params,
 }: Readonly<{
-  params: { locale: string; slug: string };
+  params: { locale: string; slug: string[] };
 }>) {
   const currentActivity = allActivities.find((activity) => activity.id === params?.slug[0]);
 
@@ -117,11 +118,10 @@ export default async function ActivityPage({
   );
 }
 
-export async function generateMetadata({
-  params,
-}: Readonly<{
-  params: { locale: string; slug: string };
-}>) {
+export async function generateMetadata(
+  { params }: { params: { locale: string; slug: string[] } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const currentActivity = allActivities.find((activity) => activity.id === params?.slug[0]);
 
   if (!currentActivity || params.slug.length !== 1) {
