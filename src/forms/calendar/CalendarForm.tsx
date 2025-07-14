@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
 
 const CalendarForm = ({
   startDate,
@@ -14,11 +14,11 @@ const CalendarForm = ({
 }: {
   disabledStartDate: boolean;
   disabledFinishDate: boolean;
-  startDate: Date | null;
-  finishDate: Date | null;
-  maxFinishDate: Date | null;
+  startDate: Date | null | undefined;
+  finishDate: Date | null | undefined;
+  maxFinishDate: Date | undefined;
   handleDateChange: (type: 'startDate' | 'finishDate', date: any) => void;
-  minFinishDate: Date | null;
+  minFinishDate: Date | undefined;
 }) => {
   const ExampleCustomInput = forwardRef(
     ({ value, onClick, className, placeholderText, disabled }: any, ref: any) => (
@@ -31,7 +31,7 @@ const CalendarForm = ({
       >
         {value ? value : placeholderText}
       </button>
-    )
+    ),
   );
 
   ExampleCustomInput.displayName = 'ExampleCustomInput';
