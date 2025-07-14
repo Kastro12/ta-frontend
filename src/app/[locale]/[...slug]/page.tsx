@@ -16,17 +16,19 @@ import type { Metadata, ResolvingMetadata } from 'next';
 export default async function ActivityPage({
   params,
 }: Readonly<{
-  params: { locale: string; slug: string[] };
+  params: Promise<{ locale: string; slug: string }>;
 }>) {
-  const currentActivity = allActivities.find((activity) => activity.id === params?.slug[0]);
+  const { slug } = await params;
 
-  if (!currentActivity || params.slug.length !== 1) {
+  const currentActivity = allActivities.find((activity) => activity.id === slug[0]);
+
+  if (!currentActivity || slug.length == 0) {
     notFound();
   }
 
   const vacationWithCurrentActivity = organizedVacations.filter((vacation) => {
     const currentActivityInVacation = vacation.activities.find(
-      (activity) => activity.id === currentActivity.id
+      (activity) => activity.id === currentActivity.id,
     );
     if (currentActivityInVacation) return true;
     return false;
@@ -118,13 +120,16 @@ export default async function ActivityPage({
   );
 }
 
-export async function generateMetadata(
-  { params }: { params: { locale: string; slug: string[] } },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const currentActivity = allActivities.find((activity) => activity.id === params?.slug[0]);
+type Props = {
+  params: Promise<{ slug: string; locale: string }>;
+};
 
-  if (!currentActivity || params.slug.length !== 1) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug, locale } = await params;
+
+  const currentActivity = allActivities.find((activity) => activity.id === slug[0]);
+
+  if (!currentActivity || slug.length !== 1) {
     notFound();
   }
 
@@ -152,7 +157,7 @@ export async function generateMetadata(
           alt: currentActivity.images[0].alt,
         },
       ],
-      locale: params.locale,
+      locale: locale,
     },
   };
 }
