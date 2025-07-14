@@ -122,11 +122,9 @@ export async function generateMetadata({
 }: Readonly<{
   params: { locale: string; slug: string };
 }>) {
-  const currentParams = await params;
+  const currentActivity = allActivities.find((activity) => activity.id === params?.slug[0]);
 
-  const currentActivity = allActivities.find((activity) => activity.id === currentParams?.slug[0]);
-
-  if (!currentActivity || currentParams.slug.length !== 1) {
+  if (!currentActivity || params.slug.length !== 1) {
     notFound();
   }
 
@@ -154,7 +152,7 @@ export async function generateMetadata({
           alt: currentActivity.images[0].alt,
         },
       ],
-      locale: currentParams.locale,
+      locale: params.locale,
     },
   };
 }
