@@ -1,3 +1,4 @@
+'use client';
 import { mainBanners } from '@/data';
 import MainBanner from './MainBanner';
 import { MainBannersProps } from '@/data/mainBanners';

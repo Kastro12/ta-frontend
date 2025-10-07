@@ -1,4 +1,3 @@
-'use client';
 import { Container, Typography } from '@mui/material';
 import { InfoWithBackgroundImage } from '@/components';
 import { SliderBarActivities, CreatedRoutesBoxList } from '@/sections';
@@ -7,10 +6,10 @@ import { organizedVacations } from '@/data/organizedVacations';
 import ZoomedBoxOfActivity from '@/app/[locale]/create-vacation/components/ZoomedBoxOfActivity';
 import { SliderBarMainBanner } from '@/sections';
 import FullWidthBanner from '@/sections/ads/FullWidthBanner';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
-  const t = useTranslations('HomePage');
+export default async function Home() {
+  const t = await getTranslations('HomePage');
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
@@ -26,15 +25,11 @@ export default function Home() {
 
       <FullWidthBanner />
 
-      <Typography variant='h2'>
-        Top season activities
-      </Typography>
+      <Typography variant='h2'>Top season activities</Typography>
 
       <SliderBarActivities serverData={topSeasonActivities} />
 
-      <Typography variant='h2'>
-        Activity categories
-      </Typography>
+      <Typography variant='h2'>Activity categories</Typography>
       {activityCategories.map((category, i) => (
         <InfoWithBackgroundImage
           title={category.label}

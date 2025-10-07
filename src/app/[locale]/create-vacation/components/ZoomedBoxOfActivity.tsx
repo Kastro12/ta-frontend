@@ -1,3 +1,4 @@
+'use client';
 import React, { useCallback } from 'react';
 import { Dialog, DialogContent, Typography, Box, Button } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
@@ -83,7 +84,7 @@ export default function ZoomedBoxOfActivity() {
                   dispatch(
                     isSelected
                       ? removeActivityWithPersistence(zoomedActivity?.id)
-                      : addActivityWithPersistence(zoomedActivity)
+                      : addActivityWithPersistence(zoomedActivity),
                   );
               }}
             >
