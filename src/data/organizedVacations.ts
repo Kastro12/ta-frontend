@@ -15,11 +15,11 @@ export const challengeAndHedonism: PredefinedVacationProps = {
   translationKey: 'organizedVacations.challenge_and_hedonism',
   link: '/predefined-vacations/challenge-and-hedonism-adventure-vacation',
   activities: [
-    { id: 'landscape_ovcarsko_kablarska_klisura' },
-    { id: 'landscape_zlatibor_gondola' },
+    { id: 'ovcarsko_kablarska_klisura' },
+    { id: 'zlatibor_gondola' },
     { id: 'cycling_tara' },
-    { id: 'landscape_nc_tara' },
-    { id: 'adventure-kayaking-drina' },
+    { id: 'nc_tara' },
+    { id: 'kayaking_drina' },
   ],
   dailyOrganization: [
     {
@@ -130,15 +130,15 @@ export const pathwayFromAncientIimes: PredefinedVacationProps = {
   translationKey: 'organizedVacations.from_ancient_to_modern_history',
   link: '/predefined-vacations/from-ancient-to-modern-history',
   activities: [
-    { id: 'history_and_culture_kalemegdan' },
+    { id: 'kalemegdan_fortress' },
     { id: 'muzej_nikola_tesla' },
     { id: 'st_sava_temple_belgrade' },
-    { id: 'history_and_culture_smederevo_fortress' },
-    { id: 'history_and_culture_viminacium' },
-    { id: 'history_and_culture_golubac_fortress_medieval_stronghold' },
+    { id: 'smederevo_fortress' },
+    { id: 'viminacium' },
+    { id: 'golubac_fortress_medieval_stronghold' },
     { id: 'tumane_monastery' },
-    { id: 'history_and_culture_lepenski_vir' },
-    { id: 'landscape_rajkova_pecina' },
+    { id: 'lepenski_vir' },
+    { id: 'rajkova_pecina' },
     { id: 'cruise_djerdap' },
     { id: 'winery_aleksandrovic_topola' },
   ],
@@ -267,11 +267,11 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
   translationKey: 'organizedVacations.exploring_local_culture_and_landscapes',
   link: '/predefined-vacations/exploring-local-culture-and-landscapes',
   activities: [
-    { id: 'landscape_nc_tara' },
+    { id: 'nc_tara' },
     { id: 'horse_riding_tara' },
-    { id: 'history_and_culture-drvengrad–traditional-village' },
-    { id: 'rural-retreat-in-northern-montenegro' },
-    { id: 'maglic-fortress' },
+    { id: 'drvengrad_traditional_village' },
+    { id: 'rural_retreat_in_northern_montenegro' },
+    { id: 'maglic_fortress' },
   ],
   dailyOrganization: [
     {
@@ -387,15 +387,15 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       translationKey: 'day_seven',
       images: [
         {
-          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-1.jpg',
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-1.jpg',
           alt: 'Maglič Fortress',
         },
         {
-          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-2.jpg',
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-2.jpg',
           alt: 'Maglič Fortress 2',
         },
         {
-          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-3.jpg',
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-3.jpg',
           alt: 'Maglič Fortress 2',
         },
       ],
@@ -410,9 +410,9 @@ export const pannonianPlain: PredefinedVacationProps = {
   activities: [
     { id: 'muzej_vazduhoplovstva' },
     { id: 'gardos_tower' },
-    { id: 'history_and_culture_sremski_karlovci' },
-    { id: 'history_and_culture_petrovaradin' },
-    { id: 'landscape_nc_fruska_gora' },
+    { id: 'sremski_karlovci' },
+    { id: 'petrovaradin_fortress' },
+    { id: 'nc_fruska_gora' },
     { id: 'winery_and_ethno_salas_zvonko_bogdan' },
   ],
   dailyOrganization: [

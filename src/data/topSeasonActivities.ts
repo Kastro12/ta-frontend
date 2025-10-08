@@ -2,10 +2,10 @@ import allActivities from '@/data/activities/allActivities';
 
 const topActivitiesID = [
   { id: 'cycling_kopaonik' },
-  { id: 'history_and_culture_golubac_fortress_medieval_stronghold' },
-  { id: 'landscape_zlatibor_gondola' },
+  { id: 'golubac_fortress_medieval_stronghold' },
+  { id: 'zlatibor_gondola' },
   { id: 'canyoning_nevidio' },
-  { id: 'landscape_vlasin_lake' },
+  { id: 'vlasinsko_jezero' },
 ];
 
 const topSeasonActivities = topActivitiesID.map((activity) =>

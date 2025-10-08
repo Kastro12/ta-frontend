@@ -4,6 +4,7 @@ const museums: Activity[] = [
   {
     paidAd: true,
     id: 'muzej_nikola_tesla',
+    translationKey: 'activities.history_and_culture.muzej_nikola_tesla',
     title: 'Nikola Tesla museum',
     description:
       'Discover the legacy of Nikola Tesla at the Nikola Tesla Museum in Belgrade, showcasing his personal belongings, inventions, and archives.',
@@ -33,10 +34,10 @@ const museums: Activity[] = [
     categoryValue: 'history_and_culture',
     subCategory: 'museum',
   },
-
   {
     paidAd: true,
     id: 'muzej_vazduhoplovstva',
+    translationKey: 'activities.history_and_culture.muzej_vazduhoplovstva',
     title: 'Museum of Aviation',
     description:
       'Discover the history of aviation at the Museum of Aviation in Belgrade, featuring an extensive collection of aircraft and artifacts.',
@@ -73,6 +74,7 @@ const fortress: Activity[] = [
   {
     paidAd: true,
     id: 'gardos_tower',
+    translationKey: 'activities.history_and_culture.gardos_tower',
     title: 'Gardoš Tower',
     description:
       'Visit Gardoš Tower, a historic landmark in Zemun, offering breathtaking views of the Danube River and the city of Belgrade.',
@@ -101,7 +103,8 @@ const fortress: Activity[] = [
   },
   {
     paidAd: true,
-    id: 'maglic-fortress',
+    id: 'maglic_fortress',
+    translationKey: 'activities.history_and_culture.maglic_fortress',
     title: 'Maglič Fortress',
     description:
       'Explore the historic Maglič Fortress, perched high above the Ibar River, offering stunning views and a journey through medieval history.',
@@ -115,15 +118,15 @@ const fortress: Activity[] = [
     cost: 180,
     images: [
       {
-        link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-1.jpg',
+        link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-1.jpg',
         alt: 'Maglič Fortress 1',
       },
       {
-        link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-2.jpg',
+        link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-2.jpg',
         alt: 'Maglič Fortress 2',
       },
       {
-        link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-3.jpg',
+        link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-3.jpg',
         alt: 'Maglič Fortress 2',
       },
     ],
@@ -132,10 +135,10 @@ const fortress: Activity[] = [
     categoryValue: 'history_and_culture',
     subCategory: 'Fortress',
   },
-
   {
     paidAd: true,
-    id: 'history_and_culture-backa-tvrdjava',
+    id: 'backa_tvrdjava',
+    translationKey: 'activities.history_and_culture.backa_tvrdjava',
     title: 'Bačka Fortress',
     description:
       'Bačka Fortress offers a glimpse into medieval history with scenic river views and convenient parking nearby. Ideal for history enthusiasts and explorers.',
@@ -163,7 +166,8 @@ const fortress: Activity[] = [
   },
   {
     paidAd: true,
-    id: 'history_and_culture-felix-romuliana–the-imperial-palace-of-galerius',
+    id: 'felix_romuliana',
+    translationKey: 'activities.history_and_culture.felix_romuliana',
     title: 'Felix Romuliana imperial palace',
     description:
       "Felix Romuliana, a UNESCO World Heritage site, features impressive Roman ruins. With convenient parking nearby, it's perfect for history enthusiasts and archaeology lovers.",
@@ -195,7 +199,8 @@ const fortress: Activity[] = [
   },
   {
     paidAd: true,
-    id: 'history_and_culture_golubac_fortress_medieval_stronghold',
+    id: 'golubac_fortress_medieval_stronghold',
+    translationKey: 'activities.history_and_culture.golubac_fortress_medieval_stronghold',
     title: 'Golubac Fortress',
     description:
       'Golubac Fortress offers stunning views and rich history by the Danube. With parking nearby, it’s ideal for history enthusiasts and photographers.',
@@ -227,7 +232,8 @@ const fortress: Activity[] = [
   },
   {
     paidAd: true,
-    id: 'history_and_culture_kalemegdan',
+    id: 'kalemegdan_fortress',
+    translationKey: 'activities.history_and_culture.kalemegdan_fortress',
     title: 'Kalemegdan Fortress',
     description:
       'Kalemegdan offers panoramic views and rich history in central Belgrade, making it an ideal spot for sightseeing and cultural exploration.',
@@ -259,7 +265,8 @@ const fortress: Activity[] = [
   },
   {
     paidAd: true,
-    id: 'history_and_culture_petrovaradin',
+    id: 'petrovaradin_fortress',
+    translationKey: 'activities.history_and_culture.petrovaradin_fortress',
     title: 'Petrovaradin Fortress',
     description:
       'Petrovaradin Fortress offers expansive views and a rich history, making it an excellent destination for history enthusiasts and panoramic sightseeing.',
@@ -287,7 +294,8 @@ const fortress: Activity[] = [
   },
   {
     paidAd: true,
-    id: 'history_and_culture_smederevo_fortress',
+    id: 'smederevo_fortress',
+    translationKey: 'activities.history_and_culture.smederevo_fortress',
     title: 'Smederevo Fortress',
     description:
       'Smederevo Fortress offers expansive historical ruins and river views, providing a great experience for history enthusiasts and explorers.',
@@ -322,7 +330,8 @@ const fortress: Activity[] = [
 const history_and_culture: Activity[] = [
   {
     paidAd: true,
-    id: 'history_and_culture-drvengrad–traditional-village',
+    id: 'drvengrad_traditional_village',
+    translationKey: 'activities.history_and_culture.drvengrad_traditional_village',
     title: 'Drvengrad traditional village',
     description:
       'Drvengrad is a charming wooden village with rich cultural attractions, making it a great destination for film enthusiasts and cultural exploration.',
@@ -355,7 +364,8 @@ const history_and_culture: Activity[] = [
 
   {
     paidAd: true,
-    id: 'history_and_culture_lepenski_vir',
+    id: 'lepenski_vir',
+    translationKey: 'activities.history_and_culture.lepenski_vir',
     title: 'Lepenski Vir archaeological site',
     description:
       'Lepenski Vir is a prehistoric site with unique sculptures and a rich history, attracting archaeology enthusiasts and history buffs.',
@@ -384,7 +394,8 @@ const history_and_culture: Activity[] = [
 
   {
     paidAd: true,
-    id: 'history_and_culture_sremski_karlovci',
+    id: 'sremski_karlovci',
+    translationKey: 'activities.history_and_culture.sremski_karlovci',
     title: 'Sremski Karlovci historic gem',
     description:
       'Sremski Karlovci offers historical landmarks and charming architecture, an excellent destination for cultural exploration and sightseeing.',
@@ -417,7 +428,8 @@ const history_and_culture: Activity[] = [
 
   {
     paidAd: true,
-    id: 'history_and_culture_viminacium',
+    id: 'viminacium',
+    translationKey: 'activities.history_and_culture.viminacium',
     title: 'Viminacium ancient roman city',
     description:
       'Viminacium features extensive Roman ruins and artifacts, a fascinating destination for archaeology enthusiasts and history buffs.',
@@ -453,6 +465,7 @@ const religious_objects: Activity[] = [
   {
     paidAd: true,
     id: 'st_sava_temple_belgrade',
+    translationKey: 'activities.history_and_culture.st_sava_temple_belgrade',
     title: 'St. Sava Temple, Belgrade',
     description:
       'Visit the magnificent St. Sava Temple in Belgrade, one of the largest Orthodox churches in the world, and experience its stunning architecture and spiritual ambiance.',
@@ -482,6 +495,7 @@ const religious_objects: Activity[] = [
   {
     paidAd: true,
     id: 'tumane_monastery',
+    translationKey: 'activities.history_and_culture.tumane_monastery',
     title: 'Tumane Monastery',
     description:
       'Experience the spiritual and historical significance of Tumane Monastery, a centuries-old sanctuary set in the serene landscape of eastern Serbia.',

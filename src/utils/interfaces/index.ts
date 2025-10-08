@@ -1,4 +1,5 @@
 export interface Activity {
+  translationKey: string;
   paidAd: boolean;
   id: string;
   title: string;
