@@ -60,7 +60,7 @@ const SwitchLanguage = () => {
         size='small'
       >
         <Image
-          src={`/icons/${locale}.png`}
+          src={`/icons/${locale === 'en' ? 'en' : 'sr'}.png`}
           alt={`${locale} flag`}
           width={22}
           height={22}

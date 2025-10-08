@@ -4,8 +4,6 @@ import { CreatedRoute } from '@/components';
 interface CreatedRoutesBox {
   serverData: {
     id: string;
-    title: string;
-    description: string;
     link: string;
     activities: { id: string }[];
     translationKey: string;

@@ -8,8 +8,6 @@ import { useTranslations } from 'next-intl';
 interface SliderBarProps {
   data: {
     id: string;
-    title: string;
-    description: string;
     link: string;
     activities: { id: string }[];
     translationKey: string;
