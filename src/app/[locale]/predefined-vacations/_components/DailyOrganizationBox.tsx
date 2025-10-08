@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Typography } from '@mui/material';
 import { GalleryWithCarousel } from '@/components';
 
@@ -8,19 +9,18 @@ const DailyOrganizationBox = ({
   id,
 }: {
   title: string;
-  description: string[] | undefined;
+  description: string | null | undefined | ReactNode;
   images: { link: string; alt: string }[];
   id: string;
 }) => {
+  console.log('title', title);
+  console.log('description', description);
+
   return (
     <div className='TextImage1'>
       <div className='text'>
         <Typography variant='h3'>{title}</Typography>
-        {description?.map((desc: string, i) => (
-          <Typography key={i} variant='body1'>
-            {desc}
-          </Typography>
-        ))}
+        <div>{description}</div>
       </div>
       <div className='image'>
         <GalleryWithCarousel images={images} glide_classname={id} />

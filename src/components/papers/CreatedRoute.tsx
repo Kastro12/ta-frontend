@@ -1,9 +1,9 @@
-import * as React from 'react';
 import { Typography, Box, Button } from '@mui/material';
 import { button, greenButton } from '@/utils/re-styledComponents';
 import Link from 'next/link';
 import { Activity } from '@/utils/interfaces';
 import allActivities from '@/data/activities/allActivities';
+import { useTranslations } from 'next-intl';
 
 interface SliderBarProps {
   data: {
@@ -12,6 +12,7 @@ interface SliderBarProps {
     description: string;
     link: string;
     activities: { id: string }[];
+    translationKey: string;
   };
 }
 
@@ -20,21 +21,23 @@ export default function CreatedRoute({ data }: SliderBarProps) {
     return allActivities.find((all: Activity) => all.id == activity.id);
   });
 
+  const organizedVacationsT = useTranslations(data?.translationKey);
+  const globalT = useTranslations('global');
   let fourActivities = uniqueActivities.slice(0, 4);
 
   return (
     <div className='CreatedRouteComponent'>
       <Box className='content'>
         <Typography variant='h3'>
-          <Link href={data.link}>{data.title}</Link>
+          <Link href={data.link}>{organizedVacationsT('title')}</Link>
         </Typography>
         <Typography variant='body1' className='text'>
-          {data.description}
+          {organizedVacationsT('description')}
         </Typography>
 
         <div className='list-wrapper'>
           <Typography variant='body1' className='list-title'>
-            Activities
+            {globalT('Activities')}
           </Typography>
           <ul>
             {fourActivities.map((activity: Activity | undefined) => (
@@ -53,7 +56,7 @@ export default function CreatedRoute({ data }: SliderBarProps) {
             href={data.link}
             className='link-button'
           >
-            Read more
+            {globalT('Read more')}
           </Button>
         </div>
       </Box>

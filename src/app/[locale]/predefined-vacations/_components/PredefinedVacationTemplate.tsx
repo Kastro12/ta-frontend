@@ -18,14 +18,18 @@ import allActivities from '@/data/activities/allActivities';
 import DailyOrganizationBox from './DailyOrganizationBox';
 import { PredefinedVacationProps } from '@/data/organizedVacations';
 import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
+import { useTranslations } from 'next-intl';
 
 interface PredefinedVacationTemplateProps {
-  organizedVacations: PredefinedVacationProps;
+  organizedVacation: PredefinedVacationProps;
 }
 
 export default function PredefinedVacationTemplate({
-  organizedVacations,
+  organizedVacation,
 }: PredefinedVacationTemplateProps) {
+  const organizedVacationsT = useTranslations(organizedVacation?.translationKey);
+  const globalT = useTranslations('global');
+
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
   const router = useRouter();
   const dispatch = useDispatch();
@@ -35,7 +39,7 @@ export default function PredefinedVacationTemplate({
   const uniqueLocations: { location: string }[] = [];
   const seenLocations = new Set();
 
-  const uniqueActivities = organizedVacations?.activities.map((activity: { id: string }) => {
+  const uniqueActivities = organizedVacation?.activities.map((activity: { id: string }) => {
     return allActivities.find((all: Activity) => all.id == activity.id);
   });
 
@@ -48,7 +52,7 @@ export default function PredefinedVacationTemplate({
   });
 
   useEffect(() => {
-    dispatch(addPredefinedVacation(organizedVacations.title));
+    dispatch(addPredefinedVacation(organizedVacation.id));
   }, []);
 
   let errorAlert = null;
@@ -57,10 +61,12 @@ export default function PredefinedVacationTemplate({
     errorAlert = 'Choose the start date.';
   }
 
+  console.log('organizedVacation', organizedVacation);
+
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Typography variant='h1' sx={{ m: '60px auto 0 auto', maxWidth: '600px' }}>
-        {organizedVacations.title}
+        {organizedVacationsT('title')}
       </Typography>
 
       <Typography
@@ -73,18 +79,26 @@ export default function PredefinedVacationTemplate({
           lineHeight: '28px',
         }}
       >
-        {organizedVacations.description}
+        {organizedVacationsT('description')}
       </Typography>
 
       <div className='daily-organization'>
-        <Typography variant='h2'>Daily organization</Typography>
+        <Typography variant='h2'>{globalT('Daily organization')}</Typography>
 
         <div className='items'>
-          {organizedVacations.dailyOgranization.map((item) => (
+          {organizedVacation.dailyOrganization.map((item) => (
             <DailyOrganizationBox
               key={item.id}
-              title={item.title}
-              description={item.description}
+              title={organizedVacationsT(`dailyOrganization.${item?.translationKey}.title`)}
+              description={organizedVacationsT.rich(
+                `dailyOrganization.${item?.translationKey}.description`,
+                {
+                  p: (chunks) => <p>{chunks}</p>,
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  br: () => <br />,
+                },
+              )}
+              // description={organizedVacationsT(`dailyOrganization.${item?.translationKey}.description`)}
               images={item.images}
               id={item.id}
             />
@@ -94,12 +108,12 @@ export default function PredefinedVacationTemplate({
       </div>
 
       <Typography variant='h2' sx={{ mt: 6 }}>
-        Summary
+        {globalT('Summary')}
       </Typography>
 
       <div className='vacation-summary'>
         <div className='box'>
-          <Typography variant='h3'>Activities</Typography>
+          <Typography variant='h3'>{globalT('Activities')}</Typography>
           <ul>
             {uniqueActivities.map((activity: Activity | undefined) => (
               <li key={activity?.title}>{activity?.title}</li>
@@ -108,7 +122,7 @@ export default function PredefinedVacationTemplate({
         </div>
 
         <div className='box'>
-          <Typography variant='h3'>Locations</Typography>
+          <Typography variant='h3'>{globalT('Locations')}</Typography>
           <ul>
             {uniqueLocations.map((location) => (
               <li key={location.location}>{location.location}</li>
@@ -117,22 +131,26 @@ export default function PredefinedVacationTemplate({
         </div>
 
         <div className='box'>
-          <Typography variant='h3'>Duration</Typography>
+          <Typography variant='h3'>{globalT('Duration')}</Typography>
           <Typography variant='body1' sx={{ fontSize: '15px' }}>
-            {organizedVacations.dailyOgranization.length} days, you choose started day
+            {organizedVacation.dailyOrganization.length} {globalT('duration_description')}
           </Typography>
         </div>
 
         <div className='box'>
-          <Typography variant='h3'>Price overview:</Typography>
+          <Typography variant='h3'>{globalT('Price overview')}:</Typography>
 
           <ul className='price'>
-            <li>Activities + €34 booking fee</li>
             <li>
-              Accommodations + €34 booking fee <span>(optional)</span>
+              {globalT('Activities')} + €34 {globalT('booking fee')}
             </li>
             <li>
-              Transportations + €34 booking fee <span>(optional)</span>
+              {globalT('Accommodation')} + €34 {globalT('booking fee')}{' '}
+              <span>({globalT('optional')})</span>
+            </li>
+            <li>
+              {globalT('Transportation')} + €34 {globalT('booking fee')}{' '}
+              <span>({globalT('optional')})</span>
             </li>
           </ul>
         </div>
@@ -145,7 +163,7 @@ export default function PredefinedVacationTemplate({
       <div className='form-background in-container calendar-persons'>
         <div className='form-calendar-persons'>
           <CalendarFormWithHandleCalendarDate
-            duration={organizedVacations.dailyOgranization.length}
+            duration={organizedVacation.dailyOrganization.length}
           />
           <NumberOfPersonsFormWithHandle />
           <div style={{ position: 'absolute', bottom: '42px' }} id='activity-offer'></div>
@@ -161,7 +179,7 @@ export default function PredefinedVacationTemplate({
             onClick={() => {
               if (startDate) {
                 router.push(
-                  '/predefined-vacations/challenge-and-hedonism-adventure-vacation/book-vacation'
+                  '/predefined-vacations/challenge-and-hedonism-adventure-vacation/book-vacation',
                 );
               } else {
                 setIsBookAlertActive(true);

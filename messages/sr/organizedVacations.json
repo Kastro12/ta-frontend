@@ -1,0 +1,275 @@
+{
+  "mainTitle": "Prethodno definisani odmori",
+
+  "challenge_and_hedonism": {
+    "title": "Izazov i hedonizam",
+    "description": "Savršeno za avanturiste koji traže kombinaciju adrenalina i uživanja. Uživajte u pešačenju, vožnji bicikla po planini i drugim uzbudljivim aktivnostima.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Dan jedan",
+        "description": "<p>Polazak iz Beograda i početak avanture u prelepoj Ovčarsko-kablarskoj klisuri.</p><p>Uživajte u planinskoj šetnji, okruženi netaknutom prirodom i zadivljujućim pogledima.</p><p>Nakon opuštajućeg dana u prirodi, krećemo ka Zlatiboru, gde ćemo provesti noć u srcu ove planinske lepote.</p>",
+        "images": {
+          "ovcarsko_kablarska_klisura_2": {
+            "alt": "Ovčarsko-kablarska klisura 2"
+          },
+          "ovcarsko_kablarska_klisura_4": {
+            "alt": "Ovčarsko-kablarska klisura 4"
+          }
+        }
+      },
+      "day_two": {
+        "title": "Dan dva",
+        "description": "<p>Čeka vas uzbudljiv dan na Zlatiboru!</p><p>Doživite vožnju žičarom sa panoramskim pogledom na planinske vrhove, a zatim adrenalinsku vožnju kvadovima kroz planinske staze.</p><p>Dan završavamo u spa centru, gde se možete opustiti i osvežiti.</p>",
+        "images": {
+          "gondola_zlatibor_1": {
+            "alt": "Žičara Zlatibor 1"
+          },
+          "gondola_zlatibor_2": {
+            "alt": "Žičara Zlatibor 2"
+          },
+          "quad_bike_zlatibor_1": {
+            "alt": "Kvad bicikl Zlatibor 1"
+          },
+          "quad_bike_zlatibor_2": {
+            "alt": "Kvad bicikl Zlatibor 2"
+          }
+        }
+      },
+      "day_three": {
+        "title": "Dan tri",
+        "description": "<p>Početak dana putovanjem do Nacionalnog parka Tara, jednog od najlepših mesta u Srbiji.</p><p>Pripremite se za avanturu vožnje bicikla po planini, gde će svaki deo staze iznenaditi prirodnom lepotom koja vas okružuje.</p>",
+        "images": {
+          "mountain_biking_tara_1": {
+            "alt": "Biciklizam na Tari"
+          },
+          "mountain_biking_tara_2": {
+            "alt": "Biciklizam na Tari 2"
+          },
+          "mountain_biking_tara_3": {
+            "alt": "Biciklizam na Tari 3"
+          }
+        }
+      },
+      "day_four": {
+        "title": "Dan četiri",
+        "description": "<p>Danas istražujemo Nacionalni park Tara.</p><p>Prošetajte netaknutom prirodom i posetite najlepše vidikovce koji nude veličanstvene pejzaže.</p><p>Ovaj dan je savršen za ljubitelje prirode i pešačenje.</p>",
+        "images": {
+          "tara_national_park_1": {
+            "alt": "Nacionalni park Tara"
+          },
+          "tara_national_park_2": {
+            "alt": "Nacionalni park Tara 2"
+          },
+          "tara_national_park_3": {
+            "alt": "Nacionalni park Tara 3"
+          }
+        }
+      },
+      "day_five": {
+        "title": "Dan pet",
+        "description": "<p>Dan počinje kajakarenjem na kristalno čistoj reci Drini. Osećaj slobode na vodi, u kombinaciji sa prelepim pejzažom oko vas, pravi je užitak za avanturiste.</p><p>Noć provodimo u šarmantnom gradu Bajina Bašta, gde ćete uživati u miru i tišini.</p>",
+        "images": {
+          "drina_kayak_1": {
+            "alt": "Kajak avantura na Drini"
+          },
+          "drina_kayak_2": {
+            "alt": "Kajak avantura na Drini 2"
+          },
+          "drina_kayak_3": {
+            "alt": "Kajak avantura na Drini 3"
+          }
+        }
+      },
+      "day_six": {
+        "title": "Dan šest",
+        "description": "<p>Poslednji dan rezervisan je za povratak u Beograd, noseći sa sobom bogatstvo novih uspomena i iskustava sa ove nezaboravne avanture kroz prirodne lepote Srbije.</p>",
+        "images": {
+          "sunset_on_the_road": {
+            "alt": "Zalazak sunca na putu"
+          }
+        }
+      }
+    }
+  },
+  "from_ancient_to_modern_history": {
+    "title": "Od drevnog do modernog doba",
+    "description": "Istražite drevne ruševine, srednjovekovne tvrđave i moderne znamenitosti, doživljavajući evoluciju regiona od antičkih vremena do danas.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Dan jedan",
+        "description": "<p>Naša tura kroz Beograd počinje šetnjom kroz veličanstveni Kalemegdan, sa panoramskim pogledom na ušće Save u Dunav.</p><p>Zatim posećujemo Muzej Nikole Tesle, gde ćete otkriti inovacije i dostignuća jednog od najvećih umova u istoriji.</p><p>Dan završavamo posetom impresivnom Hramu Svetog Save, dominantnom simbolu pravoslavlja na beogradskoj panorami.</p>",
+        "images": {
+          "kalemegdan": { "alt": "Tvrđava Kalemegdan" },
+          "nikola_tesla_museum": { "alt": "Muzej Nikole Tesle 1" },
+          "st_sava_temple": { "alt": "Hram Svetog Save 1" }
+        }
+      },
+      "day_two": {
+        "title": "Dan dva",
+        "description": "<p>Ujutru krećemo ka Smederevskoj tvrđavi, jednoj od najlepših srednjovekovnih tvrđava u Srbiji, koja čuva priče o slavnim vremenima.</p><p>Nakon toga nastavljamo do Viminacijuma, drevnog rimskog grada i vojnog logora, gde ćete se vratiti u vreme rimske civilizacije.</p><p>Popodne stižemo u Golubac, gde se smestimo i provedemo noć u ovom slikovitom gradu na obali Dunava.</p>",
+        "images": {
+          "viminacium_2": { "alt": "Drevni rimski grad Viminacijum 2" },
+          "smederevo_fortress": { "alt": "Smederevska tvrđava" },
+          "viminacium_1": { "alt": "Drevni rimski grad Viminacijum" }
+        }
+      },
+      "day_three": {
+        "title": "Dan tri",
+        "description": "<p>Dan započinjemo posetom Golubačkoj tvrđavi, impresivnoj srednjovekovnoj građevini koja čuva Dunav.</p><p>Nakon istraživanja ove veličanstvene tvrđave, nastavljamo do manastira Tumane, duhovnog utočišta u mirnoj prirodi, gde se oseća posebna spokojnost i energija.</p>",
+        "images": {
+          "golubac_fortress_1": { "alt": "Golubačka tvrđava" },
+          "golubac_fortress_2": { "alt": "Golubačka tvrđava 2" },
+          "golubac_fortress_3": { "alt": "Golubačka tvrđava 3" },
+          "tumane_monastery": { "alt": "Manastir Tumane 1" }
+        }
+      },
+      "day_four": {
+        "title": "Dan četiri",
+        "description": "<p>Naše putovanje nastavlja se posetom Lepenskom Viru, jednom od najznačajnijih arheoloških lokaliteta iz praistorijskog perioda. Ovaj lokalitet približiće vam život jedne od najstarijih evropskih civilizacija.</p><p>Kasnije istražujemo tajne Rajkove pećine, gde ćete se diviti zadivljujućim pećinskim formacijama koje je priroda vekovima oblikovala.</p>",
+        "images": {
+          "lepenski_vir_1": { "alt": "Arheološki lokalitet Lepenski Vir" },
+          "lepenski_vir_2": { "alt": "Arheološki lokalitet Lepenski Vir 2" },
+          "rajkova_cave_1": { "alt": "Rajkova pećina" },
+          "rajkova_cave_2": { "alt": "Rajkova pećina 2" }
+        }
+      },
+      "day_five": {
+        "title": "Dan pet",
+        "description": "<p>Danas uživamo u jedinstvenoj vožnji brodom kroz Đerdapsku klisuru, poznatu i kao “Gvozdena vrata”, gde ćete uživati u netaknutoj prirodi i visokim liticama koje okružuju Dunav.</p><p>Ova krstarenja pruža savršenu priliku za opuštanje i fotografisanje veličanstvenih pejzaža.</p>",
+        "images": {
+          "djerdap_cruise_1": { "alt": "Krstarenje Đerdapom" },
+          "djerdap_river_1": { "alt": "Đerdap 1" },
+          "djerdap_river_2": { "alt": "Đerdap 2" }
+        }
+      },
+      "day_six": {
+        "title": "Dan šest",
+        "description": "<p>Poslednji dan započinjemo u Topoli, gde ćemo posetiti jednu od renomiranih vinarija u regionu. Uživajte u degustaciji vrhunskih vina, praćenoj autentičnim ručkom koji zaokružuje ovo nezaboravno putovanje.</p><p>Nakon toga se vraćamo u Beograd, bogatiji za nova iskustva i uspomene.</p>",
+        "images": {
+          "winery_topola_1": { "alt": "Vinarija Topola 1" },
+          "winery_topola_2": { "alt": "Vinarija Topola 2" },
+          "winery_topola_3": { "alt": "Vinarija Topola 3" }
+        }
+      }
+    }
+  },
+  "exploring_local_culture_and_landscapes": {
+    "title": "Istraživanje lokalne kulture i pejzaža",
+    "description": "Uronite u vibrantnu lokalnu kulturu i prelepe pejzaže. Otkrijte lokalni život, tradiciju i jedinstvene vidike.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Dan jedan",
+        "description": "<p>Naše putovanje počinje u Nacionalnom parku Tara, gde ćete imati priliku da se divite spektakularnim pejzažima ovog prirodnog raja. Istražićemo brojne vidikovce sa zadivljujućim pogledom na guste šume, smaragdno-zelene reke i kristalno čista jezera.</p><p>Tara je dom bogatog biljnog i životinjskog sveta, a svaki korak otkriva novu lepotu ovog jedinstvenog mesta.</p>",
+        "images": {
+          "tara_1": { "alt": "Nacionalni park Tara" },
+          "tara_2": { "alt": "Nacionalni park Tara 2" },
+          "tara_3": { "alt": "Nacionalni park Tara 3" }
+        }
+      },
+      "day_two": {
+        "title": "Dan dva",
+        "description": "<p>Danas je posvećeno uzbudljivoj jahanju kroz prelepu tarasku prirodu. Ova aktivnost omogućava poseban kontakt sa prirodom, uživajući u miru i tišini planinskih staza.</p><p>Nakon jahanja, opustićemo se degustacijom tradicionalne regionalne kuhinje, gde ćete moći da uživate u autentičnim jelima pripremljenim po starim receptima i dobijete pravi uvid u lokalnu gastronomiju.</p>",
+        "images": {
+          "horse_riding_1": { "alt": "Jahanje na planini Tara" },
+          "horse_riding_2": { "alt": "Jahanje na planini Tara 2" },
+          "horse_riding_3": { "alt": "Jahanje na planini Tara 3" }
+        }
+      },
+      "day_three": {
+        "title": "Dan tri",
+        "description": "<p>Naša avantura nastavlja se posetom Drvengradu, šarmantnom etno-selu koje je stvorio poznati reditelj Emir Kusturica. Ovaj jedinstveni kompleks drvenih kuća i muzeja nudi fascinantan uvid u tradicionalni način života, a atmosfera mesta čini posetu nezaboravnom.</p><p>Nakon toga uživaćemo u vožnji vozom kroz slikovite pejzaže, pružajući priliku da se opustite i uživate u prirodnim lepotama iz udobnosti voza.</p>",
+        "images": {
+          "drvengrad_1": { "alt": "Drvengrad tradicionalno selo" },
+          "drvengrad_2": { "alt": "Drvengrad tradicionalno selo 2" },
+          "drvengrad_train": { "alt": "Drvengrad tradicionalno selo 3" }
+        }
+      },
+      "day_four": {
+        "title": "Dan četiri",
+        "description": "<p>Putujemo do etno domaćinstva u Crnoj Gori, gde ćete imati priliku da obiđete farmu i uživate u degustaciji organske hrane. Ovaj dan nudi jedinstvenu priliku da se upoznate sa tradicionalnim poljoprivrednim praksama i probate lokalne specijalitete.</p><p>Nakon posete farmi, istražićemo lokalne planine i pašnjake, upijajući atmosferu i učeći o tradicionalnom životu u ovom regionu.</p>",
+        "images": {
+          "montenegro_farm_1": { "alt": "Seosko domaćinstvo u severnoj Crnoj Gori" },
+          "montenegro_farm_2": { "alt": "Seosko domaćinstvo u severnoj Crnoj Gori 2" },
+          "montenegro_farm_3": { "alt": "Seosko domaćinstvo u severnoj Crnoj Gori 3" }
+        }
+      },
+      "day_five": {
+        "title": "Dan pet",
+        "description": "<p>Tokom leta ljudi su migrirali iz sela u planine zbog obilja hrane i vode. Danas ćemo pratiti ove istorijske staze do planina, gde će nas na destinaciji dočekati obrok pripremljen po tradicionalnim receptima iz ovog kraja.</p><p>Ovaj dan pruža ne samo fizički izazov, već i kulinarsko putovanje kroz autentične ukuse i priče koje čine ovaj region posebnim.</p>",
+        "images": {
+          "lokve_1": { "alt": "Planina Lokve Crna Gora" },
+          "lokve_2": { "alt": "Planina Lokve Crna Gora 2" },
+          "lokve_3": { "alt": "Planina Lokve Crna Gora 3" }
+        }
+      },
+      "day_six": {
+        "title": "Dan šest",
+        "description": "<p>Uspon na planinu Komove predstavlja izazov za sve ljubitelje prirode i avanture. Dok se penjemo na ovu veličanstvenu planinu, uživaćete u spektakularnim pogledima na okolni pejzaž i osećati duboku povezanost sa prirodom.</p><p>Uspon na Komove pruža osećaj postignuća i nezaboravne trenutke u prirodnom ambijentu.</p>",
+        "images": {
+          "komovi_1": { "alt": "Planina Komovi Crna Gora" },
+          "komovi_2": { "alt": "Planina Komovi Crna Gora 2" },
+          "komovi_3": { "alt": "Planina Komovi Crna Gora 3" }
+        }
+      },
+      "day_seven": {
+        "title": "Dan sedam",
+        "description": "<p>Na kraju naše ture posetićemo stari grad Maglič, istorijsko mesto poznato po bogatom kulturnom nasleđu i šarmantnim ruševinama. Istražujući ostatke ovog nekada važnog grada, saznaćemo više o njegovom značaju i istoriji.</p><p>Nakon toga se vraćamo u Beograd, noseći prelepe uspomene sa ovog nezaboravnog putovanja.</p>",
+        "images": {
+          "maglic_1": { "alt": "Tvrđava Maglič" },
+          "maglic_2": { "alt": "Tvrđava Maglič 2" },
+          "maglic_3": { "alt": "Tvrđava Maglič 3" }
+        }
+      }
+    }
+  },
+  "pannonian_plain": {
+    "title": "Nasleđe Panonske ravnice",
+    "description": "Otkrijte bogato nasleđe Panonske ravnice, gde se istorija i tradicija spajaju sa mirnim pejzažima.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Dan Prvi",
+        "description": "<p>Panonska tura počinje posetom Muzeju vazduhoplovstva, gde ćete otkriti fascinantnu istoriju avijacije kroz bogatu kolekciju aviona i eksponata.</p><p>Zatim idemo u Zemun, gde ćemo istražiti Gardoš, poznat po srednjovekovnoj kuli i prelepim pogledima na Dunav. Uživajte u šetnji kaldrmisanim ulicama i istorijskoj atmosferi.</p>",
+        "images": {
+          "gardos_1": { "alt": "Gardoš Zemun" },
+          "aviation_museum_1": { "alt": "Muzej vazduhoplovstva Beograd 1" }
+        }
+      },
+      "day_two": {
+        "title": "Dan Drugi",
+        "description": "<p>Danas idemo u Sremske Karlovce, šarmantan barokni grad poznat po bogatom kulturnom nasleđu i čuvenim vinarijama. Istražićemo istorijske znamenitosti, uključujući Karlovačku gimnaziju i Patrijaršijsku rezidenciju.</p><p>Nakon posete Karlovcima, nastavljamo do Petrovaradina, gde ćemo otkriti impresivnu Petrovaradinsku tvrđavu. Odavde ćete imati prelep pogled na Novi Sad, a tvrđava sama sadrži brojne galerije, muzeje i kafiće.</p>",
+        "images": {
+          "sremski_karlovci_1": { "alt": "Sremski Karlovci" },
+          "sremski_karlovci_3": { "alt": "Sremski Karlovci 3" },
+          "petrovaradin_1": { "alt": "Petrovaradinska tvrđava" }
+        }
+      },
+      "day_three": {
+        "title": "Dan Treći",
+        "description": "<p>Ovaj dan je posvećen istraživanju Fruške Gore, jednog od najlepših prirodnih rezervata u Srbiji. Posetićemo manastire koji vekovima čuvaju duhovno i kulturno nasleđe ovog regiona.</p><p>Nakon uživanja u prirodnim lepotama i kulturnim znamenitostima, uveče ćemo se opustiti u Fruškim Termama. Termalni izvori i spa tretmani pružiće savršen odmor nakon aktivnog dana.</p>",
+        "images": {
+          "fruska_gora_1": { "alt": "Nacionalni park Fruška Gora" },
+          "fruska_gora_2": { "alt": "Nacionalni park Fruška Gora 2" },
+          "fruske_terme_1": { "alt": "Fruške Terme spa 1" },
+          "fruske_terme_2": { "alt": "Fruške Terme spa 2" }
+        }
+      },
+      "day_four": {
+        "title": "Dan Četvrti",
+        "description": "<p>Danas idemo na etno imanje kod Subotice, gde ćete doživeti tradicionalni vojvođanski način života.</p><p>Nakon toga posetićemo čuvenu vinariju Zvonko Bogdan, gde ćete imati priliku da probate vrhunska vina i upoznate bogatu tradiciju vinogradarstva u ovom regionu. Uživajte u autentičnoj atmosferi imanja i prelepom okruženju vinograda.</p>",
+        "images": {
+          "zvonko_bogdan_1": { "alt": "Vinarija etno salaš Zvonko Bogdan 1" },
+          "zvonko_bogdan_2": { "alt": "Vinarija etno salaš Zvonko Bogdan 2" },
+          "zvonko_bogdan_3": { "alt": "Vinarija etno salaš Zvonko Bogdan 3" }
+        }
+      },
+      "day_five": {
+        "title": "Dan Peti",
+        "description": "<p>Ovaj dan ćemo provesti uživajući u miru jezera, poznatog po čistoj vodi i slikovitim pejzažima.</p><p>Okolina jezera pruža šetališta i parkove idealne za odmor, a Palić je takođe poznat po istorijskim vilama i bogatoj turističkoj ponudi.</p><p>Nakon toga se vraćamo u Beograd, noseći lepe uspomene sa ovog nezaboravnog putovanja.</p>",
+        "images": {
+          "palic_1": { "alt": "Palićko jezero 1" },
+          "palic_2": { "alt": "Palićko jezero 2" }
+        }
+      }
+    }
+  }
+}

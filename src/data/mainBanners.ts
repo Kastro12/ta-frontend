@@ -1,10 +1,9 @@
 export interface MainBannersProps {
   id: string;
-  title: string;
-  description: string;
-  button: { title: string; link: string };
+  link: string;
+  translationKey: string;
   image: {
-    link: string;
+    src: string;
     alt: string;
   };
 }
@@ -12,14 +11,10 @@ export interface MainBannersProps {
 const mainBanners: MainBannersProps[] = [
   {
     id: 'createVacationID',
-    title: 'Create your dream vacation',
-    description: 'Choose the activities and let us organize the rest',
-    button: {
-      title: 'Create vacation',
-      link: '/create-vacation',
-    },
+    translationKey: 'homePage.mainBanners.createVacation',
+    link: '/create-vacation',
     image: {
-      link: '/main-banner/road_through_colorful_forest.webp',
+      src: '/main-banner/road_through_colorful_forest.webp',
       alt: 'Road through colorful forest',
     },
   },

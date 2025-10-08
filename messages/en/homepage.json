@@ -1,3 +1,10 @@
 {
-  "title": "Hello world!"
+  "mainBanners": {
+    "createVacation": {
+      "title": "Create your dream vacation",
+      "description": "Choose the activities and let us organize the rest",
+      "buttonTitle": "Create vacation",
+      "alt": "Road through colorful forest"
+    }
+  }
 }

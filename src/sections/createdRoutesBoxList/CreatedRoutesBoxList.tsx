@@ -8,6 +8,7 @@ interface CreatedRoutesBox {
     description: string;
     link: string;
     activities: { id: string }[];
+    translationKey: string;
   }[];
 }
 

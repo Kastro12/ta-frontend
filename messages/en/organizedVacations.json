@@ -1,0 +1,275 @@
+{
+  "mainTitle": "Predefined vacations",
+
+  "challenge_and_hedonism": {
+    "title": "Challenge and hedonism adventure",
+    "description": "Perfect for adventurers seeking both adrenaline and indulgence. Enjoy hiking, mountain biking, and other exciting activities.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Day one",
+        "description": "<p>We depart from Belgrade to begin our adventure in the stunning Ovčar-Kablar Gorge.</p><p>Enjoy a hike along mountain trails, where you'll be surrounded by untouched nature and breathtaking views.</p><p>After a relaxing day in the great outdoors, we head to Zlatibor, where we'll spend the night in the heart of this mountain beauty.</p>",
+        "images": {
+          "ovcarsko_kablarska_klisura_2": {
+            "alt": "Ovcarsko kablarska klisura 2"
+          },
+          "ovcarsko_kablarska_klisura_4": {
+            "alt": "Ovcarsko kablarska klisura 4"
+          }
+        }
+      },
+      "day_two": {
+        "title": "Day two",
+        "description": "<p>An exciting day awaits you in Zlatibor!</p><p>Experience a gondola ride offering panoramic views of the mountain peaks, followed by an adrenaline-filled quad bike ride through mountain trails.</p><p>We conclude the day in a spa center, where you can unwind and rejuvenate.</p>",
+        "images": {
+          "gondola_zlatibor_1": {
+            "alt": "Gondola zlatibor 1"
+          },
+          "gondola_zlatibor_2": {
+            "alt": "Gondola zlatibor 2"
+          },
+          "quad_bike_zlatibor_1": {
+            "alt": "Quad bike zlatibor 1"
+          },
+          "quad_bike_zlatibor_2": {
+            "alt": "Quad bike zlatibor 2"
+          }
+        }
+      },
+      "day_three": {
+        "title": "Day three",
+        "description": "<p>We start the day with a trip to Tara National Park, one of the most beautiful places in Serbia.</p><p>Get ready for a mountain biking adventure, where every part of the trail will surprise you with the natural beauty surrounding this mountain.</p>",
+        "images": {
+          "mountain_biking_tara_1": {
+            "alt": "Mountain Biking on Tara"
+          },
+          "mountain_biking_tara_2": {
+            "alt": "Mountain Biking on Tara 2"
+          },
+          "mountain_biking_tara_3": {
+            "alt": "Mountain Biking on Tara 3"
+          }
+        }
+      },
+      "day_four": {
+        "title": "Day four",
+        "description": "<p>Today, we explore Tara National Park.</p><p>Take a walk through pristine nature and visit the most scenic viewpoints, offering majestic landscapes.</p><p>This day is perfect for nature lovers and hikers.</p>",
+        "images": {
+          "tara_national_park_1": {
+            "alt": "Tara National Park"
+          },
+          "tara_national_park_2": {
+            "alt": "Tara National Park 2"
+          },
+          "tara_national_park_3": {
+            "alt": "Tara National Park 3"
+          }
+        }
+      },
+      "day_five": {
+        "title": "Day five",
+        "description": "<p>The day begins with kayaking on the crystal-clear Drina River. The feeling of freedom on the water, coupled with the beautiful scenery around you, will be a real treat for adventurers.</p><p>We'll spend the night in the charming town of Bajina Bašta, where you'll enjoy peace and tranquility.</p>",
+        "images": {
+          "drina_kayak_1": {
+            "alt": "Drina Kayak Adventure"
+          },
+          "drina_kayak_2": {
+            "alt": "Drina Kayak Adventure 2"
+          },
+          "drina_kayak_3": {
+            "alt": "Drina Kayak Adventure 3"
+          }
+        }
+      },
+      "day_six": {
+        "title": "Day six",
+        "description": "<p>The last day is reserved for our return to Belgrade, carrying with us a wealth of new memories and experiences from this unforgettable adventure through the natural wonders of Serbia.</p>",
+        "images": {
+          "sunset_on_the_road": {
+            "alt": "Sunset on the road"
+          }
+        }
+      }
+    }
+  },
+  "from_ancient_to_modern_history": {
+    "title": "From Ancient to Modern History",
+    "description": "Explore ancient ruins, medieval castles, and modern landmarks, experiencing the region's evolution from ancient times to today.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Day One",
+        "description": "<p>Our tour of Belgrade begins with a stroll through the magnificent Kalemegdan, where you’ll enjoy panoramic views of the confluence of the Sava and Danube rivers.</p><p>Next, we’ll visit the Nikola Tesla Museum, where you’ll discover the innovations and achievements of one of history’s greatest minds.</p><p>We conclude the day with a visit to the impressive St. Sava Temple, a dominant symbol of Orthodox Christianity on the Belgrade skyline.</p>",
+        "images": {
+          "kalemegdan": { "alt": "Kalemegdan Fortress" },
+          "nikola_tesla_museum": { "alt": "Nikola Tesla museum 1" },
+          "st_sava_temple": { "alt": "St. Sava Temple 1" }
+        }
+      },
+      "day_two": {
+        "title": "Day Two",
+        "description": "<p>In the morning, we head to the Smederevo Fortress, one of the most beautiful medieval fortresses in Serbia, which holds stories of glorious times.</p><p>After that, we continue to Viminacium, an ancient Roman city and military camp, where you’ll travel back to the era of Roman civilization.</p><p>In the afternoon, we arrive in Golubac, where we’ll settle in and spend the night in this picturesque town on the Danube's banks.</p>",
+        "images": {
+          "viminacium_2": { "alt": "Viminacium ancient roman city 2" },
+          "smederevo_fortress": { "alt": "Smederevo Fortress" },
+          "viminacium_1": { "alt": "Viminacium ancient roman city" }
+        }
+      },
+      "day_three": {
+        "title": "Day Three",
+        "description": "<p>We begin the day with a visit to the Golubac Fortress, an impressive medieval structure guarding the Danube.</p><p>After exploring this magnificent fortress, we continue to Tumane Monastery, a spiritual retreat nestled in peaceful nature, where a special sense of tranquility and energy pervades.</p>",
+        "images": {
+          "golubac_fortress_1": { "alt": "Golubac Fortress" },
+          "golubac_fortress_2": { "alt": "Golubac Fortress 2" },
+          "golubac_fortress_3": { "alt": "Golubac Fortress 3" },
+          "tumane_monastery": { "alt": "Tumane Monastery 1" }
+        }
+      },
+      "day_four": {
+        "title": "Day Four",
+        "description": "<p>Our journey continues with a visit to Lepenski Vir, one of the most significant archaeological sites from the prehistoric period. This site will bring you closer to the life of one of Europe’s oldest civilizations.</p><p>Later, we explore the secrets of Rajko’s Cave, where you’ll marvel at the stunning cave formations sculpted by nature over the centuries.</p>",
+        "images": {
+          "lepenski_vir_1": { "alt": "Lepenski Vir Archaeological Site" },
+          "lepenski_vir_2": { "alt": "Lepenski Vir Archaeological Site 2" },
+          "rajkova_cave_1": { "alt": "Rajkova Cave" },
+          "rajkova_cave_2": { "alt": "Rajkova Cave 2" }
+        }
+      },
+      "day_five": {
+        "title": "Day Five",
+        "description": "<p>Today, enjoy a unique boat ride through the Đerdap Gorge, also known as the “Iron Gates,” where you’ll take in the untouched nature and towering cliffs surrounding the Danube.</p><p>This cruise offers a perfect opportunity to relax and capture the majestic landscapes with your camera.</p>",
+        "images": {
+          "djerdap_cruise_1": { "alt": "Đerdap river cruise" },
+          "djerdap_river_1": { "alt": "Đerdap River 1" },
+          "djerdap_river_2": { "alt": "Đerdap River 2" }
+        }
+      },
+      "day_six": {
+        "title": "Day Six",
+        "description": "<p>Our final day begins in Topola, where we’ll visit one of the region’s renowned wineries. You’ll enjoy a tasting of premium wines, followed by an authentic lunch that will round off this unforgettable journey.</p><p>Afterward, we return to Belgrade, enriched with new experiences and memories.</p>",
+        "images": {
+          "winery_topola_1": { "alt": "Winery Topola 1" },
+          "winery_topola_2": { "alt": "Winery Topola 2" },
+          "winery_topola_3": { "alt": "Winery Topola 3" }
+        }
+      }
+    }
+  },
+  "exploring_local_culture_and_landscapes": {
+    "title": "Exploring local culture and landscapes",
+    "description": "Immerse in vibrant local culture and breathtaking landscapes. Discover local life, traditions, and unique scenic views.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Day One",
+        "description": "<p>Our adventure begins with a trip to Tara National Park, where you'll have the opportunity to admire the spectacular landscapes of this natural paradise. We’ll explore numerous viewpoints offering breathtaking views of dense forests, emerald-green rivers, and crystal-clear lakes.</p><p>Tara is home to a rich variety of plant and animal life, and every step reveals a new beauty of this unique place.</p>",
+        "images": {
+          "tara_1": { "alt": "Tara National Park" },
+          "tara_2": { "alt": "Tara National Park 2" },
+          "tara_3": { "alt": "Tara National Park 3" }
+        }
+      },
+      "day_two": {
+        "title": "Day Two",
+        "description": "<p>Today is dedicated to exciting horseback riding through the beautiful terrain of Tara. This activity will allow you to connect with nature in a special way, enjoying the peace and tranquility of mountain trails.</p><p>After riding, we will relax with a tasting of traditional regional cuisine, where you’ll have the chance to savor authentic dishes prepared using old recipes, giving you a true insight into local gastronomy.</p>",
+        "images": {
+          "horse_riding_1": { "alt": "Horse riding on Tara mountain" },
+          "horse_riding_2": { "alt": "Horse riding on Tara mountain 2" },
+          "horse_riding_3": { "alt": "Horse riding on Tara mountain 3" }
+        }
+      },
+      "day_three": {
+        "title": "Day Three",
+        "description": "<p>Our exploration continues with a visit to Drvengrad, a charming ethno-village created by the famous director Emir Kusturica. This unique complex of wooden houses and museums offers a fascinating glimpse into traditional ways of life, while the atmosphere of the place makes the visit unforgettable.</p><p>Afterwards, we will enjoy a train ride through picturesque landscapes, providing you with the chance to relax and take in the natural beauty from the comfort of the train.</p>",
+        "images": {
+          "drvengrad_1": { "alt": "Drvengrad traditional village" },
+          "drvengrad_2": { "alt": "Drvengrad traditional village 2" },
+          "drvengrad_train": { "alt": "Drvengrad traditional village 3" }
+        }
+      },
+      "day_four": {
+        "title": "Day Four",
+        "description": "<p>We travel to an ethno homestead in Montenegro, where you’ll have the chance to tour a farm and enjoy a tasting of organic food. This day offers a unique opportunity to learn about traditional agricultural practices and taste local specialties.</p><p>After visiting the farm, we’ll explore local mountains and pastures, soaking up the atmosphere and learning about traditional life in this region.</p>",
+        "images": {
+          "montenegro_farm_1": { "alt": "Rural retreat northern Montenegro" },
+          "montenegro_farm_2": { "alt": "Rural retreat northern Montenegro 2" },
+          "montenegro_farm_3": { "alt": "Rural retreat northern Montenegro 3" }
+        }
+      },
+      "day_five": {
+        "title": "Day Five",
+        "description": "<p>During the summer, people migrated from villages to the mountains due to the abundance of food and water. Today, we will follow these historic paths to the mountains, where at the destination we will be greeted with a meal prepared using traditional recipes from the area.</p><p>This day provides not only a physical challenge but also a culinary journey through authentic flavors and stories that make this region special.</p>",
+        "images": {
+          "lokve_1": { "alt": "Planina Lokve Montenegro" },
+          "lokve_2": { "alt": "Planina Lokve Montenegro 2" },
+          "lokve_3": { "alt": "Planina Lokve Montenegro 3" }
+        }
+      },
+      "day_six": {
+        "title": "Day Six",
+        "description": "<p>Climbing Mount Komovi is a challenge for all nature and adventure enthusiasts. As you ascend this magnificent mountain, you will enjoy spectacular views of the surrounding landscape, feeling a deep connection with nature.</p><p>The climb to Komovi offers a sense of achievement and unforgettable moments in a natural setting.</p>",
+        "images": {
+          "komovi_1": { "alt": "Planina Komovi Montenegro" },
+          "komovi_2": { "alt": "Planina Komovi Montenegro 2" },
+          "komovi_3": { "alt": "Planina Komovi Montenegro 3" }
+        }
+      },
+      "day_seven": {
+        "title": "Day Seven",
+        "description": "<p>At the end of our tour, we will visit the old town of Maglič, a historical site known for its rich cultural heritage and charming ruins. As we explore the remains of this once-important city, we will learn more about its significance and history.</p><p>Afterward, we return to Belgrade, carrying beautiful memories of this unforgettable journey.</p>",
+        "images": {
+          "maglic_1": { "alt": "Maglič Fortress" },
+          "maglic_2": { "alt": "Maglič Fortress 2" },
+          "maglic_3": { "alt": "Maglič Fortress 3" }
+        }
+      }
+    }
+  },
+  "pannonian_plain": {
+    "title": "Heritage of the Pannonian Plain",
+    "description": "Discover the rich heritage of the Pannonian Plains, where history and tradition blend with serene landscapes.",
+    "dailyOrganization": {
+      "day_one": {
+        "title": "Day One",
+        "description": "<p>The Panonian tour begins with a visit to the Aviation Museum, where you'll uncover the fascinating history of aviation through a rich collection of aircraft and exhibits.</p><p>Next, we head to Zemun, where we’ll explore Gardoš, known for its medieval tower and stunning views of the Danube. Enjoy a stroll through the cobbled streets and the historical atmosphere.</p>",
+        "images": {
+          "gardos_1": { "alt": "Gardos Zemun" },
+          "aviation_museum_1": { "alt": "Museum of Aviation Belgrade 1" }
+        }
+      },
+      "day_two": {
+        "title": "Day Two",
+        "description": "<p>Today takes us to Sremski Karlovci, a charming Baroque town renowned for its rich cultural heritage and famous wineries. We’ll explore historical landmarks, including the Karlovci Gymnasium and the Patriarchal Residence.</p><p>After our visit to Karlovci, we continue to Petrovaradin, where we’ll discover the impressive Petrovaradin Fortress. From there, you'll have a breathtaking view of Novi Sad, and the fortress itself houses numerous galleries, museums, and cafes.</p>",
+        "images": {
+          "sremski_karlovci_1": { "alt": "Sremski Karlovci" },
+          "sremski_karlovci_3": { "alt": "Sremski Karlovci 3" },
+          "petrovaradin_1": { "alt": "Petrovaradin Fortress" }
+        }
+      },
+      "day_three": {
+        "title": "Day Three",
+        "description": "<p>This day is dedicated to exploring Fruška Gora, one of Serbia’s most beautiful natural reserves. We’ll visit monasteries that have preserved the spiritual and cultural heritage of the region for centuries.</p><p>After enjoying the natural beauty and cultural landmarks, we’ll relax in Fruške Terme in the evening. The thermal springs and spa treatments will provide perfect relaxation after an active day.</p>",
+        "images": {
+          "fruska_gora_1": { "alt": "Fruška Gora National Park" },
+          "fruska_gora_2": { "alt": "Fruška Gora National Park 2" },
+          "fruske_terme_1": { "alt": "Fruške Terme spa 1" },
+          "fruske_terme_2": { "alt": "Fruške Terme spa 2" }
+        }
+      },
+      "day_four": {
+        "title": "Day Four",
+        "description": "<p>Today we head north to an ethno farm near Subotica, where you’ll experience the traditional Vojvodina lifestyle.</p><p>Afterward, we’ll visit the renowned Zvonko Bogdan Winery, where you’ll have the opportunity to taste premium wines and learn about the rich winemaking tradition of the region. Enjoy the authentic atmosphere of the farm and the beautiful vineyard setting.</p>",
+        "images": {
+          "zvonko_bogdan_1": { "alt": "Winery ethno salaš Zvonko Bogdan 1" },
+          "zvonko_bogdan_2": { "alt": "Winery ethno salaš Zvonko Bogdan 2" },
+          "zvonko_bogdan_3": { "alt": "Winery ethno salaš Zvonko Bogdan 3" }
+        }
+      },
+      "day_five": {
+        "title": "Day Five",
+        "description": "<p>We will spend this day enjoying the peace of the lake, known for its clear water and picturesque landscapes.</p><p>The area around the lake features promenades and parks ideal for relaxation, and Palić is also known for its historic villas and rich tourist offerings.</p><p>Afterward, we return to Belgrade, carrying beautiful memories of this unforgettable journey.</p>",
+        "images": {
+          "palic_1": { "alt": "Palić Lake 1" },
+          "palic_2": { "alt": "Palić Lake 2" }
+        }
+      }
+    }
+  }
+}

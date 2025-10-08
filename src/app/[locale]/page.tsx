@@ -9,7 +9,7 @@ import FullWidthBanner from '@/sections/ads/FullWidthBanner';
 import { getTranslations } from 'next-intl/server';
 
 export default async function Home() {
-  const t = await getTranslations('HomePage');
+  const organizedVacationsT = await getTranslations('organizedVacations');
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
@@ -17,9 +17,7 @@ export default async function Home() {
 
       <SliderBarMainBanner />
 
-      <p>{t('title')}</p>
-
-      <Typography variant='h2'>Predefined vacations</Typography>
+      <Typography variant='h2'>{organizedVacationsT('mainTitle')}</Typography>
 
       <CreatedRoutesBoxList serverData={organizedVacations} />
 

@@ -1,3 +1,10 @@
 {
-  "title": "Pozdrav svete!"
+  "mainBanners": {
+    "createVacation": {
+      "title": "Kreiraj svoje idealno putovanje",
+      "description": "Izaberi aktivnosti, a mi organizujemo ostalo",
+      "buttonTitle": "Kreiraj putovanje",
+      "alt": "Put kroz šarenu šumu"
+    }
+  }
 }
