@@ -53,7 +53,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
   };
 
   const handleFilterChange = useCallback(
-    (e: { label: string; value: string; id: string } | null, type: 'category' | 'location') => {
+    (e: { value: string; id: string } | null, type: 'category' | 'location') => {
       let filterObject = {};
 
       switch (type) {
@@ -72,7 +72,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
       const filterLink = createLinkWithParams(pathname, filterObject);
       router.push(filterLink, { scroll: false });
     },
-    [locationParam, categoryParam]
+    [locationParam, categoryParam],
   );
 
   return (

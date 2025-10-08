@@ -1,8 +1,8 @@
 import { ReactSelectOptions } from '@/forms/form.interface';
 
 interface activityCategories extends ReactSelectOptions {
-  description: string;
   link: string;
+  translationKey: string;
   images: { link: string; alt: string }[];
 }
 
@@ -10,9 +10,8 @@ const activityCategories: activityCategories[] = [
   {
     id: '1',
     value: 'adventure',
+    translationKey: 'categories.adventure',
     label: 'Adventure',
-    description:
-      'The Adventure category offers thrilling activities like rugged mountain trails, pristine river navigation, and cycling through stunning landscapes. These adventures challenge your endurance and connect you with Serbia’s most captivating environments. Ideal for thrill-seekers and outdoor enthusiasts, these experiences promise unforgettable memories and a deep sense of accomplishment.',
     link: '/create-vacation?category=adventure',
     images: [
       {
@@ -36,9 +35,8 @@ const activityCategories: activityCategories[] = [
   {
     id: '2',
     value: 'landscape',
+    translationKey: 'categories.landscape',
     label: 'Landscape',
-    description:
-      'Explore Serbia’s majestic natural wonders, from dramatic canyons and lush parks to tranquil lakes and rolling hills. Perfect for relaxation, exploration, and photography, each destination offers breathtaking scenery. Whether hiking through forests, admiring mountain views, or strolling along riverbanks, these landscapes promise a deep connection with nature and an enriching experience. Ideal for nature lovers and scenic enthusiasts.',
     link: '/create-vacation?category=landscape',
     images: [
       {
@@ -62,9 +60,8 @@ const activityCategories: activityCategories[] = [
   {
     id: '3',
     value: 'history_and_culture',
+    translationKey: 'categories.history_and_culture',
     label: 'History & culture',
-    description:
-      "Immerse yourself in Serbia's rich history through ancient fortresses, archaeological sites, and historical landmarks. The History and Culture category invites you to explore past civilizations, medieval strongholds, and regional traditions. Perfect for history enthusiasts and culture seekers, these journeys promise to deepen your understanding and appreciation of Serbia’s storied past.",
     link: '/create-vacation?category=history_and_culture',
     images: [
       {
@@ -89,9 +86,8 @@ const activityCategories: activityCategories[] = [
   {
     id: '4',
     value: 'relaxation_and_flavors',
+    translationKey: 'categories.relaxation_and_flavors',
     label: 'Relaxation & flavors',
-    description:
-      'Indulge in serenity and exquisite tastes with our Relaxation & Flavors category. From luxurious spas and traditional wineries to local delicacies at ethno farms, these experiences nourish body and soul. Perfect for those seeking tranquility and a deep connection with local culture, it’s a soothing escape into Serbia’s most relaxing and flavorful spots.',
     link: '/create-vacation?category=relaxation_and_flavors',
     images: [
       {

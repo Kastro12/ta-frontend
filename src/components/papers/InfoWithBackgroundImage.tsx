@@ -1,30 +1,33 @@
-'use client';
-import * as React from 'react';
 import { Typography, Button } from '@mui/material';
 import { GalleryWithCarousel } from '@/components';
 import Link from 'next/link';
 import { button, linkGreenButton } from '@/utils/re-styledComponents';
+import { getTranslations } from 'next-intl/server';
 
-export default function InfoWithBackgroundImage({
+export default async function InfoWithBackgroundImage({
+  translationKey,
   title,
   description,
   images,
   link,
   glide_classname,
 }: {
+  translationKey: string;
   title: string;
   description: string;
   images: { link: string; alt: string }[];
   link: string;
   glide_classname: string;
 }) {
+  const t = await getTranslations(translationKey);
+
   return (
     <div className='TextImage1'>
       <div className='text'>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Typography sx={{ display: 'inline-block' }} variant='h3'>
-            {title}
-          </Typography>{' '}
+            {t('label')}
+          </Typography>
           <Button
             sx={{ ...button, ...linkGreenButton }}
             variant='outlined'
@@ -37,7 +40,7 @@ export default function InfoWithBackgroundImage({
           </Button>
         </div>
 
-        <Typography variant='body1'>{description}</Typography>
+        <Typography variant='body1'>{t('description')}</Typography>
 
         <div className='desktop-button'>
           <Button
@@ -46,7 +49,7 @@ export default function InfoWithBackgroundImage({
             LinkComponent={Link}
             href={link}
           >
-            {title} activities
+            {t('label')}
           </Button>
         </div>
       </div>

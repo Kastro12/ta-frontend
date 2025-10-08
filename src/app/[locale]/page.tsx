@@ -9,6 +9,7 @@ import FullWidthBanner from '@/sections/ads/FullWidthBanner';
 import { getTranslations } from 'next-intl/server';
 
 export default async function Home() {
+  const homepageT = await getTranslations('homePage');
   const organizedVacationsT = await getTranslations('organizedVacations');
 
   return (
@@ -23,13 +24,14 @@ export default async function Home() {
 
       <FullWidthBanner />
 
-      <Typography variant='h2'>Top season activities</Typography>
+      <Typography variant='h2'>{homepageT('top-season-activities')}</Typography>
 
       <SliderBarActivities serverData={topSeasonActivities} />
 
-      <Typography variant='h2'>Activity categories</Typography>
+      <Typography variant='h2'>{homepageT('activity-categories')}</Typography>
       {activityCategories.map((category, i) => (
         <InfoWithBackgroundImage
+          translationKey={category?.translationKey}
           title={category.label}
           description={category.description}
           images={category.images}

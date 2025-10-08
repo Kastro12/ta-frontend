@@ -1,0 +1,18 @@
+{
+  "adventure": {
+    "label": "Avantura",
+    "description": "Kategorija Avantura nudi uzbudljive aktivnosti poput šetnje planinskim stazama, plovidbe netaknutim rekama i vožnje biciklom kroz spektakularne predele. Ove avanture testiraju vašu izdržljivost i povezuju vas sa najlepšim prirodnim okruženjima Srbije. Idealno za ljubitelje uzbuđenja i boravka na otvorenom, ovi doživljaji obećavaju nezaboravne uspomene i snažan osećaj postignuća."
+  },
+  "landscape": {
+    "label": "Pejzaž",
+    "description": "Uživajte u veličanstvenim prirodnim čudima Srbije – od dramatičnih kanjona i zelenih parkova, do mirnih jezera i pitomih brežuljaka. Savršeno za opuštanje, šetnju i fotografisanje, svaka destinacija pruža spektakularan prizor. Bilo da šetate kroz šume, posmatrate planinske vrhove ili uživate pored reka, ovi pejzaži donose snažnu povezanost s prirodom i obogaćujuće iskustvo. Idealno za ljubitelje prirode i lepih pogleda."
+  },
+  "history_and_culture": {
+    "label": "Istorija i kultura",
+    "description": "Uronite u bogatu prošlost Srbije kroz drevne tvrđave, arheološka nalazišta i istorijske znamenitosti. Kategorija Istorija i kultura vodi vas kroz tragove starih civilizacija, srednjovekovne utvrde i tradicije različitih krajeva. Savršeno za sve koji vole prošlost i kulturno nasleđe, ova putovanja produbljuju razumevanje i poštovanje prema bogatoj istoriji Srbije."
+  },
+  "relaxation_and_flavors": {
+    "label": "Odmor i ukusi",
+    "description": "Prepustite se opuštanju i divnim ukusima uz kategoriju Odmor i ukusi. Od luksuznih banja i tradicionalnih vinarija do specijaliteta na etno farmama, ova iskustva hrane i telo i dušu. Idealno za one koji traže spokoj i autentičnu povezanost sa lokalnom kulturom, ovo je miran beg u najopuštenije i najupečatljivije kutke Srbije."
+  }
+}
