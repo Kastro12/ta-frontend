@@ -4,6 +4,7 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 import Select from 'react-select';
 import { childrenAge } from '@/data';
 import { Popover } from '@mui/material';
+import { useTranslations } from 'next-intl';
 
 const NumberOfPersonForm = ({
   adults,
@@ -33,12 +34,13 @@ const NumberOfPersonForm = ({
   };
   const openPopover = Boolean(isOpenChildrenField);
   const idPopover = openPopover ? 'simple-popover' : undefined;
+  const globalT = useTranslations('global');
 
   return (
     <div className='NumberOfPersonsForm'>
       <div className='content'>
         <div className='quantity-field adults'>
-          <span className={`label`}>Adults</span>
+          <span className={`label`}>{globalT('Adults')}</span>
           <InputQuantity
             quantity={adults}
             type='adults'
@@ -66,7 +68,7 @@ const NumberOfPersonForm = ({
               }
             }}
           >
-            Children
+            {globalT('Children')}
             {children > 0 && <KeyboardArrowDownOutlinedIcon />}
           </span>
           <InputQuantity
@@ -114,9 +116,21 @@ const NumberOfPersonForm = ({
                         isLoading={false}
                         isClearable={true}
                         isSearchable={false}
-                        options={childrenAge}
-                        placeholder={'Age needed'}
-                        value={currentValue}
+                        options={childrenAge.map((childAge) => {
+                          return {
+                            ...childAge,
+                            label: globalT(`age-needed.options.${childAge.value}`),
+                          };
+                        })}
+                        placeholder={globalT('age-needed.label')}
+                        value={
+                          currentValue
+                            ? {
+                                ...currentValue,
+                                label: globalT(`age-needed.options.${currentValue.value}`),
+                              }
+                            : null
+                        }
                         onChange={(value) => handleChildAgeChange(index, value)}
                         components={{
                           IndicatorSeparator: () => null,
@@ -126,10 +140,7 @@ const NumberOfPersonForm = ({
                   );
                 })}
               </ul>
-              <p style={{ margin: '3px 0', fontSize: '13px' }}>
-                Please indicate the age of each child. It helps us ensure we have child seats for a
-                safe trip.
-              </p>
+              <p style={{ margin: '3px 0', fontSize: '13px' }}>{globalT('age-needed.info')}</p>
             </div>
           </Popover>
 

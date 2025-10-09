@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { useDispatch } from 'react-redux';
+import { useTranslations } from 'next-intl';
 
 export const radioStyle = {
   color: '#899199',
@@ -50,6 +51,7 @@ const FormLabelStyle = {
 
 const ChooseServicesForm = ({ changeRadioGroup }: any) => {
   const dispatch = useDispatch();
+  const globalT = useTranslations('global');
 
   const [accommodationPopover, setAccommodationPopover] = useState<HTMLButtonElement | null>(null);
   const handleClickAccommodationPopover = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -62,7 +64,7 @@ const ChooseServicesForm = ({ changeRadioGroup }: any) => {
   const idAccommodationPopover = openAccommodationPopover ? 'simple-popover' : undefined;
 
   const [transportationPopover, setTransportationPopover] = useState<HTMLButtonElement | null>(
-    null
+    null,
   );
   const handleClickTransportationPopover = (event: React.MouseEvent<HTMLButtonElement>) => {
     setTransportationPopover(event.currentTarget);
@@ -77,7 +79,7 @@ const ChooseServicesForm = ({ changeRadioGroup }: any) => {
     <div className='ChooseServicesForm'>
       <FormControl className='accommodation'>
         <FormLabel id='demo-row-radio-buttons-group-label' sx={FormLabelStyle}>
-          Would you like us to arrange accommodation?{' '}
+          {globalT('arrange-accommodation-question')}{' '}
           <IconButton aria-label='info' size='small' onClick={handleClickAccommodationPopover}>
             <InfoOutlinedIcon fontSize='small' />
           </IconButton>
@@ -113,21 +115,13 @@ const ChooseServicesForm = ({ changeRadioGroup }: any) => {
           <FormControlLabel
             value='accommodation_yes'
             control={<Radio size='small' sx={radioStyle} />}
-            label={
-              <>
-                <strong>Yes</strong>, arrange it for us
-              </>
-            }
+            label={<>{globalT('confirm-arrangement')}</>}
             sx={FormControlLabelStyle}
           />
           <FormControlLabel
             value='accommodation_no'
             control={<Radio size='small' sx={radioStyle} />}
-            label={
-              <>
-                <strong>No</strong>, we&apos;ll arrange it ourselves
-              </>
-            }
+            label={<>{globalT('unconfirmed-arrangement')}</>}
             sx={FormControlLabelStyle}
           />
         </RadioGroup>
@@ -135,7 +129,7 @@ const ChooseServicesForm = ({ changeRadioGroup }: any) => {
 
       <FormControl className='transportation'>
         <FormLabel id='demo-row-radio-buttons-group-label' sx={FormLabelStyle}>
-          Would you like us to arrange transportation?{' '}
+          {globalT('arrange-transportation-question')}{' '}
           <IconButton aria-label='info' size='small' onClick={handleClickTransportationPopover}>
             <InfoOutlinedIcon fontSize='small' />
           </IconButton>
@@ -172,21 +166,13 @@ const ChooseServicesForm = ({ changeRadioGroup }: any) => {
           <FormControlLabel
             value='transportation_yes'
             control={<Radio size='small' sx={radioStyle} />}
-            label={
-              <>
-                <strong>Yes</strong>, arrange it for us
-              </>
-            }
+            label={<>{globalT('confirm-arrangement')}</>}
             sx={FormControlLabelStyle}
           />
           <FormControlLabel
             value='transportation_no'
             control={<Radio size='small' sx={radioStyle} />}
-            label={
-              <>
-                <strong>No</strong>, we&apos;ll arrange it ourselves
-              </>
-            }
+            label={<>{globalT('unconfirmed-arrangement')}</>}
             sx={FormControlLabelStyle}
           />
         </RadioGroup>

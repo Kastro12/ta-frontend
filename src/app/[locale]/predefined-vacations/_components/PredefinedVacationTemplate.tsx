@@ -61,8 +61,6 @@ export default function PredefinedVacationTemplate({
     errorAlert = 'Choose the start date.';
   }
 
-  console.log('organizedVacation', organizedVacation);
-
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Typography variant='h1' sx={{ m: '60px auto 0 auto', maxWidth: '600px' }}>

@@ -10,5 +10,36 @@
   "Accommodation": "Accommodation",
   "Transportation": "Transportation",
   "booking fee": "booking fee",
-  "optional": "optional"
+  "optional": "optional",
+  "Adventure": "Adventure",
+  "History & culture": "History & culture",
+  "Landscape": "Landscape",
+  "Relaxation & flavors": "Relaxation & flavors",
+  "It takes half a day": "It takes half a day",
+  "It takes 1 day": "It takes 1 day",
+  "It takes 2 days": "It takes 2 days",
+  "Choose": "Choose",
+  "Remove": "Remove",
+  "Added to vacation plan": "Added to vacation plan.",
+  "Removed from vacation plan": "Removed from vacation plan.",
+  "Create vacation": "Create vacation",
+  "Start date": "Start date",
+  "Finish date": "Finish date",
+  "Adults": "Adults",
+  "Children": "Children",
+  "arrange-accommodation-question": "Would you like us to arrange accommodation?",
+  "arrange-transportation-question": "Would you like us to arrange transportation?",
+  "confirm-arrangement": "Yes, arrange it for us",
+  "unconfirmed-arrangement": "No, we'll arrange it ourselves",
+  "age-needed": {
+    "label": "Age needed",
+    "info": "Please indicate the age of each child. This helps us ensure we have child seats for safe travel, child discounts, etc.",
+    "options": {
+      "1-2": "1-2 years old",
+      "2-4": "2-4 years old",
+      "4-7": "4-7 years old",
+      "7+": "7+ years old"
+    }
+  },
+  "Activity offer": "Activity offer"
 }

@@ -13,6 +13,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RootState, AppDispatch } from '@/store/store';
 import { useSelector, useDispatch } from 'react-redux';
+import { useTranslations } from 'next-intl';
 
 interface BoxOfActivityProps {
   data: Activity;
@@ -20,6 +21,8 @@ interface BoxOfActivityProps {
 }
 
 export default function BoxOfActivity({ data, handleSnackbar }: BoxOfActivityProps) {
+  const t = useTranslations(data?.translationKey);
+  const globalT = useTranslations('global');
   const dispatch = useDispatch<AppDispatch>();
   const { durationInDays, title, images, description, id, category, location } = data;
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
@@ -46,7 +49,7 @@ export default function BoxOfActivity({ data, handleSnackbar }: BoxOfActivityPro
               href={data.id}
               style={{ cursor: 'pointer', fontWeight: '600', fontSize: '18px', lineHeight: '30px' }}
             >
-              {title}
+              {t('title')}
             </Link>
             <div
               style={{
@@ -55,12 +58,12 @@ export default function BoxOfActivity({ data, handleSnackbar }: BoxOfActivityPro
                 flexDirection: 'row',
               }}
             >
-              <span className='gray-label'>{category}</span>
-              <span className='gray-label'>{location}</span>
+              <span className='gray-label'>{globalT(data.category)}</span>
+              <span className='gray-label'>{data.location}</span>
             </div>
 
             <Typography variant='body1' className='description'>
-              {description}
+              {t('description')}
             </Typography>
           </Box>
           <div className='buttons'>
@@ -78,10 +81,10 @@ export default function BoxOfActivity({ data, handleSnackbar }: BoxOfActivityPro
                 }
               }}
             >
-              {isSelected ? 'Remove' : 'Choose'}
+              {isSelected ? globalT('Remove') : globalT('Choose')}
             </Button>
 
-            <span className='gray-label'>{activityDurationInString(durationInDays)}</span>
+            <span className='gray-label'>{globalT(activityDurationInString(durationInDays))}</span>
           </div>
         </Box>
       </Box>

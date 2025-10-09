@@ -4,7 +4,7 @@ const rafting: Activity[] = [
   {
     paidAd: true,
     id: 'rafting_on_the_tara_river',
-    translationKey: 'activities.adventure.rafting_on_the_tara_river',
+    translationKey: 'activities.rafting_on_the_tara_river',
     title: 'Rafting on the Tara river',
     description:
       "Embark on an exhilarating rafting adventure on the Tara River, one of the Balkans' most stunning rivers. Navigate breathtaking canyons and experience untouched nature.",
@@ -38,7 +38,7 @@ const rafting: Activity[] = [
   {
     paidAd: true,
     id: 'rafting_on_the_ibar_river',
-    translationKey: 'activities.adventure.rafting_on_the_ibar_river',
+    translationKey: 'activities.rafting_on_the_ibar_river',
     title: 'Rafting on the Ibar river',
     description:
       'Experience the thrill of rafting on the Ibar River through the scenic Valley of Serbian Kings, past the majestic Maglič Castle.',
@@ -75,7 +75,7 @@ const paragliding: Activity[] = [
   {
     paidAd: false,
     id: 'paragliding_zlatibor',
-    translationKey: 'activities.adventure.paragliding_zlatibor',
+    translationKey: 'activities.paragliding_zlatibor',
     title: 'Paragliding Zlatibor',
     description:
       "Experience the thrill of paragliding over Zlatibor's stunning landscapes. Soar from Čigota peaks at 1,422 meters with professional guidance, capturing unforgettable views.",
@@ -108,7 +108,7 @@ const paragliding: Activity[] = [
   {
     paidAd: true,
     id: 'paragliding_budva',
-    translationKey: 'activities.adventure.paragliding_budva',
+    translationKey: 'activities.paragliding_budva',
     title: 'Paragliding Budva, Montenegro',
     description:
       "Soar above Budva's Adriatic coast with a paragliding adventure. Glide from coastal mountains, capturing panoramic views of the vibrant sea and historic Old Town.",
@@ -144,7 +144,7 @@ const kayaking: Activity[] = [
   {
     paidAd: false,
     id: 'kayaking_drina',
-    translationKey: 'activities.adventure.kayaking_drina',
+    translationKey: 'activities.kayaking_drina',
     title: 'Drina Kayak adventure',
     description:
       'Embark on an unforgettable 22 km kayaking journey down the Drina River. Explore stunning landscapes, the majestic Vrelo Waterfall, and the iconic house on the rock.',
@@ -177,7 +177,7 @@ const kayaking: Activity[] = [
   {
     paidAd: false,
     id: 'kayaking_danube_iron_gate',
-    translationKey: 'activities.adventure.kayaking_danube_iron_gate',
+    translationKey: 'activities.kayaking_danube_iron_gate',
     title: 'Kayaking the Danube iron gate',
     description:
       'Explore the majestic Danube River on a kayaking tour through Serbia’s Iron Gate. Discover historic sites, stunning views, and pristine nature along the way.',
@@ -210,7 +210,7 @@ const kayaking: Activity[] = [
   {
     paidAd: false,
     id: 'kayaking_uvac',
-    translationKey: 'activities.adventure.kayaking_uvac',
+    translationKey: 'activities.kayaking_uvac',
     title: 'Uvac kayak adventure',
     description:
       'Paddle through the breathtaking meanders of Uvac Lake and uncover its hidden wonders on a serene and picturesque kayaking journey.',
@@ -243,7 +243,7 @@ const kayaking: Activity[] = [
   {
     paidAd: false,
     id: 'war_island_kayak',
-    translationKey: 'activities.adventure.war_island_kayak',
+    translationKey: 'activities.war_island_kayak',
     title: 'War Island kayak adventure',
     description:
       'Explore the picturesque War Island in Belgrade from a unique vantage point with our exhilarating kayak tour. Enjoy stunning views and a refreshing adventure.',
@@ -275,7 +275,7 @@ const jeep_safary: Activity[] = [
   {
     paidAd: false,
     id: 'jeep_safari_durmitor_rings',
-    translationKey: 'activities.adventure.jeep_safari_durmitor_rings',
+    translationKey: 'activities.jeep_safari_durmitor_rings',
     title: 'Jeep safari around Durmitor ring',
     description:
       'Experience a thrilling jeep safari around Durmitor Ring, ideal for adrenaline junkies and off-road enthusiasts eager to explore rugged terrains and hidden beauties.',
@@ -311,7 +311,7 @@ const horse_riding: Activity[] = [
   {
     paidAd: false,
     id: 'horse_riding_tara',
-    translationKey: 'activities.adventure.horse_riding_tara',
+    translationKey: 'activities.horse_riding_tara',
     title: 'Horse riding on Tara mountain',
     description:
       'Experience the beauty of Tara Mountain with guided horseback riding, perfect for both beginners and seasoned riders.',
@@ -344,7 +344,7 @@ const horse_riding: Activity[] = [
   {
     paidAd: false,
     id: 'horse_riding_fruska_gora',
-    translationKey: 'activities.adventure.horse_riding_fruska_gora',
+    translationKey: 'activities.horse_riding_fruska_gora',
     title: 'Horse riding on Fruska Gora',
     description:
       'Set off on a horseback riding adventure across the stunning landscapes of Fruška Gora, ideal for riders of all levels, offering a memorable and scenic experience.',
@@ -380,7 +380,7 @@ const hiking: Activity[] = [
   {
     paidAd: false,
     id: 'hiking_rtanj_mountain',
-    translationKey: 'activities.adventure.hiking_rtanj_mountain',
+    translationKey: 'activities.hiking_rtanj_mountain',
     title: 'Hiking on Rtanj mountain',
     description:
       'Explore the mystical Rtanj Mountain, famous for its pyramid shape and legends of hidden treasures. A hike to its peak, Šiljak, offers an exciting adventure.',
@@ -416,7 +416,7 @@ const fishing: Activity[] = [
   {
     paidAd: false,
     id: 'fishing_on_the_drina_river',
-    translationKey: 'activities.adventure.fishing_on_the_drina_river',
+    translationKey: 'activities.fishing_on_the_drina_river',
     title: 'Fishing on the Drina river',
     description:
       'Enjoy a peaceful yet exciting fishing experience on the Drina River, renowned for its rich fish population and stunning natural beauty. Perfect for anglers of all levels.',
@@ -449,7 +449,7 @@ const fishing: Activity[] = [
   {
     paidAd: false,
     id: 'fishing_on_the_tara_river',
-    translationKey: 'activities.adventure.fishing_on_the_tara_river',
+    translationKey: 'activities.fishing_on_the_tara_river',
     title: 'Fishing on the Tara river',
     description:
       'Experience fishing on the Tara River, with its pristine waters and abundant fish species. This serene setting is an ideal escape for anglers of all skill levels.',
@@ -485,7 +485,7 @@ const cycling: Activity[] = [
   {
     paidAd: false,
     id: 'cycling_kopaonik',
-    translationKey: 'activities.adventure.cycling_kopaonik',
+    translationKey: 'activities.cycling_kopaonik',
     title: 'Mountain biking on Kopaonik',
     description:
       'Kopaonik offers thrilling mountain biking trails with stunning views. Ideal for adventure seekers and outdoor enthusiasts.',
@@ -518,7 +518,7 @@ const cycling: Activity[] = [
   {
     paidAd: false,
     id: 'cycling_tara',
-    translationKey: 'activities.adventure.cycling_tara',
+    translationKey: 'activities.cycling_tara',
     title: 'Mountain biking on Tara',
     description:
       'Set off on an exhilarating mountain biking adventure through Tara, exploring its stunning terrain and scenic views for an unforgettable experience.',
@@ -554,7 +554,7 @@ const canyoning: Activity[] = [
   {
     paidAd: false,
     id: 'canyoning_nevidio',
-    translationKey: 'activities.adventure.canyoning_nevidio',
+    translationKey: 'activities.canyoning_nevidio',
     title: 'Nevidio canyon adventure',
     description:
       "Discover Montenegro's hidden marvels with an exhilarating canyoning experience in Nevidio Canyon, nestled on Durmitor's southern slopes.",
@@ -590,7 +590,7 @@ const bungee_jump: Activity[] = [
   {
     paidAd: false,
     id: 'bungee_jump_ada_ciganlija',
-    translationKey: 'activities.adventure.bungee_jump_ada_ciganlija',
+    translationKey: 'activities.bungee_jump_ada_ciganlija',
     title: 'Bungee jump at Ada Ciganlija',
     description:
       'Take the plunge with a thrilling bungee jump at Ada Ciganlija, Belgrade’s top spot for adrenaline seekers. Experience the ultimate rush!',
@@ -618,7 +618,7 @@ const quad_bike: Activity[] = [
   {
     paidAd: false,
     id: 'quad_bike_zlatibor',
-    translationKey: 'activities.adventure.quad_bike_zlatibor',
+    translationKey: 'activities.quad_bike_zlatibor',
     title: 'Quad Bike Adventure in Zlatibor',
     description:
       'Experience the thrill of quad biking in Zlatibor as you conquer rugged terrains and take in spectacular scenery.',

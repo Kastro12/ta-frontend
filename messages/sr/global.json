@@ -10,5 +10,36 @@
   "Accommodation": "Smeštaj",
   "Transportation": "Prevoz",
   "booking fee": "naknada za rezervaciju",
-  "optional": "opciono"
+  "optional": "opciono",
+  "Adventure": "Avantura",
+  "History & culture": "Istorija i kultura",
+  "Landscape": "Pejzaž",
+  "Relaxation & flavors": "Opuštanje i ukusi",
+  "It takes half a day": "Traje pola dana",
+  "It takes 1 day": "Traje 1 dan",
+  "It takes 2 days": "Traje 2 dana",
+  "Choose": "Odaberi",
+  "Remove": "Ukloni",
+  "Added to vacation plan": "Dodato u plan odmora.",
+  "Removed from vacation plan": "Uklonjeno iz plana odmora.",
+  "Create vacation": "Kreiraj odmor",
+  "Start date": "Datum početka",
+  "Finish date": "Datum završetka",
+  "Adults": "Odrasli",
+  "Children": "Deca",
+  "arrange-accommodation-question": "Da li želite da vam organizujemo smeštaj?",
+  "arrange-transportation-question": "Da li želite da organizujemo prevoz?",
+  "confirm-arrangement": "Da, organizujte za nas",
+  "unconfirmed-arrangement": "Ne, sami ćemo organizovati",
+  "age-needed": {
+    "label": "Potreban uzrast",
+    "info": "Molimo vas da označite uzrast svakog deteta. To nam pomaže da osiguramo dečja sedišta za bezbedno putovanje, popuste za decu itd.",
+    "options": {
+      "1-2": "1-2 godine",
+      "2-4": "2-4 godine",
+      "4-7": "4-7 godina",
+      "7+": "7+ godina"
+    }
+  },
+  "Activity offer": "Ponuda aktivnosti"
 }

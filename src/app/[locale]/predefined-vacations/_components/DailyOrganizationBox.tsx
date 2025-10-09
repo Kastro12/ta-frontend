@@ -13,9 +13,6 @@ const DailyOrganizationBox = ({
   images: { link: string; alt: string }[];
   id: string;
 }) => {
-  console.log('title', title);
-  console.log('description', description);
-
   return (
     <div className='TextImage1'>
       <div className='text'>

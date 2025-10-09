@@ -32,8 +32,6 @@ export default async function Home() {
       {activityCategories.map((category, i) => (
         <InfoWithBackgroundImage
           translationKey={category?.translationKey}
-          title={category.label}
-          description={category.description}
           images={category.images}
           link={category.link}
           glide_classname={`glid_${i}`}

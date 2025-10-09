@@ -1,11 +1,12 @@
-import React from 'react';
 import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import Image from 'next/image';
 import Link from 'next/link';
 import { linkGreenButton } from '@/utils/re-styledComponents';
+import { getTranslations } from 'next-intl/server';
+export default async function AboutUs() {
+  const globalT = await getTranslations('global');
 
-export default function AboutUs() {
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
@@ -83,7 +84,7 @@ export default function AboutUs() {
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, lg: 6 }}>
           <Typography variant='h3' sx={{ mb: 2 }}>
-            Create vacation
+            {globalT('Create vacation')}
           </Typography>
           <Typography variant='body1' className='text'>
             With{' '}

@@ -1,7 +1,7 @@
 export interface ReactSelectOptions {
   id: string;
   value: string;
-  label: string;
+  label?: string;
 }
 [];
 export interface FormInputProps {
@@ -13,8 +13,6 @@ export interface FormInputProps {
   defaultValue?: { id: string; value: string; label: string }[];
   getSelectedValue?: (value: any) => void;
 }
-
-
 
 export type BookVacationProps = {
   fullName: string | undefined;

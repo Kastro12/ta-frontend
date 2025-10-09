@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { zoomActivity } from '@/store/activities/activitiesReducer';
 import { useDispatch } from 'react-redux';
 import Link from 'next/link';
+import TopActivity from './TopActivity';
 
 const SliderBarActivities = ({ serverData }) => {
   useEffect(() => {
@@ -41,38 +42,7 @@ const SliderBarActivities = ({ serverData }) => {
           style={{ position: 'relative', zIndex: 1 }}
         >
           <ul className='glide__slides'>
-            {serverData &&
-              serverData.map((data) => (
-                <li key={data.id}>
-                  <Link href={data.id}>
-                    <Image
-                      src={data.images[0].link}
-                      alt={data.images[0].alt}
-                      loading='lazy'
-                      fill
-                      style={{ objectFit: 'cover', borderRadius: '4px' }}
-                      sizes='100%'
-                    />
-                    <Typography
-                      variant='h3'
-                      sx={{
-                        cursor: 'pointer',
-                        p: '0 16px 6px 16px',
-                        position: 'absolute',
-                        bottom: 0,
-                        zIndex: 1,
-                        color: '#fff',
-                        fontSize: '16px',
-                        fontWeight: 500,
-                      }}
-                      style={{ cursor: 'pointer' }}
-                      onClick={() => dispatch(zoomActivity(data))}
-                    >
-                      {data.title}
-                    </Typography>
-                  </Link>
-                </li>
-              ))}
+            {serverData && serverData.map((data) => <TopActivity key={data.id} data={data} />)}
           </ul>
         </div>
         <div className='glide__arrows' data-glide-el='controls'>

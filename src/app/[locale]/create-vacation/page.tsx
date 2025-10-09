@@ -7,7 +7,7 @@ import ChooseServicesForm from '@/forms/chooseServices/ChooseServicesForm';
 import FilterForm from './forms/FilterForm';
 import ActivitiesWrapper from './components/BoxOfActivity/ActivitiesWrapper';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '@/store/store';
+import { RootState } from '@/store/store';
 import { Activity } from '@/utils/interfaces';
 import {
   updateActivitiesToDisplay,
@@ -20,17 +20,19 @@ import { Alert } from '@/components';
 import { changeRadioGroup } from '@/store/vacation/vacationReducer';
 import { Suspense } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function Activities() {
   const dispatch = useDispatch();
   const router = useRouter();
+  const globalT = useTranslations('global');
 
   const ACTIVITY_LIST_SIZE = useSelector((state: RootState) => state.activities.activityListSize);
   const activityList = useSelector((state: RootState) => state.activities.activityList);
   const currentPage = useSelector((state: RootState) => state.activities.currentPage);
   const activitiesLength = activityList?.length;
   const activitiesToDisplay = useSelector(
-    (state: RootState) => state.activities.activitiesToDisplay
+    (state: RootState) => state.activities.activitiesToDisplay,
   );
 
   const pageAlert = useSelector((state: RootState) => state.alerts.pageAlert);
@@ -82,7 +84,7 @@ export default function Activities() {
           dispatch(updateCurrentPage(lastPageRef.current + 1));
         }
       },
-      { threshold: 1.0 }
+      { threshold: 1.0 },
     );
 
     if (loader.current) {
@@ -126,7 +128,7 @@ export default function Activities() {
           />
         )}
 
-        <Typography variant='h1'>Create vacation</Typography>
+        <Typography variant='h1'>{globalT('Create vacation')}</Typography>
 
         {activitiesToDisplay && activitiesToDisplay.length > 0 && (
           <>
@@ -144,7 +146,9 @@ export default function Activities() {
 
         <div className='title-filter'>
           <div style={{ position: 'absolute', top: '-96px' }} id='activity_offer_position'></div>
-          <Typography variant='h2'>Activity offer ({activitiesLength})</Typography>
+          <Typography variant='h2'>
+            {globalT('Activity offer')} ({activitiesLength})
+          </Typography>
           <FilterForm setIsAllActivitiesLoaded={setIsAllActivitiesLoaded} />
         </div>
 

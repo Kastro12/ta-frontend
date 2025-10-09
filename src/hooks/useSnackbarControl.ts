@@ -1,8 +1,9 @@
 import { useState } from 'react';
-
+import { useTranslations } from 'next-intl';
 type SnackbarType = 'REMOVE' | 'ADD' | false;
 
 export function useSnackbarControl() {
+  const t = useTranslations('global');
   const [snackbar, setSnackbar] = useState<SnackbarType>(false);
 
   const handleSnackbar = (message: Exclude<SnackbarType, false>) => {
@@ -21,12 +22,12 @@ export function useSnackbarControl() {
 
   switch (snackbar) {
     case 'REMOVE':
-      snackbarMessage = 'Removed from vacation plan.';
+      snackbarMessage = t('Removed from vacation plan');
       snackbarBackgroundColor = '#bcd9d8';
       snackbarColor = '#21817d';
       break;
     case 'ADD':
-      snackbarMessage = 'Added to vacation plan.';
+      snackbarMessage = t('Added to vacation plan');
       snackbarBackgroundColor = '#1e706c';
       snackbarColor = '#fff';
       break;

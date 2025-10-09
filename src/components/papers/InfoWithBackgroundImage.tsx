@@ -6,15 +6,11 @@ import { getTranslations } from 'next-intl/server';
 
 export default async function InfoWithBackgroundImage({
   translationKey,
-  title,
-  description,
   images,
   link,
   glide_classname,
 }: {
   translationKey: string;
-  title: string;
-  description: string;
   images: { link: string; alt: string }[];
   link: string;
   glide_classname: string;
