@@ -16,19 +16,23 @@ import Image from 'next/image';
 import SwitchLanguage from './SwitchLanguage';
 import { AppDispatch } from '@/store/store';
 import { loadChosenActivities } from '@/store/vacation/vacationReducer';
+import { useTranslations } from 'next-intl';
 
 const Navbar = () => {
+  const globalT = useTranslations('global');
+  const organizedVacationT = useTranslations('organizedVacations');
+
   const pages = useMemo(
     () => [
-      { name: 'About us', link: '/about-us' },
-      { name: 'Create vacation', icon: CreateOutlinedIcon, link: '/create-vacation' },
+      { name: globalT('About us'), link: '/about-us' },
+      { name: globalT('Create vacation'), icon: CreateOutlinedIcon, link: '/create-vacation' },
       {
-        name: 'Predefined vacations',
+        name: organizedVacationT('mainTitle'),
         icon: RouteOutlinedIcon,
         link: '/#predefined-vacations-position',
       },
     ],
-    []
+    [],
   );
 
   const dispatch = useDispatch<AppDispatch>();
@@ -46,7 +50,7 @@ const Navbar = () => {
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
 
   const chosenActivitiesAction = useSelector(
-    (state: RootState) => state.vacation.chosenActivitiesAction
+    (state: RootState) => state.vacation.chosenActivitiesAction,
   );
 
   useEffect(() => {

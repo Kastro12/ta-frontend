@@ -6,6 +6,7 @@ import { activityCategories, activityLocations } from '@/data';
 import { useDispatch } from 'react-redux';
 import { filterActivityList } from '@/store/activities/activitiesReducer';
 import { updateCurrentPage } from '@/store/activities/activitiesReducer';
+import { useTranslations } from 'next-intl';
 
 interface FilterFormProps {
   setIsAllActivitiesLoaded: React.Dispatch<React.SetStateAction<boolean>>;
@@ -15,6 +16,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
   const dispatch = useDispatch();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const globalT = useTranslations('global');
 
   const pathname = usePathname();
   const categoryParam = searchParams.get('category');
@@ -77,7 +79,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
 
   return (
     <div className='action-filter-wrapper'>
-      <span className='label'>Filter by:</span>
+      <span className='label'>{globalT('Filter by')}:</span>
       <div className='field'>
         <Select
           id='category'
@@ -89,9 +91,11 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
           isClearable={true}
           isSearchable={!isMobile}
           name='category'
-          options={activityCategories}
+          options={activityCategories.map((cat) => {
+            return { ...cat, label: globalT(cat.label) };
+          })}
           defaultValue={activityCategories.filter((category) => category.value == categoryParam)}
-          placeholder={'Category'}
+          placeholder={globalT('Category')}
           onChange={(e) => handleFilterChange(e, 'category')}
           components={{
             IndicatorSeparator: () => null,
@@ -112,7 +116,7 @@ const FilterForm: React.FC<FilterFormProps> = ({ setIsAllActivitiesLoaded }) => 
           name='location'
           options={activityLocations}
           defaultValue={activityLocations.filter((location) => location.value == locationParam)}
-          placeholder={'Location'}
+          placeholder={globalT('Location')}
           onChange={(e) => handleFilterChange(e, 'location')}
           components={{
             IndicatorSeparator: () => null,

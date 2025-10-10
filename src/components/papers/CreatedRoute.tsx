@@ -21,6 +21,7 @@ export default function CreatedRoute({ data }: SliderBarProps) {
 
   const organizedVacationsT = useTranslations(data?.translationKey);
   const globalT = useTranslations('global');
+  const t = useTranslations();
   let fourActivities = uniqueActivities.slice(0, 4);
 
   return (
@@ -39,7 +40,7 @@ export default function CreatedRoute({ data }: SliderBarProps) {
           </Typography>
           <ul>
             {fourActivities.map((activity: Activity | undefined) => (
-              <li key={activity?.title}>{activity?.title}</li>
+              <li key={activity?.title}>{t(activity?.translationKey + '.title')}</li>
             ))}
 
             <li>...</li>
