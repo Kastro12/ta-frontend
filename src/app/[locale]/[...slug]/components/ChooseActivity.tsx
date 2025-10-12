@@ -12,10 +12,11 @@ import {
 } from '@/store/vacation/vacationReducer';
 import { Activity } from '@/utils/interfaces';
 import { useSnackbarControl } from '@/hooks/useSnackbarControl';
+import { useTranslations } from 'next-intl';
 
 export default function ChooseActivity({ currentActivity }: { currentActivity: Activity }) {
   const dispatch = useDispatch<AppDispatch>();
-
+  const globalT = useTranslations('global');
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const isSelected = chosenActivities.some((activity) => activity.id === currentActivity?.id);
   const {
@@ -47,7 +48,7 @@ export default function ChooseActivity({ currentActivity }: { currentActivity: A
           }
         }}
       >
-        {isSelected ? 'Remove' : 'Choose'}
+        {isSelected ? globalT('Remove') : globalT('Choose')}
       </Button>
       <Snackbar
         open={isOpen}

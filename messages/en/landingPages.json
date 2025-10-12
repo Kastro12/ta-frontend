@@ -1,5 +1,7 @@
 {
   "page-about": {
+    "metaTitle": "About us",
+    "metaDescription": "Specialized vacation planning for Serbia and nearby regions. Custom trips or predefined options with full management of activities, stays, and transport.",
     "mainTitle": "Expert vacation planning for ultimate relaxation",
     "mainSubtitle": "Experience the best vacation planning service, where you can relax and enjoy your adventures without any worries.",
     "mainSubtitle2": "Let us handle the details while you make lasting memories!",
@@ -25,6 +27,8 @@
     }
   },
   "page-accommodation": {
+    "metaTitle": "Accommodation and dining",
+    "metaDescription": "Experience top comfort with our accommodation services and savor fine dining at recommended restaurants. Enjoy luxury stays and exceptional cuisine.",
     "mainTitle": "Accommodation and dining",
     "mainSubtitle": "Enjoy maximum comfort and delicious cuisine",
     "text1": "If you choose our accommodation reservation service, we prioritize your comfort and enjoyment. Accommodations are selected to provide you with the highest level of luxury and relaxation.",
@@ -32,6 +36,8 @@
     "text3": "Whether relaxing after a day of activities or enjoying a meal at one of our recommended spots, our commitment ensures your stay will be exceptional."
   },
   "page-vehicle": {
+    "metaTitle": "Vehicle fleet",
+    "metaDescription": "Discover luxury vehicle options for a comfortable and reliable journey. Professional drivers ensure seamless and safe travel throughout your vacation.",
     "mainTitle": "Vehicle fleet",
     "mainSubtitle": "Travel in comfort and safety",
     "text1": "If you choose our transportation arrangement service, we ensure your journey is as comfortable and safe as it can be. Our fleet of luxury vehicles is selected to provide you with the utmost comfort and reliability.",
@@ -39,15 +45,27 @@
     "text3": "Our main goal is for you to focus on your vacation and enjoy the ride. Whether it's a scenic drive or transportation between activities, we provide a seamless, comfortable, and safe travel experience from start to finish."
   },
   "page-jobs": {
+    "metaTitle": "Jobs",
+    "metaDescription": "Jobs",
     "mainTitle": "Join Our Team",
     "alert": "Currently, there are no open positions available."
   },
   "page-partnerships": {
+    "metaTitle": "Partnership",
+    "metaDescription": "Partnership",
     "mainTitle": "Partnership with us",
     "mainSubtitle": "Join forces for mutual success",
     "text1": "We are always open to forming new partnerships and collaborations in our field. Whether you are an individual, a company, or an organization, we believe in the power of working together to achieve mutual success.",
     "text2": "Our team is dedicated to building strong and fruitful relationships that benefit all parties involved. By partnering with us, you will gain access to our extensive network, resources, and expertise in vacation planning and management. Together, we can create unique and unforgettable experiences for our clients.",
     "text3": "If you are interested in exploring potential collaboration opportunities, please feel free to reach out to us using the contact form. We look forward to hearing from you and discussing how we can work together to achieve our shared goals.",
     "Contact": "Contact"
+  },
+  "page-contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with us for personalized vacation planning. Contact us for inquiries about custom trips, predefined packages, and more. We're here to help!"
+  },
+  "page-create-vacation": {
+    "metaTitle": "Create vacation",
+    "metaDescription": "Create vacation"
   }
 }

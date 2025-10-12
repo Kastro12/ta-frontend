@@ -13,7 +13,13 @@ import {
 } from '@/store/vacation/vacationReducer';
 import { Activity } from '@/utils/interfaces';
 
-export default function HeaderSection({ currentActivity }: { currentActivity: Activity }) {
+export default function HeaderSection({
+  currentActivity,
+  title,
+}: {
+  currentActivity: Activity;
+  title: string;
+}) {
   const dispatch = useDispatch<AppDispatch>();
 
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
@@ -32,7 +38,7 @@ export default function HeaderSection({ currentActivity }: { currentActivity: Ac
 
       <div className='content'>
         <Grid size={{ md: 12 }} className='titles'>
-          <Typography variant='h1'>{currentActivity.title}</Typography>
+          <Typography variant='h1'>{title}</Typography>
         </Grid>
 
         <Grid size={{ md: 12 }} sx={{ textAlign: 'center', display: { xs: 'block', md: 'none' } }}>
@@ -50,7 +56,7 @@ export default function HeaderSection({ currentActivity }: { currentActivity: Ac
               dispatch(
                 isSelected
                   ? removeActivityWithPersistence(currentActivity.id)
-                  : addActivityWithPersistence(currentActivity)
+                  : addActivityWithPersistence(currentActivity),
               )
             }
           >

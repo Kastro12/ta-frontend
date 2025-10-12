@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: 'Jobs - Tailor-made vacations',
-  description: 'Jobs - Tailor-made vacations',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('landingPages.page-jobs');
+
+  return {
+    title: `${t('metaTitle')} | Tailor-made vacations`,
+    description: ` ${t('metaDescription')}`,
+  };
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className='page jobs'>{children}</div>;

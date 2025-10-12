@@ -6,12 +6,13 @@ import { Container, Typography, Button, Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import Image from 'next/image';
 import Gallery from '@/sections/slideBarActivityGallery/Gallery';
-import Link from 'next/link';
 import ActivitiesWrapper from '@/app/[locale]/create-vacation/components/BoxOfActivity/ActivitiesWrapper';
 import { getRecommendedActivities } from '@/utils/activities';
 import HeaderSection from './components/HeaderSection';
+import VacationWithCurrentActivity from './components/VacationWithCurrentActivity';
 import ChooseActivity from './components/ChooseActivity';
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
 export default async function ActivityPage({
   params,
@@ -21,6 +22,9 @@ export default async function ActivityPage({
   const { slug } = await params;
 
   const currentActivity = allActivities.find((activity) => activity.id === slug[0]);
+
+  const activitiesT = await getTranslations('activities.' + currentActivity?.translationKey);
+  const globalT = await getTranslations('global');
 
   if (!currentActivity || slug.length == 0) {
     notFound();
@@ -38,28 +42,42 @@ export default async function ActivityPage({
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
-      <HeaderSection currentActivity={currentActivity} />
+      <HeaderSection currentActivity={currentActivity} title={activitiesT('title')} />
 
       <Grid container>
         <Grid size={{ xs: 12, lg: 8 }}>
-          {currentActivity?.longDescritpion.map((desc: string, index) => (
-            <Typography variant='body1' sx={{ mt: index == 0 ? 5 : 3, mb: 1 }} key={index}>
-              {desc}
-            </Typography>
-          ))}
+          <div style={{ marginTop: '40px' }}>
+            {activitiesT.rich(`longDescription`, {
+              p: (chunks) => (
+                <p
+                  style={{
+                    fontFamily: 'Platypi',
+                    marginBottom: '8px',
+                    fontSize: '16px',
+                    fontWeight: 300,
+                    lineHeight: '26px',
+                  }}
+                >
+                  {chunks}
+                </p>
+              ),
+              strong: (chunks) => <strong>{chunks}</strong>,
+              br: () => <br />,
+            })}
+          </div>
 
           <div className='vacation-summary' style={{ marginTop: '36px' }}>
             <div className='box' style={{ marginBottom: '12px' }}>
               <Typography variant='h3' sx={{ width: '120px !important' }}>
-                Category
+                {globalT('Category')}
               </Typography>
               <ul>
-                <li>{currentActivity.category}</li>
+                <li>{globalT(currentActivity.category)}</li>
               </ul>
             </div>
             <div className='box'>
               <Typography variant='h3' sx={{ width: '120px !important' }}>
-                Location
+                {globalT('Location')}
               </Typography>
               <ul>
                 <li>{currentActivity.location}</li>
@@ -67,26 +85,19 @@ export default async function ActivityPage({
             </div>
           </div>
 
-          <Typography variant='h2'>Gallery</Typography>
+          <Typography variant='h2'>{globalT('Gallery')}</Typography>
           <Gallery serverData={currentActivity.images} />
 
           {vacationWithCurrentActivity && vacationWithCurrentActivity.length > 0 && (
             <>
               <Typography variant='h2' sx={{ marginBottom: '24px !important' }}>
-                Predefined vacation which include this activity
+                {globalT('predefined-vacation-include-activity')}
               </Typography>
               {vacationWithCurrentActivity.map((vacation, index) => (
-                <Link
-                  key={index}
-                  style={{
-                    display: 'inline-block',
-                    color: '#21817d',
-                    textDecoration: 'underline',
-                  }}
-                  href={vacation.link}
-                >
-                  {vacation.title}
-                </Link>
+                <VacationWithCurrentActivity
+                  key={vacation.link}
+                  data={{ link: vacation.link, translationKey: vacation.translationKey }}
+                />
               ))}
             </>
           )}
@@ -112,7 +123,7 @@ export default async function ActivityPage({
             />
           </Box>
         </Grid>
-        <Typography variant='h2'>Similar & nearby</Typography>
+        <Typography variant='h2'>{globalT('Similar & nearby')}</Typography>
 
         <ActivitiesWrapper activities={recommendedActivities} />
       </Grid>
@@ -128,6 +139,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, locale } = await params;
 
   const currentActivity = allActivities.find((activity) => activity.id === slug[0]);
+  const activitiesT = await getTranslations('activities.' + currentActivity?.translationKey);
 
   if (!currentActivity || slug.length !== 1) {
     notFound();
@@ -137,8 +149,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // alternates: {
     //   canonical: productSEO?.meta_canonical_link || canonical,
     // },
-    title: `${process.env.NEXT_PUBLIC_SITE_NAME} | ${currentActivity?.title}`,
-    description: currentActivity?.description,
+    title: `${process.env.NEXT_PUBLIC_SITE_NAME} | ${activitiesT('title')}`,
+    description: activitiesT('description'),
     keywords: currentActivity?.location,
     robots: {
       index: true,
@@ -146,8 +158,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
 
     openGraph: {
-      title: currentActivity?.title,
-      description: currentActivity?.description,
+      title: `${process.env.NEXT_PUBLIC_SITE_NAME} | ${activitiesT('title')}`,
+      description: activitiesT('description'),
       type: 'website',
       images: [
         {

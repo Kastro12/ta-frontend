@@ -79,7 +79,10 @@
     "required-email": "Email is required",
     "invalid-email": "Invalid email address",
     "required-terms-and-conditions": "Please read and accept the terms and conditions",
-    "Send a message":"Send a message"
+    "Send a message": "Send a message"
   },
-  "Telephone": "Telephone"
+  "Telephone": "Telephone",
+  "Gallery": "Gallery",
+  "predefined-vacation-include-activity": "Predefined vacation which include this activity",
+  "Similar & nearby": "Similar & nearby"
 }

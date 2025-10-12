@@ -21,10 +21,10 @@ interface BoxOfActivityProps {
 }
 
 export default function BoxOfActivity({ data, handleSnackbar }: BoxOfActivityProps) {
-  const t = useTranslations(data?.translationKey);
+  const t = useTranslations('activities.' + data?.translationKey);
   const globalT = useTranslations('global');
   const dispatch = useDispatch<AppDispatch>();
-  const { durationInDays, title, images, description, id, category, location } = data;
+  const { durationInDays, images, id } = data;
   const chosenActivities = useSelector((state: RootState) => state.vacation.chosenActivities);
   const isSelected = chosenActivities.some((activity) => activity.id === data.id);
 

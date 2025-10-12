@@ -1,5 +1,7 @@
 {
   "page-about": {
+    "metaTitle": "O nama",
+    "metaDescription": "Specijalizovano planiranje odmora za Srbiju i okolne regione. Prilagođena putovanja ili unapred definisane opcije sa potpunim upravljanjem aktivnostima, boravcima i prevozom.",
     "mainTitle": "Stručno planiranje odmora za vrhunsko opuštanje",
     "mainSubtitle": "Iskusite najbolju uslugu planiranja odmora, gde se možete opustiti i uživati u svojim avanturama bez ikakvih briga.",
     "mainSubtitle2": "Prepustite nam brigu o detaljima dok vi stvarate trajne uspomene!",
@@ -25,6 +27,8 @@
     }
   },
   "page-accommodation": {
+    "metaTitle": "Smeštaj i hrana",
+    "metaDescription": "Doživite vrhunsku udobnost uz naše usluge smeštaja i uživajte u finoj hrani u preporučenim restoranima. Uživajte u luksuznom boravku i izuzetnoj kuhinji.",
     "mainTitle": "Smeštaj i hrana",
     "mainSubtitle": "Uživajte u maksimalnoj udobnosti i ukusnoj kuhinji",
     "text1": "Ako izaberete našu uslugu rezervacije smeštaja, prioritet nam je vaša udobnost i uživanje. Smeštaj je odabran tako da vam pruži najviši nivo luksuza i opuštanja.",
@@ -32,6 +36,8 @@
     "text3": "Bez obzira da li se opuštate nakon dana aktivnosti ili uživate u obroku u jednom od naših preporučenih mesta, naša posvećenost osigurava da će vaš boravak biti izuzetan."
   },
   "page-vehicle": {
+    "metaTitle": "Vozni park",
+    "metaDescription": "Otkrijte luksuzne opcije vozila za udobno i pouzdano putovanje. Profesionalni vozači osiguravaju besprekorno i bezbedno putovanje tokom vašeg odmora.",
     "mainTitle": "Vozni park",
     "mainSubtitle": "Putujte udobno i bezbedno",
     "text1": "Ako izaberete našu uslugu prevoza, osiguraćemo vam što udobnije i bezbednije putovanje. Naša flota luksuznih vozila je odabrana da vam pruži maksimalnu udobnost i pouzdanost.",
@@ -39,15 +45,27 @@
     "text3": "Naš glavni cilj je da se fokusirate na svoj odmor i uživate u vožnji. Bilo da je u pitanju vožnja živopisnim krajolikim pogledom ili prevoz između aktivnosti, pružamo besprekorno, udobno i bezbedno iskustvo putovanja od početka do kraja."
   },
   "page-jobs": {
+    "metaTitle": "Posao",
+    "metaDescription": "Posao",
     "mainTitle": "Pridružite se našem timu",
     "alert": "Trenutno nema otvorenih pozicija."
   },
   "page-partnerships": {
+    "metaTitle": "Partnerstvo",
+    "metaDescription": "Partnerstvo sa nama",
     "mainTitle": "Partnerstvo sa nama",
     "mainSubtitle": "Udružite snage za zajednički uspeh",
     "text1": "Uvek smo otvoreni za sklapanje novih partnerstava i saradnji u našoj oblasti. Bez obzira da li ste pojedinac, kompanija ili organizacija, verujemo u moć zajedničkog rada kako bismo postigli obostrani uspeh.",
     "text2": "Naš tim je posvećen izgradnji jakih i plodonosnih odnosa koji koriste svim uključenim stranama. Partnerstvom sa nama, dobićete pristup našoj širokoj mreži, resursima i stručnosti u planiranju i upravljanju odmorima. Zajedno možemo stvoriti jedinstvena i nezaboravna iskustva za naše klijente.",
     "text3": "Ukoliko ste zainteresovani za istraživanje potencijalnih mogućnosti saradnje, slobodno nas kontaktirajte putem kontakt forme. Radujemo se vašem odgovoru i razgovoru o tome kako možemo sarađivati kako bismo ostvarili naše zajedničke ciljeve.",
     "Contact": "Kontakt"
+  },
+  "page-contact": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Kontaktirajte nas za personalizovano planiranje odmora. Kontaktirajte nas za upite o prilagođenim putovanjima, unapred definisanim paketima i još mnogo toga. Tu smo da vam pomognemo!"
+  },
+  "page-create-vacation": {
+    "metaTitle": "Kreiraj odmor",
+    "metaDescription": "Kreiraj odmor"
   }
 }
