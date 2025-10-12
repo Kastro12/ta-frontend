@@ -1,15 +1,16 @@
-'use client';
 import { Container, Typography, Button } from '@mui/material';
 import ContactForm from './forms/ContactForm';
-
 import Link from 'next/link';
 import { button, linkGreenButton } from '@/utils/re-styledComponents';
+import { getTranslations } from 'next-intl/server';
 
-export default function Contact() {
+export default async function Contact() {
+  const globalT = await getTranslations('global');
+
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Typography variant='h1' sx={{ mb: '32px' }}>
-        Contact
+        {globalT('Contact')}
       </Typography>
 
       {/* <Typography
@@ -23,7 +24,7 @@ export default function Contact() {
         variant='body1'
         sx={{ maxWidth: '940px', m: '0 auto 32px auto', fontWeight: '300', textAlign: 'center' }}
       >
-        Telephone:&nbsp;
+        {globalT('Telephone')}:&nbsp;
         <Button
           sx={{ ...button, ...linkGreenButton, position: 'relative', top: '-1px' }}
           variant='outlined'

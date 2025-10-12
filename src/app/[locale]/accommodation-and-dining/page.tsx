@@ -3,8 +3,11 @@ import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import SliderBarGallery from '@/sections/sliderBarGallery/SliderBarGallery';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-export default function AccommodationAndDining() {
+export default async function AccommodationAndDining() {
+  const accommodationT = await getTranslations('landingPages.page-accommodation');
+
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
@@ -18,7 +21,7 @@ export default function AccommodationAndDining() {
         />
         <div className='content'>
           <Grid size={{ md: 12 }} className='titles'>
-            <Typography variant='h1'>Accommodation and dining</Typography>
+            <Typography variant='h1'>{accommodationT('mainTitle')}</Typography>
           </Grid>
         </div>
       </Grid>
@@ -34,29 +37,18 @@ export default function AccommodationAndDining() {
           letterSpacing: '0.02em',
         }}
       >
-        Enjoy maximum comfort and delicious cuisine
+        {accommodationT('mainSubtitle')}
       </Typography>
 
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, lg: 4 }}>
-          <Typography variant='body1'>
-            If you choose our accommodation reservation service, we prioritize your comfort and
-            enjoyment. Accommodations are selected to provide you with the highest level of luxury
-            and relaxation.
-          </Typography>
+          <Typography variant='body1'>{accommodationT('text1')}</Typography>
         </Grid>
         <Grid size={{ xs: 12, lg: 4 }}>
-          <Typography variant='body1'>
-            We recommend only the best restaurants, ensuring you enjoy top-quality cuisine. Our
-            selections cater to all tastes, offering memorable culinary experiences throughout your
-            vacation.
-          </Typography>
+          <Typography variant='body1'>{accommodationT('text2')}</Typography>
         </Grid>
         <Grid size={{ xs: 12, lg: 4 }}>
-          <Typography variant='body1'>
-            Whether relaxing after a day of activities or enjoying a meal at one of our recommended
-            spots, our commitment ensures your stay will be exceptional.
-          </Typography>
+          <Typography variant='body1'>{accommodationT('text3')}</Typography>
         </Grid>
       </Grid>
 

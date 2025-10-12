@@ -29,6 +29,7 @@ export default function PredefinedVacationTemplate({
 }: PredefinedVacationTemplateProps) {
   const organizedVacationsT = useTranslations(organizedVacation?.translationKey);
   const globalT = useTranslations('global');
+  const activitiesT = useTranslations('activities');
 
   const [isBookAlertActive, setIsBookAlertActive] = useState<boolean>(false);
   const router = useRouter();
@@ -58,7 +59,7 @@ export default function PredefinedVacationTemplate({
   let errorAlert = null;
 
   if (!startDate) {
-    errorAlert = 'Choose the start date.';
+    errorAlert = `${globalT('Choose the start date')}.`;
   }
 
   return (
@@ -114,7 +115,7 @@ export default function PredefinedVacationTemplate({
           <Typography variant='h3'>{globalT('Activities')}</Typography>
           <ul>
             {uniqueActivities.map((activity: Activity | undefined) => (
-              <li key={activity?.title}>{activity?.title}</li>
+              <li key={activity?.title}>{activitiesT(activity?.translationKey + '.title')}</li>
             ))}
           </ul>
         </div>
@@ -155,7 +156,7 @@ export default function PredefinedVacationTemplate({
       </div>
 
       <Typography variant='h2' sx={{ textAlign: 'center', marginTop: '60px' }}>
-        Fill out the form and book your vacation
+        {globalT('form-title-book-vacation')}
       </Typography>
 
       <div className='form-background in-container calendar-persons'>
@@ -189,7 +190,7 @@ export default function PredefinedVacationTemplate({
               return;
             }}
           >
-            Book now
+            {globalT('Book vacation')}
           </Button>
 
           {errorAlert && isBookAlertActive && (

@@ -1,0 +1,53 @@
+{
+  "page-about": {
+    "mainTitle": "Stručno planiranje odmora za vrhunsko opuštanje",
+    "mainSubtitle": "Iskusite najbolju uslugu planiranja odmora, gde se možete opustiti i uživati u svojim avanturama bez ikakvih briga.",
+    "mainSubtitle2": "Prepustite nam brigu o detaljima dok vi stvarate trajne uspomene!",
+    "text1": "Na našem servisu, prilagođavamo svako putovanje vašim željama, upravljajući rezervacijama aktivnosti, smeštajem i prevozom, kako biste se mogli opustiti i uživati u svom odmoru.",
+    "text2": "Nudimo fleksibilne opcije, bez obzira da li želite potpuno prilagođeno iskustvo ili unapred isplaniran plan putovanja. Cilj nam je da vaš odmor iz snova pretvorimo u stvarnost uz visokokvalitetnu, personalizovanu uslugu.",
+    "text3": "Transparentnost i kvalitet vode naš rad. Pažljivo biramo najbolje opcije smeštaja i prevoza, osiguravajući besprekorno i prijatno iskustvo prilagođeno vašim potrebama.",
+    "services": {
+      "title": "Naše usluge",
+      "subtitle1": "Kreiraj odmor",
+      "text1": {
+        "With": "Sa",
+        "create vacation": "kreiraj odmor",
+        "p1": "uslugom birate aktivnosti, a mi ćemo se pobrinuti za ostalo. Rezervisaćemo vaše aktivnosti i pronaći vam smeštaj, nudeći izbor čistih, dobro opremljenih standardnih ili luksuznih opcija. Ova usluga košta 34 evra.",
+        "p2": "Takođe možemo organizovati prevoz standardnim ili luksuznim vozilima, sva u odličnom stanju. Usluga prevoza košta 34 evra. Pored toga, preporučićemo vam opcije za ručavanje, bilo u restoranima ili u vašem hotelu."
+      },
+      "subtitle2": "Definisani odmori",
+      "text2": {
+        "intro": "Za one koji preferiraju unapred određenu rutu, nudimo",
+        "predefined vacation": "unapred definisan odmor",
+        "p1": "pakete. Ovi odmori dolaze sa potpuno isplaniranim rasporedom aktivnosti, što vam omogućava da jednostavno izaberete datum polaska i uživate u bezbrižnom iskustvu. Sve je organizovano, tako da je sve što treba da uradite da spakujete kofere i krenete.",
+        "p2": "Obe usluge vam omogućavaju da izaberete datum početka i navedete broj ljudi u vašoj grupi, osiguravajući da je odmor prilagođen vašim potrebama."
+      }
+    }
+  },
+  "page-accommodation": {
+    "mainTitle": "Smeštaj i hrana",
+    "mainSubtitle": "Uživajte u maksimalnoj udobnosti i ukusnoj kuhinji",
+    "text1": "Ako izaberete našu uslugu rezervacije smeštaja, prioritet nam je vaša udobnost i uživanje. Smeštaj je odabran tako da vam pruži najviši nivo luksuza i opuštanja.",
+    "text2": "Preporučujemo samo najbolje restorane, osiguravajući vam da uživate u vrhunskoj kuhinji. Naš izbor zadovoljava svačiji ukus, nudeći nezaboravna kulinarska iskustva tokom vašeg odmora.",
+    "text3": "Bez obzira da li se opuštate nakon dana aktivnosti ili uživate u obroku u jednom od naših preporučenih mesta, naša posvećenost osigurava da će vaš boravak biti izuzetan."
+  },
+  "page-vehicle": {
+    "mainTitle": "Vozni park",
+    "mainSubtitle": "Putujte udobno i bezbedno",
+    "text1": "Ako izaberete našu uslugu prevoza, osiguraćemo vam što udobnije i bezbednije putovanje. Naša flota luksuznih vozila je odabrana da vam pruži maksimalnu udobnost i pouzdanost.",
+    "text2": "Od trenutka kada stignete na aerodrom ili započnete svoj odmor, naši profesionalni vozači su tu da vas bez problema prevezu do svih vaših odredišta.",
+    "text3": "Naš glavni cilj je da se fokusirate na svoj odmor i uživate u vožnji. Bilo da je u pitanju vožnja živopisnim krajolikim pogledom ili prevoz između aktivnosti, pružamo besprekorno, udobno i bezbedno iskustvo putovanja od početka do kraja."
+  },
+  "page-jobs": {
+    "mainTitle": "Pridružite se našem timu",
+    "alert": "Trenutno nema otvorenih pozicija."
+  },
+  "page-partnerships": {
+    "mainTitle": "Partnerstvo sa nama",
+    "mainSubtitle": "Udružite snage za zajednički uspeh",
+    "text1": "Uvek smo otvoreni za sklapanje novih partnerstava i saradnji u našoj oblasti. Bez obzira da li ste pojedinac, kompanija ili organizacija, verujemo u moć zajedničkog rada kako bismo postigli obostrani uspeh.",
+    "text2": "Naš tim je posvećen izgradnji jakih i plodonosnih odnosa koji koriste svim uključenim stranama. Partnerstvom sa nama, dobićete pristup našoj širokoj mreži, resursima i stručnosti u planiranju i upravljanju odmorima. Zajedno možemo stvoriti jedinstvena i nezaboravna iskustva za naše klijente.",
+    "text3": "Ukoliko ste zainteresovani za istraživanje potencijalnih mogućnosti saradnje, slobodno nas kontaktirajte putem kontakt forme. Radujemo se vašem odgovoru i razgovoru o tome kako možemo sarađivati kako bismo ostvarili naše zajedničke ciljeve.",
+    "Contact": "Kontakt"
+  }
+}

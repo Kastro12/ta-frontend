@@ -1,0 +1,53 @@
+{
+  "page-about": {
+    "mainTitle": "Expert vacation planning for ultimate relaxation",
+    "mainSubtitle": "Experience the best vacation planning service, where you can relax and enjoy your adventures without any worries.",
+    "mainSubtitle2": "Let us handle the details while you make lasting memories!",
+    "text1": "At our service, we tailor each trip to your preferences, managing activity reservations, accommodations, and transportation, so you can relax and enjoy your vacation.",
+    "text2": "We offer flexible options, whether you want a fully customized experience or a pre-planned itinerary. We aim to turn your dream vacation into reality with high-quality, personalized service.",
+    "text3": " Transparency and quality guide our work. We carefully select the best accommodations and transport options, ensuring a seamless and enjoyable experience tailored to your needs.",
+    "services": {
+      "title": "Our services",
+      "subtitle1": "Create vacation",
+      "text1": {
+        "With": "With",
+        "create vacation": "create vacation",
+        "p1": "service, you have the freedom to choose your activities, and we'll handle the rest. We'll book your activities and can also find accommodations for you, offering a selection of clean, well-equipped standard or luxury options. This service costs €34.",
+        "p2": "We can also arrange transportation with standard or luxury vehicles, all in excellent condition. The transportation service is €34. Additionally, we'll recommend dining options, whether in restaurants or at your hotel."
+      },
+      "subtitle2": "Predefined vacations",
+      "text2": {
+        "intro": "For those who prefer a set itinerary, we offer",
+        "predefined vacation": "predefined vacation",
+        "p1": "packages. These vacations come with a fully planned schedule of activities, allowing you to simply select your departure date and enjoy a worry-free experience. Everything is taken care of, so all you need to do is pack your bags and go.",
+        "p2": "Both services allow you to choose the start date and specify the number of people in your group, ensuring that the vacation is tailored to your needs."
+      }
+    }
+  },
+  "page-accommodation": {
+    "mainTitle": "Accommodation and dining",
+    "mainSubtitle": "Enjoy maximum comfort and delicious cuisine",
+    "text1": "If you choose our accommodation reservation service, we prioritize your comfort and enjoyment. Accommodations are selected to provide you with the highest level of luxury and relaxation.",
+    "text2": "We recommend only the best restaurants, ensuring you enjoy top-quality cuisine. Our selections cater to all tastes, offering memorable culinary experiences throughout your vacation.",
+    "text3": "Whether relaxing after a day of activities or enjoying a meal at one of our recommended spots, our commitment ensures your stay will be exceptional."
+  },
+  "page-vehicle": {
+    "mainTitle": "Vehicle fleet",
+    "mainSubtitle": "Travel in comfort and safety",
+    "text1": "If you choose our transportation arrangement service, we ensure your journey is as comfortable and safe as it can be. Our fleet of luxury vehicles is selected to provide you with the utmost comfort and reliability.",
+    "text2": "From the moment you arrive at the airport or begin your vacation, our professional drivers are there to transport you to all your destinations seamlessly.",
+    "text3": "Our main goal is for you to focus on your vacation and enjoy the ride. Whether it's a scenic drive or transportation between activities, we provide a seamless, comfortable, and safe travel experience from start to finish."
+  },
+  "page-jobs": {
+    "mainTitle": "Join Our Team",
+    "alert": "Currently, there are no open positions available."
+  },
+  "page-partnerships": {
+    "mainTitle": "Partnership with us",
+    "mainSubtitle": "Join forces for mutual success",
+    "text1": "We are always open to forming new partnerships and collaborations in our field. Whether you are an individual, a company, or an organization, we believe in the power of working together to achieve mutual success.",
+    "text2": "Our team is dedicated to building strong and fruitful relationships that benefit all parties involved. By partnering with us, you will gain access to our extensive network, resources, and expertise in vacation planning and management. Together, we can create unique and unforgettable experiences for our clients.",
+    "text3": "If you are interested in exploring potential collaboration opportunities, please feel free to reach out to us using the contact form. We look forward to hearing from you and discussing how we can work together to achieve our shared goals.",
+    "Contact": "Contact"
+  }
+}

@@ -1,10 +1,12 @@
-import React from 'react';
 import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import NoAccountsOutlinedIcon from '@mui/icons-material/NoAccountsOutlined';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-export default function Jobs() {
+export default async function Jobs() {
+  const jobsT = await getTranslations('landingPages.page-jobs');
+
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
       <Grid container className='header-section'>
@@ -18,7 +20,7 @@ export default function Jobs() {
         />
         <div className='content'>
           <Grid size={{ md: 12 }} className='titles'>
-            <Typography variant='h1'>Join Our Team</Typography>
+            <Typography variant='h1'>{jobsT('mainTitle')}</Typography>
           </Grid>
         </div>
       </Grid>
@@ -36,7 +38,7 @@ export default function Jobs() {
               textAlign: 'center',
             }}
           >
-            Currently, there are no open positions available.
+            {jobsT('alert')}
           </Typography>
         </Grid>
       </Grid>

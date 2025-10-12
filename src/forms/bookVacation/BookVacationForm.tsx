@@ -6,6 +6,7 @@ import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import { BookVacationProps } from '@/forms/form.interface';
 import { SubmitHandler } from 'react-hook-form';
+import { useTranslations } from 'next-intl';
 
 const BookVacationForm = ({
   initialCountryCode,
@@ -20,6 +21,8 @@ const BookVacationForm = ({
   control: any;
   errors: any;
 }) => {
+  const globalT = useTranslations('global');
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Grid container spacing={3}>
@@ -38,14 +41,14 @@ const BookVacationForm = ({
             name='fullName'
             control={control}
             rules={{
-              required: 'Enter your full name',
+              required: globalT('form.required-fullname'),
               minLength: {
                 value: 2,
-                message: 'Enter at least 2 characters',
+                message: globalT('form.min-length-2'),
               },
               maxLength: {
                 value: 150,
-                message: 'Cannot exceed 150 characters',
+                message: globalT('form.max-length-150'),
               },
             }}
             render={({ field: { onChange, value }, fieldState: { error } }) => (
@@ -58,7 +61,7 @@ const BookVacationForm = ({
                 fullWidth
                 label={
                   <span>
-                    Full name&nbsp;<span style={{ color: '#ffa235' }}>*</span>
+                    {globalT('form.Full name')}&nbsp;<span style={{ color: '#ffa235' }}>*</span>
                   </span>
                 }
                 variant='outlined'
@@ -72,10 +75,10 @@ const BookVacationForm = ({
             name='email'
             control={control}
             rules={{
-              required: 'Email is required',
+              required: globalT('form.required-email'),
               pattern: {
                 value: /^\S+@\S+$/i,
-                message: 'Invalid email address',
+                message: globalT('form.invalid-email'),
               },
             }}
             render={({ field: { onChange, value }, fieldState: { error } }) => (
@@ -88,7 +91,7 @@ const BookVacationForm = ({
                 fullWidth
                 label={
                   <span>
-                    Email&nbsp;<span style={{ color: '#ffa235' }}>*</span>
+                    {globalT('form.Email')}&nbsp;<span style={{ color: '#ffa235' }}>*</span>
                   </span>
                 }
                 variant='outlined'
@@ -131,7 +134,7 @@ const BookVacationForm = ({
                 error={!!error}
                 onChange={onChange}
                 fullWidth
-                label='Street'
+                label={globalT('form.Street')}
                 variant='outlined'
               />
             )}
@@ -150,7 +153,7 @@ const BookVacationForm = ({
                 error={!!error}
                 onChange={onChange}
                 fullWidth
-                label='City'
+                label={globalT('form.City')}
                 variant='outlined'
               />
             )}
@@ -169,7 +172,7 @@ const BookVacationForm = ({
                 error={!!error}
                 onChange={onChange}
                 fullWidth
-                label='Country'
+                label={globalT('form.Country')}
                 variant='outlined'
               />
             )}
@@ -190,7 +193,7 @@ const BookVacationForm = ({
                 fullWidth
                 multiline
                 rows={4}
-                label='Message'
+                label={globalT('form.Message')}
                 variant='outlined'
               />
             )}
@@ -201,7 +204,7 @@ const BookVacationForm = ({
           <Controller
             name='termsAccepted'
             control={control}
-            rules={{ required: 'Please read and accept the terms and conditions' }}
+            rules={{ required: globalT('form.required-terms-and-conditions') }}
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <FormControlLabel
                 control={
@@ -213,7 +216,11 @@ const BookVacationForm = ({
                     className={errors.termsAccepted ? 'error' : ''}
                   />
                 }
-                label={<span style={{ fontSize: '14px' }}>I accept the terms and conditions</span>}
+                label={
+                  <span style={{ fontSize: '14px' }}>
+                    {globalT('form.terms-and-conditions')}
+                  </span>
+                }
               />
             )}
           />
@@ -234,7 +241,7 @@ const BookVacationForm = ({
 
         <Grid item xs={12} md={12} sx={{ width: '100%', textAlign: 'center' }}>
           <Button type='submit' sx={{ ...button, ...greenButton }} variant='outlined'>
-            Submit Booking
+            {globalT('form.Submit Booking')}
           </Button>
         </Grid>
       </Grid>

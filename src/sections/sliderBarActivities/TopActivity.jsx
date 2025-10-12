@@ -7,8 +7,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 const TopActivity = ({ data }) => {
-  const t = useTranslations(data?.translationKey);
-
+  const t = useTranslations('activities.' + data?.translationKey);
   const dispatch = useDispatch();
 
   return (

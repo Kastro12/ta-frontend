@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
-import { challengeAndHedonism as organizedVacations } from '@/data/organizedVacations';
+import { challengeAndHedonism as organizedVacation } from '@/data/organizedVacations';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: `Book vacation - ${organizedVacations.title}`,
-  robots: 'noindex, follow',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('organizedVacations');
+  const organizedVacationsT = await getTranslations(organizedVacation.translationKey);
+
+  return {
+    title: `Book vacation - ${organizedVacationsT('title')}`,
+    description: `${t('mainTitle')} | ${organizedVacationsT('description')}`,
+  };
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className='page predefined-vacations'>{children}</div>;

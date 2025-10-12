@@ -1,1 +1,0 @@
-export const bookVacationInfo = `After filling out the form, we will email you the vacation plan and an invoice for the service payment. Once you choose your accommodation and transportation options, you will receive transparent details about all costs.`;

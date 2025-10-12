@@ -57,5 +57,29 @@
   "Contact": "Contact",
   "Terms and conditions": "Terms and conditions",
   "Copyright": "Copyright",
-  "All Rights Reserved": "All Rights Reserved"
+  "All Rights Reserved": "All Rights Reserved",
+  "form-title-book-vacation": "Fill out the form and book your vacation",
+  "Book vacation": "Book vacation",
+  "Choose the start date": "Choose the start date",
+  "Note": "Note",
+  "bookVacationInfo": "After filling out the form, we will email you the vacation plan and an invoice for the service payment. Once you choose your accommodation and transportation options, you will receive transparent details about all costs.",
+  "form": {
+    "Full name": "Full name",
+    "Email": "Email",
+    "Street": "Street",
+    "City": "City",
+    "Country": "Country",
+    "Message": "Message",
+    "terms-and-conditions": "I accept the terms and conditions",
+    "Submit Booking": "Submit Booking",
+    "required-fullname": "Enter your full name",
+    "min-length-2": "Enter at least 2 characters",
+    "max-length-150": "Cannot exceed 150 characters",
+    "max-length-300": "Cannot exceed 300 characters",
+    "required-email": "Email is required",
+    "invalid-email": "Invalid email address",
+    "required-terms-and-conditions": "Please read and accept the terms and conditions",
+    "Send a message":"Send a message"
+  },
+  "Telephone": "Telephone"
 }

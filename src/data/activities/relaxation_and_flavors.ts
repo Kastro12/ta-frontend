@@ -4,7 +4,7 @@ const winery: Activity[] = [
   {
     paidAd: false,
     id: 'winery_aleksandrovic_topola',
-    translationKey: 'activities.winery_aleksandrovic_topola',
+    translationKey: 'winery_aleksandrovic_topola',
     title: 'Winery Topola',
     description:
       'Enjoy the fine wines of Aleksandrović Winery, nestled in the heart of Serbia’s renowned Topola wine region, and discover traditional varieties.',
@@ -39,7 +39,7 @@ const winery: Activity[] = [
   {
     paidAd: false,
     id: 'winery_and_ethno_salas_zvonko_bogdan',
-    translationKey: 'activities.winery_and_ethno_salas_zvonko_bogdan',
+    translationKey: 'winery_and_ethno_salas_zvonko_bogdan',
     title: 'Winery ethno salaš Zvonko Bogdan',
     description:
       'Discover the elegance and tradition of Vinarija i Salaš Zvonko Bogdan, where winemaking art meets the rustic charm of the Pannonian plains.',
@@ -76,7 +76,7 @@ const spa: Activity[] = [
   {
     paidAd: false,
     id: 'fruske_terme_spa',
-    translationKey: 'activities.fruske_terme_spa',
+    translationKey: 'fruske_terme_spa',
     title: 'Fruške Terme spa',
     description:
       'Enjoy luxury and tranquility at Fruške Terme, a premium spa resort nestled in the scenic Fruška Gora mountains.',
@@ -113,7 +113,7 @@ const villages: Activity[] = [
   {
     paidAd: false,
     id: 'rural_retreat_in_northern_montenegro',
-    translationKey: 'activities.rural_retreat_in_northern_montenegro',
+    translationKey: 'rural_retreat_in_northern_montenegro',
     title: 'Rural retreat northern Montenegro',
     description:
       'Enjoy a stay in the tranquil landscapes of rural Montenegro, featuring organic farm tours and scenic mountain excursions.',

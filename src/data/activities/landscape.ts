@@ -4,7 +4,7 @@ const cruise: Activity[] = [
   {
     paidAd: false,
     id: 'cruise_perucac_visegrad',
-    translationKey: 'activities.cruise_perucac_visegrad',
+    translationKey: 'cruise_perucac_visegrad',
     title: 'Cruise from Perućac to Višegrad and back',
     description:
       'Set sail on a memorable cruise through the Drina River canyon from Perućac to Višegrad and back. Enjoy a blend of natural beauty, history, and culture.',
@@ -37,7 +37,7 @@ const cruise: Activity[] = [
   {
     paidAd: false,
     id: 'cruise_djerdap',
-    translationKey: 'activities.cruise_djerdap',
+    translationKey: 'cruise_djerdap',
     title: 'Đerdap river cruise',
     description:
       "Embark on a unique cruise through the stunning Đerdap Gorge. Enjoy breathtaking views and immerse yourself in Serbia's rich cultural heritage.",
@@ -70,7 +70,7 @@ const cruise: Activity[] = [
   {
     paidAd: false,
     id: 'cruise_djerdap_speedboat',
-    translationKey: 'activities.cruise_djerdap_speedboat',
+    translationKey: 'cruise_djerdap_speedboat',
     title: 'Speedboat through Đerdap gorge',
     description:
       'Experience the beauty of Europe’s most stunning gorge with a thrilling speedboat ride through the heart of Đerdap Gorge.',
@@ -107,7 +107,7 @@ const caves: Activity[] = [
   {
     paidAd: false,
     id: 'rajkova_pecina',
-    translationKey: 'activities.rajkova_pecina',
+    translationKey: 'rajkova_pecina',
     title: 'Rajkova cave',
     description:
       'Rajkova Cave features impressive stalactites and stalagmites. It’s ideal for caving enthusiasts and nature lovers.',
@@ -142,7 +142,7 @@ const caves: Activity[] = [
   {
     paidAd: false,
     id: 'resavska_pecina',
-    translationKey: 'activities.resavska_pecina',
+    translationKey: 'resavska_pecina',
     title: 'Resava cave',
     description:
       'Resava Cave offers breathtaking stalactites and stalagmites. It’s ideal for caving and exploring natural formations.',
@@ -177,7 +177,7 @@ const caves: Activity[] = [
   {
     paidAd: false,
     id: 'stopica_pecina',
-    translationKey: 'activities.stopica_pecina',
+    translationKey: 'stopica_pecina',
     title: 'Stopića cave',
     description:
       'Stopića Cave features stunning limestone formations and cascading pools. It’s perfect for nature lovers and explorers.',
@@ -214,7 +214,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'djavolja_varos',
-    translationKey: 'activities.djavolja_varos',
+    translationKey: 'djavolja_varos',
     title: 'Đavolja Varoš natural wonder',
     description:
       'Đavolja Varoš features unique earth pyramids and mineral springs. It’s ideal for nature exploration and photography.',
@@ -248,7 +248,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'tara_canyon',
-    translationKey: 'activities.tara_canyon',
+    translationKey: 'tara_canyon',
     title: 'Tara river canyon, the deepest in Europe',
     description:
       "Tara River Canyon offers dramatic cliffs and crystal-clear waters. It's ideal for rafting, hiking, and nature exploration.",
@@ -282,7 +282,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'nc_djerdap',
-    translationKey: 'activities.nc_djerdap',
+    translationKey: 'nc_djerdap',
     title: 'Đerdap National Park',
     description:
       'Đerdap National Park features majestic cliffs and the Danube’s Iron Gates. It’s ideal for hiking, history, and scenic views.',
@@ -316,7 +316,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'nc_fruska_gora',
-    translationKey: 'activities.nc_fruska_gora',
+    translationKey: 'nc_fruska_gora',
     title: 'Fruška Gora National Park',
     description:
       'Fruška Gora National Park features rolling hills, vineyards, and monasteries, making it an ideal destination for hiking and cultural exploration.',
@@ -349,7 +349,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'nc_kopaonik',
-    translationKey: 'activities.nc_kopaonik',
+    translationKey: 'nc_kopaonik',
     title: 'Kopaonik National Park',
     description:
       "Kopaonik National Park features majestic peaks and rich biodiversity. It's ideal for hiking, skiing, extreme sports, and nature exploration.",
@@ -382,7 +382,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'nc_tara',
-    translationKey: 'activities.nc_tara',
+    translationKey: 'nc_tara',
     title: 'Tara National Park',
     description:
       'Tara National Park offers dense forests and stunning viewpoints, ideal for hiking, wildlife observation, and relaxation.',
@@ -415,7 +415,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'ovcarsko_kablarska_klisura',
-    translationKey: 'activities.ovcarsko_kablarska_klisura',
+    translationKey: 'ovcarsko_kablarska_klisura',
     title: 'Ovčar-Kablar gorge',
     description:
       'Ovčar-Kablar Gorge features dramatic cliffs and tranquil rivers, making it ideal for hiking, exploring monasteries, and unwinding.',
@@ -449,7 +449,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'stara_planina',
-    translationKey: 'activities.stara_planina',
+    translationKey: 'stara_planina',
     title: 'Stara Planina majestic retreat',
     description:
       'Stara Planina features dramatic peaks and diverse landscapes, making it perfect for hiking, skiing, and exploring nature.',
@@ -482,7 +482,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'lokve_planina',
-    translationKey: 'activities.lokve_planina',
+    translationKey: 'lokve_planina',
     title: 'Hidden gem of Lokve mountain',
     description:
       'Experience Lokve Mountain, a serene and lesser-known destination in Montenegro, ideal for nature lovers and adventurers alike.',
@@ -516,7 +516,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'komovi_planina',
-    translationKey: 'activities.komovi_planina',
+    translationKey: 'komovi_planina',
     title: 'Majestic Komovi mountain',
     description:
       'Set out on an adventure in the Komovi Mountains, one of Montenegro’s most stunning landscapes, offering breathtaking views and exhilarating activities.',
@@ -550,7 +550,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'vlasinsko_jezero',
-    translationKey: 'activities.vlasinsko_jezero',
+    translationKey: 'vlasinsko_jezero',
     title: 'Vlasina lake',
     description:
       'Vlasina Lake offers crystal-clear waters and serene landscapes, ideal for nature walks and relaxation.',
@@ -584,7 +584,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'palic_lake',
-    translationKey: 'activities.palic_lake',
+    translationKey: 'palic_lake',
     title: 'Palić Lake',
     description:
       'Experience the serene beauty of Palić Lake, a natural oasis in northern Serbia, ideal for relaxation and outdoor activities.',
@@ -618,7 +618,7 @@ const all: Activity[] = [
   {
     paidAd: false,
     id: 'zlatibor_gondola',
-    translationKey: 'activities.zlatibor_gondola',
+    translationKey: 'zlatibor_gondola',
     title: 'Gold gondola ride',
     description:
       'The Zlatibor Gold Gondola offers stunning mountain views on a scenic ride, perfect for sightseeing and nature enthusiasts.',

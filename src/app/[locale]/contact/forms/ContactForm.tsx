@@ -8,12 +8,14 @@ import 'react-international-phone/style.css';
 import { BookVacationProps } from '@/forms/form.interface';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
-
 import { getCountryCode } from '@/utils/geolocation';
+import { useTranslations } from 'next-intl';
 
 const ContactForm = () => {
   const [initialCountryCode, setInitialCountryCode] = useState<string | undefined>();
   const router = useRouter();
+
+  const globalT = useTranslations('global');
 
   useEffect(() => {
     const fetchCountryCode = async () => {
@@ -92,14 +94,14 @@ const ContactForm = () => {
             name='fullName'
             control={control}
             rules={{
-              required: 'Enter your full name',
+              required: globalT('form.required-fullname'),
               minLength: {
                 value: 2,
-                message: 'Enter at least 2 characters',
+                message: globalT('form.min-length-2'),
               },
               maxLength: {
                 value: 150,
-                message: 'Cannot exceed 150 characters',
+                message: globalT('form.max-length-150'),
               },
             }}
             render={({ field: { onChange, value }, fieldState: { error } }) => (
@@ -112,7 +114,7 @@ const ContactForm = () => {
                 fullWidth
                 label={
                   <span>
-                    Full name&nbsp;<span style={{ color: '#ffa235' }}>*</span>
+                    {globalT('form.Full name')}&nbsp;<span style={{ color: '#ffa235' }}>*</span>
                   </span>
                 }
                 variant='outlined'
@@ -126,10 +128,10 @@ const ContactForm = () => {
             name='email'
             control={control}
             rules={{
-              required: 'Email is required',
+              required: globalT('form.required-email'),
               pattern: {
                 value: /^\S+@\S+$/i,
-                message: 'Invalid email address',
+                message: globalT('form.invalid-email'),
               },
             }}
             render={({ field: { onChange, value }, fieldState: { error } }) => (
@@ -142,7 +144,7 @@ const ContactForm = () => {
                 fullWidth
                 label={
                   <span>
-                    Email&nbsp;<span style={{ color: '#ffa235' }}>*</span>
+                    {globalT('form.Email')}&nbsp;<span style={{ color: '#ffa235' }}>*</span>
                   </span>
                 }
                 variant='outlined'
@@ -178,14 +180,14 @@ const ContactForm = () => {
             name='message'
             control={control}
             rules={{
-              required: 'Enter your full name',
+              required: globalT('form.required-fullname'),
               minLength: {
                 value: 2,
-                message: 'Enter at least 2 characters',
+                message: globalT('form.min-length-2'),
               },
               maxLength: {
                 value: 300,
-                message: 'Cannot exceed 300 characters',
+                message: globalT('form.max-length-300'),
               },
             }}
             render={({ field: { onChange }, fieldState: { error } }) => (
@@ -200,7 +202,7 @@ const ContactForm = () => {
                 rows={4}
                 label={
                   <span>
-                    Message&nbsp;<span style={{ color: '#ffa235' }}>*</span>
+                    {globalT('form.Message')}&nbsp;<span style={{ color: '#ffa235' }}>*</span>
                   </span>
                 }
                 variant='outlined'
@@ -211,7 +213,7 @@ const ContactForm = () => {
 
         <Grid item xs={12} md={12} sx={{ width: '100%', textAlign: 'center' }}>
           <Button type='submit' sx={{ ...button, ...greenButton }} variant='outlined'>
-            Send a message
+            {globalT('form.Send a message')}
           </Button>
         </Grid>
       </Grid>

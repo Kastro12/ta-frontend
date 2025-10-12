@@ -4,8 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { linkGreenButton } from '@/utils/re-styledComponents';
 import { getTranslations } from 'next-intl/server';
+
 export default async function AboutUs() {
-  const globalT = await getTranslations('global');
+  const aboutT = await getTranslations('landingPages.page-about');
 
   return (
     <Container maxWidth='lg' className='custom-container' sx={{ mt: 3 }}>
@@ -20,10 +21,7 @@ export default async function AboutUs() {
         />
         <div className='content'>
           <Grid size={{ md: 12 }} className='titles'>
-            <Typography variant='h1'>
-              Expert vacation planning
-              <br /> for ultimate relaxation
-            </Typography>
+            <Typography variant='h1'>{aboutT('mainTitle')}</Typography>
           </Grid>
         </div>
       </Grid>
@@ -39,8 +37,7 @@ export default async function AboutUs() {
           letterSpacing: '0.02em',
         }}
       >
-        Experience the best vacation planning service, where you can relax and enjoy your adventures
-        without any worries.
+        {aboutT('mainSubtitle')}
       </Typography>
       <Typography
         variant='h3'
@@ -54,77 +51,60 @@ export default async function AboutUs() {
           letterSpacing: '0.02em',
         }}
       >
-        Let us handle the details while you make lasting memories!
+        {aboutT('mainSubtitle2')}
       </Typography>
 
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, lg: 4 }}>
-          <Typography variant='body1'>
-            At our service, we tailor each trip to your preferences, managing activity reservations,
-            accommodations, and transportation, so you can relax and enjoy your vacation.
-          </Typography>
+          <Typography variant='body1'>{aboutT('text1')}</Typography>
         </Grid>
         <Grid size={{ xs: 12, lg: 4 }}>
-          <Typography variant='body1'>
-            We offer flexible options, whether you want a fully customized experience or a
-            pre-planned itinerary. We aim to turn your dream vacation into reality with
-            high-quality, personalized service.
-          </Typography>
+          <Typography variant='body1'>{aboutT('text2')}</Typography>
         </Grid>
         <Grid size={{ xs: 12, lg: 4 }}>
-          <Typography variant='body1'>
-            Transparency and quality guide our work. We carefully select the best accommodations and
-            transport options, ensuring a seamless and enjoyable experience tailored to your needs.
-          </Typography>
+          <Typography variant='body1'>{aboutT('text3')}</Typography>
         </Grid>
       </Grid>
 
-      <Typography variant='h2'>Our services</Typography>
+      <Typography variant='h2'>{aboutT('services.title')}</Typography>
 
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, lg: 6 }}>
           <Typography variant='h3' sx={{ mb: 2 }}>
-            {globalT('Create vacation')}
+            {aboutT('services.subtitle1')}
           </Typography>
           <Typography variant='body1' className='text'>
-            With{' '}
+            {aboutT('services.text1.With')}{' '}
             <Link
               style={{ ...linkGreenButton, padding: '0', border: 'none' }}
               href={'/create-vacation'}
             >
-              create vacation
+              {aboutT('services.text1.create vacation')}
             </Link>{' '}
-            service, you have the freedom to choose your activities, and we&apos;ll handle the rest.
-            We&apos;ll book your activities and can also find accommodations for you, offering a
-            selection of clean, well-equipped standard or luxury options. This service costs €34.
+            {aboutT('services.text1.p1')}
           </Typography>
 
           <Typography variant='body1' className='text'>
-            We can also arrange transportation with standard or luxury vehicles, all in excellent
-            condition. The transportation service is €34. Additionally, we&apos;ll recommend dining
-            options, whether in restaurants or at your hotel.
+            {aboutT('services.text1.p2')}
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, lg: 6 }}>
           <Typography variant='h3' sx={{ mb: 2 }}>
-            Predefined vacations
+            {aboutT('services.subtitle2')}
           </Typography>
           <Typography variant='body1' className='text'>
-            For those who prefer a set itinerary, we offer{' '}
+            {aboutT('services.text2.intro')}
             <Link
               style={{ ...linkGreenButton, padding: '0', border: 'none' }}
               href={'/#predefined-vacations-position'}
             >
-              predefined vacation
+              {aboutT('services.text2.predefined vacation')}
             </Link>{' '}
-            packages. These vacations come with a fully planned schedule of activities, allowing you
-            to simply select your departure date and enjoy a worry-free experience. Everything is
-            taken care of, so all you need to do is pack your bags and go.
+            {aboutT('services.text2.p1')}
           </Typography>
 
           <Typography variant='body1' className='text'>
-            Both services allow you to choose the start date and specify the number of people in
-            your group, ensuring that the vacation is tailored to your needs.
+            {aboutT('services.text2.p2')}
           </Typography>
         </Grid>
       </Grid>
