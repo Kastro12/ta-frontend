@@ -1,0 +1,67 @@
+{
+  "mainTitle": "Terms and Conditions",
+  "introduction": {
+    "title": "Introduction",
+    "text1": "Welcome to 'Tailor-made Vacations'. By accessing and using our services, you agree to be bound by the following terms and conditions. Please review them carefully."
+  },
+  "bookingAndReservations": {
+    "title": "Booking and reservations",
+    "text1": "Booking Process: All bookings are made through our website or contact form. By completing a booking, you accept these terms and conditions.",
+    "text2": "Payment: Full payment or a deposit is required to confirm your booking. Payment details will be provided via email.",
+    "text3": "Cancellation Policy: Cancellations must be submitted in writing. Refunds are subject to our cancellation policy as detailed below."
+  },
+  "cancellationAndRefunds": {
+    "title": "Cancellation and refunds",
+    "text1": "Client-Initiated Cancellations: If you cancel your booking, refunds will be processed according to the following schedule:",
+    "ul1": {
+      "li1": "Cancellations made more than 30 days before the start date: Full refund minus a processing fee",
+      "li2": "Cancellations made 15-30 days before the start date: 50% refund",
+      "li3": "Cancellations made less than 15 days before the start date: No refund"
+    },
+    "text2": "Company-Initiated Cancellations: If we need to cancel your booking due to unforeseen circumstances, we will provide a full refund or offer alternative dates."
+  },
+  "changesToBooking": {
+    "title": "Changes to booking",
+    "text1": "Client-Initiated Changes: Requests to modify booking dates or details must be submitted in writing. We will accommodate changes when possible, subject to availability and potential additional fees.",
+    "text2": "Company-Initiated Changes: We reserve the right to modify your itinerary due to circumstances beyond our control. We will notify you promptly and offer suitable alternatives."
+  },
+  "accommodation": {
+    "title": "Accommodation and dining",
+    "text1": "Quality Assurance: We strive to provide high-quality accommodation and dining experiences. However, we cannot guarantee specific standards as they depend on third-party providers.",
+    "text2": "Client Responsibility: You are responsible for informing us of any dietary restrictions, allergies, or preferences in advance."
+  },
+  "transportation": {
+    "title": "Transportation",
+    "text1": "Vehicles and Drivers: We provide luxury vehicles and professional drivers to ensure safe and comfortable transportation. We are not liable for delays caused by traffic, weather conditions, or other unforeseen events.",
+    "text2": "Client Responsibility: Clients must be ready at designated pickup times. Delays may result in missed transportation or additional charges."
+  },
+  "activitiesAndItineraries": {
+    "title": "Activities and itineraries",
+    "text1": "Activity Participation: Participation in all activities is at your own risk. We are not responsible for any injuries, accidents, or losses that occur during activities.",
+    "text2": "Itinerary Changes: We reserve the right to modify itineraries due to weather, safety concerns, or other operational factors. Clients will be notified of changes at the earliest opportunity."
+  },
+  "healthAndSafety": {
+    "title": "Health and safety",
+    "text1": "Company Responsibility: We prioritize client safety and take reasonable precautions. However, we are not liable for injuries, illnesses, or accidents beyond our reasonable control.",
+    "text2": "Client Responsibility: You must disclose any medical conditions, disabilities, or special requirements that may affect your participation. We strongly recommend comprehensive travel insurance."
+  },
+  "privacyAndDataProtection": {
+    "title": "Privacy and data protection",
+    "text1": "Data Collection: We collect personal information necessary for booking and providing our services. We are committed to protecting your privacy and handling your data securely.",
+    "text2": "Data Use: Your personal data will not be shared with third parties except as required to deliver our services, and we comply with applicable data protection laws."
+  },
+  "complaintsAndDisputes": {
+    "title": "Complaints and disputes",
+    "text1": "Complaints: Any complaints must be submitted in writing within 7 days of your vacation completion. We will investigate and respond in a timely manner.",
+    "text2": "Dispute Resolution: Any disputes arising from these terms will first be attempted to be resolved through good-faith negotiation. If unresolved, disputes may be referred to mediation, arbitration, or the appropriate legal jurisdiction."
+  },
+  "governingLawAndJurisdiction": {
+    "title": "Governing law and jurisdiction",
+    "text1": "These Terms and Conditions are governed by and construed in accordance with the laws of [Your Country/Region]. Any disputes arising from or in connection with these Terms and Conditions shall be subject to the exclusive jurisdiction of the courts of [Your Country/Region]."
+  },
+  "contactInformation": {
+    "title": "Contact information",
+    "text1": "For any questions or concerns regarding these terms and conditions, please contact us at:",
+    "buttonLabel": "Contact"
+  }
+}

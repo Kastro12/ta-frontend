@@ -1,0 +1,67 @@
+{
+  "mainTitle": "Uslovi korišćenja",
+  "introduction": {
+    "title": "Uvod",
+    "text1": "Dobrodošli u 'Tailor-made vacations'. Pristupanjem našim uslugama i njihovim korišćenjem, slažete se da ćete se pridržavati sledećih uslova korišćenja i da ćete biti njima obavezani. Molimo vas da ih pažljivo pročitate."
+  },
+  "bookingAndReservations": {
+    "title": "Rezervacije",
+    "text1": "Proces rezervacije: Sve rezervacije se vrše putem našeg veb sajta ili kontakt forme. Završetkom rezervacije prihvatate ove uslove korišćenja.",
+    "text2": "Plaćanje: Za potvrdu rezervacije neophodna je uplata u celosti ili akontacija. Detalji o plaćanju biće vam dostavljeni putem e-pošte.",
+    "text3": "Politika otkazivanja: Otkazivanje mora biti izvršeno u pisanom obliku. Povraćaj sredstava podleže našoj politici otkazivanja, koja je detaljno opisana u nastavku."
+  },
+  "cancellationAndRefunds": {
+    "title": "Otkazivanje i povraćaj novca",
+    "text1": "Otkazivanje na inicijativu klijenta: Ukoliko otkažete svoju rezervaciju, povraćaj novca će se obaviti prema sledećem rasporedu:",
+    "ul1": {
+      "li1": "Otkazivanje više od 30 dana pre početka: Potpuni povraćaj iznosa umanjen za naknadu za procesuiranje.",
+      "li2": "Otkazivanje 15-30 dana pre početka: 50% povraćaj iznosa.",
+      "li3": "Otkazivanje manje od 15 dana pre početka: Bez povraćaja novca."
+    },
+    "text2": "Otkazivanje na inicijativu kompanije: Ukoliko mi budemo primorani da otkažemo vašu rezervaciju zbog nepredviđenih okolnosti, obezbedićemo vam potpuni povraćaj novca ili ponuditi alternative datume."
+  },
+  "changesToBooking": {
+    "title": "Izmene rezervacije",
+    "text1": "Izmene na inicijativu klijenta: Zahtevi za izmenu datuma ili detalja rezervacije moraju biti dostavljeni u pisanom obliku. U mogućnosti smo da prihvatimo izmene kada god je to moguće, uz mogućnost dodatnih naknada.",
+    "text2": "Izmene na inicijativu kompanije: Zadržavamo pravo da izvršimo neophodne izmene vašeg itinerera zbog okolnosti izvan naše kontrole. Obavestićemo vas o tome što je pre moguće i ponuditi alternativna rešenja."
+  },
+  "accommodation": {
+    "title": "Smeštaj i ishrana",
+    "text1": "Garancija kvaliteta: Nastojimo da obezbedimo visokokvalitetan smeštaj i gastronomska iskustva. Međutim, ne možemo garantovati određene standarde jer oni zavise od trećih strana.",
+    "text2": "Odgovornost klijenta: Vaša je odgovornost da nas izvestite o bilo kakvim dijetetskim restrikcijama ili preferencijama."
+  },
+  "transportation": {
+    "title": "Transport",
+    "text1": "Vozila i vozači: Obezbeđujemo luksuzna vozila i profesionalne vozače kako bismo osigurali siguran i udoban transport. Nismo odgovorni za kašnjenja uzrokovana saobraćajem, vremenskim prilikama ili drugim nepredviđenim događajima.",
+    "text2": "Odgovornost klijenta: Klijenti moraju biti spremni u dogovorenim vremenima za usluge prevoza. Kašnjenja mogu rezultirati dodatnim naknadama."
+  },
+  "activitiesAndItineraries": {
+    "title": "Aktivnosti i plan putovanja",
+    "text1": "Učešće u aktivnostima: Učešće u aktivnostima je na sopstvenu odgovornost. Nismo odgovorni za povrede ili nezgode koje se dogode tokom aktivnosti.",
+    "text2": "Izmene plana putovanja: Zadržavamo pravo da izmenimo plan putovanja zbog vremenskih prilika, bezbednosnih razloga ili drugih faktora. Klijenti će biti blagovremeno obavešteni o svim promenama."
+  },
+  "healthAndSafety": {
+    "title": "Zdravlje i bezbednost",
+    "text1": "Odgovornost kompanije: Dajemo prioritet bezbednosti klijenata i preduzećemo neophodne mere predostrožnosti. Međutim, nismo odgovorni za povrede ili nezgode izvan naše kontrole.",
+    "text2": "Odgovornost klijenta: Klijenti su dužni da nas informišu o bilo kakvim zdravstvenim stanjima ili posebnim zahtevima. Preporučujemo sklapanje putnog osiguranja."
+  },
+  "privacyAndDataProtection": {
+    "title": "Privatnost i zaštita podataka",
+    "text1": "Prikupljanje podataka: Prikupljamo lične podatke neophodne za rezervaciju i pružanje naših usluga. Posvećeni smo zaštiti vaše privatnosti.",
+    "text2": "Korišćenje podataka: Vaši podaci neće biti deljeni sa trećim stranama, osim ukoliko je to neophodno za pružanje naših usluga."
+  },
+  "complaintsAndDisputes": {
+    "title": "Pritužbe i sporovi",
+    "text1": "Pritužbe: Sve pritužbe moraju biti dostavljene u pisanom obliku u roku od 7 dana od završetka vašeg odmora. Istražićemo svaku pritužbu i odgovoriti u najkraćem mogućem roku.",
+    "text2": "Rešavanje sporova: Svi sporovi koji proističu iz ovih uslova korišćenja biće rešavani putem pregovora. Ukoliko je neophodno, sporovi se mogu proslediti arbitraži ili nadležnom sudu."
+  },
+  "governingLawAndJurisdiction": {
+    "title": "Primenjivo pravo i nadležnost",
+    "text1": "Ovi Uslovi korišćenja regulisani su i tumače se u skladu sa zakonima [Vaša zemlja/region]. Korišćenjem naših usluga, korisnik se slaže da će svi sporovi koji proističu iz ili su u vezi sa ovim Uslovima korišćenja biti rešavani isključivo pred nadležnim sudovima [Vaša zemlja/region]."
+  },
+  "contactInformation": {
+    "title": "Kontakt informacije",
+    "text1": "Ukoliko imate bilo kakva pitanja ili nedoumice u vezi sa ovim uslovima korišćenja, molimo vas da nas kontaktirate putem:",
+    "buttonLabel": "Kontakt"
+  }
+}

@@ -7,6 +7,7 @@ import activitiesHistoryAndCulture from './activities/history_and_culture.json';
 import activitiesLandscape from './activities/landscape.json';
 import activitiesRelaxationAndFlavors from './activities/relaxation_and_flavors.json';
 import landingPages from './landingPages.json';
+import termsAndConditions from './termsAndConditions.json';
 
 export default {
   global,
@@ -20,4 +21,5 @@ export default {
     ...activitiesRelaxationAndFlavors,
   },
   landingPages,
+  termsAndConditions,
 };
