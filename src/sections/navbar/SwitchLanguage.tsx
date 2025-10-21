@@ -1,24 +1,24 @@
 'use client';
-import { usePathname as useNavigationPathname } from 'next/navigation';
+import { usePathname as useNavigationPathname, useRouter } from 'next/navigation';
 import { usePathname } from '@/i18n/routing';
 import { useState } from 'react';
 import { IconButton, Menu, MenuItem } from '@mui/material';
 import { button, transparentLightButton } from '@/utils/re-styledComponents/index';
 import { MouseEvent } from 'react';
 import Image from 'next/image';
-import { Link } from '@/i18n/routing';
 import { Tooltip } from '@/components';
 import { useTranslations } from 'next-intl';
 
 const ItemActive = {
   backgroundColor: 'rgba(33, 129, 125, 0.06)',
+  cursor: 'auto',
   hover: {
     backgroundColor: '#fff',
   },
 };
 
 const ItemLinkStyle = {
-  fontSize: '15px',
+  fontSize: '14px',
   display: 'flex',
   alignItems: 'center',
   width: '100%',
@@ -38,8 +38,8 @@ const ItemImageStyle = { fontSize: '24px', borderRadius: '100px', marginRight: '
 const SwitchLanguage = () => {
   const globalT = useTranslations('global');
 
+  const router = useRouter();
   const pathname = usePathname();
-
   const navigationPathname = useNavigationPathname();
   const locale = navigationPathname.split('/')[1];
 
@@ -75,15 +75,18 @@ const SwitchLanguage = () => {
       </Tooltip>
       <Menu id='language-menu' anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem
-          onClick={handleClose}
+          onClick={() => {
+            handleClose();
+            if (pathname === '/create-vacation') {
+              window.location.href = `/sr/create-vacation`;
+            } else {
+              router.push(`/sr${pathname}`);
+            }
+          }}
           sx={{ p: 0 }}
-          style={{ ...(locale === 'sr' ? ItemActive : {}) }}
+          style={{ ...(locale !== 'en' ? ItemActive : {}) }}
         >
-          <Link
-            href={`${pathname}`}
-            locale='sr'
-            style={{ ...ItemLinkStyle, ...(locale === 'sr' ? ActiveItemLinkStyle : {}) }}
-          >
+          <div style={{ ...ItemLinkStyle, ...(locale !== 'en' ? ActiveItemLinkStyle : {}) }}>
             <Image
               src={`/icons/sr.png`}
               alt={`sr flag`}
@@ -91,19 +94,22 @@ const SwitchLanguage = () => {
               height={19}
               style={{ ...ItemImageStyle }}
             />
-            Srpski
-          </Link>
+            {globalT('Serbian')}
+          </div>
         </MenuItem>
         <MenuItem
-          onClick={handleClose}
+          onClick={() => {
+            handleClose();
+            if (pathname === '/create-vacation') {
+              window.location.href = `/en/create-vacation`;
+            } else {
+              router.push(`/en${pathname}`);
+            }
+          }}
           sx={{ p: 0 }}
           style={{ ...(locale === 'en' ? ItemActive : {}) }}
         >
-          <Link
-            href={`${pathname}`}
-            locale='en'
-            style={{ ...ItemLinkStyle, ...(locale === 'en' ? ActiveItemLinkStyle : {}) }}
-          >
+          <div style={{ ...ItemLinkStyle, ...(locale === 'en' ? ActiveItemLinkStyle : {}) }}>
             <Image
               src={`/icons/en.png`}
               alt={`en flag`}
@@ -111,8 +117,8 @@ const SwitchLanguage = () => {
               height={19}
               style={{ ...ItemImageStyle }}
             />
-            English
-          </Link>
+            {globalT('English')}
+          </div>
         </MenuItem>
       </Menu>
     </>
