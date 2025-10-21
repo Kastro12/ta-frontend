@@ -10,6 +10,8 @@ import { useMaxNumberOfDaysForChosenActivities } from '@/utils/date';
 import ActivityList from './component/ActivityList';
 import EmptyActivityList from './component/EmptyActivityList';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { getDayText } from '@/utils/string';
 
 interface DrawerList {
   handleOpenDrawer: () => void;
@@ -21,6 +23,7 @@ interface DrawerList {
 }
 
 const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
+  const globalT = useTranslations('global');
   const router = useRouter();
   const pathname = usePathname();
   const startDate = useSelector((state: RootState) => state.vacation.startDate);
@@ -33,13 +36,13 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
   let errorAlertLink = null;
 
   if (!startDate && chosenActivities.length == 0) {
-    errorAlert = 'Choose a start date and choose activities.';
+    errorAlert = globalT('Choose a start date and choose activities');
     errorAlertLink = '/create-vacation';
   } else if (!startDate) {
-    errorAlert = 'Choose a start date.';
+    errorAlert = globalT('Choose a start date');
     errorAlertLink = '/create-vacation';
   } else if (chosenActivities.length == 0) {
-    errorAlert = 'Choose activities.';
+    errorAlert = globalT('Choose activities');
     errorAlertLink = '/create-vacation#activity_offer_position';
   }
 
@@ -62,7 +65,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
             className='main-title'
             style={{ fontSize: '20px', marginTop: '0px' }}
           >
-            Your created vacation
+            {globalT('Your vacation plan')}
           </Typography>
           <IconButton
             sx={{
@@ -72,7 +75,6 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
               color: '#212b3b',
             }}
             onClick={handleOpenDrawer}
-            title='Close cart'
           >
             <CloseOutlinedIcon />
           </IconButton>
@@ -96,10 +98,14 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
               marginBottom: '6px',
             }}
           >
-            <span>Chosen activities:</span>
+            <span>{globalT('Chosen activities')}:</span>
             {chosenActivities.length > 0 ? (
               <span style={{ fontSize: '12px' }}>
-                All takes <strong>{maxNumberOfDaysForChosenActivities} days</strong>
+                {globalT('All takes')}{' '}
+                <strong>
+                  {Math.ceil(maxNumberOfDaysForChosenActivities)}{' '}
+                  {globalT(getDayText(Math.ceil(maxNumberOfDaysForChosenActivities)))}
+                </strong>
               </span>
             ) : (
               <></>
@@ -126,31 +132,31 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
           }}
         >
           <Typography variant='body1' sx={{ marginTop: '16px', fontWeight: '600' }}>
-            <span className={'date-label'}>Dates:</span>
+            <span className={'date-label'}>{globalT('Dates')}:</span>
             {startDate ? (
               startDate
             ) : (
               <span className='no-data required'>
                 <Link href={'/create-vacation'} onClick={handleOpenDrawer}>
-                  Start date
+                  {globalT('Start date')}
                 </Link>
               </span>
             )}{' '}
             &nbsp;-&nbsp;
-            {finishDate ? finishDate : <span className='no-data'>Finish date</span>}
+            {finishDate ? finishDate : <span className='no-data'>{globalT('Finish date')}</span>}
           </Typography>
         </Grid>
 
         <div className='persons'>
           <div>
             <Typography variant='body1' sx={{ marginTop: '16px', fontWeight: '600' }}>
-              <span className={'date-label'}>Adults:</span>
+              <span className={'date-label'}>{globalT('Adults')}:</span>
               {adults}
             </Typography>
           </div>
           <div>
             <Typography variant='body1' sx={{ marginTop: '16px', fontWeight: '600' }}>
-              <span className='date-label'>Children:</span>
+              <span className='date-label'>{globalT('Children')}:</span>
               {children}
             </Typography>
           </div>
@@ -158,16 +164,20 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
 
         <Grid md={12} className='price_overview'>
           <Typography variant='body1' sx={{ mt: 0 }}>
-            Price overview:
+            {globalT('Price overview')}:
           </Typography>
 
           <ul className='price_list'>
-            <li>Activities + €34 booking fee</li>
             <li>
-              Accommodations + €34 booking fee <span>(optional)</span>
+              {globalT('Activities')} + €34 {globalT('booking fee')}
             </li>
             <li>
-              Transportations + €34 booking fee <span>(optional)</span>
+              {globalT('Accommodation')} + €34 {globalT('booking fee')}{' '}
+              <span>({globalT('optional')})</span>
+            </li>
+            <li>
+              {globalT('Transportation')} + €34 {globalT('booking fee')}{' '}
+              <span>({globalT('optional')})</span>
             </li>
           </ul>
         </Grid>
@@ -203,7 +213,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
               }}
               className='submit'
             >
-              Book now
+              {globalT('Create vacation')}
             </Button>
           )}
         </Grid>

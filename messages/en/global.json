@@ -84,5 +84,16 @@
   "Telephone": "Telephone",
   "Gallery": "Gallery",
   "predefined-vacation-include-activity": "Predefined vacation which include this activity",
-  "Similar & nearby": "Similar & nearby"
+  "Similar & nearby": "Similar & nearby",
+  "Chosen activities": "Chosen activities",
+  "Change language": "Change language",
+  "Your vacation plan": "Your vacation plan",
+  "All takes": "All takes",
+  "day": "day",
+  "_days": "days",
+  "Remove from list": "Remove from list",
+  "Dates": "Dates",
+  "Choose a start date": "Choose a start date",
+  "Choose a start date and choose activities": "Choose a start date and choose activities",
+  "Choose activities": "Choose activities"
 }

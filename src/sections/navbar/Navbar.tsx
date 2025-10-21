@@ -17,6 +17,7 @@ import SwitchLanguage from './SwitchLanguage';
 import { AppDispatch } from '@/store/store';
 import { loadChosenActivities } from '@/store/vacation/vacationReducer';
 import { useTranslations } from 'next-intl';
+import { Tooltip } from '@/components';
 
 const Navbar = () => {
   const globalT = useTranslations('global');
@@ -136,26 +137,29 @@ const Navbar = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <SwitchLanguage />
+              <Tooltip title={globalT('Change language')}>
+                <SwitchLanguage />
+              </Tooltip>
 
-              <IconButton
-                sx={{
-                  ...button,
-                  ...transparentLightButton,
-                  p: '12px!important',
-                  marginLeft: '12px',
-                }}
-                id='shoppingCartIcon'
-                onClick={handleOpenShoppingCart}
-                size='small'
-              >
-                <ShoppingCartOutlinedIcon sx={{ fontSize: '24px' }} />
-                <span className='count'>{chosenActivities.length}</span>
-                {chosenActivitiesAction && (
-                  <div className={`animation ${chosenActivitiesAction}`}></div>
-                )}
-              </IconButton>
-
+              <Tooltip title={globalT('Chosen activities')}>
+                <IconButton
+                  sx={{
+                    ...button,
+                    ...transparentLightButton,
+                    p: '12px!important',
+                    marginLeft: '12px',
+                  }}
+                  id='shoppingCartIcon'
+                  onClick={handleOpenShoppingCart}
+                  size='small'
+                >
+                  <ShoppingCartOutlinedIcon sx={{ fontSize: '24px' }} />
+                  <span className='count'>{chosenActivities.length}</span>
+                  {chosenActivitiesAction && (
+                    <div className={`animation ${chosenActivitiesAction}`}></div>
+                  )}
+                </IconButton>
+              </Tooltip>
               <Drawer
                 anchor={'right'}
                 open={isShoppingCartOpened}

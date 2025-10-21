@@ -11,3 +11,4 @@ export { default as SuccessContact } from './contactInfo/Success';
 export { default as ErrorContact } from './contactInfo/Error';
 
 export { default as Alert } from './alert/Alert';
+export { default as Tooltip } from './tooltip/Tooltip';

@@ -33,3 +33,18 @@ export const activityDurationInString = (durationInDays: number) => {
 
   return durationText;
 };
+
+export const getDayText = (number: number) => {
+  const lastTwo = number % 100;
+  const last = number % 10;
+
+  if (lastTwo >= 11 && lastTwo <= 14) {
+    return `_days`;
+  }
+
+  if (last === 1) {
+    return `day`;
+  }
+
+  return `_days`;
+};

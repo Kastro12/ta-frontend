@@ -6,8 +6,16 @@ import { useDispatch } from 'react-redux';
 import CloseOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import Image from 'next/image';
 import { AppDispatch } from '@/store/store';
+import { useTranslations } from 'next-intl';
+import { activityDurationInString } from '@/utils/string';
+import Tooltip from '@/components/tooltip/Tooltip';
 
 const ActivityList = ({ activity }: any) => {
+  console.log('activity', activity);
+
+  const activitiesT = useTranslations('activities.' + activity?.translationKey);
+  const globalT = useTranslations('global');
+
   const pathname = usePathname();
   const dispatch = useDispatch<AppDispatch>();
 
@@ -40,25 +48,28 @@ const ActivityList = ({ activity }: any) => {
 
         <div className='content'>
           <div className='info'>
-            <p>{activity.title}</p>
+            <p>{activitiesT('title')}</p>
             <div className='sub-info'>
-              <span className='gray-label'>{activity.category}</span>
-              <span className='gray-label'>{durationText}</span>
+              <span className='gray-label'>{globalT(activity.category)}</span>
+              <span className='gray-label'>
+                {globalT(activityDurationInString(activity.durationInDays))}
+              </span>
             </div>
           </div>
 
           {pathname !== '/book-vacation' && (
             <>
               <div className='action remove'>
-                <IconButton
-                  sx={{ ...button }}
-                  id='shoppingCartIcon'
-                  onClick={() => dispatch(removeActivityWithPersistence(activity.id))}
-                  size='small'
-                  title='Remove activity'
-                >
-                  <CloseOutlinedIcon />
-                </IconButton>
+                <Tooltip title={globalT('Remove from list')}>
+                  <IconButton
+                    sx={{ ...button }}
+                    id='shoppingCartIcon'
+                    onClick={() => dispatch(removeActivityWithPersistence(activity.id))}
+                    size='small'
+                  >
+                    <CloseOutlinedIcon />
+                  </IconButton>
+                </Tooltip>
               </div>
             </>
           )}

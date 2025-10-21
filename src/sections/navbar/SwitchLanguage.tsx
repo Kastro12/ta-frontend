@@ -7,6 +7,8 @@ import { button, transparentLightButton } from '@/utils/re-styledComponents/inde
 import { MouseEvent } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
+import { Tooltip } from '@/components';
+import { useTranslations } from 'next-intl';
 
 const ItemActive = {
   backgroundColor: 'rgba(33, 129, 125, 0.06)',
@@ -34,6 +36,8 @@ const ActiveItemLinkStyle = {
 const ItemImageStyle = { fontSize: '24px', borderRadius: '100px', marginRight: '9px' };
 
 const SwitchLanguage = () => {
+  const globalT = useTranslations('global');
+
   const pathname = usePathname();
 
   const navigationPathname = useNavigationPathname();
@@ -50,23 +54,25 @@ const SwitchLanguage = () => {
 
   return (
     <>
-      <IconButton
-        sx={{ ...button, ...transparentLightButton, p: '12px!important' }}
-        id='shoppingCartIcon'
-        aria-controls={open ? 'language-menu' : undefined}
-        aria-haspopup='true'
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        size='small'
-      >
-        <Image
-          src={`/icons/${locale === 'en' ? 'en' : 'sr'}.png`}
-          alt={`${locale} flag`}
-          width={22}
-          height={22}
-          style={{ fontSize: '24px', borderRadius: '100px' }}
-        />
-      </IconButton>
+      <Tooltip title={globalT('Change language')}>
+        <IconButton
+          sx={{ ...button, ...transparentLightButton, p: '12px!important' }}
+          id='shoppingCartIcon'
+          aria-controls={open ? 'language-menu' : undefined}
+          aria-haspopup='true'
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+          size='small'
+        >
+          <Image
+            src={`/icons/${locale === 'en' ? 'en' : 'sr'}.png`}
+            alt={`${locale} flag`}
+            width={24}
+            height={24}
+            style={{ fontSize: '24px', borderRadius: '100px' }}
+          />
+        </IconButton>
+      </Tooltip>
       <Menu id='language-menu' anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem
           onClick={handleClose}
