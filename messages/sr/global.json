@@ -60,6 +60,7 @@
   "All Rights Reserved": "Sva prava zadržava",
   "form-title-book-vacation": "Popunite formu i rezervišite svoj odmor",
   "Book vacation": "Rezervišite odmor",
+  "Book your vacation": "Rezervišite Vaš odmor",
   "Choose the start date": "Izaberite datum početka",
   "Note": "Napomena",
   "bookVacationInfo": "Nakon popunjavanja formulara, poslaćemo vam plan odmora i fakturu za plaćanje usluge putem e-pošte. Kada izaberete opcije smeštaja i prevoza, dobićete transparentne detalje o svim troškovima.",
@@ -71,7 +72,7 @@
     "Country": "Država",
     "Message": "Poruka",
     "terms-and-conditions": "Prihvatam uslove i odredbe",
-    "Submit Booking": "Pošaljite rezervaciju",
+    "Submit Booking": "Rezerviši",
     "required-fullname": "Unesite svoje ime i prezime",
     "min-length-2": "Unesite najmanje 2 karaktera",
     "max-length-150": "Ne može biti duže od 150 karaktera",
@@ -97,5 +98,6 @@
   "Choose a start date and choose activities": "Izaberite datum početka i izaberite aktivnosti",
   "Choose activities": "Izaberite aktivnosti",
   "Serbian": "Srpski",
-  "English": "Engleski"
+  "English": "Engleski",
+  "no chosen activity": "Nema izabranih aktivnosti"
 }

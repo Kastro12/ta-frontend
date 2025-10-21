@@ -67,5 +67,22 @@
   "page-create-vacation": {
     "metaTitle": "Create vacation",
     "metaDescription": "Create vacation"
+  },
+  "page-success-booking": {
+    "metaTitle": "Successfully booked vacation",
+    "metaDescription": "",
+    "mainTitle": "Successfully booked vacation",
+    "text1": "Thank you for choosing us for your vacation! A detailed plan and program of your vacation, along with payment information, will be sent to your email.",
+    "text2": "If you have any further questions or need assistance, please feel free to contact us via email at [your email] or call us at [your phone number].",
+    "text3": "We look forward to your journey with us!",
+    "Homepage": "Homepage"
+  },
+  "page-unsuccess-booking": {
+    "metaTitle": "Booking unsuccessful",
+    "metaDescription": "",
+    "mainTitle": "Booking unsuccessful",
+    "text1": "There was an error submitting your form. Please try again later.",
+    "text2": "You can also contact us directly via email at [your email] or call us at [your phone number]. Thank you for your understanding.",
+    "Homepage": "Homepage"
   }
 }

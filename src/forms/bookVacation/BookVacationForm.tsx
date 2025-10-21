@@ -217,9 +217,7 @@ const BookVacationForm = ({
                   />
                 }
                 label={
-                  <span style={{ fontSize: '14px' }}>
-                    {globalT('form.terms-and-conditions')}
-                  </span>
+                  <span style={{ fontSize: '14px' }}>{globalT('form.terms-and-conditions')}</span>
                 }
               />
             )}
@@ -240,7 +238,11 @@ const BookVacationForm = ({
         </Grid>
 
         <Grid item xs={12} md={12} sx={{ width: '100%', textAlign: 'center' }}>
-          <Button type='submit' sx={{ ...button, ...greenButton }} variant='outlined'>
+          <Button
+            type='submit'
+            sx={{ ...button, ...greenButton, padding: '0 24px' }}
+            variant='outlined'
+          >
             {globalT('form.Submit Booking')}
           </Button>
         </Grid>

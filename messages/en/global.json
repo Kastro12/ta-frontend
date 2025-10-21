@@ -60,6 +60,7 @@
   "All Rights Reserved": "All Rights Reserved",
   "form-title-book-vacation": "Fill out the form and book your vacation",
   "Book vacation": "Book vacation",
+  "Book your vacation": "Book your vacation",
   "Choose the start date": "Choose the start date",
   "Note": "Note",
   "bookVacationInfo": "After filling out the form, we will email you the vacation plan and an invoice for the service payment. Once you choose your accommodation and transportation options, you will receive transparent details about all costs.",
@@ -97,5 +98,6 @@
   "Choose a start date and choose activities": "Choose a start date and choose activities",
   "Choose activities": "Choose activities",
   "Serbian": "Serbian",
-  "English": "English"
+  "English": "English",
+  "no chosen activity": "There is no chosen activity"
 }

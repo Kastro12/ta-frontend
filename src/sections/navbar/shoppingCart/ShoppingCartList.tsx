@@ -213,7 +213,7 @@ const ShoppingCartList = ({ handleOpenDrawer }: DrawerList) => {
               }}
               className='submit'
             >
-              {globalT('Create vacation')}
+              {globalT('Book vacation')}
             </Button>
           )}
         </Grid>

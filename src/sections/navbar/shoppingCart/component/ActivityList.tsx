@@ -11,8 +11,6 @@ import { activityDurationInString } from '@/utils/string';
 import Tooltip from '@/components/tooltip/Tooltip';
 
 const ActivityList = ({ activity }: any) => {
-  console.log('activity', activity);
-
   const activitiesT = useTranslations('activities.' + activity?.translationKey);
   const globalT = useTranslations('global');
 

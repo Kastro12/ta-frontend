@@ -67,5 +67,22 @@
   "page-create-vacation": {
     "metaTitle": "Kreiraj odmor",
     "metaDescription": "Kreiraj odmor"
+  },
+  "page-success-booking": {
+    "metaTitle": "Uspešno rezervisan odmor",
+    "metaDescription": "",
+    "mainTitle": "Uspešno rezervisan odmor",
+    "text1": "Hvala vam što ste nas izabrali za vaš odmor! Detaljan plan i program vašeg odmora, zajedno sa informacijama o plaćanju, biće vam poslat na imejl.",
+    "text2": "Ukoliko imate dodatnih pitanja ili vam je potrebna pomoć, slobodno nas kontaktirajte putem e-pošte na [vaša e-pošta] ili nas pozovite na [vaš broj telefona].",
+    "text3": "Radujemo se vašem putovanju sa nama!",
+    "Homepage": "Početna strana"
+  },
+  "page-unsuccess-booking": {
+    "metaTitle": "Rezervacija nije uspela",
+    "metaDescription": "",
+    "mainTitle": "Rezervacija nije uspela",
+    "text1": "Došlo je do greške prilikom slanja vašeg formulara. Molimo vas pokušajte ponovo kasnije.",
+    "text2": "Takođe nas možete direktno kontaktirati putem e-pošte na [vaša e-adresa] ili nas pozvati na [vaš broj telefona]. Hvala vam na razumevanju.",
+    "Homepage": "Početna strana"
   }
 }
