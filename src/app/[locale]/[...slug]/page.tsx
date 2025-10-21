@@ -153,8 +153,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: activitiesT('description'),
     keywords: currentActivity?.location,
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
     },
 
     openGraph: {

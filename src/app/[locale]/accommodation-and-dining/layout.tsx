@@ -7,6 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${t('metaTitle')} | Tailor-made vacations`,
     description: ` ${t('metaDescription')}`,
+    robots: 'noindex, follow',
   };
 }
 

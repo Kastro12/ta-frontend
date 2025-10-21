@@ -9,6 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: organizedVacationsT('title'),
     description: `${t('mainTitle')} | ${organizedVacationsT('description')}`,
+    robots: 'noindex, follow',
   };
 }
 
