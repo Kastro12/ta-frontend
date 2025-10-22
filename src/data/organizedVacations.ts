@@ -387,15 +387,15 @@ export const localCultureAndLandscapes: PredefinedVacationProps = {
       translationKey: 'day_seven',
       images: [
         {
-          link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-1.jpg',
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-1.jpg',
           alt: 'Maglič Fortress',
         },
         {
-          link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-2.jpg',
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-2.jpg',
           alt: 'Maglič Fortress 2',
         },
         {
-          link: '/activities/history_and_culture/tvrdjava/maglic/maglic_fortress-3.jpg',
+          link: '/activities/history_and_culture/tvrdjava/maglic/maglic-fortress-3.jpg',
           alt: 'Maglič Fortress 2',
         },
       ],

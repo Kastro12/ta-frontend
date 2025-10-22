@@ -5,7 +5,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('landingPages.page-jobs');
 
   return {
-    title: `${t('metaTitle')} | Tailor-made vacations`,
+    title: `${t('metaTitle')} | naodmor.com`,
     description: ` ${t('metaDescription')}`,
   };
 }

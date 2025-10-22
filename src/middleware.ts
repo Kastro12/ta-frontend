@@ -11,11 +11,7 @@ export default function middleware(request: NextRequest) {
 
   if (!cookieLocale) {
     const country = request.headers.get('x-vercel-ip-country') || '';
-    console.log('country', country);
-    console.log(
-      'serbianSpeakingCountries.includes(country)',
-      serbianSpeakingCountries.includes(country),
-    );
+
     let defaultLocale = 'sr';
     if (country && !serbianSpeakingCountries.includes(country)) {
       defaultLocale = 'en';
