@@ -149,7 +149,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // alternates: {
     //   canonical: productSEO?.meta_canonical_link || canonical,
     // },
-    title: `${process.env.NEXT_PUBLIC_SITE_NAME} | ${activitiesT('title')}`,
+    title: `${activitiesT('title')} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: activitiesT('description'),
     keywords: currentActivity?.location,
     robots: {

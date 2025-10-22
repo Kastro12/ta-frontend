@@ -5,7 +5,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('landingPages.page-create-vacation');
 
   return {
-    title: `${t('metaTitle')} | Tailor-made vacations`,
+    title: `${t('metaTitle')} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: ` ${t('metaDescription')}`,
     robots: 'noindex, follow',
   };

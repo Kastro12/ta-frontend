@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: 'Successfully booked vacation - Tailor-made vacations',
-  robots: 'noindex, follow',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('landingPages.page-success-booking');
+
+  return {
+    title: `${t('metaTitle')} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+    robots: 'noindex, follow',
+  };
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className='page book-vacation-success'>{children}</div>;

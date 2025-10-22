@@ -84,5 +84,10 @@
     "text1": "There was an error submitting your form. Please try again later.",
     "text2": "You can also contact us directly via email at [your email] or call us at [your phone number]. Thank you for your understanding.",
     "Homepage": "Homepage"
+  },
+  "digital-advertising": {
+    "metaTitle": "Digital advertising",
+    "metaDescription": "Digital advertising",
+    "mainTitle": "Digital advertising"
   }
 }

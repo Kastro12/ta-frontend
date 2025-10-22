@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import '@/style/appStyle.scss';
 
 export const metadata: Metadata = {
-  title: 'Tailor-made vacations',
+  title: process.env.NEXT_PUBLIC_SITE_NAME,
   description:
     'Tailor-made vacations offer personalized trips across Serbia and the surrounding. Choose your vacation plan, with planning of accommodations and transport.',
   robots: 'index, follow',

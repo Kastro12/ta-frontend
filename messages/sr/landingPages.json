@@ -84,5 +84,10 @@
     "text1": "Došlo je do greške prilikom slanja vašeg formulara. Molimo vas pokušajte ponovo kasnije.",
     "text2": "Takođe nas možete direktno kontaktirati putem e-pošte na [vaša e-adresa] ili nas pozvati na [vaš broj telefona]. Hvala vam na razumevanju.",
     "Homepage": "Početna strana"
+  },
+  "digital-advertising": {
+    "metaTitle": "Digitalno oglašavanje",
+    "metaDescription": "Digitalno oglašavanje",
+    "mainTitle": "Digitalno oglašavanje"
   }
 }

@@ -4,10 +4,11 @@ import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('organizedVacations');
+  const globalT = await getTranslations('global');
   const organizedVacationsT = await getTranslations(organizedVacation.translationKey);
 
   return {
-    title: `Book vacation - ${organizedVacationsT('title')}`,
+    title: `${globalT('Book vacation')} - ${organizedVacationsT('title')}`,
     description: `${t('mainTitle')} | ${organizedVacationsT('description')}`,
   };
 }

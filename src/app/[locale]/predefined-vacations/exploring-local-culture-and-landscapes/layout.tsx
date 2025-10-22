@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const organizedVacationsT = await getTranslations(organizedVacation.translationKey);
 
   return {
-    title: organizedVacationsT('title'),
+    title: `${organizedVacationsT('title')} | ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: `${t('mainTitle')} | ${organizedVacationsT('description')}`,
     robots: 'noindex, follow',
   };
