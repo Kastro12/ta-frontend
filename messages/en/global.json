@@ -28,7 +28,9 @@
   "Adults": "Adults",
   "Children": "Children",
   "arrange-accommodation-question": "Would you like us to arrange accommodation?",
+  "arrange-accommodation-note": "If you select 'Yes' option, we will find several accommodation options that meet your needs and send them to you for selection.",
   "arrange-transportation-question": "Would you like us to arrange transportation?",
+  "arrange-transportation-note": "If you select 'Yes' option, we will offer you different types of transportation, including standard vehicles and luxury options, so you can choose what suits you best.",
   "confirm-arrangement": "Yes, arrange it for us",
   "unconfirmed-arrangement": "No, we'll arrange it ourselves",
   "age-needed": {

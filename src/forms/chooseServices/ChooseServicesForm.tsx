@@ -99,8 +99,7 @@ const ChooseServicesForm = ({ changeRadioGroup }: any) => {
             className='ChooseServicesForm_popover'
           >
             <Typography>
-              <strong>Note:</strong> If you select &apos;Yes&apos; option, we will find several
-              accommodation options that meet your needs and send them to you for selection.
+              <strong>{globalT('Note')}:</strong> {globalT('arrange-accommodation-note')}
             </Typography>
           </Popover>
         </FormLabel>
@@ -149,9 +148,7 @@ const ChooseServicesForm = ({ changeRadioGroup }: any) => {
             className='ChooseServicesForm_popover'
           >
             <Typography>
-              <strong>Note:</strong> If you select &apos;Yes&apos; option, we will offer you
-              different types of transportation, including standard vehicles and luxury options, so
-              you can choose what suits you best.
+              <strong>{globalT('Note')}:</strong> {globalT('arrange-transportation-note')}
             </Typography>
           </Popover>
         </FormLabel>

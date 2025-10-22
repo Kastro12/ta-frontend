@@ -28,7 +28,9 @@
   "Adults": "Odrasli",
   "Children": "Deca",
   "arrange-accommodation-question": "Da li želite da vam organizujemo smeštaj?",
+  "arrange-accommodation-note": "Ako izaberete opciju „Da“, pronaći ćemo nekoliko opcija smeštaja koje zadovoljavaju vaše potrebe i poslati vam ih na izbor.",
   "arrange-transportation-question": "Da li želite da organizujemo prevoz?",
+  "arrange-transportation-note": "Ako izaberete opciju „Da“, ponudićemo vam različite vrste prevoza, uključujući standardna vozila i luksuzne opcije, tako da možete izabrati ono što vam najviše odgovara.",
   "confirm-arrangement": "Da, organizujte za nas",
   "unconfirmed-arrangement": "Ne, sami ćemo organizovati",
   "age-needed": {
